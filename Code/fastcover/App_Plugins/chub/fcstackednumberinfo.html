@@ -1,1 +1,70 @@
-﻿
+﻿<div ng-controller="CHControls.StackedNumberedInfoController">
+    <div class="scamstitle">
+        <input type="text" ng-model="control.value.heading" />
+    </div>
+    <div class="scamsinbali">
+        <div class="scamsbox bdrbtm" ng-repeat="input in control.inputs">
+            <div class="lightgrey">
+                <ul>
+                    <li><div class="nbr">{{$index+1}}</div></li>
+                    <li>
+                        <div class="svgwidth">
+                            <div class="usky-editor-placeholder imagegrid" ng-click="setimage(input.id)" ng-if="input.image == null" style="width: 100%;">
+                                <i class="icon icon-picture"></i>
+                                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                                    Image
+                                </div>
+                            </div>
+
+                            <div ng-if="input.image != null">
+                                <div class="imggrid4wide">
+                                    <img ng-click="setimage(input.id)" ng-src="{{input.image.image}}" cl class="fullSizeImage" />
+                                    <a href class="picked-image" ng-click="removeimage(input.id)"><i class="icon icon-delete"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><div class="txt"><input type="text" ng-model="input.heading" /></div></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="orangebox-text entry">
+                <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                    <div grid-rte
+                         configuration="control.editor.config.fcstackednumberinfortetoolbar"
+                         value="input.rteValue"
+                         unique-id="control.$uniqueId + $index"
+                         on-link-picker-click="vm.openLinkPicker"
+                         on-media-picker-click="vm.openMediaPicker"
+                         on-embed-click="vm.openEmbed"
+                         on-macro-picker-click="vm.openMacroPicker">
+                    </div>
+                    <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                                 model="vm.linkPickerOverlay"
+                                 position="right"
+                                 view="vm.linkPickerOverlay.view">
+                    </umb-overlay>
+                    <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                                 model="vm.mediaPickerOverlay"
+                                 position="right"
+                                 view="vm.mediaPickerOverlay.view">
+                    </umb-overlay>
+                    <umb-overlay ng-if="vm.embedOverlay.show"
+                                 model="vm.embedOverlay"
+                                 position="right"
+                                 view="vm.embedOverlay.view">
+                    </umb-overlay>
+                    <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                                 model="vm.macroPickerOverlay"
+                                 view="vm.macroPickerOverlay.view"
+                                 position="right">
+                    </umb-overlay>
+                </div>
+                <div class="exclaimation-mark excmark-svgwidth"></div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <button class="btn btn-default pull-right margin10auto" type="button" ng-click="AddRow()">Add Row</button>
+</div>

@@ -907,3 +907,89 @@ angular.module("umbraco").controller("CHControls.StackedTextBoxeswithImagewithRa
 
 
 });
+
+angular.module("umbraco").controller("CHControls.StackedNumberedInfoController", function ($scope, $rootScope, $location, $routeParams, $timeout, $http, $log, dialogService) {
+
+    $scope.control.radiocollection = $scope.control.editor.config.radiocollection;
+    if ("inputs" in $scope.control) {
+        var input = $scope.control.inputs;
+        $scope.control.inputs = input;
+    } else {
+        $scope.control.id = 1;
+        $scope.control.inputs = [{ 'heading': '', 'rteValue': '', 'image': null, 'position': $scope.control.editor.config.radiodefaultvalue, 'id': $scope.control.id }];
+    }
+
+    $scope.AddRow = function () {
+        $scope.control.id++;
+        $scope.control.inputs.push({ 'heading': '', 'rteValue': '', 'image': null, 'position': $scope.control.editor.config.radiodefaultvalue, 'id': $scope.control.id });
+    }
+
+    $scope.setimage = function (rowid) {
+        debugger;
+
+        $scope["currentRowId"] = rowid;
+
+        dialogService.mediaPicker({
+            startNodeId: $scope.control.editor.config && $scope.control.editor.config.startNodeId ? $scope.control.editor.config.startNodeId : undefined,
+            multiPicker: false,
+            cropSize: $scope.control.editor.config && $scope.control.editor.config.size ? $scope.control.editor.config.size : undefined,
+            showDetails: true,
+            callback: function (data) {
+
+                debugger;
+
+                var imageRowId = $scope["currentRowId"];
+                var index = -1;
+                var comArr = eval($scope.control.inputs);
+                for (var i = 0; i < comArr.length; i++) {
+                    if (comArr[i].id === imageRowId) {
+                        index = i;
+                        break;
+                    }
+                }
+
+                if ($scope.control.inputs[index].image == null) {
+                    $scope.control.inputs[index].image = {};
+                }
+
+                $scope.control.inputs[index].image = {
+                    focalPoint: data.focalPoint,
+                    id: data.id,
+                    image: data.image,
+                    altText: data.altText
+                };
+
+            }
+        });
+    };
+
+    $scope.removeimage = function (rowid) {
+        $scope["currentRowId"] = rowid;
+        var imageRowId = $scope["currentRowId"];
+        var index = -1;
+        var comArr = eval($scope.control.inputs);
+        for (var i = 0; i < comArr.length; i++) {
+            if (comArr[i].id === imageRowId) {
+                index = i;
+                break;
+            }
+        }
+        delete $scope.control.inputs[index].image;
+    }
+    $scope.RemoveRow = function (id) {
+        var index = -1;
+        var comArr = eval($scope.control.inputs);
+        for (var i = 0; i < comArr.length; i++) {
+            if (comArr[i].id === id) {
+                index = i;
+                break;
+            }
+        }
+        if (index === -1) {
+            alert("Something gone wrong");
+        }
+        $scope.control.inputs.splice(index, 1);
+    };
+
+
+});

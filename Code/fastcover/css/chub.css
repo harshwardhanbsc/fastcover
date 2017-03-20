@@ -386,9 +386,18 @@ div.chrichtext {
 .chrichtext.orangebg h4,
 .chrichtext.orangebg h5,
 .chrichtext.orangebg h6,
-.chrichtext.orangebg p {
+.chrichtext.orangebg p,
+.chrichtext.orangebg ul,
+.chrichtext.orangebg ol,
+.chrichtext.orangebg ul li,
+.chrichtext.orangebg ol li {
     color: #ffffff;
 }
+
+    .chrichtext.orangebg ol li:before,
+    .chrichtext.orangebg ul li:before {
+        color: #ffffff;
+    }
 
 .chrichtext.orangebg a {
     color: #fac47e;
@@ -2073,6 +2082,122 @@ div.chrichtext {
         bottom: -10px;
     }
 /*#endregion*/
+/*#region Stacked Numbered Info*/
+.scamstitle {
+    background: #eb4f1d;
+    border: 2px #a6a6a6 solid;
+    color: #fff;
+    padding: 15px;
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: 8px;
+    max-width: 70%;
+    margin: 50px auto 0;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.scamsinbali {
+    background: #eb4f1d;
+    width: 100%;
+    margin: 0px auto 50px;
+    position: relative;
+    display: block;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+    .scamsinbali .scamsbox {
+        display: block;
+        clear: both;
+        position: relative;
+    }
+
+        .scamsinbali .scamsbox .lightgrey {
+            padding: 0 20px;
+            position: relative;
+            color: #fff;
+            background: #a6a6a6;
+            height: 175px;
+        }
+
+            .scamsinbali .scamsbox .lightgrey ul {
+                display: table;
+                position: relative;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                width: 100%;
+            }
+
+                .scamsinbali .scamsbox .lightgrey ul li {
+                    width: 33.3%;
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+
+                    .scamsinbali .scamsbox .lightgrey ul li .nbr {
+                        font-size: 155px;
+                        font-weight: 700;
+                        font-family: sans-serif;
+                        line-height: 175px;
+                    }
+
+                    .scamsinbali .scamsbox .lightgrey ul li .txt {
+                        font-size: 26px;
+                        text-align: right;
+                        font-weight: 500;
+                        line-height: 30px;
+                        letter-spacing: 4px;
+                    }
+
+.orangebox-text {
+    display: block;
+    clear: both;
+    padding: 40px 170px 40px 20px !important;
+    position: relative;
+}
+
+.bdrbtm {
+    border-bottom: 3px #f0f0f0 solid;
+}
+
+.darkgrey {
+    background: #464646 !important;
+}
+
+.exclaimation-mark {
+    background: url(../images/exclaimationmark.svg) 26.9% 12% no-repeat;
+    background-size: 100%;
+}
+
+.excmark-svgwidth {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    z-index: 99;
+    right: 10px;
+    bottom: 0px;
+}
+
+.scamsinbali .scamsbox .lightgrey ul li .svgwidth {
+    width: 200px;
+    height: 200px;
+    margin: -9px auto -10px;
+}
+
+
+.scamsinbali .scamsbox:nth-child(1n) .lightgrey {
+    background: #a6a6a6;
+}
+
+.scamsinbali .scamsbox:nth-child(2n) .lightgrey {
+    background: #464646;
+}
+/*#endregion*/
 /*#region max-width:1200px;*/
 @media screen and (max-width: 1200px) {
     .diseasesarea .diseasebox .table::after {
@@ -2193,7 +2318,7 @@ div.chrichtext {
         width: 88.5%;
     }
 }
-/*endregion*/
+/*#endregion*/
 /*#region max-width:900px;*/
 @media screen and (max-width: 900px) {
     .diseasesarea .commonbox .ul .li:nth-child(3), .diseasesarea .commonbox .ul .li:nth-child(5) {
@@ -2239,7 +2364,7 @@ div.chrichtext {
         width: 87.5%;
     }
 }
-/*endregion*/
+/*#endregion*/
 /*#region max-width:800px;*/
 @media screen and (max-width: 800px) {
     .t-box .ul:after {
@@ -2449,6 +2574,43 @@ div.chrichtext {
         right: 5%;
         width: 91.2%;
     }
+
+    .scamstitle {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+    .excmark-svgwidth {
+        width: 60px;
+        height: 60px;
+    }
+
+    .orangebox-text {
+        padding: 20px 50px 20px 20px !important;
+    }
+
+    .scamsinbali .scamsbox .lightgrey {
+        height: 90px;
+    }
+
+        .scamsinbali .scamsbox .lightgrey ul li .svgwidth {
+            width: 100px;
+            height: 100px;
+            margin: -6px auto -10px;
+        }
+
+        .scamsinbali .scamsbox .lightgrey ul li .nbr {
+            font-size: 90px;
+            line-height: 95px;
+        }
+
+        .scamsinbali .scamsbox .lightgrey ul li .txt {
+            font-size: 18px;
+            text-align: right;
+            line-height: 22px;
+            letter-spacing: 1px;
+            margin-top: 23px;
+        }
 }
 /*#endregion*/
 /*#region max-width:767px;*/

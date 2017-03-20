@@ -1,4 +1,52 @@
+/*#region Font Family*/
+@font-face {
+    font-family: "MetaPro";
+    src: url("../../../fonts/MetaPro/MetaProBlack.eot");
+    src: url("../../../fonts/MetaPro/MetaProBlack.eot?#iefix") format('embedded-opentype'), url("../../../fonts/MetaPro/MetaProBlack.woff") format('woff'), url("../../../fonts/MetaPro/MetaProBlack.ttf") format('truetype'), url("../../../fonts/MetaPro/MetaProBlack.svg#MetaPro") format('svg');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "MetaPro-Bold";
+    src: url("../../../fonts/MetaPro/MetaProBold.eot");
+    src: url("../../../fonts/MetaPro/MetaProBold.eot?#iefix") format('embedded-opentype'), url("../../../fonts/MetaPro/MetaProBold.woff") format('woff'), url("../../../fonts/MetaPro/MetaProBold.ttf") format('truetype'), url("../../../fonts/MetaPro/MetaProBold.svg#MetaPro-Bold") format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("../../../fonts/MetaPro/MetaProBold.eot");
+    src: url("../../../fonts/MetaPro/MetaProBold.eot?#iefix") format('embedded-opentype'), url("../../../fonts/MetaPro/MetaProBold.woff") format('woff'), url("../../../fonts/MetaPro/MetaProBold.ttf") format('truetype'), url("../../../fonts/MetaPro/MetaProBold.svg#MetaPro") format('svg');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("../../../fonts/MetaPro/MetaProBook.eot");
+    src: url("../../../fonts/MetaPro/MetaProBook.eot?#iefix") format('embedded-opentype'), url("../../../fonts/MetaPro/MetaProBook.woff") format('woff'), url("../../../fonts/MetaPro/MetaProBook.ttf") format('truetype'), url("../../../fonts/MetaPro/MetaProBook.svg#MetaPro") format('svg');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("../../../fonts/MetaPro/MetaProMedium.eot");
+    src: url("../../../fonts/MetaPro/MetaProMedium.eot?#iefix") format('embedded-opentype'), url("../../../fonts/MetaPro/MetaProMedium.woff") format('woff'), url("../../../fonts/MetaPro/MetaProMedium.ttf") format('truetype'), url("../../../fonts/MetaPro/MetaProMedium.svg#MetaPro") format('svg');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("../../../fonts/MetaPro/MetaProNormal.eot");
+    src: url("../../../fonts/MetaPro/MetaProNormal.eot?#iefix") format('embedded-opentype'), url("../../../fonts/MetaPro/MetaProNormal.woff") format('woff'), url("../../../fonts/MetaPro/MetaProNormal.ttf") format('truetype'), url("../../../fonts/MetaPro/MetaProNormal.svg#MetaPro") format('svg');
+    font-weight: normal;
+}
+/*#endregion*/
+
 /*#region Common Components*/
+input {
+    font: 18px/22px 'MetaPro', sans-serif;
+}
+
 h1,
 .h1 {
     font-size: 36px;
@@ -1859,3 +1907,164 @@ p, ul, ol, li {
         left: -10px;
         bottom: -10px;
     }
+
+.scamstitle {
+    background: #eb4f1d;
+    border: 2px #a6a6a6 solid;
+    color: #fff;
+    padding: 15px;
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: 8px;
+    width: 100%;
+    margin: 50px auto 0;
+    max-width: 665px;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+    .scamstitle input {
+        width: 98%;
+        font-weight: 800;
+        font-size: 40px;
+        letter-spacing: 8px;
+        line-height: 120%;
+        height: 120%;
+    }
+
+.scamsinbali {
+    background: #eb4f1d;
+    max-width: 890px;
+    width: 100%;
+    margin: 0px auto 50px;
+    position: relative;
+    display: block;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+    .scamsinbali .scamsbox {
+        display: block;
+        clear: both;
+        position: relative;
+    }
+
+        .scamsinbali .scamsbox .lightgrey {
+            padding: 0 20px;
+            position: relative;
+            color: #fff;
+            background: #a6a6a6;
+            height: 175px;
+        }
+
+            .scamsinbali .scamsbox .lightgrey ul {
+                display: block;
+                position: relative;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+                .scamsinbali .scamsbox .lightgrey ul li {
+                    width: 33.3%;
+                    float: left;
+                }
+
+                    .scamsinbali .scamsbox .lightgrey ul li .nbr {
+                        font-size: 155px;
+                        font-weight: 700;
+                        font-family: sans-serif;
+                        line-height: 175px;
+                    }
+
+                    .scamsinbali .scamsbox .lightgrey ul li .txt {
+                        font-size: 26px;
+                        text-align: right;
+                        font-weight: 500;
+                        line-height: 30px;
+                        letter-spacing: 4px;
+                        margin-top: 55px;
+                    }
+
+                        .scamsinbali .scamsbox .lightgrey ul li .txt input {
+                            font-size: 26px;
+                            line-height: 120%;
+                            height: 120%;
+                            font-weight: 500;
+                            letter-spacing: 4px;
+                        }
+
+        .scamsinbali .scamsbox:first-child .lightgrey ul li .svgwidth {
+            margin-top: 0px;
+        }
+
+
+.orangebox-text {
+    display: block;
+    clear: both;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.bdrbtm {
+    border-bottom: 3px #f0f0f0 solid;
+}
+
+.orangebox-text ul,
+.balibelly .contentarea ul, .ulbullet ul {
+    margin-left: 20px;
+}
+
+    .orangebox-text ul li:before,
+    .balibelly .contentarea ul li:before,
+    .ulbullet ul li:before {
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        top: 7px;
+    }
+
+    .orangebox-text ul li, .orangebox-text p {
+        color: #fff;
+    }
+
+.orangebox-text p {
+    text-align: justify;
+}
+
+
+.exclaimation-mark {
+    background: url('../../../images/exclaimationmark.svg') 26.9% 12% no-repeat;
+    background-size: 100%;
+}
+
+.excmark-svgwidth {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    z-index: 99;
+    right: 10px;
+    bottom: 0px;
+}
+
+.scamsinbali .scamsbox .lightgrey ul li .svgwidth {
+    width: 200px;
+    height: 200px;
+    margin: -9px auto -10px;
+}
+
+.scamsinbali .scamsbox:first-child .lightgrey {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.scamsinbali .scamsbox:nth-child(1n) .lightgrey {
+    background: #a6a6a6;
+}
+
+.scamsinbali .scamsbox:nth-child(2n) .lightgrey {
+    background: #464646;
+}

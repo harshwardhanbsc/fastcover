@@ -408,6 +408,7 @@
     <Content Include="fonts\MetaPro\MetaProNormal.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\downwardarrow.svg" />
+    <Content Include="images\exclaimationmark.svg" />
     <Content Include="images\hline.png" />
     <Content Include="images\noseimage.svg" />
     <Content Include="images\plane.svg" />
@@ -3108,6 +3109,7 @@
     <Content Include="App_Plugins\Grid\Editors\Render\media_text_right.cshtml" />
     <Content Include="App_Plugins\Grid\Editors\Render\media_wide.cshtml" />
     <Content Include="App_Plugins\Grid\Editors\Render\quote_with_description.cshtml" />
+    <None Include="Properties\PublishProfiles\File System.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

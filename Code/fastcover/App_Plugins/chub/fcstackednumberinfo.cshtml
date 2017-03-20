@@ -1,1 +1,68 @@
-﻿
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    var heading = (Model.value != null) ? Model.value.heading : null;
+    var items = Model.inputs;
+}
+
+<h2 class="scamstitle">@heading</h2>
+<div class="scamsinbali">
+    @foreach (var item in items)
+    {
+        if (item.Equals(items.Last))
+        {
+            <div class="scamsbox">
+                <div class="lightgrey">
+                    <ul>
+                        <li><div class="nbr">@item.id</div></li>
+                        <li>
+                            <div class="svgwidth">
+                                @if (item.image != null)
+                                {
+                                    if (item.image.image != null)
+                                    {
+                                        <img src="@item.image.image" alt="@item.image.altText" />
+                                    }
+                                }
+                            </div>
+                        </li>
+                        <li><div class="txt">@item.heading</div></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="orangebox-text chrichtext orangebg">
+                    @Html.Raw(item.rteValue)
+                    <div class="exclaimation-mark excmark-svgwidth"></div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="scamsbox bdrbtm">
+                <div class="lightgrey">
+                    <ul>
+                        <li><div class="nbr">@item.id</div></li>
+                        <li>
+                            <div class="svgwidth">
+                                @if (item.image != null)
+                                {
+                                    if (item.image.image != null)
+                                    {
+                                        <img src="@item.image.image" alt="@item.image.altText" />
+                                    }
+                                }
+                            </div>
+                        </li>
+                        <li><div class="txt">@item.heading</div></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="orangebox-text chrichtext orangebg">
+                    @Html.Raw(item.rteValue)
+                    <div class="exclaimation-mark excmark-svgwidth"></div>
+                </div>
+            </div>
+        }
+    }
+    <div class="clear"></div>
+
+</div>
