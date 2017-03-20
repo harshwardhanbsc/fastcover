@@ -1,0 +1,179 @@
+﻿<div ng-controller="CHControls.MultipleMediaController3" class="textboxwithheadingoptionalhorizontalimagecontainer">
+    <div class="textboxwithheadingoptionalhorizontalimageheadingtopcontainer">
+        <div class="textboxwithheadingoptionalhorizontalimageheading">
+            Heading<input type="text" ng-model="control.value.heading" />
+        </div>
+        <div class="fourimages smallimage">
+            <span>Small Image</span>
+            <br />
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('smallimage')" ng-if="control.value == null || control.value.images == null || control.value.images.smallimage == null" style="width: 100%;">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">Small Image <br />(Optional)</div>
+            </div>
+            <div ng-if="control.value.images != null && control.value.images.smallimage != null">
+                <div class="imggrid4wide">
+                    <img ng-click="setImage('smallimage')"
+                         ng-src="{{control.value.images.smallimage.image}}"
+                         class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('smallimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="textboxwithheadingoptionalhorizontalimageheadingbottomcontainer">
+        Content
+        <br />
+        <br />
+        <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+            <div grid-rte
+                 configuration="control.editor.config.textboxwithheadingoptionalhorizontalimagertetoolbar"
+                 value="control.rteValue"
+                 unique-id="control.$uniqueId"
+                 on-link-picker-click="vm.openLinkPicker"
+                 on-media-picker-click="vm.openMediaPicker"
+                 on-embed-click="vm.openEmbed"
+                 on-macro-picker-click="vm.openMacroPicker">
+            </div>
+            <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                         model="vm.linkPickerOverlay"
+                         position="right"
+                         view="vm.linkPickerOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                         model="vm.mediaPickerOverlay"
+                         position="right"
+                         view="vm.mediaPickerOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.embedOverlay.show"
+                         model="vm.embedOverlay"
+                         position="right"
+                         view="vm.embedOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                         model="vm.macroPickerOverlay"
+                         view="vm.macroPickerOverlay.view"
+                         position="right">
+            </umb-overlay>
+        </div>
+        <ul class="image">
+            <li class="fourimages">
+                <br />
+                <span>Image 1</span>
+                <br />
+                <br />
+                <div class="usky-editor-placeholder imagegrid" ng-click="setImage('image1')" ng-if="control.value == null || control.value.images == null || control.value.images.image1 == null" style="width: 100%;">
+                    <i class="icon icon-picture"></i>
+                    <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">Image 1 <br />(Optional)</div>
+                </div>
+
+                <div ng-if="control.value.images != null && control.value.images.image1 != null">
+                    <div class="imggrid4wide">
+                        <img ng-click="setImage('image1')"
+                             ng-src="{{control.value.images.image1.image}}"
+                             class="fullSizeImage" />
+                        <a href class="picked-image" ng-click="removeImage('image1')"><i class="icon icon-delete"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="fourimages">
+                <br />
+                <span>Image 2</span>
+                <br />
+                <br />
+                <div class="usky-editor-placeholder imagegrid" ng-click="setImage('image2')" ng-if="control.value == null || control.value.images == null || control.value.images.image2 == null" style="width: 100%;">
+                    <i class="icon icon-picture"></i>
+                    <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">Image 2 <br />(Optional)</div>
+                </div>
+
+                <div ng-if="control.value.images != null && control.value.images.image2 != null">
+                    <div class="imggrid4wide">
+                        <img ng-click="setImage('image2')"
+                             ng-src="{{control.value.images.image2.image}}"
+                             class="fullSizeImage" />
+                        <a href class="picked-image" ng-click="removeImage('image2')"><i class="icon icon-delete"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="fourimages">
+                <br />
+                <span>Image 3</span>
+                <br />
+                <br />
+                <div class="usky-editor-placeholder imagegrid" ng-click="setImage('image3')" ng-if="control.value == null || control.value.images == null || control.value.images.image3 == null" style="width: 100%;">
+                    <i class="icon icon-picture"></i>
+                    <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">Image 3 <br />(Optional)</div>
+                </div>
+
+                <div ng-if="control.value.images != null && control.value.images.image3 != null">
+                    <div class="imggrid4wide">
+                        <img ng-click="setImage('image3')"
+                             ng-src="{{control.value.images.image3.image}}"
+                             class="fullSizeImage" />
+                        <a href class="picked-image" ng-click="removeImage('image3')"><i class="icon icon-delete"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="fourimages">
+                <br />
+                <span>Image 4</span>
+                <br />
+                <br />
+                <div class="usky-editor-placeholder imagegrid" ng-click="setImage('image4')" ng-if="control.value == null || control.value.images == null || control.value.images.image4 == null" style="width: 100%;">
+                    <i class="icon icon-picture"></i>
+                    <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">Image 4 <br />(Optional)</div>
+                </div>
+
+                <div ng-if="control.value.images != null && control.value.images.image4 != null">
+                    <div class="imggrid4wide">
+                        <img ng-click="setImage('image4')"
+                             ng-src="{{control.value.images.image4.image}}"
+                             class="fullSizeImage" />
+                        <a href class="picked-image" ng-click="removeImage('image4')"><i class="icon icon-delete"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="fourimages">
+                <br />
+                <span>Image 5</span>
+                <br />
+                <br />
+                <div class="usky-editor-placeholder imagegrid" ng-click="setImage('image5')" ng-if="control.value == null || control.value.images == null || control.value.images.image5 == null" style="width: 100%;">
+                    <i class="icon icon-picture"></i>
+                    <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">Image 5 <br />(Optional)</div>
+                </div>
+
+                <div ng-if="control.value.images != null && control.value.images.image5 != null">
+                    <div class="imggrid4wide">
+                        <img ng-click="setImage('image5')"
+                             ng-src="{{control.value.images.image5.image}}"
+                             class="fullSizeImage" />
+                        <a href class="picked-image" ng-click="removeImage('image5')"><i class="icon icon-delete"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="fourimages">
+                <br />
+                <span>Image 6</span>
+                <br />
+                <br />
+                <div class="usky-editor-placeholder imagegrid" ng-click="setImage('image6')" ng-if="control.value == null || control.value.images == null || control.value.images.image6 == null" style="width: 100%;">
+                    <i class="icon icon-picture"></i>
+                    <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                        Image 6 <br />(Optional)
+                    </div>
+                </div>
+
+                <div ng-if="control.value.images != null && control.value.images.image6 != null">
+                    <div class="imggrid4wide">
+                        <img ng-click="setImage('image6')"
+                             ng-src="{{control.value.images.image6.image}}"
+                             class="fullSizeImage" />
+                        <a href class="picked-image" ng-click="removeImage('image6')"><i class="icon icon-delete"></i></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>

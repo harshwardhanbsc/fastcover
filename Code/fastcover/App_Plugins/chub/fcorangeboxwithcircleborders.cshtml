@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string topimage = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.image : null;
+    string bottomimage = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.image : null;
+    string topimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.altText : null;
+    string bottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.altText : null;
+}
+<div class="orangeboxwithcircleborderarea ">
+    <div class="circlesvg topeat">
+        <img src="@topimage" alt="@topimageAlttext" />
+    </div>
+    <h2>@Model.heading</h2>
+    <div class="ectext chrichtext">
+        @Html.Raw(Model.rteValue)
+    </div>
+    <div class="circlesvg bottomeat">
+        <img src="@bottomimage" alt="@bottomimageAlttext" />
+    </div>
+</div>

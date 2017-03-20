@@ -1,0 +1,193 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    String topimage = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.image : null;
+    var inputs = Model["inputs"];
+}
+<div class="diseasesarea">
+    <div class="headingbg">
+        <img src="@topimage" />
+    </div>
+    <div class="contentbox">
+        @foreach (var input in inputs)
+        {
+            <div class="fullwidthbox">
+                <div class="topcontent chrichtext">
+                    @Html.Raw(input.topcontent)
+                </div>
+            </div>
+            string diimage1 = (input.diimage1 != null) ? input.diimage1.image : null;
+            string diimage2 = (input.diimage2 != null) ? input.diimage2.image : null;
+            string diimage3 = (input.diimage3 != null) ? input.diimage3.image : null;
+            string diimage4 = (input.diimage4 != null) ? input.diimage4.image : null;
+            string diimage1Text = input.diimage1text ?? null;
+            string diimage2Text = input.diimage2text ?? null;
+            string diimage3Text = input.diimage3text ?? null;
+            string diimage4Text = input.diimage4text ?? null;
+            string diimage1AltText = (input.diimage1 != null) ? input.diimage1.altText : null;
+            string diimage2AltText = (input.diimage2 != null) ? input.diimage2.altText : null;
+            string diimage3AltText = (input.diimage3 != null) ? input.diimage3.altText : null;
+            string diimage4AltText = (input.diimage4 != null) ? input.diimage4.altText : null;
+            <div class="diseasebox">
+                @if ((!string.IsNullOrEmpty(diimage1) || !string.IsNullOrEmpty(diimage1Text)) && (!string.IsNullOrEmpty(diimage2) || !string.IsNullOrEmpty(diimage2Text)) && (!string.IsNullOrEmpty(diimage3) || !string.IsNullOrEmpty(diimage3Text)) && (!string.IsNullOrEmpty(diimage4) || !string.IsNullOrEmpty(diimage4Text)))
+                {
+                    <div class="table">
+                        @if (!string.IsNullOrEmpty(diimage1) || !string.IsNullOrEmpty(diimage1Text))
+                    {
+                            <div class="td">
+                                <div class="dis-icon single-icon">
+                                    <img src="@diimage1" alt="@diimage1AltText" />
+                                </div>
+                                <p>@diimage1Text</p>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(diimage2) || !string.IsNullOrEmpty(diimage2Text))
+                    {
+                            <div class="td">
+                                <div class="dis-icon single-icon">
+                                    <img src="@diimage2" alt="@diimage2AltText" />
+                                </div>
+                                <p>@diimage2Text</p>
+                            </div>
+                        }
+                        <div class="clear"></div>
+                        @if (!string.IsNullOrEmpty(diimage3) && !string.IsNullOrEmpty(diimage3Text) && !string.IsNullOrEmpty(diimage4) && !string.IsNullOrEmpty(diimage4Text))
+                    {
+                        if (!string.IsNullOrEmpty(diimage3) || !string.IsNullOrEmpty(diimage3Text))
+                        {
+                                <div class="td">
+                                    <div class="dis-icon single-icon">
+                                        <img src="@diimage3" alt="@diimage3AltText" />
+                                    </div>
+                                    <p>@diimage3Text</p>
+                                </div>
+                            }
+                            if (!string.IsNullOrEmpty(diimage4) || !string.IsNullOrEmpty(diimage4Text))
+                            {
+                                <div class="td">
+                                    <div class="dis-icon single-icon">
+                                        <img src="@diimage4" alt="@diimage4AltText" />
+                                    </div>
+                                    <p>@diimage4Text</p>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+
+                            if (!string.IsNullOrEmpty(diimage3) || !string.IsNullOrEmpty(diimage3Text))
+                            {
+                                <div class="td single">
+                                    <div class="dis-icon single-icon">
+                                        <img src="@diimage3" alt="@diimage3AltText" />
+                                    </div>
+                                    <p>@diimage3Text</p>
+                                </div>
+                            }
+                            if (!string.IsNullOrEmpty(diimage4) || !string.IsNullOrEmpty(diimage4Text))
+                            {
+                                <div class="td single">
+                                    <div class="dis-icon single-icon">
+                                        <img src="@diimage4" alt="@diimage4AltText" />
+                                    </div>
+                                    <p>@diimage4Text</p>
+                                </div>
+                            }
+
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="table threebox">
+                        @if (!string.IsNullOrEmpty(diimage1) || !string.IsNullOrEmpty(diimage1Text))
+                    {
+                            <div class="td">
+                                <div class="dis-icon single-icon">
+                                    <img src="@diimage1" alt="@diimage1AltText" />
+                                </div>
+                                <p>@diimage1Text</p>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(diimage2) || !string.IsNullOrEmpty(diimage2Text))
+                    {
+                            <div class="td">
+                                <div class="dis-icon single-icon">
+                                    <img src="@diimage2" alt="@diimage2AltText" />
+                                </div>
+                                <p>@diimage2Text</p>
+                            </div>
+                        }
+                        <div class="clear"></div>
+                        @if (!string.IsNullOrEmpty(diimage3) && !string.IsNullOrEmpty(diimage3Text) && !string.IsNullOrEmpty(diimage4) && !string.IsNullOrEmpty(diimage4Text))
+                    {
+                        if (!string.IsNullOrEmpty(diimage3) || !string.IsNullOrEmpty(diimage3Text))
+                        {
+                                <div class="td">
+                                    <div class="dis-icon single-icon">
+                                        <img src="@diimage3" alt="@diimage3AltText" />
+                                    </div>
+                                    <p>@diimage3Text</p>
+                                </div>
+                            }
+                            if (!string.IsNullOrEmpty(diimage4) || !string.IsNullOrEmpty(diimage4Text))
+                            {
+                                <div class="td">
+                                    <div class="dis-icon single-icon">
+                                        <img src="@diimage4" alt="@diimage4AltText" />
+                                    </div>
+                                    <p>@diimage4Text</p>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+
+                            if (!string.IsNullOrEmpty(diimage3) || !string.IsNullOrEmpty(diimage3Text))
+                            {
+                                <div class="td single">
+                                    <div class="dis-icon single-icon">
+                                        <img src="@diimage3" alt="@diimage3AltText" />
+                                    </div>
+                                    <p>@diimage3Text</p>
+                                </div>
+                            }
+                            if (!string.IsNullOrEmpty(diimage4) || !string.IsNullOrEmpty(diimage4Text))
+                            {
+                                <div class="td single">
+                                    <div class="dis-icon single-icon">
+                                        <img src="@diimage4" alt="@diimage4AltText" />
+                                    </div>
+                                    <p>@diimage4Text</p>
+                                </div>
+                            }
+
+                        }
+                    </div>
+                }
+
+            </div>
+            <div class="clear"></div>
+            <div class="commonbox">
+                <h3>@input.symptonsheading</h3>
+                <div class="ul">
+                    @foreach (var symptonsimage in input.symptonsimages)
+                {
+                        <div class="li">
+                            @symptonsimage.diseasename
+                            <span><img src="@symptonsimage.image" alt="@symptonsimage.altText" /></span>
+                        </div>
+                    }
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="bottomcontent chrichtext">
+                @Html.Raw(input.bottomcontent)
+            </div>
+            if (!input.Equals(inputs.Last))
+            {
+                <div class="hline"></div>
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,450 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: "MetaPro";
+  src: url("../fonts/MetaPro/MetaProBlack.eot");
+  src: url("../fonts/MetaPro/MetaProBlack.eot?#iefix") format('embedded-opentype'), url("../fonts/MetaPro/MetaProBlack.woff") format('woff'), url("../fonts/MetaPro/MetaProBlack.ttf") format('truetype'), url("../fonts/MetaPro/MetaProBlack.svg#MetaPro") format('svg');
+  font-weight: 900; }
+
+@font-face {
+  font-family: "MetaPro-Bold";
+  src: url("../fonts/MetaPro/MetaProBold.eot");
+  src: url("../fonts/MetaPro/MetaProBold.eot?#iefix") format('embedded-opentype'), url("../fonts/MetaPro/MetaProBold.woff") format('woff'), url("../fonts/MetaPro/MetaProBold.ttf") format('truetype'), url("../fonts/MetaPro/MetaProBold.svg#MetaPro-Bold") format('svg');
+  font-weight: normal; }
+
+@font-face {
+  font-family: "MetaPro";
+  src: url("../fonts/MetaPro/MetaProBold.eot");
+  src: url("../fonts/MetaPro/MetaProBold.eot?#iefix") format('embedded-opentype'), url("../fonts/MetaPro/MetaProBold.woff") format('woff'), url("../fonts/MetaPro/MetaProBold.ttf") format('truetype'), url("../fonts/MetaPro/MetaProBold.svg#MetaPro") format('svg');
+  font-weight: bold; }
+
+@font-face {
+  font-family: "MetaPro";
+  src: url("../fonts/MetaPro/MetaProBook.eot");
+  src: url("../fonts/MetaPro/MetaProBook.eot?#iefix") format('embedded-opentype'), url("../fonts/MetaPro/MetaProBook.woff") format('woff'), url("../fonts/MetaPro/MetaProBook.ttf") format('truetype'), url("../fonts/MetaPro/MetaProBook.svg#MetaPro") format('svg');
+  font-weight: 300; }
+
+@font-face {
+  font-family: "MetaPro";
+  src: url("../fonts/MetaPro/MetaProMedium.eot");
+  src: url("../fonts/MetaPro/MetaProMedium.eot?#iefix") format('embedded-opentype'), url("../fonts/MetaPro/MetaProMedium.woff") format('woff'), url("../fonts/MetaPro/MetaProMedium.ttf") format('truetype'), url("../fonts/MetaPro/MetaProMedium.svg#MetaPro") format('svg');
+  font-weight: 500; }
+
+@font-face {
+  font-family: "MetaPro";
+  src: url("../fonts/MetaPro/MetaProNormal.eot");
+  src: url("../fonts/MetaPro/MetaProNormal.eot?#iefix") format('embedded-opentype'), url("../fonts/MetaPro/MetaProNormal.woff") format('woff'), url("../fonts/MetaPro/MetaProNormal.ttf") format('truetype'), url("../fonts/MetaPro/MetaProNormal.svg#MetaPro") format('svg');
+  font-weight: normal; }
+  
+
+body {
+  font: 18px/22px 'MetaPro', sans-serif;
+  color: #24201f;
+  background: #f0f0f0;
+  position: relative;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none; }
+
+.controlarea{max-width:1170px; width:100%; padding:0px 15px; margin:auto; display:block; clear:both;}
+.taxibox{margin-left:80px; padding:20px 20px 20px 180px; display:block; border:3px #f1592a solid; background:#fff; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; position:relative;}
+.taxititle{font-size: 60px;display: block;text-align: right;color: #eb511d;line-height: 38px;font-weight: 800;text-transform: uppercase;letter-spacing: 10px;margin-top: 50px; margin-right:20px;}
+.taxibox .taxi{max-width:240px;width:100%; height:114px; background:url("../img/taxi.png") no-repeat; background-size:cover;position: absolute;top: -47px; left: -80px;}
+.taxibox ul{margin-left:20px;}
+.taxibox ul li:before{width:5px; height:5px;    background-color: #6d6e71; top:7px;}
+.taxibox ul li,.taxibox p{font-size:18px;    color: #6d6e71;}
+.clear{ clear:both;}
+.scamstitle{background: #eb4f1d;border: 2px #a6a6a6 solid;color: #fff;padding: 15px;font-weight: 800;font-size: 40px;letter-spacing: 8px;width: 100%;margin:50px auto 0;max-width: 665px;text-align: center;border-top-left-radius: 15px;border-top-right-radius: 15px;}
+.scamsinbali{ background:#eb4f1d;max-width:890px; width:100%; margin:0px auto 50px; position:relative; display:block; -webkit-border-radius:25px; -moz-border-radius:25px; border-radius:25px; overflow:hidden; }
+.scamsinbali .scamsbox{ display:block; clear:both; position:relative;}
+.scamsinbali .scamsbox .lightgrey{padding:0 20px; position:relative; color:#fff; background:#a6a6a6;    height: 175px;}
+.scamsinbali .scamsbox .lightgrey ul{display:block; position:relative; margin:0; padding:0; list-style:none;}
+.scamsinbali .scamsbox .lightgrey ul li{width:33.3%; float:left;}
+.scamsinbali .scamsbox .lightgrey ul li .nbr{font-size: 155px;font-weight: 700;font-family: sans-serif;line-height: 175px;}
+.scamsinbali .scamsbox .lightgrey ul li .txt{font-size: 26px;text-align: right;font-weight: 500;line-height: 30px;letter-spacing: 4px; margin-top:55px;}
+.scamsinbali .scamsbox:first-child .lightgrey ul li .svgwidth{ margin-top:0px;}
+.scamsinbali .scamsbox:nth-child(1) .lightgrey ul li .txt,
+.scamsinbali .scamsbox:nth-child(2) .lightgrey ul li .txt{margin-top:45px;}
+.scamsinbali .scamsbox:first-child .orangebox-text{padding: 40px 20px; }
+.orangebox-text{ display:block; clear:both;    padding: 40px 170px 40px 20px;  position:relative;}
+.bdrbtm{border-bottom: 3px #f0f0f0 solid;}
+.orangebox-text ul,
+.balibelly .contentarea ul,.ulbullet ul{margin-left:20px;}
+.orangebox-text ul li:before,
+.balibelly .contentarea ul li:before,
+.ulbullet ul li:before{width:5px; height:5px;    background-color: #fff; top:7px;}
+.orangebox-text ul li,.orangebox-text p{color: #fff;}
+.orangebox-text p{ text-align:justify;}
+.darkgrey{background:#464646 !important;}
+
+.eatcleanarea{background:#eb4f1d;max-width:850px; width:100%; margin:100px auto; position:relative; display:block;padding: 100px 0px 76px 0px;}
+.circlesvg{margin:0 -8px;padding: 0;width: 865px;display: block;overflow: hidden; position:absolute;}
+.circlesvg.topeat{top:-65px;}
+.circlesvg.bottomeat{bottom:-65px;}
+
+
+.eatcleanarea .circlesvg .eat-svgwidth{width:145px; height:145px; margin-left:-1px;}
+.eatcleanarea .circlesvg .eat-svg{background:url("../img/circle.png") no-repeat; background-size:cover;}
+.eatcleanarea .circlesvg .eat-svgwidth{float:left;}
+.eatcleanarea .circlesvg .eat-svgwidth:first-child{margin-left:0px;}
+
+
+.eatcleanarea h2{ font-size:50px; font-weight:700; text-align:center; color:#fff; background:#636363; padding:40px 0px;    letter-spacing: 4px;}
+.ectext{padding:20px; color:#fff;}
+.ectext ul{margin-left:20px;}
+.ectext ul li:before{width:5px; height:5px;    background-color: #fff; top:7px;}
+
+.balibelly{ border-radius:20px; position:relative; display:block; clear:both; background:#eb4f1d; max-width:945px; width:100%; margin:140px auto 100px;}
+.balibelly h2{font-size: 46px;font-weight: 700;text-align: center;color: #fff;background: #6d6e71;padding: 12px 0 8px;text-transform: uppercase;letter-spacing: 5px;line-height: 45px;
+border-top-left-radius:20px; border-top-right-radius:20px; border-bottom:3px #fff solid;}
+.balibelly h2 span{width:50%; display:inline-block;}
+.balibelly h2 span:first-child{padding-right:75px; text-align:right;}
+.balibelly h2 span:last-child{padding-left:82px; text-align:left;}
+.balibelly .balibellysvg{width:150px; height:195px;background:url("../img/balibelly.png") no-repeat; background-size:cover;    
+display: inline-block; position:absolute; left:0; right:0; margin:auto; top:-127px;}
+.balibelly .bellysvg1{ margin-right:10%;margin-left:33%; width:100px; height:90px; display:inline-block;background: url(../img/bellymedication.png)  no-repeat; background-size:cover;}
+.balibelly .bellysvg2{ margin-right:30%;width:70px; height:100px; display:inline-block;background: url(../img/western-toilet.png) no-repeat; background-size:cover;}
+.balibelly .contentarea{ padding:20px; display:block; color:#fff;}
+
+.infocircle{width:1000px; height:1000px; margin:50px auto;background: url(../img/infocircle.png) no-repeat;background-size:cover;    padding: 104px 145px;}
+.circleinjection{width:140px; height:140px; margin:auto;background: url(../img/circle-injection.png) no-repeat;background-size:cover;}
+.circleclose{position:relative;width:180px; height:180px; margin:30px auto 0;background: url(../img/close.png) no-repeat;background-size:cover;}
+.infocircle h2{ font-size:30px;font-weight:700; text-align:center; color:#eb501c;    line-height: 50px; margin-top: 20px;}
+.infocircle .text{padding:20px; margin:auto; color:#6d6e71;}
+.infocircle .circleclose:after{content: ""; width: 200px;left: -192px;height: 1px;background: #f9af96;position: absolute;top: 88px;z-index: 999;}
+.infocircle .circleclose:before{content: "";width: 200px;right: -192px;height: 1px;background: #f9af96;position: absolute;top: 88px;z-index: 999;}
+.ulbullet ul li:before{background:#6d6e71 !important;}
+
+.lgbtqarea{position:relative;max-width: 950px; width:100%;margin:70px auto 30px;}
+.lgbtqarea .lgbtq{border: 3px #eb511d solid;border-top-left-radius: 20px;border-top-right-radius: 20px;padding: 50px 60px;background: #fff;color: #6d6e71;font-weight: 700;}
+.lgbtqarea .lgbtq h2{font-size: 36px; text-align: center;font-weight: 700; color: #eb511d; margin: 0;padding-top:45px;}
+.lgbtqarea .lgbtqsvgcircle{background: url(../img/lgbtq.png) no-repeat;background-size:cover; height:150px; width:150px; margin:auto;    position: absolute;
+    top: -68px;left: 0;right: 0;}
+.lgbtqarea .lgbtq p{font-weight:300;}
+.lgbtqarea .lgbtqlover{background: url(../img/lgbtq-lover.png) no-repeat;background-size:contain;width:100%; height:145px; position:relative; display:block;}
+
+.exclaimation-mark{background: url(../img/exclaimationmark.svg) 26.9% 12% no-repeat;background-size: 100%;}
+.excmark-svgwidth{width: 130px;height:130px;position: absolute;z-index: 99;right:10px;bottom:0px;}
+.scamsinbali .scamsbox .lightgrey ul li .svgwidth{width:200px; height:200px;margin: -9px auto -10px;}
+.svgicon{background:url("../img/stacked.png") no-repeat; background-size:cover;}
+.corruptpolice{background:url("../img/corruptpolice.png") no-repeat; background-size:cover;}
+
+.cornerbox1{background:#eb4f1d; border:3px #eb4f1d solid; border-radius:15px; position:relative; margin:30px auto; max-width:945px; width:100%; padding:0 50px 40px 135px;}
+.cornerbox1 h2{background:#6d6e71; color:#fff; font-size:36px; font-weight:700; text-align:left; border-top-left-radius:15px; border-top-right-radius:15px;margin-left:-135px;padding-left:140px;padding-top: 13px;}
+.cornerbox1 h3{color:#fff;}
+.cornerbox1 p,.cornerbox1 ul li{color:#fff;}
+.cornerbox1 ul li:before,.cornerbox2 .textbox ul li:before {background: #ffffff !important;}
+.cornersvg1,.cornersvg2,.cornersvg3,.cornersvg4{position: absolute;}
+.cornersvg1{background:url("../img/orangebox1.png") no-repeat; background-size:cover; width:172px; height:160px;left: -35px;top: -20px;}
+.cornersvg2{background:url("../img/orangebox2.png") no-repeat; background-size:cover;width:140px; height:170px;right: -16px;top: -20px;}
+.cornersvg3{background:url("../img/orangebox3.png") no-repeat; background-size:cover;width:165px; height:206px;left: -25px;bottom: -25px;}
+.cornersvg4{background:url("../img/orangebox4.png") no-repeat; background-size:cover;width:238px; height:145px;right: 50px;bottom: -62px;}
+
+.cornerbox2{color:#fff;background:#eb4f1d; border-radius:15px;position:relative; margin:100px auto 30px; max-width:945px; width:100%;}
+.cornerbox2 h2{background:#6d6e71; color:#fff; font-size:36px; font-weight:700; text-align:left; border-top-left-radius:15px; border-top-right-radius:15px;padding-left:25px;padding-top: 10px; border:3px #fff solid;}
+.cornerbox2 .textbox{padding:40px;}
+.conner2svg{background:url("../img/cornbox2icon.png") no-repeat; background-size:cover;width:155px;height:155px;right:-39px;position: absolute; top: -58px;}
+
+.balibelly .partycircle{width:150px; height:150px;background:url("../img/party-circle.png") no-repeat; background-size:cover;    
+display: inline-block; position:absolute; left:0; right:0; margin:auto; top:-66px;}
+.balibelly .partysvg{width:125px; height:125px;background:url("../img/partysvg.png") no-repeat; background-size:cover;display: inline-block; position:absolute; top:67px;}
+.balibelly .partysvg.left{left:0;}
+.balibelly .partysvg.right{right:5px;}
+.balibelly h3{color: #fff;text-align: center;font-size: 28px;padding: 45px 0;}
+.balibelly.partysec h2{font-size:36px;}
+.balibelly.partysec ul li,.balibelly.partysec p{font-size:18px;}
+.balibelly.partysec .partycrowd{ height:380px; width:101%;background:url("../img/partycrowd.png") no-repeat; background-size:cover; display:block; position:absolute; bottom:-50px;left:-5px; right:-5px;}
+.balibelly.partysec .contentarea{    padding: 20px 20px 350px 20px;}
+.dwidth{max-width: 945px; width: 100%; position:relative; display:block; clear:both; margin:30px auto;}
+.piercing{border:3px #eb5024 solid; background:#fff; margin-top:200px; margin-bottom:60px; }
+.piercingtop{background:url("../img/piercing1.png") no-repeat; background-size:cover; width:440px; height:370px; margin:auto; margin-top: -172px;}
+.piercingsvg1{width:70px; height:47px; position:absolute;background:url("../img/piercing2.png") no-repeat; background-size:cover; }
+.piercingsvg1.ltrtp{top:-35px; left:10px; transform: rotate(-180deg);}
+.piercingsvg1.rltbtm{bottom:-35px; right:10px;   }
+.piercing .contentarea{text-align: center; padding: 40px 90px;}
+.piercing .contentarea h2{color:#f1592a; font-size:36px;}
+.piercing .contentarea p{color:#868689; font-size:18px;}
+.piercing .piercinstick{background:url("../img/piercing-stick.png") no-repeat; background-size:cover; position:absolute; width:21px; height:500px; z-index:99; }
+.piercing .piercinstick.right{transform: rotate(-180deg); right: -10px;top: 0;}
+.piercing .piercinstick.left{left: -10px;bottom: -3px;}
+.stackedbox,.sti{max-width:1170px; width:100%; margin:30px auto; position:relative; display:block;}
+.stackedbox .stackedleft,.stackedbox .stackedright{float:left; min-height:300px; position:relative;}
+.stackedbox .stackedleft{width:80%; background:#eb4f1d; border-radius:15px; border-top-left-radius: 0; padding:20px; color:#fff;}
+.stackedbox .stackedleft ul{padding-top:0px; padding-left:20px;}
+.stackedbox .stackedleft ul li:before{width: 5px;height: 5px; background-color: #fff;top: 7px;}
+.stackedbox .stackedright{width:20%;}
+.stackedright .scooter{background:url("../img/scooter.png") no-repeat; background-size:cover;height: 300px;width: 130px;margin: auto;position: absolute;left: 0;right: 0;bottom: 0;top: 0;}
+.stacktitle{border: 3px #eb4f1d solid;border-radius: 10px;background: #fff;color: #6d6e71;width: 285px;
+    font-size: 30px;font-weight: 700;letter-spacing: 3px;line-height: 30px;border-bottom-left-radius: 0;padding: 10px;}
+.stackedbox1 .stacktitle{width:320px;}
+.stackedbox1 .stackedright .scooter{background:url("../img/safetyroad.png") no-repeat; background-size:cover;height: 216px;width: 100%;margin: auto;position: absolute; left: 0;right: 0;bottom: 0;top: inherit;}
+.stackedbox.lostpassport .stackedleft {width:100%;}
+.passportsvg{background:url("../img/passport.png") no-repeat; background-size:cover;height:280px;width:209px;max-width: 20%;float: left;}
+.stackedbox.lostpassport .stacktitle{width:245px;}
+.stackedbox.lostpassport .stackedleft ul,
+.stackedbox.lostpassport .stackedleft p{width:70%; float:left; margin-right:10%;}
+.stackedbox.lostpassport .stackedleft p,.stackedbox.lostpassport .stackedleft ul li{font-size:20px;letter-spacing:0;}
+.stackedbox.lostpassport .stackedleft ul{margin-top:40px;}
+.staysafe{ background:#eb4f1d; color:#fff; min-height:630px;}
+.staysafe:before {content:"";background:url("../img/staysafe.png") no-repeat;background-size: contain;width: 200px;height: 106%;position: absolute;top: -20px;bottom: -20px;left: -70px;}
+.staysafe ul li:before,.sti ul li:before {background: #fff !important;}
+.staysafe .contentarea{padding:40px 120px;}
+.staysafe .stayheading{background: #6d6e71;margin:15px -120px;padding-left: 150px;font-size: 150px;text-transform: uppercase;font-weight: 700;line-height: 140px;padding-top: 11px;}
+.staysafe .stayheading .exclaimationmark{background: url(../img/exclaimationmark.svg) 26.9% 12% no-repeat;background-size: 100%;
+    width: 120px;height: 106px;position: relative; z-index: 99;display: inline-block;}
+.staysafe .contentarea ul:last-child{ padding-top:0px; padding-left:35px;}
+.staysafe .staydrinksvg{background: url(../img/staydrink.png) no-repeat;background-size:cover;position: absolute;width: 138px;height: 316px;right: -38px;z-index: 99;top: -33px;}
+.staysafe .staydeathsvg{background: url(../img/staydeath.png) no-repeat;background-size:cover;position: absolute;
+    width: 200px;height: 78px;right: -3px;z-index: 99;bottom: -15px;}
+.stiarea{position: relative;display: block;overflow: hidden;height: 765px;}
+.sti{background:#eb4f1d;color:#fff; min-height:718px; margin-top:50px;}
+.sti:before{content:"";background:url("../img/curveimg.png") bottom no-repeat;background-size: cover;height:70px;width: 102%;z-index: 99;display: block; margin:0px -10px;}
+.sti:after{content: "";position: absolute;bottom: -120px;width: 117%;height: 203px;border-radius: 47%;background: #f0f0f0;margin: 0 0 0 -112px;}
+.sti .rightbdr{content: "";position: absolute;right:-24px;bottom:0px; top:0;width:40px;height:100%;border-radius:100%;background: #f0f0f0;}
+.womenbottom{background:url("../img/womentbottom.png") no-repeat;background-size: cover;height: 700px;width: 225px;margin-top: -72px;margin-left: -46px;position: absolute;z-index: 9;}
+.sti .contentarea{padding:0px 30px 60px 220px; }
+.sti .contentarea p,.sti .contentarea ul li{font-size:18px; line-height:1.5em; letter-spacing:0;}
+.sti .contentarea ul{ margin-top:30px; margin-bottom:30px;}
+.sti .contentarea ul li{font-weight:500;}
+.sti .stiheading{background: #636363;color: #fff;position: relative;display: block;font-size: 36px;font-weight: 700;line-height:80px; margin:50px 0px 30px 0px;padding-left: 220px;}
+.sti .sticonsvg{background:url("../img/sticon.png") no-repeat;background-size: cover;height:170px;width:170px;right: 12px; position: absolute; z-index: 9;bottom:24px;}
+.sti .sticurrency{background:url("../img/dollars.png") no-repeat;background-size: cover;height:145px;width:180px;position: absolute; z-index: 9;top:-44px;left:216px}
+.waterboxarea{background:url("../img/waterdrop.png") no-repeat;background-size: contain;    background-position: 50% 100%; padding-bottom:150px;}
+.waterboxarea .drinksvg{background:url("../img/drink.png") no-repeat;background-size: cover;width:293px; height:210px; margin:auto; position:relative; display:block; clear:both;}
+.waterboxarea .waterbox{background:#fff;max-width:650px; text-align:justify;width: 100%;position: relative;display: block;margin:auto;overflow: hidden;border: 4px #eb5024 solid;border-radius: 15px;}
+.waterboxarea .waterbox h2{background: #eb5024;color: #fff;line-height: 60px;text-align: center;font-size: 36px;font-weight: 700;letter-spacing: 3px;}
+.waterboxarea .waterbox .contentarea{padding:30px;}
+.waterboxarea .waterbox .contentarea p{color: #6d6e71;letter-spacing: 0;font-weight: 500;}
+
+
+
+@media only screen and (min-width:768px) and (max-width:991px){
+	.scamsinbali{max-width:720px;}
+	.excmark-svgwidth{width:60px; height:60px;}
+	.orangebox-text{padding: 40px 60px 40px 20px;}
+	.eatcleanarea{max-width:670px;padding: 65px 0px 35px 0px;}
+	.eatcleanarea h2{letter-spacing:0px;}
+	.eatcleanarea .circlesvg .eat-svgwidth{width:115px; height:115px;}
+	.circlesvg{width:auto;}
+	.balibelly,.lgbtqarea{max-width:738px;}
+	.infocircle{width:700px; height:700px; padding:65px 100px;}
+	.circleinjection,.circleclose{height:80px; width:80px;}
+	.infocircle h2{margin-top:0px; font-size:30px;}
+	.infocircle .text{ padding:0px 20px;}
+	.circleclose{margin:10px auto 0;}
+	.infocircle .circleclose:after {width: 100px;left: -95px;top: 40px;}
+	.infocircle .circleclose:before {width: 100px;right: -95px;top: 40px;}
+	.lgbtqarea .lgbtq{padding: 35px 20px;}
+	.width768{max-width:700px;}
+	.conner2svg{right:-20px;}
+	.balibelly.partysec h2 {font-size: 26px;}
+	.balibelly h3{font-size:18px;}
+	.balibelly.partysec ul li, .balibelly.partysec p {font-size: 16px;}
+	.balibelly.partysec .partycrowd{height:295px;}
+	.balibelly.partysec .contentarea {padding: 20px 20px 250px 20px;}
+	.piercing .contentarea {padding: 40px;}
+	.stackedbox1 .stackedright .scooter{height: 130px;}
+	.passportsvg{height:180px;}
+	.stackedbox.lostpassport .stackedleft p, .stackedbox.lostpassport .stackedleft ul li {font-size: 16px;}
+	.staysafe .stayheading{font-size:90px; line-height:90px;}
+	.staysafe .stayheading .exclaimationmark{width:80px; height:70px;}
+	.staysafe .contentarea {padding: 15px 120px 40px;}
+	.sti .contentarea {padding: 0px 30px 20px 190px;}
+	.sti .stiheading{    margin: 50px 0px 15px 0px;}
+	.sti .sticurrency {height: 90px; width: 115px;top: 6px;left: 190px;}
+	.sti .contentarea p, .sti .contentarea ul li {font-size: 16px;line-height:22px;}
+	.sti .sticonsvg{height:130px; width:130px;}
+	.womenbottom {height: 660px; width: 200px; margin-top: -47px;}
+	
+	
+}
+@media only screen and (min-width:480px) and (max-width:767px){
+	.scamstitle{max-width:380px; font-size:30px; letter-spacing:1px;}
+	.scamsinbali,.lgbtqarea,.waterboxarea .waterbox{max-width:450px;}
+	.excmark-svgwidth{width:60px; height:60px;}
+	.eatcleanarea{max-width:420px;padding: 45px 0px 25px 0px;}
+	.eatcleanarea h2{letter-spacing:0px; font-size:30px;}
+	.eatcleanarea .circlesvg .eat-svgwidth{width:73px; height:73px;}
+	.circlesvg.topeat {top: -35px;}
+	.circlesvg.bottomeat {bottom: -32px;}
+	.circlesvg{width:auto;}
+	.balibelly{max-width:450px;    margin: 80px auto;}
+	.balibelly .balibellysvg{width:100px; height:130px; top:-60px;}
+	.balibelly .bellysvg2{margin-right:20%;}
+	.balibelly .bellysvg1{margin-left:20%;}
+	
+	.infocircle{width: 450px;height: auto;padding: 15px 40px;background: #fff;border: 3px #f1592a dotted;border-radius: 100%;}
+	.circleinjection,.circleclose{height:80px; width:80px;}
+	.infocircle h2{margin-top:0px; font-size:22px;}
+	.infocircle .text{ padding:0px 20px;}
+	.circleclose{margin:10px auto 0;}
+	.infocircle .circleclose:after {width: 70px;left: -65px;top: 40px;}
+	.infocircle .circleclose:before {width: 70px;right: -65px;top: 40px;}
+	.lgbtqarea .lgbtq{padding: 35px 20px;}
+	.lgbtqarea .lgbtq h2{font-size:26px;}
+	.width768{max-width:450px;}
+	.cornerbox1{padding: 0 14px 40px 65px;}
+	.cornerbox1 h2{margin-left: -68px;padding-left: 72px;}
+	.conner2svg{right:-20px;}
+	.cornersvg1 {width: 95px;height: 90px;left: -23px; top: -20px;}
+	.cornersvg2 {width: 80px;height: 95px;right: -12px;}
+	.cornersvg3 {width: 80px;height: 100px;left: -16px;bottom: -15px;}
+	.cornersvg4 {width: 130px; height: 79px; right: 15px; bottom: -38px;}
+	.conner2svg{width:100px; height:100px; top:-30px;}
+	.cornerbox2 h2,
+	.piercing .contentarea h2,
+	.waterboxarea .waterbox h2{font-size:24px;}
+	.piercing .contentarea p{font-size:16px;}
+	
+	.balibelly .partycircle{width:100px; height:100px; top:-20px;}
+	.balibelly.partysec h2 {font-size: 16px;}
+	.balibelly.partysec h2 span:first-child{padding-right:55px;}
+	.balibelly.partysec h2 span:last-child{padding-left:60px;}
+	.balibelly .partysvg{width:60px; height:60px;}
+	.balibelly h3{font-size:18px; padding:5px 50px;}
+	.balibelly.partysec ul li, .balibelly.partysec p {font-size: 16px;}
+	.balibelly.partysec .partycrowd{height:180px; left:-3px;}
+	.balibelly.partysec .contentarea {padding: 20px 20px 140px 20px;}
+	.piercing{margin-top:100px;}
+	.piercing .contentarea {padding: 40px;}
+	.piercingtop {width: 215px; height: 180px;margin-top: -85px;}
+	.piercing .piercinstick{height:425px;}
+	
+	.stackedbox1 .stackedright .scooter{height: 85px;}
+	.passportsvg{height:110px;}
+	.stackedbox.lostpassport .stackedleft p, .stackedbox.lostpassport .stackedleft ul li {font-size: 16px;}
+	.stackedright .scooter{height: 190px; width: 85px;}
+	.staysafe .stayheading{font-size: 70px;line-height: 70px;padding-left: 15px; margin: 15px -44px; padding-top: 0;}
+	.staysafe .stayheading .exclaimationmark{width: 52px;height: 45px}
+	.staysafe .contentarea {    padding: 15px 42px 40px;}
+	.staysafe:before {width: 85px; height: 26%;top: -20px;left: -28px;}
+	.staysafe{max-width:400px !important;}
+	.staysafe .staydrinksvg {width: 70px; height: 163px;right: -17px;top: 219px;}
+	.staysafe .contentarea ul:last-child {padding-left: 0px;}
+	.stiarea{height:690px;}
+	.sti {min-height:620px;}
+	.sti .sticurrency {height: 70px; width: 88px; top: -1px;}
+	.sti .contentarea p, .sti .contentarea ul li {font-size: 16px;line-height:22px;}
+	
+	.womenbottom {height: 100%;width: 205px;margin-top: -17px;margin-left: -27px;}
+	.sti .stiheading {font-size: 20px;line-height: 50px; margin-right: -10px;  margin-left:0px; padding-left: 200px;margin-bottom: 20px;}
+	
+	
+	
+}
+
+@media only screen and (max-width:767px){
+	.taxibox{padding:20px; margin-left:0px;}
+	.taxibox .taxi{position:relative; position: relative;margin: auto;top: 0;left: 0;margin-bottom: 20px;}
+	.orangebox-text ul{padding:0px;}
+	.orangebox-text{padding:20px 50px 20px 20px;}
+	.scamsinbali .scamsbox .lightgrey{height:90px;}
+	.scamsinbali .scamsbox .lightgrey ul li .svgwidth {width: 100px;height: 100px; margin: -6px auto -10px;}
+	.scamsinbali .scamsbox .lightgrey ul li .nbr {font-size: 90px; line-height: 95px;   }
+	.scamsinbali .scamsbox:nth-child(1) .lightgrey ul li .txt, .scamsinbali .scamsbox:nth-child(2) .lightgrey ul li .txt {margin-top: 12px;}
+	.scamsinbali .scamsbox .lightgrey ul li .txt {font-size: 18px;text-align: right;line-height: 22px;letter-spacing: 1px;margin-top:23px;}
+	.cornerbox1 h3{font-size:18px; letter-spacing:0px;}
+	.sti .contentarea{z-index:99;padding:10px 20px;    position: relative;}
+	.sti:before{height:30px;}
+	.sti:after {bottom: -60px; width: 106%;height: 90px; border-radius: 48%; margin: 0 0 0 -10px;}
+	.sti .contentarea ul {margin-top: 0px;margin-bottom: 10px;}
+	.sti .sticonsvg{height:90px; width:90px;bottom:0;}
+	
+}
+@media only screen and (min-width:320px) and (max-width:479px){
+	body{    min-width: initial;}
+	.scamstitle{max-width:250px; font-size:18px; letter-spacing:1px;}
+	.scamsinbali,.lgbtqarea,.waterboxarea .waterbox{max-width:300px;}
+	.excmark-svgwidth{width:60px; height:60px;}
+	.scamsinbali .scamsbox:first-child .orangebox-text { padding: 20px 10px 40px 10px;}
+	.orangebox-text { padding: 20px 50px 20px 10px;}
+	.scamsinbali .scamsbox .lightgrey{padding:0 10px;}
+	.scamsinbali .scamsbox .lightgrey ul li .txt{ letter-spacing:0px; font-size:16px;}
+	
+	.eatcleanarea{max-width:280px;    padding: 30px 0px 0px 0px;}
+	.eatcleanarea h2{letter-spacing:0px; font-size:20px; padding:15px 0px;}
+	.eatcleanarea .circlesvg .eat-svgwidth{width:49px; height:49px;}
+	.circlesvg.topeat {top: -25px;}
+	.circlesvg.bottomeat {bottom: -32px;}
+	.circlesvg{width:auto;    margin: 0 -5px;}
+	.balibelly{max-width:300px;    margin: 80px auto;}
+	.balibelly .balibellysvg{width:100px; height:130px; top:-60px;}
+	.balibelly h2{font-size:30px;}
+	.balibelly h2 span:last-child{ padding-left:50px;}
+	.balibelly h2 span:first-child{padding-right:50px;}
+	.balibelly .bellysvg2{margin-right:20%;}
+	.balibelly .bellysvg1{margin-left:3%;}
+	
+	.infocircle{width:290px;height: auto;padding: 15px;background: #fff;border: 3px #f1592a dotted;border-radius: 100%;}
+	.circleinjection,.circleclose{height:80px; width:80px;}
+	.infocircle h2{ margin-top: 0px; font-size: 22px; line-height: normal; width: 200px; margin: auto;}
+	.infocircle .text{ padding:0px 20px;}
+	.circleclose{margin:10px auto 0;}
+	.infocircle .circleclose:after {width: 25px;left: -15px;top: 40px;}
+	.infocircle .circleclose:before {width: 25px;right: -15px;top: 40px;}
+	.lgbtqarea .lgbtq{padding: 35px 20px; font-weight:300;}
+	.lgbtqarea .lgbtq h2{font-size:26px;}
+	.width768{max-width:290px;}
+	.cornerbox1{padding: 0 14px 40px 15px;}
+	.cornerbox1 h2{margin-left: -18px;padding-left: 39px;font-size: 24px;padding-bottom: 5px;margin-right: -17px;padding-top: 5px;}
+	.conner2svg{right:-20px;}
+	.cornersvg1 {width: 50px;height: 45px;left: -12px;top: -8px;}
+	.cornersvg2 {width: 40px;height: 50px;right: -8px;top: -8px;}
+	.cornersvg3 {width: 40px;height: 51px;left: -8px;bottom: -8px;}
+	.cornersvg4 {width: 80px;height: 48px;right: 10px;bottom: -20px;}
+	.conner2svg{width:70px; height:70px; top:-10px;}
+	.cornerbox2 h2{font-size:18px;}
+	.cornerbox2 .textbox {padding: 10px;}
+	
+	.balibelly .partycircle{width:60px; height:60px; top:-40px;}
+	.balibelly.partysec h2 {font-size: 16px;}
+	.balibelly.partysec h2 span{width:auto;}
+	.balibelly.partysec h2 span:first-child{padding-right:0px;}
+	.balibelly.partysec h2 span:last-child{padding-left:10px;}
+	.balibelly .partysvg{width:60px; height:60px;}
+	.balibelly h3{font-size:18px; padding:5px 50px;}
+	.balibelly.partysec ul li, .balibelly.partysec p {font-size: 16px;}
+	.balibelly.partysec .partycrowd{height:120px; left:-3px;}
+	.balibelly.partysec .contentarea {padding: 20px 20px 90px 20px;}
+	.piercing{margin-top:100px;}
+	.piercing .contentarea h2{font-size:18px;}
+	.piercing .contentarea p{font-size:16px;}
+	.piercing .contentarea {padding:15px;}
+	.piercingtop {width: 150px; height:125px;margin-top: -60px;}
+	.piercing .piercinstick{height:425px;}
+	.piercingsvg1{width:50px; height:30px;}
+	.piercingsvg1.ltrtp {top: -22px;left: 0px;}
+	.piercingsvg1.rltbtm {bottom: -21px; right: 0px;}
+	.stacktitle{width:100%;}
+	.stackedright .scooter{height: 130px;width: 56px;}
+	.stackedbox1 .stacktitle {width: 100%;letter-spacing: 0;text-align: center;}
+	.stackedbox1 .stackedright .scooter{height:58px;}
+	.stackedbox.lostpassport .stackedleft p, 
+	.stackedbox.lostpassport .stackedleft ul li {font-size: 16px; letter-spacing: 0;width: 100%; margin: 0;text-align: justify;}
+	.stackedbox.lostpassport .stackedleft ul {margin-top: 40px; width: 100%; margin: 30px 0;}
+	.passportsvg{max-width:100%;}
+	.staysafe .stayheading{font-size: 44px;line-height: 44px;padding-left: 16px;margin: 15px -18px;padding-top: 0;}
+	.staysafe .stayheading .exclaimationmark{width: 35px;height: 30px;}
+	.staysafe .contentarea {    padding: 15px 18px 50px;}
+	.staysafe:before {width:36px; height: 26%;top: -5px;left: -20px;}
+	.staysafe{max-width:260px !important;}
+	.staysafe .staydrinksvg {width: 35px;height: 80px;right: -12px;top: 385px;}
+	.staysafe .contentarea ul:last-child {padding-left: 0px;}
+	.staysafe .staydeathsvg {width: 150px;height: 58px; right: -3px; bottom: -8px;}
+	.stiarea{height:810px;}
+	.sti {min-height:720px;}
+	.sti .sticurrency {height: 70px;  width: 88px;  top: -1px; left: inherit; right: 10px;}
+	.sti .contentarea p, .sti .contentarea ul li {font-size: 16px;line-height:22px;}
+	
+	.womenbottom {height: 100%;width: 205px;    margin-top: -10px; margin-left: -30px;}
+	.sti .stiheading {font-size: 20px;line-height: 50px;margin-right: 9px;margin-left: -17px;padding-left: 0;margin-bottom:0px;z-index: 99;text-align: center;}
+	.sti:before {margin: 0px -3px;}
+	.sti:after{    margin: 0 0 0 -25px;}
+	.waterboxarea{padding-bottom:70px;}
+	.waterboxarea .waterbox h2{font-size: 24px;line-height: normal;}
+	.waterboxarea .waterbox .contentarea{padding: 10px;}
+	
+	
+	
+}

@@ -1,0 +1,180 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string topimage1 = (Model.value != null && Model.value.images != null && Model.value.images.topimage1 != null) ? Model.value.images.topimage1.image : null;
+    string topimage2 = (Model.value != null && Model.value.images != null && Model.value.images.topimage2 != null) ? Model.value.images.topimage2.image : null;
+    string topimage3 = (Model.value != null && Model.value.images != null && Model.value.images.topimage3 != null) ? Model.value.images.topimage3.image : null;
+    string bottomimage1 = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage1 != null) ? Model.value.images.bottomimage1.image : null;
+    string bottomimage2 = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage2 != null) ? Model.value.images.bottomimage2.image : null;
+    string bottomimage3 = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage3 != null) ? Model.value.images.bottomimage3.image : null;
+    string imagealign1 = (Model != null) ? Model.imagealign1 : null;
+    string imagealign2 = (Model != null) ? Model.imagealign2 : null;
+    string imagealign3 = (Model != null) ? Model.imagealign3 : null;
+    string content1 = (Model != null) ? Model.rteValue1 : null;
+    string content2 = (Model != null) ? Model.rteValue2 : null;
+    string content3 = (Model != null) ? Model.rteValue3 : null;
+    string topimage1AltText = (Model.value != null && Model.value.images != null && Model.value.images.topimage1 != null) ? Model.value.images.topimage1.altText : null;
+    string topimage2AltText = (Model.value != null && Model.value.images != null && Model.value.images.topimage2 != null) ? Model.value.images.topimage2.altText : null;
+    string topimage3AltText = (Model.value != null && Model.value.images != null && Model.value.images.topimage3 != null) ? Model.value.images.topimage3.altText : null;
+    string bottomimage1AltText = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage1 != null) ? Model.value.images.bottomimage1.altText : null;
+    string bottomimage2AltText = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage2 != null) ? Model.value.images.bottomimage2.altText : null;
+    string bottomimage3AltText = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage3 != null) ? Model.value.images.bottomimage3.altText : null;
+}
+<div class="widthmorethan768">
+    <div class="taxiarea">
+        <div class="ul">
+            <div class="li">
+                <div class="taxi-icon">
+                    <img src="@topimage1" alt="@topimage1AltText" />
+                </div>
+            </div>
+            <div class="li">
+                <div class="taxi-icon">
+                    <img src="@topimage2" alt="@topimage2AltText" />
+                </div>
+            </div>
+            <div class="li">
+                <div class="taxi-icon">
+                    <img src="@topimage3" alt="@topimage3AltText" />
+                </div>
+            </div>
+        </div>
+
+        <div class="ul">
+            <div class="li">
+                <div class="content chrichtext orangebg">
+                    @Html.Raw(content1)
+                </div>
+            </div>
+            <div class="li">
+                <div class="content chrichtext orangebg">
+                    @Html.Raw(content2)
+                </div>
+            </div>
+            <div class="li">
+                <div class="content chrichtext orangebg">
+                    @Html.Raw(content3)
+                </div>
+            </div>
+        </div>
+        <div class="ul">
+            <div class="li">
+                @if (imagealign1 == "left")
+                {
+                    <div class="leftimg">
+                        <img src="@bottomimage1" alt="@bottomimage1AltText" />
+                    </div>
+                }
+                @if (imagealign1 == "right")
+                {
+                    <div class="rightimg">
+                        <img src="@bottomimage1" alt="@bottomimage1AltText" />
+                    </div>
+                }
+            </div>
+            <div class="li">
+                @if (imagealign2 == "left")
+                {
+                    <div class="leftimg">
+                        <img src="@bottomimage2" alt="@bottomimage2AltText" />
+                    </div>
+                }
+                @if (imagealign2 == "right")
+                {
+                    <div class="rightimg">
+                        <img src="@bottomimage2" alt="@bottomimage2AltText" />
+                    </div>
+                }
+            </div>
+            <div class="li">
+                @if (imagealign3 == "left")
+                {
+                    <div class="leftimg">
+                        <img src="@bottomimage3" alt="@bottomimage3AltText" />
+                    </div>
+                }
+                @if (imagealign3 == "right")
+                {
+                    <div class="rightimg">
+                        <img src="@bottomimage3" alt="@bottomimage3AltText" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="widthlesstha768">
+    <div class="taxiarea">
+        <div class="ul">
+            @if (topimage1 != null || content1 != null || bottomimage1 != null)
+            {
+                <div class="li" id="firstchild">
+                    <div class="taxi-icon">
+                        <img src="@topimage1" alt="@topimage1AltText" />
+                    </div>
+                    <div class="content chrichtext orangebg">
+                        @Html.Raw(content1)
+                    </div>
+                    @if (imagealign1 == "left")
+                {
+                        <div class="leftimg">
+                            <img src="@bottomimage1" alt="@bottomimage1AltText" />
+                        </div>
+                    }
+                    @if (imagealign1 == "right")
+                {
+                        <div class="rightimg">
+                            <img src="@bottomimage1" alt="@bottomimage1AltText" />
+                        </div>
+                    }
+                </div>
+            }
+            @if (topimage2 != null || content2 != null || bottomimage2 != null)
+            {
+                <div class="li" id="secondchild">
+                    <div class="taxi-icon">
+                        <img src="@topimage2" alt="@topimage2AltText" />
+                    </div>
+                    <div class="content chrichtext orangebg">
+                        @Html.Raw(content2)
+                    </div>
+                    @if (imagealign2 == "left")
+                {
+                        <div class="leftimg">
+                            <img src="@bottomimage2" alt="@bottomimage1AltText" />
+                        </div>
+                    }
+                    @if (imagealign2 == "right")
+                {
+                        <div class="rightimg">
+                            <img src="@bottomimage2" alt="@bottomimage2AltText" />
+                        </div>
+                    }
+                </div>
+            }
+            @if (topimage3 != null || content3 != null || bottomimage3 != null)
+            {
+                <div class="li" id="thirdchild">
+                    <div class="taxi-icon">
+                        <img src="@topimage3" alt="@topimage3AltText" />
+                    </div>
+                    <div class="content chrichtext orangebg">
+                        @Html.Raw(content3)
+                    </div>
+                    @if (imagealign3 == "left")
+                {
+                        <div class="leftimg">
+                            <img src="@bottomimage3" alt="@bottomimage3AltText" />
+                        </div>
+                    }
+                    @if (imagealign3 == "right")
+                {
+                        <div class="rightimg">
+                            <img src="@bottomimage3" alt="@bottomimage3AltText" />
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

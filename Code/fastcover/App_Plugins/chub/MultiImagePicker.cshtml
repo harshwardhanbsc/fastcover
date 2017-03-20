@@ -1,0 +1,380 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@using Newtonsoft.Json;
+@*
+@if (Model.value != null)
+{   
+    var url = Model.value.image;
+    if(Model.editor.config != null && Model.editor.config.size != null){
+        url += "?width=" + Model.editor.config.size.width;
+        url += "&height=" + Model.editor.config.size.height;
+
+        if(Model.value.focalPoint != null){
+            url += "&center=" + Model.value.focalPoint.top +"," + Model.value.focalPoint.left;
+            url += "&mode=crop";
+        }
+    }    
+    <img class="wide wideimage75pc" src="@url">    
+}
+*@
+@{                
+    String img1 = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.image : "";
+    String img1Alt = (Model.value != null && Model.value.images != null && Model.value.images.image1Alt != null) ? Model.value.images.image1Alt.image : "";
+    
+    String img2 = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.image : "";
+    String img2Alt = (Model.value != null && Model.value.images != null && Model.value.images.image2Alt != null) ? Model.value.images.image2Alt.image : "";
+    
+    String img3 = (Model.value != null && Model.value.images != null && Model.value.images.image3 != null) ? Model.value.images.image3.image : "";
+    String img3Alt = (Model.value != null && Model.value.images != null && Model.value.images.image3Alt != null) ? Model.value.images.image3Alt.image : "";
+    
+    String img4 = (Model.value != null && Model.value.images != null && Model.value.images.image4 != null) ? Model.value.images.image4.image : "";
+    String img4Alt = (Model.value != null && Model.value.images != null && Model.value.images.image4Alt != null) ? Model.value.images.image4Alt.image : "";
+
+    
+    String img5 = (Model.value != null && Model.value.images != null && Model.value.images.image5 != null) ? Model.value.images.image5.image : "";
+    String img5Alt = (Model.value != null && Model.value.images != null && Model.value.images.image5Alt != null) ? Model.value.images.image5Alt.image : "";
+
+    String img6 = (Model.value != null && Model.value.images != null && Model.value.images.image6 != null) ? Model.value.images.image6.image : "";
+    String img6Alt = (Model.value != null && Model.value.images != null && Model.value.images.image6Alt != null) ? Model.value.images.image6Alt.image : "";
+
+
+    String img7 = (Model.value != null && Model.value.images != null && Model.value.images.image7 != null) ? Model.value.images.image7.image : "";
+    String img7Alt = (Model.value != null && Model.value.images != null && Model.value.images.image7Alt != null) ? Model.value.images.image7Alt.image : "";
+
+
+    String img8 = (Model.value != null && Model.value.images != null && Model.value.images.image8 != null) ? Model.value.images.image8.image : "";
+    String img8Alt = (Model.value != null && Model.value.images != null && Model.value.images.image8Alt != null) ? Model.value.images.image8Alt.image : "";
+        
+}
+
+@*
+<hr />
+<h3>Multi Image Picker</h3>
+*@
+
+
+<style>
+.image
+{
+    width:20%;
+    height:150px;
+    float:left;
+    z-index:5;
+}
+.image1
+{
+    background-image: url("@img1");
+    background-size:100%;
+    background-repeat:no-repeat;
+    width:20%;
+    margin-left:2.5%
+}
+.image1:hover
+{
+    background-image: url("@img1Alt");
+}
+.image2
+{
+    background-image: url("@img2");
+    background-size:100%;
+    background-repeat:no-repeat;
+    margin-left:5%;
+}
+.image2:hover
+{
+    background-image: url("@img2Alt");
+}
+.image3
+{
+    background-image: url("@img3");
+    background-size:100%;
+    background-repeat:no-repeat;
+    margin-left:5%;
+}
+.image3:hover
+{
+    background-image: url("@img3Alt");
+}
+.image4
+{
+    background-image: url("@img4");
+    background-size:100%;
+    background-repeat:no-repeat;
+    margin-left:5%;
+}
+.image4:hover
+{
+    background-image: url("@img4Alt");
+}
+.image5
+{
+    background-image: url("@img5");
+    background-size:100%;
+    background-repeat:no-repeat;
+    margin-left:2.5%
+}
+.image5:hover
+{
+    background-image: url("@img5Alt");
+}
+.image6
+{
+    background-image: url("@img6");
+    background-size:100%;
+    background-repeat:no-repeat;
+    margin-left:5%;
+}
+.image6:hover
+{
+    background-image: url("@img6Alt");
+}
+.image7
+{
+    background-image: url("@img7");
+    background-size:100%;
+    background-repeat:no-repeat;
+    margin-left:5%;
+}
+.image7:hover
+{
+    background-image: url("@img7Alt");
+}
+.image8
+{
+    background-image: url("@img8");
+    background-size:100%;
+    background-repeat:no-repeat;
+    margin-left:5%;
+}
+.image8:hover
+{
+    background-image: url("@img8Alt");
+}
+.maindiv
+{
+    width:100%;    
+    max-width:750px;
+}
+
+.topdiv, .bottomdiv
+{
+    margin-left:auto; margin-right:auto; position:relative;border:0px solid red;z-index:30;
+
+}
+.bottomdiv
+{
+    margin-top:-50px;
+}
+.borderdiv
+{
+    height:200px;border:0px solid blue;margin-left:auto; margin-right:auto;position:relative;margin-top:-100px;z-index:20;
+}
+
+.borderdiv .outter
+{
+    width:12.5%;float:left;height:200px;
+}
+
+.borderdiv .inner
+{
+    width:25%;float:left;border:3px solid #F15A29;height:200px;
+}
+.borderdiv .inner.noright
+{
+    border-right:0px;
+}
+
+@@media screen and (max-width: 767px) 
+{
+    .image
+    {
+        width:30%;
+        height:210px;
+        margin-bottom:40px;
+    }
+    .maindiv
+    {
+        max-width:700px;
+        left:15%;
+    }
+    .borderdiv
+    {
+        height:800px;
+        margin-top:-400px
+    }
+    .borderdiv .outter
+    {
+        width:20%;
+        height:100%;
+    }
+    .borderdiv .inner
+    {
+        width:35%;
+        height:100%;
+    }
+    .borderdiv .inner.noright
+    {
+        width:0%;
+        border:0px;
+    }
+    .bottomdiv
+    {
+        margin-top:-400px;
+    }
+}
+@@media screen and (max-width: 600px) 
+{
+    .image
+    {
+        height:150px;
+        margin-bottom:20px;
+    }
+    .borderdiv .outter
+    {
+        width:15%
+    }
+    .borderdiv .inner
+    {
+        width:40%;
+    }
+    .borderdiv
+    {
+        height:570px;
+        margin-top:-300px;
+    }
+    .bottomdiv
+    {
+        margin-top:-270px;
+    }
+}
+@@media screen and (max-width: 400px) 
+{
+    .maindiv
+    {
+        left:0px;
+    }
+    .image
+    {
+        width:70%;
+        margin-left:15%;
+        margin-right:15%;
+        height:230px;
+    }
+    .borderdiv
+    {
+        height:1800px;   
+        margin-top:-950px;
+    }
+    .borderdiv .outter
+    {
+        width:50%;
+        float:left;
+    }
+    .borderdiv .outter.secondoutter
+    {
+        width:0%;
+    }
+    .borderdiv .inner
+    {
+        width:0%;
+        float:left;
+    }
+    .bottomdiv
+    {
+        margin-top:-900px;
+        float:left;
+    }
+    
+
+
+
+
+}
+
+</style>
+
+
+<div class="maindiv topdiv">
+    <div class="image image1"></div>
+    <div class="image image2"></div>
+    <div class="image image3"></div>
+    <div class="image image4"></div>
+    <div style="clear:both;"></div>
+</div>
+<div style="clear:both;height:0px;"></div>
+<div class="maindiv borderdiv">
+    <div class="outter"></div>
+    <div class="inner noright"></div>
+    <div class="inner noright"></div>
+    <div class="inner"></div>
+    <div class="outter secondoutter"></div>
+</div>
+<div style="clear:both;height:0px;"></div>
+<div class="maindiv bottomdiv">
+    <div class="image image5"></div>
+    <div class="image image6"></div>
+    <div class="image image7"></div>
+    <div class="image image8"></div>
+    <div style="clear:both;"></div>
+</div>
+
+
+
+@*
+
+<div class="outerdiv">
+    <div class="sidemargins"></div>
+    <div class="image image1"></div>
+    <div class="hlinespace">
+        <div class="hline1top"></div>
+        <div class="hline1bottom"></div>
+    </div>    
+    <div class="image image2"></div>
+    <div class="hlinespace">
+        <div class="hline1top"></div>
+        <div class="hline1bottom"></div>
+    </div>    
+    <div class="image image3"></div>
+    <div class="hlinespace">
+        <div class="hline1top"></div>
+        <div class="hline1bottom"></div>
+    </div>    
+    <div class="image image4"></div>
+    <div class="sidemargins"></div>
+</div>
+<div class="outerdiv" style="height:20px;">
+    <div class="vline1"></div>
+    <div class="vlinespace"></div>
+    <div class="vline2"></div>
+</div>
+<div class="outerdiv">
+    <div class="sidemargins"></div>
+    <div class="image image5"></div>
+    <div class="hlinespace">
+        <div class="hline1top"></div>
+        <div class="hline1bottom"></div>
+    </div>    
+    <div class="image image6"></div>
+    <div class="hlinespace">
+        <div class="hline1top"></div>
+        <div class="hline1bottom"></div>
+    </div>    
+    <div class="image image7"></div>
+    <div class="hlinespace">
+        <div class="hline1top"></div>
+        <div class="hline1bottom"></div>
+    </div>    
+    <div class="image image8"></div>
+    <div class="sidemargins"></div>
+</div>
+
+
+<div style="clear:both;height:200px;"></div>
+
+*@
+
+
+@*
+<hr />
+<pre>@Model</pre>
+<hr />
+*@

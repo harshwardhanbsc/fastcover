@@ -1,0 +1,53 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string lefttopimage = (Model.value != null && Model.value.images != null && Model.value.images.lefttopimage != null) ? Model.value.images.lefttopimage.image : null;
+    string righttopimage = (Model.value != null && Model.value.images != null && Model.value.images.righttopimage != null) ? Model.value.images.righttopimage.image : null;
+    string leftbottomimage = (Model.value != null && Model.value.images != null && Model.value.images.leftbottomimage != null) ? Model.value.images.leftbottomimage.image : null;
+    string rightbottomimage = (Model.value != null && Model.value.images != null && Model.value.images.rightbottomimage != null) ? Model.value.images.rightbottomimage.image : null;
+    string backgroundimage = (Model.value != null && Model.value.images != null && Model.value.images.backgroundimage != null) ? Model.value.images.backgroundimage.image : null;
+    string lefttopimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.lefttopimage != null) ? Model.value.images.lefttopimage.altText : null;
+    string righttopimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.righttopimage != null) ? Model.value.images.righttopimage.altText : null;
+    string leftbottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.leftbottomimage != null) ? Model.value.images.leftbottomimage.altText : null;
+    string rightbottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.rightbottomimage != null) ? Model.value.images.rightbottomimage.altText : null;
+
+    string headingposition = (Model != null) ? Model.position : "inside";
+}
+@if (headingposition == "inside")
+{
+    <div class="cornerbox1 ulbullet" style="background: url('@backgroundimage') no-repeat #F1592A; background-size: auto; background-position: center center;">
+        <div class="cornersvg1">
+            <img src="@lefttopimage" alt="@lefttopimageAlttext" />
+        </div>
+        <div class="cornersvg2">
+            <img src="@righttopimage" alt="@righttopimageAlttext" />
+        </div>
+        <h2>@Model.value.heading</h2>
+        <div class="chrichtext">@Html.Raw(Model.rteValue)</div>
+        <div class="cornersvg3">
+            <img src="@leftbottomimage" alt="@leftbottomimageAlttext" />
+        </div>
+        <div class="cornersvg4">
+            <img src="@rightbottomimage" alt="@rightbottomimageAlttext" />
+        </div>
+    </div>
+}
+@if (headingposition == "outside")
+{
+    <div class="cornerbox2 ulbullet" style="background: url('@backgroundimage') no-repeat #F1592A; background-size: auto; background-position: center center;">
+        <div class="cornersvg1">
+            <img src="@lefttopimage" alt="@lefttopimageAlttext" />
+        </div>
+        <div class="cornersvg2">
+            <img src="@righttopimage" alt="@righttopimageAlttext" />
+        </div><h2>@Model.value.heading</h2>
+        <div class="textbox chrichtext">
+            @Html.Raw(Model.rteValue)
+        </div>
+        <div class="cornersvg3">
+            <img src="@leftbottomimage" alt="@leftbottomimageAlttext" />
+        </div>
+        <div class="cornersvg4">
+            <img src="@rightbottomimage" alt="@rightbottomimageAlttext" />
+        </div>
+    </div>
+}

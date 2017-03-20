@@ -1,0 +1,101 @@
+﻿@font-face {
+    font-family: "MetaPro";
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProBlack.eot");
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProBlack.eot?#iefix") format('embedded-opentype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBlack.woff") format('woff'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBlack.ttf") format('truetype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBlack.svg#MetaPro") format('svg');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "MetaPro-Bold";
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProBold.eot");
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProBold.eot?#iefix") format('embedded-opentype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBold.woff") format('woff'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBold.ttf") format('truetype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBold.svg#MetaPro-Bold") format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProBold.eot");
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProBold.eot?#iefix") format('embedded-opentype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBold.woff") format('woff'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBold.ttf") format('truetype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBold.svg#MetaPro") format('svg');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProBook.eot");
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProBook.eot?#iefix") format('embedded-opentype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBook.woff") format('woff'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBook.ttf") format('truetype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProBook.svg#MetaPro") format('svg');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProMedium.eot");
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProMedium.eot?#iefix") format('embedded-opentype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProMedium.woff") format('woff'), url("https://fastcover.com.au/fonts/MetaPro/MetaProMedium.ttf") format('truetype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProMedium.svg#MetaPro") format('svg');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProNormal.eot");
+    src: url("https://fastcover.com.au/fonts/MetaPro/MetaProNormal.eot?#iefix") format('embedded-opentype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProNormal.woff") format('woff'), url("https://fastcover.com.au/fonts/MetaPro/MetaProNormal.ttf") format('truetype'), url("https://fastcover.com.au/fonts/MetaPro/MetaProNormal.svg#MetaPro") format('svg');
+    font-weight: normal;
+}
+
+
+body {
+    font: 18px/22px 'MetaPro', sans-serif !important;
+    color: #24201f;
+    background: #f0f0f0;
+    position: relative;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+}
+
+h1,
+.h1 {
+    font-size: 36px;
+}
+
+h2,
+.h2 {
+    font-size: 30px;
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+}
+
+h4,
+.h4 {
+    font-size: 18px;
+}
+
+h5,
+.h5 {
+    font-size: 15px;
+}
+
+h6,
+.h6 {
+    font-size: 12px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    font-weight: bold;
+    line-height: 120%;
+}
+
+p, ul, ol, li {
+    font-size: 15px;
+}
+
+body.mce-content-body {
+    background-color: #eb521d;
+    color: #ffffff;
+}

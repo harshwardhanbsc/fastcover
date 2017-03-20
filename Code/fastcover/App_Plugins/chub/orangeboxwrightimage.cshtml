@@ -1,0 +1,101 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    var heading = (Model.value != null && Model.value.heading != "") ? Model.value.heading : null;
+}
+<div class="t-box">
+    <div class="title">
+        @if (heading != null)
+        {
+            <h2>@heading</h2>
+        }
+    </div>
+    <div class="clear"></div>
+    @if (heading != null)
+    {
+        if (Model.value != null)
+        {
+            if (Model.value.images != null)
+            {
+                if (Model.value.images.image != null)
+                {
+                    if (Model.value.images.image.image == null)
+                    {
+                        <div class="orangeboxwithrightimage orangeboxwithheading">
+                            <div class="textwithoptimalimagecontent width100 chrichtext">
+                                @Html.Raw(Model.rteValue)
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        }
+        if (Model.value != null)
+        {
+            if (Model.value.images != null)
+            {
+                if (Model.value.images.image != null)
+                {
+                    <div class="orangeboxwithrightimagetop">
+                        <div class="orangeboxwithrightimage orangeboxwithheading">
+                            <div class="textwithoptimalimagecontent chrichtext">
+                                @Html.Raw(Model.rteValue)
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="textwithoptimalimageimage top22">
+                            <img src="@Model.value.images.image.image" alt="@Model.value.images.image.altText" />
+                        </div>
+                    </div>
+                }
+            }
+        }
+    }
+    else
+    {
+        if (Model.value != null)
+        {
+            if (Model.value.images != null)
+            {
+                if (Model.value.images.image != null)
+                {
+                    if (Model.value.images.image.image == null)
+                    {
+
+                        <div class="orangeboxwithrightimage orangeboxwithoutheading">
+                            <div class="textwithoptimalimagecontent width100 chrichtext">
+                                @Html.Raw(Model.rteValue)
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        }
+        if (Model.value != null)
+        {
+            if (Model.value.images != null)
+            {
+                if (Model.value.images.image != null)
+                {
+                    @*<div class="textwithoptimalimagecontent chrichtext">
+                            @Html.Raw(Model.rteValue)
+                        </div>
+                        <div class="textwithoptimalimageimage top6">
+                            <img src="@Model.value.images.image.image" />
+                        </div>*@
+
+                    <div class="orangeboxwithrightimagetop">
+                        <div class="orangeboxwithrightimage orangeboxwithoutheading">
+                            <div class="textwithoptimalimagecontent chrichtext">
+                                @Html.Raw(Model.rteValue)
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="textwithoptimalimageimage top6">
+                            <img src="@Model.value.images.image.image" alt="@Model.value.images.image.altText" />
+                        </div>
+                    </div>
+                }
+            }
+        }
+    }
+</div>

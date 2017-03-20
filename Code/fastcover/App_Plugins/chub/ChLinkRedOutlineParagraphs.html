@@ -1,0 +1,113 @@
+<div ng-controller="CHControls.LinkedParagraphGroupController">
+
+
+    <!--
+    <div ng-show="true" ng-controller="CHControls.RteAllOptions" style="border:1px solid grey;">
+        <div
+            unique-id="control.$uniqueId"
+            value="control.testvalue"
+            grid-rte configuration="rteconfig" style="border:4px solid #EB4F1C;" class="testclass">
+        </div>
+    </div>
+    -->
+
+
+    <table class="table">
+        <tr>
+            <th>Heading</th>
+            <th>Text</th>
+        </tr>
+        <tr ng-repeat="rowData in control.tabelsData">
+            <td width="20%">
+                <input ng-show="true" ng-change="ChangeContent()" ng-model="rowData.heading" type="text" />
+            </td>
+            <td width="50%">
+                <!--<textarea ng-show="true" ng-change="ChangeContent()" ng-model="rowData.content"></textarea> -->
+
+                <div ng-show="true" ng-controller="CHControls.RteAllOptions" style="border:1px solid grey;">
+                    <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                        <div grid-rte
+                             configuration="rteconfig"
+                             value="rowData.content"
+                             unique-id="control.$uniqueId + $index"
+                             on-link-picker-click="vm.openLinkPicker"
+                             on-media-picker-click="vm.openMediaPicker"
+                             on-embed-click="vm.openEmbed"
+                             on-macro-picker-click="vm.openMacroPicker" style="border:4px solid #EB4F1C;" class="testclass">
+                        </div>
+                        <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                                     model="vm.linkPickerOverlay"
+                                     position="right"
+                                     view="vm.linkPickerOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                                     model="vm.mediaPickerOverlay"
+                                     position="right"
+                                     view="vm.mediaPickerOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.embedOverlay.show"
+                                     model="vm.embedOverlay"
+                                     position="right"
+                                     view="vm.embedOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                                     model="vm.macroPickerOverlay"
+                                     view="vm.macroPickerOverlay.view"
+                                     position="right">
+                        </umb-overlay>
+                    </div>
+                    <!--<div
+                                  unique-id="control.$uniqueId + $index"
+                                  value="rowData.content"
+                                  grid-rte configuration="rteconfig" style="border:4px solid #EB4F1C;" class="testclass">
+                              </div>-->
+                </div>
+
+            </td>
+            <td width="20%">
+                <!--
+                    <div ng-if="rowData === null">
+                        <span>rowData null</span>
+                    </div>
+                    <div ng-if="rowData.image === null">
+                        <span>rowData.image null</span>
+                    </div>
+                    <div ng-if="rowData.image.image === null">
+                        <span>rowData.image.image null</span>
+                    </div>
+                    <div ng-if="rowData.image.image == null">
+                        <span>rowData.image.image == null</span>
+                    </div>
+                     <div class="else">
+                        <img ng-src="rowData.image.image" />
+                    </div>
+                -->
+                <div class="usky-editor-placeholder" class="padding:10px;" ng-click="setImage(rowData.id)" ng-if="rowData.image.image === null || rowData.image.image == null">
+                    <i class="icon icon-picture" style="line-height:55px;font-size:55px;"></i>
+                    <div ng-id="!control.$inserted" class="help-text">Click to insert image</div>
+                </div>
+                <div ng-if="rowData.image" style="float:right;">
+                    <div style="width:90%;display:inline-block;">
+                        <img ng-if="rowData.image.image"
+                             ng-click="setImage(rowData.id)"
+                             ng-src="{{rowData.image.image}}"
+                             class="" style="max-height:100px;" />
+                        <!--
+                            <img
+                                ng-if="url"
+                                ng-click="setImage($index)"
+                                ng-src="{{url}}"
+                                class="" style="max-height:100px;"/>
+                        -->
+                    </div>
+                </div>
+            </td>
+            <td width="10%">
+                <button class="btn btn-default-red" type="button" ng-click="RemoveRow(rowData.id)">-</button>
+            </td>
+        </tr>
+        <tr class="lastRow">
+            <td> <button class="btn btn-default" type="button" ng-click="AddRow()">+</button></td>
+        </tr>
+    </table>
+</div>

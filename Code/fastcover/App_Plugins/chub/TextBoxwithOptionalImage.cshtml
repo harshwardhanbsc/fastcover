@@ -1,0 +1,93 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string image = (Model.value != null && Model.value.images != null && Model.value.images.image != null) ? Model.value.images.image.image : null;
+    string imageAltText = (Model.value != null && Model.value.images != null && Model.value.images.image != null) ? Model.value.images.image.altText : null;
+    string heading = (Model.value != null) ? Model.value.heading : null;
+    string imagealign = (Model != null) ? Model.imagealign : null;
+}
+<div class="t-box">
+    <div class="title">
+        @if (heading != null)
+        {
+            <h2>@heading</h2>
+        }
+    </div>
+    <div class="clear"></div>
+    @if (heading != null)
+    {
+        <div class="mosqbdr chub-textwithoptimalimagecontainer" style="margin-top: 0;">
+            @if (image != null)
+            {
+                if (imagealign == "left")
+                {
+                    <div class="textwithoptimalimageimage">
+                        <img src="@image" alt="@imageAltText" />
+                    </div>
+                    <div class="textwithoptimalimagecontent chrichtext">
+                        @Html.Raw(Model.rteValue)
+                    </div>
+                }
+            }
+            @if (image == null)
+            {
+                <div class="textwithoptimalimagecontent width100 chrichtext">
+                    @Html.Raw(Model.rteValue)
+                </div>
+
+            }
+            @if (image != null)
+            {
+                if (imagealign == "right")
+                {
+                    <div class="textwithoptimalimagecontent chrichtext">
+                        @Html.Raw(Model.rteValue)
+                    </div>
+                    <div class="textwithoptimalimageimage">
+                        <img src="@image" alt="@imageAltText" />
+                    </div>
+                }
+            }
+            <div class="clear"></div>
+        </div>
+    }
+    else
+    {
+        <div class="mosqbdr chub-textwithoptimalimagecontainer" style="border-top-left-radius: 15px;">
+            @if (image != null)
+            {
+                if (imagealign == "left")
+                {
+                    <div class="textwithoptimalimageimage">
+                        <img src="@image" alt="@imageAltText" />
+                    </div>
+                    <div class="textwithoptimalimagecontent chrichtext">
+                        @Html.Raw(Model.rteValue)
+                    </div>
+                }
+
+            }
+            @if (image == null)
+            {
+
+                <div class="textwithoptimalimagecontent width100 chrichtext">
+                    @Html.Raw(Model.rteValue)
+                </div>
+            }
+
+            @if (image != null)
+            {
+                if (imagealign == "right")
+                {
+
+                    <div class="textwithoptimalimagecontent chrichtext">
+                        @Html.Raw(Model.rteValue)
+                    </div>
+                    <div class="textwithoptimalimageimage">
+                        <img src="@image" alt="@imageAltText" />
+                    </div>
+                }
+            }
+            <div class="clear"></div>
+        </div>
+    }
+</div>

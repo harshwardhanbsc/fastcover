@@ -1,0 +1,416 @@
+﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://fastcover.com.au/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://fastcover.com.au/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://fastcover.com.au/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://fastcover.com.au/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://fastcover.com.au/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://fastcover.com.au/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://fastcover.com.au/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://fastcover.com.au/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="https://fastcover.com.au/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://fastcover.com.au/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://fastcover.com.au/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://fastcover.com.au/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://fastcover.com.au/manifest.json">
+    <link rel="mask-icon" href="https://fastcover.com.au/safari-pinned-tab.svg" color="#ff4d15">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="https://fastcover.com.au/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="msvalidate.01" content="E9A670D6464947160AE43EBE892D7782" />
+    <link rel="stylesheet" href="https://fastcover.com.au/css/app.css?v=@DateTime.Now.ToString("ddmmyyHHMMss")" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="https://fastcover.com.au/css/sprite.css?v=@DateTime.Now.ToString("ddmmyyHHMMss")" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="https://fastcover.com.au/css/animate.css?v=@DateTime.Now.ToString("ddmmyyHHMMss")" type="text/css" media="screen, projection" />
+    <link href="~/css/chub.css?v=@DateTime.Now.ToString("ddmmyyHHMMss")" rel="stylesheet" type="text/css" media="screen, projection" />
+    <script type="text/javascript" src="https://fastcover.com.au/scripts/Site2015JS/oldbrowser.js?v=@DateTime.Now.ToString("ddmmyyHHMMss")"></script>
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js?v=@DateTime.Now.ToString("ddmmyyHHMMss")"></script>
+    <![endif]-->
+    <!-- structured data for Google -->
+    <script type="application/ld+json">
+        @*{
+                "@context": "http://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Fast Cover",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Suite 2, Level 15, 9 Castlereagh Street",
+                    "addressLocality": "Sydney",
+                    "addressRegion": "NSW",
+                    "postalCode": "2000"
+                },
+                "telephone": "+611300409322",
+                "email":"enquiries@fastcover.com.au",
+                "@type" : "Organization",
+                "name" : "Fast Cover",
+                "logo" : "https://fastcover.com.au/img/logo.svg",
+                "url" : "https://fastcover.com.au/",
+                "sameAs" : [
+                    "https://www.facebook.com/fastcover",
+                    "https://www.linkedin.com/company/fast-cover-travel-insurance",
+                    "https://plus.google.com/+FastcoverAustralia/posts",
+                    "https://twitter.com/FastCover",
+                    "http://pinterest.com/fastcover/",
+                    "http://instagram.com/fastcovertravel"
+                ]
+            }*@
+        @RenderSection("HeadAdditionalTags", false)
+    </script>
+    <title></title>
+    <meta name="description" content="">
+    <meta name="robots" content="noindex,nofollow" />
+</head>
+<body>
+    <header id="header">
+        <div class="container header-box">
+            <a href="/" id="logo" title="Fastcover"></a>
+            <div class="phone"><a href="tel:1300409322"><div class="svg svg-phone svg-phone-dims"></div><span class="google_number">1300 409 322</span></a></div>
+            <nav id="menu">
+                <div class="trigger"></div>
+                <ul>
+                    <li>
+                        <a href="#">Travel Insurance</a>
+                        <div class="dropdown-full">
+                            <div class="col">
+                                <p class="mhead">Traveller Type</p>
+                                <ul>
+                                    <li><a href="/solo-travel-insurance"><div class="svg svg-m1 svg-m1-dims"></div>Solo</a></li>
+                                    <li><a href="/student-travel-insurance"><div class="svg svg-m2 svg-m2-dims"></div>Student</a></li>
+                                    <li><a href="/couples-travel-insurance"><div class="svg svg-m3 svg-m3-dims"></div>Couple</a></li>
+                                    <li><a href="/friends-travel-insurance"><div class="svg svg-m4 svg-m4-dims"></div>Friends</a></li>
+                                    <li><a href="/group-travel-insurance"><div class="svg svg-m5 svg-m5-dims"></div>Group</a></li>
+                                    <li><a href="/family-travel-insurance"><div class="svg svg-m6 svg-m6-dims"></div>Family</a></li>
+                                    <li><a href="/seniors-travel-insurance"><div class="svg svg-m7 svg-m7-dims"></div>Senior</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <p class="mhead">Trip Type</p>
+                                <ul>
+                                    <li><a href="/holiday-insurance"><div class="svg svg-m8 svg-m8-dims"></div>Holiday</a></li>
+                                    <li><a href="/domestic-travel-insurance"><div class="svg svg-m9 svg-m9-dims"></div>Domestic</a></li>
+                                    <li><a href="/international-travel-insurance"><div class="svg svg-m10 svg-m10-dims"></div>International</a></li>
+                                    <li><a href="/cruise-travel-insurance"><div class="svg svg-m11 svg-m11-dims"></div>Cruise</a></li>
+                                    <li><a href="/backpacker-travel-insurance"><div class="svg svg-m12 svg-m12-dims"></div>Backpacking</a></li>
+                                    <li><a href="/working-holiday-travel-insurance"><div class="svg svg-m13 svg-m13-dims"></div>Working holiday</a></li>
+                                    <li><a href="/business-travel-insurance"><div class="svg svg-m14 svg-m14-dims"></div>Business</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <p class="mhead">Cover Type</p>
+                                <ul>
+                                    <li><a href="/budget-travel-insurance"><div class="svg svg-m15 svg-m15-dims"></div>Budget</a></li>
+                                    <li><a href="/medical-only-travel-insurance"><div class="svg svg-m16 svg-m16-dims"></div>Medical Only</a></li>
+                                    <li><a href="/standard-travel-insurance"><div class="svg svg-m17 svg-m17-dims"></div>Standard</a></li>
+                                    <li><a href="/comprehensive-travel-insurance"><div class="svg svg-m18 svg-m18-dims"></div>Comprehensive</a></li>
+                                    <li><a href="/multi-trip"><div class="svg svg-m19 svg-m19-dims"></div>Multi-Trip</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <p class="mhead">Sports</p>
+                                <ul>
+                                    <li><a href="/travel-insurance-for-skiing-and-snowboarding"><div class="svg svg-m21 svg-m21-dims"></div>Skiing &amp; Snowboarding</a></li>
+                                    <li><a href="/adventure-travel-insurance"><div class="svg svg-m22 svg-m22-dims"></div>Adventure Activities</a></li>
+                                </ul>
+                                <p class="mhead">Medical</p>
+                                <ul>
+                                    <li><a href="/travel-insurance-for-pre-existing-medical-conditions"><div class="svg svg-m23 svg-m23-dims"></div>Pre-Existing Medical</a></li>
+                                    <li><a href="/travel-insurance-when-youre-pregnant"><div class="svg svg-m24 svg-m24-dims"></div>Pregnancy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/what-we-cover">What We Cover</a>
+                        <div class="dropdown-full cols3">
+                            <div class="col3">
+                                <ul>
+                                    <li><a href="/what-we-cover/medical"><div class="svg svg-f5 svg-f5-dims"></div>Medical</a></li>
+                                    <li><a href="/what-we-cover/luggage-and-personal-effects"><div class="svg svg-f4 svg-f4-dims"></div>Luggage & Personal Effects</a></li>
+                                    <li><a href="/what-we-cover/while-you-are-travelling"><div class="svg svg-m10 svg-m10-dims"></div>While you're travelling</a></li>
+                                </ul>
+                            </div>
+                            <div class="col3">
+                                <ul>
+                                    <li><a href="/what-we-cover/cancellation"><div class="svg svg-f1 svg-f1-dims"></div>Cancellation</a></li>
+                                    <li><a href="/what-we-cover/financial"><div class="svg svg-f3 svg-f3-dims"></div>Financial</a></li>
+                                    <li><a href="/what-we-cover/work-and-study"><div class="svg svg-m2 svg-m2-dims"></div>Work & Study</a></li>
+                                </ul>
+                            </div>
+                            <div class="col3 spread">
+                                <ul>
+                                    <li><a href="/what-we-cover/pre-existing-medical-conditions"><div class="svg svg-m23 svg-m23-dims"></div>Pre-Existing Medical Conditions</a></li>
+                                    <li><a href="/what-we-cover/activities"><div class="svg svg-m22 svg-m22-dims"></div>Activities</a></li>
+                                    <li><a href="/what-we-cover/traveller-types"><div class="svg svg-m4 svg-m4-dims"></div>Traveller Types</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Your Policy</a>
+                        <div class="dropdown-full">
+                            <div class="cols">
+                                <div class="col5">
+                                    <p class="mhead">Look up quote</p>
+                                    <form action="/fcp/quote" method="get">
+                                        <button type="submit"><div class="svg svg-searcht svg-searcht-dims"></div></button>
+                                        <input type="text" name="number" placeholder="quote number">
+                                    </form>
+                                </div>
+                                <div class="col5">
+                                    <a href="/your-policy">
+                                        <p class="mhead">Extend or Change</p>
+                                        <div class="svg svg-pol1 svg-pol1-dims"></div>
+                                    </a>
+                                </div>
+                                <div class="col5">
+                                    <a href="/pds">
+                                        <p class="mhead">Download PDS</p>
+                                        <div class="svg svg-pol2 svg-pol2-dims"></div>
+                                    </a>
+                                </div>
+                                <div class="col5">
+                                    <a href="/travel-alerts">
+                                        <p class="mhead">Travel Warnings</p>
+                                        <div class="svg svg-pol3 svg-pol3-dims"></div>
+                                    </a>
+                                </div>
+                                <div class="col5">
+                                    <a href="/claims">
+                                        <p class="mhead">Make a claim</p>
+                                        <div class="svg svg-pol4 svg-pol4-dims"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="blue-point">
+                        <a href="/faq">FAQs</a>
+                        <div class="dropdown-full">
+                            <ul>
+                                <li><a href="/faq/pre-existing-medical-conditions"><div class="svg svg-m23 svg-m23-dims"></div>Pre-Existing Medical Conditions</a></li>
+                                <li><a href="/faq/cancellation"><div class="svg svg-f1 svg-f1-dims"></div>Cancellation</a></li>
+                                <li><a href="/faq/claims"><div class="svg svg-f3 svg-f3-dims"></div>Making a claim</a></li>
+                                <li><a href="/faq/luggage"><div class="svg svg-f4 svg-f4-dims"></div>Luggage</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="/faq/medical"><div class="svg svg-f5 svg-f5-dims"></div>Medical</a></li>
+                                <li><a href="/faq/cancellation"><div class="svg svg-f6 svg-f6-dims"></div>Flight Delays</a></li>
+                                <li><a href="/faq/snow"><div class="svg svg-f7 svg-f7-dims"></div>Snow Sports</a></li>
+                                <li><a href="/faq/cruise"><div class="svg svg-f8 svg-f8-dims"></div>Cruises</a></li>
+                            </ul>
+                            <div class="search-form">
+                                <p class="mhead">Search FAQs</p>
+                                <form action="/faq/search">
+                                    <input type="text" name="query" placeholder="enter your question">
+                                    <button type="submit"><div class="svg svg-searchtb svg-searchtb-dims"></div></button>
+                                </form>
+                            </div>
+                            <div class="all-q">
+                                <a href="/faq">
+                                    <span class="text">All FAQs</span>
+                                    <span class="question">?</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/emergency-contacts/">Emergency</a></li>
+                </ul>
+            </nav>
+            <!-- / navigation -->
+        </div>
+        <!-- / container -->
+    </header>
+    <!-- / header -->
+    <!-- / header -->
+    @RenderBody()
+
+    <div class="contact-row">
+        <div class="container">
+            <div class="stay-widget">
+                <div class="social-side">
+                    <img src="https://fastcover.com.au/img/logo.svg" width="240" alt="">
+                    <ul class="social-icons">
+                        <li><a href="http://facebook.com/fastcover"><div class="svg svg-social-fb svg-social-fb-dims"></div></a></li>
+                        <li><a href="https://twitter.com/FastCover"><div class="svg svg-social-tw svg-social-tw-dims"></div></a></li>
+                        <li><a href="https://plus.google.com/+FastcoverAustralia/"><div class="svg svg-social-gp svg-social-gp-dims"></div></a></li>
+                        <li><a href="http://pinterest.com/fastcover/"><div class="svg svg-social-pi svg-social-pi-dims"></div></a></li>
+                        <li><a href="http://instagram.com/fastcovertravel"><div class="svg svg-social-it svg-social-it-dims"></div></a></li>
+                        <li><a href="http://api.addthis.com/oexchange/0.8/offer?url=http://fastcover.com.au"><div class="svg svg-social-sh svg-social-sh-dims"></div></a></li>
+                    </ul>
+                    <div class="underwritten">
+                        <p>underwritten by</p>
+                        <div class="svg svg-blue_l svg-blue_l-dims"></div>
+                    </div>
+                </div>
+
+                <div class="newsletter-side">
+                    <div class="signup-form">
+                        <!-- IsDevMode = True -->
+                        <form name="newsletteradd" id="newsletteradd" action="/fcp/subscribeMailerLite" method="post" target="_blank">
+                            <fieldset>
+                                <label><strong>Want travel tips &amp; freebies?</strong> <br>Join our newsletter!</label>
+                                <input type="text" id="newslettername" errorlabel="Name" required name="firstname" placeholder="Your name">
+                                <input type="email" id="newsletteremail" errorlabel="Email" required name="email" placeholder="Email address">
+                            </fieldset>
+                            <button type="submit" class="btn btn-alt">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="thankyou-screen">
+                        <form>
+                            <fieldset>
+                                <label><strong>Thank You</strong> <br /><br />We have sent you an email which you need to open and confirm your address to receive our newsletters.</label>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-widget">
+                <h3><strong><a href="/contact">Need a hand?</a></strong></h3>
+                <p><span class="google_number" style="display:inline;">1300 409 322</span><br><a href="mailto:enquiries@fastcover.com.au">enquiries@fastcover.com.au</a><br>Fax: (02) 8252 4710</p>
+            </div>
+            <div class="text-widget">
+                <h3><strong><a href="/claims">Making a claim?</a></strong></h3>
+                <p><span class="google_number" style="display:inline;">1300 409 322</span><br><a href="mailto:claims@fastcover.com.au">claims@fastcover.com.au</a><br>Fax: (07) 3305 7016</p>
+                <p class="white"><a href="/contact">See all our contact details</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <section class="hori-links">
+                <article>
+                    <h3>Cover</h3>
+                    <ul>
+                        <li><a href="/travel-insurance-for-pre-existing-medical-conditions">Pre-existing Medical Conditions</a></li>
+                        <li><a href="/pds">Product Disclosure Statement (PDS)</a></li>
+                        <li><a href="/seniors-travel-insurance">Seniors Travel Insurance</a></li>
+                        <li><a href="/family-travel-insurance">Family Travel Insurance</a></li>
+                        <li><a href="/working-holiday-travel-insurance">Working Holiday &amp; Back Packers</a></li>
+                        <li><a href="/multi-trip">Multi-Trip Cover</a></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="/your-policy">Make a change to your policy</a></li>
+                        <li><a href="#HelpBox" class="call-modal trigger">Ask a Question</a></li>
+                        <li><a href="/faq">Frequently Asked Questions</a></li>
+                        <li><a href="/claims">Make a Claim</a></li>
+                        <li><a href="/contact">Fast Cover Contacts</a></li>
+                        <li><a href="/emergency-contacts">Emergency Assistance</a></li>
+                        <li><a href="/alerts">Cover Advisories</a></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="/about-us">About Us</a></li>
+                        <li><a href="/travel-suitcase">Blog</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/your-duty-of-disclosure">Duty of Disclosure</a></li>
+                        <li><a href="/media-centre">Media Centre</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/sponsorship">Sponsorship</a></li>
+                    </ul>
+                </article>
+            </section>
+            <div class="copy">
+                <p>
+                    Fast Cover Pty Ltd ABN 98 143 196 098 AR No.381399 arranges this insurance as an authorised representative of AGA Assistance Australia Pty Ltd,
+                    ABN 52 097 227 177, AFSL 245631 trading as Allianz Global Assistance. Travel Insurance is issued and managed by Allianz Global Assistance
+                    as agent of the insurer Allianz Australia Insurance Limited ABN 15 000 122 850 AFSL 234708. Terms, conditions, limits and exclusions apply.
+                    We do not provide any advice on this insurance based on any consideration of your objectives, financial situation or needs. You should consider the
+                    Combined Financial Services Guide and <a href="/pds" target=_blank>Product Disclosure Statement</a> (including policy wording) available on this website before buying this product to
+                    decide if this product is right for you. If you purchase a policy, Fast Cover receives a commission which is a percentage of your premium - ask us for more information.
+                </p>
+            </div>
+        </div>
+        <!-- / container -->
+    </footer>
+    <!-- / footer -->
+
+
+    <div class="help-bar">
+        <a href="#HelpBox" class="call-modal trigger">?</a>
+    </div>
+    <div class="lightbox helpbox" id="HelpBox">
+        <div class="content lightbox.helpbox">
+            <span class="tooltip-div" style="float:left;"><span class="icon">?</span></span>
+            <h2>Need Help?</h2>
+
+            <ul>
+                <li>Look for the help icons <span class="tooltip-div"><span class="icon">?</span></span>, you'll find answers there</li>
+                <li>See our <a href="/what-we-cover">What We Cover section</a></li>
+                <li>Check our <a href="/faq">Frequently Asked Questions</a></li>
+                <li>Call us on <a href="tel:1300409322">1300 409 322</a></li>
+
+                <li>Ask your <a href="#" onclick="GoToAskQuestion(); return true;">Question Here</a></li>
+            </ul>
+        </div>
+        <div class="greyback">
+            <div class="content">
+
+                <form class="helpform" method="post" action="">
+                    <input type="hidden" name="subject" value="Question from Help Popup" />
+                    <input type="hidden" name="submitted_from" value="" />
+                    <input type="hidden" name="set_tags" value="web_widget" />
+                    <input type="hidden" name="via_id" value="48" />
+                    <input type="hidden" name="locale_id" value="1" />
+                    <p>Question</p>
+                    <textarea name="description" class="vert" required="" id="description" errorlabel="Question" cols="25" rows="3"></textarea>
+
+                    <div>
+                        <div class="col col1">
+                            <p>Name</p>
+                            <input name="name" type="text" required="" id="name" errorlabel="Name" maxlength="50" />
+                        </div>
+                        <div class="col col2">
+                            <p>Email</p>
+                            <input name="email" type="email" required="" id="email" errorlabel="Email" maxlength="50" />
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input name="addnewsletter" type="checkbox" id="crf-input-1" class="crf-i" style="position: absolute; left: -9999em;">
+                        <label class="crf" for="crf-input-1">
+                            <div class="ico">
+                                <div class="svg svg-checkbox svg-checkbox-dims"></div>
+                            </div>
+                            <div class="label">Send me exclusive offers & travel tips.</div>
+                        </label>
+                    </div>
+                    <div class="">
+                        <a href="#" class="btn btn-green submit">Submit</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="greyback alt">
+            <div class="content">
+                <p>Thank you. A Travel Insurance Specialist will answer your question shortly.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Zendesk -->
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script type="text/javascript" src="https://fastcover.com.au/scripts/Site2015JS/global.js?v=@DateTime.Now.ToString("ddmmyyHHMMss")"></script>
+    <script type="text/javascript" src="https://fastcover.com.au/scripts/Site2015JS/page.js?v=@DateTime.Now.ToString("ddmmyyHHMMss")"></script>
+
+    <script type="text/javascript" src="~/scripts/chub.js?v=@DateTime.Now.ToString("ddmmyyHHMMss")"></script>
+    <script type="text/javascript" src="~/scripts/readmore.js?v=@DateTime.Now.ToString("ddmmyyHHMMss")"></script>
+</body>
+</html>

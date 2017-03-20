@@ -1,0 +1,18 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    String img1 = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.image : "";
+    String img2 = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.image : "";
+    String img3 = (Model.value != null && Model.value.images != null && Model.value.images.image3 != null) ? Model.value.images.image3.image : "";
+    String img1AltText = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.altText : "";
+    String img2AltText = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.altText : "";
+    String img3AltText = (Model.value != null && Model.value.images != null && Model.value.images.image3 != null) ? Model.value.images.image3.altText : "";
+}
+<div>
+    <div style="width:15%;margin-left:15%;float:left;"><img src="@img1" style="width:100%;" alt="@img1AltText" /></div>
+    <div style="width:40%;float:left;">
+        <div style="border:0px;"><img src="@img2" style="width:100%;" alt="@img2AltText" /></div>
+        <div style="background:#EB4F1C;color:#FFF;border-radius:20px;border:0px;padding:20px;margin-top:-3px;font-size:14px;line-height:18px;font-weight:400;" class="chgridrte chrichtext">@Html.Raw(Model.value.rteValue)</div>
+    </div>
+    <div style="width:15%;float:left;margin-right:15%;"><img src="@img3" style="width:100%;" alt="@img3AltText" /></div>
+</div>
+<div style="clear:both;"></div>

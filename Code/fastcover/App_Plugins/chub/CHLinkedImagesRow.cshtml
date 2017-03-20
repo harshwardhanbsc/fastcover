@@ -1,0 +1,183 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@using Newtonsoft.Json;
+@*
+    @if (Model.value != null)
+    {
+        var url = Model.value.image;
+        if(Model.editor.config != null && Model.editor.config.size != null){
+            url += "?width=" + Model.editor.config.size.width;
+            url += "&height=" + Model.editor.config.size.height;
+
+            if(Model.value.focalPoint != null){
+                url += "&center=" + Model.value.focalPoint.top +"," + Model.value.focalPoint.left;
+                url += "&mode=crop";
+            }
+        }
+        <img class="wide wideimage75pc" src="@url">
+    }
+*@
+@{
+    String img1 = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.image : "";
+    String img2 = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.image : "";
+    String img3 = (Model.value != null && Model.value.images != null && Model.value.images.image3 != null) ? Model.value.images.image3.image : "";
+    String img4 = (Model.value != null && Model.value.images != null && Model.value.images.image4 != null) ? Model.value.images.image4.image : "";
+    String img5 = (Model.value != null && Model.value.images != null && Model.value.images.image5 != null) ? Model.value.images.image5.image : "";
+    String img1AltText = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.altText : "";
+    String img2AltText = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.altText : "";
+    String img3AltText = (Model.value != null && Model.value.images != null && Model.value.images.image3 != null) ? Model.value.images.image3.altText : "";
+    String img4AltText = (Model.value != null && Model.value.images != null && Model.value.images.image4 != null) ? Model.value.images.image4.altText : "";
+    String img5AltText = (Model.value != null && Model.value.images != null && Model.value.images.image5 != null) ? Model.value.images.image5.altText : "";
+}
+
+@*
+    <hr />
+    <h3>Multi Image Picker</h3>
+*@
+<div class="fiveimgrow">
+    <div class="img">
+        @if (!string.IsNullOrEmpty(img1))
+        {
+            <img src="@img1" alt="@img1AltText" />
+            <br />
+        }
+        <p>@Model.value.image1Text</p>
+    </div>
+    <div class="fiverowspacer">
+        <div class="greyline">&nbsp;</div>
+    </div>
+    <div class="img">
+        @if (!string.IsNullOrEmpty(img2))
+        {
+            <img src="@img2" alt="@img2AltText" />
+            <br />
+        }
+        <p>@Model.value.image2Text</p>
+    </div>
+    <div class="fiverowspacer">
+        <div class="greyline">&nbsp;</div>
+    </div>
+    <div class="img">
+        @if (!string.IsNullOrEmpty(img3))
+        {
+            <img src="@img3" alt="@img3AltText" />
+            <br />
+        }
+        <p>@Model.value.image3Text</p>
+    </div>
+    <div class="fiverowspacer">
+        <div class="greyline">&nbsp;</div>
+    </div>
+    <div class="img">
+        @if (!string.IsNullOrEmpty(img4))
+        {
+            <img src="@img4" alt="@img4AltText" />
+            <br />
+        }
+        <p>@Model.value.image4Text</p>
+    </div>
+    <div class="fiverowspacer">
+        <div class="greyline">&nbsp;</div>
+    </div>
+    <div class="img">
+        @if (!string.IsNullOrEmpty(img5))
+        {
+            <img src="@img5" alt="@img5AltText" />
+            <br />
+        }
+        <p>@Model.value.image5Text</p>
+    </div>
+    <div style="clear:both;"></div>
+
+
+
+    <!-- <div class="fiverowspacer"><div class="greyline"></div></div> -->
+</div>
+
+
+@*
+
+    <div class="maindiv topdiv">
+        <div class="image image1"></div>
+        <div class="image image2"></div>
+        <div class="image image3"></div>
+        <div class="image image4"></div>
+        <div style="clear:both;"></div>
+    </div>
+    <div style="clear:both;height:0px;"></div>
+    <div class="maindiv borderdiv">
+        <div class="outter"></div>
+        <div class="inner noright"></div>
+        <div class="inner noright"></div>
+        <div class="inner"></div>
+        <div class="outter secondoutter"></div>
+    </div>
+    <div style="clear:both;height:0px;"></div>
+    <div class="maindiv bottomdiv">
+        <div class="image image5"></div>
+        <div class="image image6"></div>
+        <div class="image image7"></div>
+        <div class="image image8"></div>
+        <div style="clear:both;"></div>
+    </div>
+*@
+
+
+@*
+
+    <div class="outerdiv">
+        <div class="sidemargins"></div>
+        <div class="image image1"></div>
+        <div class="hlinespace">
+            <div class="hline1top"></div>
+            <div class="hline1bottom"></div>
+        </div>
+        <div class="image image2"></div>
+        <div class="hlinespace">
+            <div class="hline1top"></div>
+            <div class="hline1bottom"></div>
+        </div>
+        <div class="image image3"></div>
+        <div class="hlinespace">
+            <div class="hline1top"></div>
+            <div class="hline1bottom"></div>
+        </div>
+        <div class="image image4"></div>
+        <div class="sidemargins"></div>
+    </div>
+    <div class="outerdiv" style="height:20px;">
+        <div class="vline1"></div>
+        <div class="vlinespace"></div>
+        <div class="vline2"></div>
+    </div>
+    <div class="outerdiv">
+        <div class="sidemargins"></div>
+        <div class="image image5"></div>
+        <div class="hlinespace">
+            <div class="hline1top"></div>
+            <div class="hline1bottom"></div>
+        </div>
+        <div class="image image6"></div>
+        <div class="hlinespace">
+            <div class="hline1top"></div>
+            <div class="hline1bottom"></div>
+        </div>
+        <div class="image image7"></div>
+        <div class="hlinespace">
+            <div class="hline1top"></div>
+            <div class="hline1bottom"></div>
+        </div>
+        <div class="image image8"></div>
+        <div class="sidemargins"></div>
+    </div>
+
+
+    <div style="clear:both;height:200px;"></div>
+
+*@
+
+
+@*
+    <hr />
+    <pre>@Model</pre>
+    <hr />
+*@

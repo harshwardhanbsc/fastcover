@@ -1,0 +1,40 @@
+<div ng-controller="CHControls.MultipleMediaController3" style="width:100%;">
+
+
+<div class="" style="width:40%;float:left;">
+	<div class="usky-editor-placeholder imagegrid" ng-click="setImage('image1')" ng-if="control.value == null || control.value.images == null || control.value.images.image1 == null" style="width:100%; ">
+		<i class="icon icon-picture"></i>
+		<div ng-id="!control.$inserted" id="{{control.uniqueId}}" class="help-text">Regular Image</div>
+	</div>
+
+	<div ng-if="control.value.images != null && control.value.images.image1 != null">
+		<div class="imggrid4wide">
+            <span>Regular Image</span><br />
+			<img				
+				ng-click="setImage('image1')"
+				ng-src="{{control.value.images.image1.image}}"
+				class="" style="max-height:300px;"/>
+		</div>
+		</div>
+ 	</div>
+</div>
+<div class="" style="width:40%;padding-left:10%;float:left;">
+	<div class="usky-editor-placeholder imagegrid" ng-click="setImage('image2')" ng-if="control.value == null || control.value.images == null || control.value.images.image2 == null" style="width:100%; ">
+		<i class="icon icon-picture"></i>
+		<div ng-id="!control.$inserted" id="Div1" class="help-text">Mobile Image</div>
+	</div>
+
+	<div ng-if="control.value.images != null && control.value.images.image2 != null">
+		<div class="imggrid4wide">
+            <span>Mobile Image</span><br />
+			<img				
+				ng-click="setImage('image2')"
+				ng-src="{{control.value.images.image2.image}}"
+				class="" style="max-height:300px;"/>
+		</div>
+ 	</div>
+</div>
+<div style="clear:both;"></div>
+
+
+

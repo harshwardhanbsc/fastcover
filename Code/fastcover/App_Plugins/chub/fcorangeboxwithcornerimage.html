@@ -1,0 +1,130 @@
+﻿<div ng-controller="CHControls.MultipleImagewithRadioController">
+    <div class="usky-editor-placeholder imagegrid" ng-click="setImage('backgroundimage')" ng-if="control.value == null || control.value.images == null || control.value.images.backgroundimage == null" style="width: 100%;">
+        <i class="icon icon-picture"></i>
+        <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+            Image<br /> (Optional)
+        </div>
+    </div>
+
+    <div ng-if="control.value.images != null && control.value.images.backgroundimage != null">
+        <div class="imggrid4wide smallimage">
+            <img ng-click="setImage('backgroundimage')" ng-src="{{control.value.images.backgroundimage.image}}" class="fullSizeImage" />
+            <a href class="picked-image" ng-click="removeImage('backgroundimage')"><i class="icon icon-delete"></i></a>
+        </div>
+    </div>
+    <div class="cornerbox1" style="background: url('{{control.value.images.backgroundimage.image}}') no-repeat #eb4f1d; background-size: auto auto; background-position: center center;">
+        <div class="cornersvg1">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('lefttopimage')" ng-if="control.value == null || control.value.images == null || control.value.images.lefttopimage == null" style="width: 100%;">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                    Image<br /> (Optional)
+                </div>
+            </div>
+
+            <div ng-if="control.value.images != null && control.value.images.lefttopimage != null">
+                <div class="imggrid4wide smallimage">
+                    <img ng-click="setImage('lefttopimage')" ng-src="{{control.value.images.lefttopimage.image}}" class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('lefttopimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="cornersvg2">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('righttopimage')" ng-if="control.value == null || control.value.images == null || control.value.images.righttopimage == null" style="width: 100%;">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                    Image<br /> (Optional)
+                </div>
+            </div>
+
+            <div ng-if="control.value.images != null && control.value.images.righttopimage != null">
+                <div class="imggrid4wide smallimage">
+                    <img ng-click="setImage('righttopimage')" ng-src="{{control.value.images.righttopimage.image}}" class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('righttopimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2>
+                <div class="radiocontrol">
+                    <fieldset class="radiogroup">
+                        <span data-ng-repeat="items in control.radiocollection">
+                            <input type="radio" name="orangeboxwithcornerimage_{{control.$uniqueId}}" unique-id="control.$uniqueId" value="{{items.value}}" ng-model="control.position" />
+                            {{items.text}}
+                        </span>
+                    </fieldset>
+                </div>
+                <br />
+                Heading
+                <br />
+                <br />
+                <input type="text" ng-model="control.value.heading" />
+            </h2>
+            Content
+            <br />
+            <br />
+            <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                <div grid-rte
+                     configuration="control.editor.config.fcorangeboxwithcornerimagertetoolbar"
+                     value="control.rteValue"
+                     unique-id="control.$uniqueId"
+                     on-link-picker-click="vm.openLinkPicker"
+                     on-media-picker-click="vm.openMediaPicker"
+                     on-embed-click="vm.openEmbed"
+                     on-macro-picker-click="vm.openMacroPicker">
+                </div>
+                <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                             model="vm.linkPickerOverlay"
+                             position="right"
+                             view="vm.linkPickerOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                             model="vm.mediaPickerOverlay"
+                             position="right"
+                             view="vm.mediaPickerOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.embedOverlay.show"
+                             model="vm.embedOverlay"
+                             position="right"
+                             view="vm.embedOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                             model="vm.macroPickerOverlay"
+                             view="vm.macroPickerOverlay.view"
+                             position="right">
+                </umb-overlay>
+            </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="cornersvg3">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('leftbottomimage')" ng-if="control.value == null || control.value.images == null || control.value.images.leftbottomimage == null" style="width: 100%;">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                    Image<br /> (Optional)
+                </div>
+            </div>
+
+            <div ng-if="control.value.images != null && control.value.images.leftbottomimage != null">
+                <div class="imggrid4wide smallimage">
+                    <img ng-click="setImage('leftbottomimage')" ng-src="{{control.value.images.leftbottomimage.image}}" class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('leftbottomimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="cornersvg4">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('rightbottomimage')" ng-if="control.value == null || control.value.images == null || control.value.images.rightbottomimage == null" style="width: 100%;">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                    Image<br /> (Optional)
+                </div>
+            </div>
+
+            <div ng-if="control.value.images != null && control.value.images.rightbottomimage != null">
+                <div class="imggrid4wide smallimage">
+                    <img ng-click="setImage('rightbottomimage')" ng-src="{{control.value.images.rightbottomimage.image}}" class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('rightbottomimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

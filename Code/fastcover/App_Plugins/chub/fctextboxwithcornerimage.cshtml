@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    String cornerimage = (Model.value != null && Model.value.images != null && Model.value.images.image != null) ? Model.value.images.image.image : null;
+    String cornerimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.image != null) ? Model.value.images.image.altText : null;
+}
+<div class="textboxwithcornerimagecontainer">
+    <div class="headingcontainer">
+        <h2>@Model.value.heading</h2>
+    </div>
+    <div class="clear"></div>
+    <div class="content">
+        <div class="imagecontainer">
+            <img src="@cornerimage" alt="@cornerimageAlttext" />
+        </div>
+
+        <div class="chrichtext">@Html.Raw(@Model.rteValue)</div>
+    </div>
+    <div class="clear"></div>
+</div>

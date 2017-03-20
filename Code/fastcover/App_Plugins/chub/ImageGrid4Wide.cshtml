@@ -1,0 +1,74 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    String img1 = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.image : null;
+    String img2 = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.image : null;
+    String img3 = (Model.value != null && Model.value.images != null && Model.value.images.image3 != null) ? Model.value.images.image3.image : null;
+    String img4 = (Model.value != null && Model.value.images != null && Model.value.images.image4 != null) ? Model.value.images.image4.image : null;
+    String img1AltText = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.altText : null;
+    String img2AltText = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.altText : null;
+    String img3AltText = (Model.value != null && Model.value.images != null && Model.value.images.image3 != null) ? Model.value.images.image3.altText : null;
+    String img4AltText = (Model.value != null && Model.value.images != null && Model.value.images.image4 != null) ? Model.value.images.image4.altText : null;
+    String description1 = (Model.value != null) ? Model.value.image1description : null;
+    String description2 = (Model.value != null) ? Model.value.image2description : null;
+    String description3 = (Model.value != null) ? Model.value.image3description : null;
+    String description4 = (Model.value != null) ? Model.value.image4description : null;
+    var i = 0;
+    foreach (var item in Model.value.images)
+    {
+        i++;
+    }
+    string width = Convert.ToString(100 / i) + "%";
+    if (i >= 4)
+    {
+        width = "25%";
+    }
+}
+<div class="image4widecontainer">
+    <div class="img-row">
+        @if (img1 != null)
+        {
+            <div class="image" style="width: @width;">
+                <div class="img">
+                    <img src="@img1" class="img-responsive-grid mtb10" alt="@img1AltText" />
+                </div>
+                <div class="description chrichtext">
+                    @Html.Raw(description1)
+                </div>
+            </div>
+        }
+        @if (img2 != null)
+        {
+            <div class="image" style="width: @width;">
+                <div class="img">
+                    <img src="@img2" class="img-responsive-grid mtb10" alt="@img2AltText" />
+                </div>
+                <div class="description chrichtext">
+                    @Html.Raw(description2)
+                </div>
+            </div>
+        }
+        @if (img3 != null)
+        {
+            <div class="image" style="width: @width;">
+                <div class="img">
+                    <img src="@img3" class="img-responsive-grid mtb10" alt="@img3AltText" />
+                </div>
+                <div class="description chrichtext">
+                    @Html.Raw(description3)
+                </div>
+            </div>
+        }
+        @if (img4 != null)
+        {
+            <div class="image" style="width: @width;">
+                <div class="img">
+                    <img src="@img4" class="img-responsive-grid mtb10" alt="@img4AltText" />
+                </div>
+                <div class="description chrichtext">
+                    @Html.Raw(description4)
+                </div>
+            </div>
+        }
+    </div>
+    <div class="clear"></div>
+</div>

@@ -1,0 +1,22 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    String img1 = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.image : "";
+    String img2 = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.image : "";
+    String img1AltText = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.altText : "";
+    String img2AltText = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.altText : "";
+}
+
+
+@if (Model.value != null && img1 != null && img2 != null)
+{
+    <div class="imgMobAlt">
+        <picture>
+            <source media="(min-width: 480px)" srcset="@img1">
+            <source media="(min-width: 250px)" srcset="@img2">
+            <!-- img tag for browsers that do not support picture element -->
+            <img src="@img1" alt="@img1AltText" style="width:100%;">
+        </picture>
+    </div>
+
+
+}

@@ -1,0 +1,176 @@
+﻿@font-face {
+    font-family: "MetaPro";
+    src: url("/fonts/MetaPro/MetaProBlack.eot");
+    src: url("/fonts/MetaPro/MetaProBlack.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProBlack.woff") format('woff'), url("/fonts/MetaPro/MetaProBlack.ttf") format('truetype'), url("/fonts/MetaPro/MetaProBlack.svg#MetaPro") format('svg');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "MetaPro-Bold";
+    src: url("/fonts/MetaPro/MetaProBold.eot");
+    src: url("/fonts/MetaPro/MetaProBold.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProBold.woff") format('woff'), url("/fonts/MetaPro/MetaProBold.ttf") format('truetype'), url("/fonts/MetaPro/MetaProBold.svg#MetaPro-Bold") format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("/fonts/MetaPro/MetaProBold.eot");
+    src: url("/fonts/MetaPro/MetaProBold.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProBold.woff") format('woff'), url("/fonts/MetaPro/MetaProBold.ttf") format('truetype'), url("/fonts/MetaPro/MetaProBold.svg#MetaPro") format('svg');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("/fonts/MetaPro/MetaProBook.eot");
+    src: url("/fonts/MetaPro/MetaProBook.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProBook.woff") format('woff'), url("/fonts/MetaPro/MetaProBook.ttf") format('truetype'), url("/fonts/MetaPro/MetaProBook.svg#MetaPro") format('svg');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("/fonts/MetaPro/MetaProMedium.eot");
+    src: url("/fonts/MetaPro/MetaProMedium.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProMedium.woff") format('woff'), url("/fonts/MetaPro/MetaProMedium.ttf") format('truetype'), url("/fonts/MetaPro/MetaProMedium.svg#MetaPro") format('svg');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("/fonts/MetaPro/MetaProNormal.eot");
+    src: url("/fonts/MetaPro/MetaProNormal.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProNormal.woff") format('woff'), url("/fonts/MetaPro/MetaProNormal.ttf") format('truetype'), url("/fonts/MetaPro/MetaProNormal.svg#MetaPro") format('svg');
+    font-weight: normal;
+}
+
+body {
+    font: 18px/22px 'MetaPro', sans-serif !important;
+    color: #24201f;
+    background: #f0f0f0;
+    position: relative;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    line-height: 150%;
+    margin: 0;
+}
+
+/**umb_name:Heading1*/
+h1 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 10px 0px 10px 0px;
+}
+/**umb_name:Heading2*/
+h2 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 32px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+/**umb_name:Heading3*/
+h3 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 28px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+/**umb_name:Heading4*/
+h4 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/**umb_name:Heading5*/
+h5 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/**umb_name:Heading6*/
+h6 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/**umb_name:Paragraph*/
+p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+/**umb_name:Disclaimer*/
+.disclaimer {
+    font-size: 12px;
+    line-height: 120%;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+    ul li {
+        font-size: 15px;
+        padding-left: 1.2em;
+        padding-bottom: 8px;
+        line-height: 120%;
+    }
+
+        ul li:before {
+            position: absolute;
+            content: "•";
+            color: #eb541d;
+            margin-left: -20px;
+        }
+
+ol {
+    list-style: none;
+    counter-reset: my-counter;
+    padding: 0 0 4px;
+    margin-left: 0px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+    ol li {
+        font-size: 15px;
+        letter-spacing: -.6px;
+        line-height: 120%;
+        padding-left: 23px;
+        padding-bottom: 8px;
+    }
+
+        ol li:before {
+            content: counter(my-counter) ".";
+            counter-increment: my-counter;
+            color: #eb541d;
+            padding-right: 10px;
+            margin-left: -23px;
+            font-weight: bold;
+        }
+
+p + ul, p + ol {
+    margin-top: -10px !important;
+}
+
+a {
+    text-decoration: none;
+    color: #eb541d;
+}
+
+    a[href], label[for], select {
+        cursor: pointer;
+    }

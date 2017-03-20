@@ -1,0 +1,3185 @@
+﻿/*#region Font Family*/
+@font-face {
+    font-family: "MetaPro";
+    src: url("/fonts/MetaPro/MetaProBlack.eot");
+    src: url("/fonts/MetaPro/MetaProBlack.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProBlack.woff") format('woff'), url("/fonts/MetaPro/MetaProBlack.ttf") format('truetype'), url("/fonts/MetaPro/MetaProBlack.svg#MetaPro") format('svg');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "MetaPro-Bold";
+    src: url("/fonts/MetaPro/MetaProBold.eot");
+    src: url("/fonts/MetaPro/MetaProBold.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProBold.woff") format('woff'), url("/fonts/MetaPro/MetaProBold.ttf") format('truetype'), url("/fonts/MetaPro/MetaProBold.svg#MetaPro-Bold") format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("/fonts/MetaPro/MetaProBold.eot");
+    src: url("/fonts/MetaPro/MetaProBold.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProBold.woff") format('woff'), url("/fonts/MetaPro/MetaProBold.ttf") format('truetype'), url("/fonts/MetaPro/MetaProBold.svg#MetaPro") format('svg');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("/fonts/MetaPro/MetaProBook.eot");
+    src: url("/fonts/MetaPro/MetaProBook.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProBook.woff") format('woff'), url("/fonts/MetaPro/MetaProBook.ttf") format('truetype'), url("/fonts/MetaPro/MetaProBook.svg#MetaPro") format('svg');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("/fonts/MetaPro/MetaProMedium.eot");
+    src: url("/fonts/MetaPro/MetaProMedium.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProMedium.woff") format('woff'), url("/fonts/MetaPro/MetaProMedium.ttf") format('truetype'), url("/fonts/MetaPro/MetaProMedium.svg#MetaPro") format('svg');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "MetaPro";
+    src: url("/fonts/MetaPro/MetaProNormal.eot");
+    src: url("/fonts/MetaPro/MetaProNormal.eot?#iefix") format('embedded-opentype'), url("/fonts/MetaPro/MetaProNormal.woff") format('woff'), url("/fonts/MetaPro/MetaProNormal.ttf") format('truetype'), url("/fonts/MetaPro/MetaProNormal.svg#MetaPro") format('svg');
+    font-weight: normal;
+}
+/*#endregion*/
+/*#region Common Components*/
+h1,
+.h1 {
+    font-size: 36px;
+}
+
+h2,
+.h2 {
+    font-size: 30px;
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+}
+
+h4,
+.h4 {
+    font-size: 18px;
+}
+
+h5,
+.h5 {
+    font-size: 14px;
+}
+
+h6,
+.h6 {
+    font-size: 12px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    font-weight: bold;
+    line-height: 150%;
+}
+
+p, ul, ol, li {
+    line-height: 150%;
+}
+
+a.morelink {
+    text-decoration: none;
+    outline: none;
+}
+
+.morecontent span {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: auto;
+}
+
+.hidelink {
+    display: none;
+}
+
+.umb-grid .container {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.wideimage75pc {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+/*#endregion*/
+/*#region Heading*/
+.chsectionHeading {
+    width: 100%;
+    max-height: 200px;
+    min-height: 68px;
+    margin-bottom: 20px;
+    line-height: 120%;
+}
+
+.chheading {
+    color: #FFF;
+    background: #eb521d;
+    width: 100%;
+    min-height: 68px;
+    display: table;
+    position: relative;
+    bottom: 0;
+    clear: both;
+    border-radius: 20px;
+    display: table;
+}
+
+    .chheading h2 {
+        color: #FFF;
+        letter-spacing: 2px;
+        font-size: 34px;
+        padding-left: 2%;
+        line-height: 100%;
+        font-weight: 500;
+        display: table-cell;
+        vertical-align: middle;
+        width: 70%;
+        position: relative;
+        min-height: 68px;
+    }
+/*#endregion*/
+/*#region Box Paragraph*/
+.boxparagph {
+    margin-top: 40px;
+    font-size: 18px;
+    border: 4px solid #EB4F1C;
+    padding-bottom: 25px;
+    padding-top: 20px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.boxparagphimagediv {
+    width: 100%;
+    text-align: right;
+}
+
+    .boxparagphimagediv img {
+        max-width: 25%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: -2%;
+    }
+/*#endregion*/
+/*#region Linked Images Row*/
+.fiveimgrow {
+    display: table;
+}
+
+    .fiveimgrow .img {
+        width: 15%;
+        display: table-cell;
+        z-index: 20;
+        text-align: center;
+    }
+
+        .fiveimgrow .img p {
+            font-size: 80%;
+            margin-top: 15px;
+        }
+
+        .fiveimgrow .img img {
+            width: 100%;
+            z-index: 25;
+            position: relative;
+        }
+
+.fiverowspacer {
+    width: 120%;
+    height: 100%;
+    display: table-cell;
+    float: left;
+    margin-left: -10%;
+    position: relative;
+    z-index: 2;
+}
+
+    .fiverowspacer .greyline {
+        height: 40%;
+        background: grey;
+    }
+
+@media screen and (max-width: 480px) {
+    div.fiveimgrow {
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .fiveimgrow .img {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+        .fiveimgrow .img img {
+            width: 100%;
+            max-width: 250px;
+        }
+
+    .fiverowspacer {
+        width: 100%;
+        display: block;
+        float: none;
+        margin-left: 0;
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
+
+        .fiverowspacer .greyline {
+            height: 60px;
+            width: 20%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+}
+/*#endregion*/
+/*#region Rich Text*/
+div.chrichtext {
+    padding-left: 2%;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+    div.chrichtext p {
+        margin-bottom: 15px;
+        line-height: 120%;
+    }
+
+.chrichtext h1 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 10px 0 10px 0;
+    line-height: 120%;
+}
+
+.chrichtext h2 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 32px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    line-height: 120%;
+}
+
+.chrichtext h3 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 28px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    line-height: 120%;
+}
+
+.chrichtext h4 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 120%;
+}
+
+.chrichtext h5 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 120%;
+}
+
+.chrichtext h6 {
+    color: #eb541d;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 120%;
+}
+
+.chrichtext .disclaimer {
+    font-size: 12px;
+    line-height: 120%;
+}
+
+.chrichtext p + ul, .chrichtext p + ol {
+    margin-top: 0;
+}
+
+.chrichtext ul {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+    .chrichtext ul li {
+        padding-left: 1.2em;
+        line-height: 120%;
+        padding-bottom: 8px;
+    }
+
+        .chrichtext ul li:before {
+            position: absolute;
+            content: "•";
+            color: #eb541d;
+            margin-left: -20px;
+        }
+
+.chrichtext ol {
+    list-style: none;
+    counter-reset: my-counter;
+    padding: 0 0 4px;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+    .chrichtext ol li {
+        font-size: 16px;
+        letter-spacing: -.6px;
+        line-height: 120%;
+        line-height: 1.2em;
+        padding-left: 23px;
+        padding-bottom: 8px;
+    }
+
+        .chrichtext ol li:before {
+            content: counter(my-counter) ".";
+            counter-increment: my-counter;
+            color: #eb541d;
+            padding-right: 10px;
+            margin-left: -23px;
+            font-weight: bold;
+        }
+
+.chrichtext.orangebg h1,
+.chrichtext.orangebg h2,
+.chrichtext.orangebg h3,
+.chrichtext.orangebg h4,
+.chrichtext.orangebg h5,
+.chrichtext.orangebg h6,
+.chrichtext.orangebg p {
+    color: #ffffff;
+}
+
+.chrichtext.orangebg a {
+    color: #fac47e;
+}
+/*#endregion*/
+/*#region Image Grid4 Wide*/
+.image4widecontainer {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.img-row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.image {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+    .image .img {
+        width: 100%;
+        height: 150px;
+    }
+
+.img-responsive-grid {
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.clear {
+    clear: both;
+    display: block;
+}
+
+.margin10 {
+    margin: 10px;
+}
+
+.mtb10 {
+    margin: 10px auto;
+}
+
+.img-row .image p {
+    color: #6D6E71;
+    margin: 10px 20px;
+    padding: 0 10px;
+}
+/*#endregion*/
+/*#region TextBox With Optimal Image*/
+.chub-textwithoptimalimagecontainer {
+    margin: 40px auto;
+    position: relative;
+}
+
+    .chub-textwithoptimalimagecontainer h2 {
+        color: #eb521d;
+    }
+
+.t-box .mosqbdr .textwithoptimalimageimage {
+    width: 10%;
+    text-align: center;
+    float: left;
+}
+
+    .t-box .mosqbdr .textwithoptimalimageimage img {
+        max-width: 100%;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+.t-box .mosqbdr .textwithoptimalimageimageright {
+    width: 9%;
+    text-align: center;
+    float: left;
+}
+
+    .t-box .mosqbdr .textwithoptimalimageimageright img {
+        max-width: 100%;
+        display: block;
+        max-height: 300px;
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        right: 0;
+    }
+
+.t-box .mosqbdr .textwithoptimalimagecontent {
+    width: 90%;
+    float: left;
+}
+
+.t-box .mosqbdr .width100 {
+    width: 100%;
+}
+
+.textwithoptimalimagecontent p {
+    text-align: justify;
+}
+/*#endregion*/
+/*#region Question Answer*/
+.qacontainer {
+    -webkit-box-shadow: 0 0 8px #000000;
+    -webkit-box-shadow: 0 0 8px rgba(0,0,0,.36);
+    -ms-box-shadow: 0 0 8px #000000;
+    -ms-box-shadow: 0 0 8px rgba(0,0,0,.36);
+    box-shadow: 0 0 8px #000000;
+    box-shadow: 0 0 8px rgba(0,0,0,.36);
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+    border: 1px solid #CFCFCF;
+    margin: 20px auto;
+}
+
+    .qacontainer h2 {
+        line-height: 42px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-align: center;
+        background: #459AD4;
+        color: #ffffff;
+        -ms-border-top-left-radius: 10px;
+        border-top-left-radius: 10px;
+        -ms-border-top-right-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 5px;
+        margin: 0;
+        font-size: 30px;
+    }
+
+    .qacontainer .accordion {
+        background: #ffffff;
+        -ms-border-bottom-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        -ms-border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+        .qacontainer .accordion dt, .qacontainer .accordion dd {
+            padding: 1%;
+            border-bottom: 0;
+        }
+
+        .qacontainer .accordion .repeatdiv:last-of-type {
+            border-bottom: none;
+        }
+
+        .qacontainer .accordion dt a, .qacontainer .accordion dd a {
+            display: block;
+            color: #6D6E71;
+            font-weight: bold;
+        }
+
+        .qacontainer .accordion .repeatdiv {
+            margin: 0 5px;
+            border-bottom: 1px dashed #459AD4;
+        }
+
+        .qacontainer .accordion dd {
+            border-top: 0;
+            margin: 5px;
+            padding: 0 10px 10px 36px;
+        }
+
+        .qacontainer .accordion dt a {
+            border-top: 0;
+            font-size: 16px;
+            padding-left: 29px;
+        }
+
+        .qacontainer .accordion dt span {
+            font-size: 18px;
+            float: left;
+            font-weight: bold;
+            color: #459AD4;
+            margin-right: 10px;
+        }
+
+    .qacontainer a {
+        text-decoration: none;
+    }
+/*#endregion*/
+/*#region Text Box with Heading Optional Horizontal Image*/
+.t-box {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: block;
+    clear: both;
+    margin-top: 40px;
+}
+
+    .t-box .title {
+        display: block;
+        clear: both;
+        width: 100%;
+        position: relative;
+    }
+
+        .t-box .title h2 {
+            background: #eb521d;
+            color: #fff;
+            padding: 9px 80px 7px 20px;
+            margin: 0;
+            text-align: left;
+            float: left;
+            -ms-border-radius: 15px 15px 0 0;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .t-box .title .mosqicon {
+            float: left;
+            margin-left: 10%;
+            height: 50px;
+            margin-top: 8px;
+        }
+
+            .t-box .title .mosqicon img {
+                height: 100%;
+                max-width: 100%;
+                width: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+    .t-box .ul .li img {
+        height: auto;
+        max-width: 100%;
+        width: auto;
+    }
+
+    .t-box .mosqbdr {
+        border: 4px #eb521d solid;
+        -ms-border-radius: 15px;
+        border-radius: 15px;
+        padding: 20px;
+        -ms-border-top-left-radius: 0;
+        border-top-left-radius: 0;
+        background: #fff;
+    }
+
+        .t-box .mosqbdr p {
+            text-align: left;
+            line-height: 25px;
+            margin: 0;
+        }
+
+    .t-box .ul {
+        margin: 0 auto !important;
+        padding: 0;
+        list-style-type: none;
+        position: relative;
+        display: block;
+        z-index: 9;
+    }
+
+        .t-box .ul:after {
+            position: absolute;
+            background: #6d6e73;
+            content: "";
+            z-index: -1;
+            height: 40px;
+            display: block;
+            margin-top: 5%;
+            left: 5%;
+            right: 5%;
+        }
+
+        .t-box .ul .li {
+            width: 14%;
+            float: left;
+            margin-left: 3.2%;
+            list-style: none;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+            .t-box .ul .li:first-child {
+                margin-left: 0;
+                text-align: left;
+            }
+
+            .t-box .ul .li:last-child {
+                text-align: right;
+            }
+/*#endregion*/
+/*#region Dotted Box with Top Image*/
+.dotted-outer {
+    margin: 40% auto 10%;
+    width: 90%;
+    padding: 0;
+}
+
+    .dotted-outer h2 {
+        color: #eb521d;
+        text-align: center;
+    }
+
+    .dotted-outer .imagecontent {
+        margin: -35% auto -9%;
+        width: 100%;
+        text-align: center;
+    }
+
+        .dotted-outer .imagecontent img {
+            max-width: 100%;
+            margin: 0 auto;
+            height: auto;
+        }
+
+    .dotted-outer .richtextcontent {
+        border: 4px dashed #EB541D;
+        padding: 10% 20px 50px;
+        -ms-border-radius: 15px;
+        border-radius: 15px;
+        background: white;
+    }
+
+    .dotted-outer .bottomimagecontent {
+        text-align: center;
+        width: 10%;
+        margin: -5% auto -6%;
+    }
+
+        .dotted-outer .bottomimagecontent img {
+            width: auto;
+            max-width: 100%;
+        }
+/*#endregion*/
+/*#region Orange Box with Right Image*/
+.orangeboxwithrightimagetop {
+    width: 100%;
+    display: table;
+}
+
+.orangeboxwithrightimage {
+    border: 4px solid #eb521d;
+    padding: 2% 10% 2% 2%;
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+    background: #ffffff;
+    margin: 40px 0 auto;
+    width: 90%;
+    min-height: 230px;
+    display: table-cell;
+}
+
+    .orangeboxwithrightimage h2 {
+        color: #eb521d;
+    }
+
+.orangeboxwithheading {
+    margin-top: 0;
+    border-top-left-radius: 0;
+}
+
+.orangeboxwithrightimagetop .textwithoptimalimageimage {
+    /*top: 0;
+        bottom: 0;
+        right: -1%;
+        margin: auto;
+        position: absolute;*/
+    display: table-cell;
+    vertical-align: middle;
+}
+
+    .orangeboxwithrightimagetop .textwithoptimalimageimage img {
+        margin-left: -100%;
+        max-width: 200%;
+        padding: 10px;
+    }
+
+.orangeboxwithrightimage .top6 {
+    top: 6%;
+}
+
+.orangeboxwit .hrightimage .textwithoptimalimageimage img {
+    max-width: 100%;
+    margin: auto;
+    height: auto;
+}
+
+.orangeboxwithrightimage .textwithoptimalimagecontent {
+    width: 100%;
+    display: table-cell;
+    padding: 0;
+}
+
+.orangeboxwithrightimage .width100 {
+    width: 100%;
+}
+
+.textwithoptimalimagecontent p {
+    text-align: justify;
+}
+/*#endregion*/
+/*#region Orange Connected Boxes*/
+.servicelistarea {
+    width: 100%;
+    margin: 40px auto;
+    display: block;
+    clear: both;
+    position: relative;
+}
+
+    .servicelistarea::after {
+        position: absolute;
+        background: #6D6E71;
+        content: "";
+        z-index: 0;
+        height: 95%;
+        width: 30%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .servicelistarea .servicelistbox {
+        width: 80%;
+        background: #EB4F1D;
+        -ms-border-radius: 15px;
+        border-radius: 15px;
+        margin-bottom: 100px;
+        padding: 7px 20px 20px 110px;
+        position: relative;
+        z-index: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .servicelistarea .servicelistbox:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+
+        .servicelistarea .servicelistbox h2, .servicelistarea .servicelistbox h3 {
+            color: #fff;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            line-height: 100%;
+            font-size: 30px;
+        }
+
+        .servicelistarea .servicelistbox .chrichtext {
+            padding-left: 0;
+        }
+
+        .servicelistarea .servicelistbox p {
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .servicelistarea .servicelistbox a {
+            color: #fac47e;
+        }
+
+        .servicelistarea .servicelistbox .circleicon {
+            position: absolute;
+            left: -60px;
+            z-index: 9;
+            top: -30px;
+            overflow: hidden;
+            width: 150px;
+        }
+
+        .servicelistarea .servicelistbox .circlecount {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            z-index: 999;
+            line-height: 40px;
+            font-weight: bold;
+            left: -65px;
+            top: -70px;
+            background: #EB4F1D;
+        }
+
+            .servicelistarea .servicelistbox .circlecount:before {
+                position: absolute;
+                z-index: 999;
+                content: "";
+                border: 1px #fff solid;
+                top: 0;
+                left: 0;
+                width: 96%;
+                height: 96%;
+                border-radius: 50%;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+
+        .servicelistarea .servicelistbox .circleicon img {
+            height: auto;
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+        }
+
+        .servicelistarea .servicelistbox ul {
+            list-style-position: outside;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+            .servicelistarea .servicelistbox ul li {
+                line-height: 30px;
+                color: #fff;
+                text-align: left;
+                list-style-type: disc;
+                font-weight: bold;
+            }
+
+/*#endregion*/
+/*#region Orange Linked Boxes V2*/
+.taxiarea {
+    width: 100%;
+    margin: 80px auto 40px;
+    display: table;
+    clear: both;
+    position: relative;
+    border-spacing: 30px 0;
+}
+
+    .taxiarea a {
+        color: #fac47e;
+    }
+
+    .taxiarea .ul {
+        list-style-type: none;
+        margin: 0 !important;
+        padding: 0;
+        display: table-row;
+        z-index: 9;
+        width: 100%;
+    }
+
+        .taxiarea .ul .li {
+            width: 33.33%;
+            margin-left: 2%;
+            background: #eb521d;
+            position: relative;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #fff;
+            z-index: 99;
+            list-style-type: none;
+            display: table-cell;
+        }
+
+        .taxiarea .ul:first-child .li {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .taxiarea .ul:nth-child(3) .li {
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .taxiarea .ul .li .taxi-icon {
+            width: 100%;
+        }
+
+            .taxiarea .ul .li .taxi-icon img {
+                max-width: 100%;
+                display: block;
+                margin: auto;
+                height: auto;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                border-radius: 15px;
+                position: relative;
+                z-index: 9;
+                overflow: hidden;
+                border: 8px #f4f4f4 solid;
+                margin: -20% auto 10px;
+            }
+
+    .taxiarea h2 {
+        text-align: center;
+        color: #fff;
+    }
+
+    .taxiarea p {
+        text-align: justify;
+    }
+
+    .taxiarea .ul .li .leftimg {
+        height: auto;
+        margin-bottom: 0;
+        margin-left: 0;
+        float: left;
+        max-width: 50%;
+    }
+
+        .taxiarea .ul .li .leftimg img, .taxiarea .ul .li .rightimg img {
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
+            width: auto;
+        }
+
+    .taxiarea .ul .li .content {
+        padding: 15px 0 0;
+    }
+
+        .taxiarea .ul .li .content p:first-child,
+        .taxiarea .ul .li .content h1:first-child,
+        .taxiarea .ul .li .content h2:first-child,
+        .taxiarea .ul .li .content h3:first-child,
+        .taxiarea .ul .li .content h4:first-child,
+        .taxiarea .ul .li .content h5:first-child,
+        .taxiarea .ul .li .content h6:first-child,
+        .taxiarea .ul .li .content ul:first-child {
+            padding-top: 0;
+        }
+
+    .taxiarea .ul .li .rightimg {
+        height: auto;
+        margin-bottom: -14px;
+        float: right;
+        max-width: 50%;
+    }
+
+
+    .taxiarea:after {
+        position: absolute;
+        background: #6d6e71;
+        content: '';
+        z-index: 1;
+        display: block;
+        height: 60%;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 90%;
+        bottom: 0;
+        margin: auto;
+    }
+
+.bdrradis15 {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.widthlesstha768 {
+    display: none;
+}
+
+.widthmorethan768 {
+    display: block;
+}
+/*#endregion*/
+/*#region Two Row End Images*/
+.threebox {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .threebox .ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .threebox .ul .li {
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            /*display: block;
+            clear: both;
+            margin-bottom: 100px;
+            border-top: 3px #eb521d solid;
+            border-bottom: 3px #eb521d solid;
+            background: #fff;
+            position: relative;
+            padding: 20px 25px;*/
+        }
+
+            .threebox .ul .li .circlediv {
+                /*width: 170px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                position: absolute;
+                left: -120px;
+                z-index: 9;
+                top: -25px;
+                overflow: hidden;*/
+                display: table-cell;
+                vertical-align: middle;
+                width: 15%;
+            }
+
+
+                .threebox .ul .li .circlediv img {
+                    /*display: block;
+                    margin: auto;
+                    width: 100%;*/
+                    max-width: 100%;
+                    right: -30px;
+                    position: relative;
+                }
+
+            .threebox .ul .li .rightdiv {
+                width: 15%;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+                .threebox .ul .li .rightdiv img {
+                    max-width: 100%;
+                    margin-left: -30px;
+                }
+
+            .threebox .ul .li .text {
+                /*text-align: left;
+                width: 70%;
+                line-height: 180%;
+                margin: auto;
+                font-weight: bold;
+                height: 70px;
+                overflow: hidden;*/
+                display: table-cell;
+                vertical-align: middle;
+                width: 70%;
+            }
+
+                .threebox .ul .li .text .contentbox {
+                    height: auto;
+                    border-top: 3px #eb521d solid;
+                    border-bottom: 3px #eb521d solid;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    background: #ffffff;
+                }
+
+            .threebox .ul .li .contentbox p {
+                margin-bottom: 10px;
+            }
+/*#endregion*/
+/*#region Disease and Infection*/
+.diseasesarea {
+    border: 4px #eb521d solid;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background: #fff;
+    width: 100%;
+    position: relative;
+    display: block;
+    clear: both;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 15% auto 50px;
+}
+
+    .diseasesarea .fullwidthbox {
+        display: block;
+        clear: both;
+        width: 100%;
+    }
+
+    .diseasesarea .headingbg {
+        width: 90%;
+        margin: -10% auto 0;
+        position: relative;
+    }
+
+    .diseasesarea .commonbox .ul .li span img {
+        max-height: 60px;
+    }
+
+    .diseasesarea .headingbg img,
+    .diseasesarea .diseasebox .table .td .dis-icon img,
+    .diseasesarea .commonbox .ul .li span img {
+        max-width: 100% !important;
+        height: auto;
+    }
+
+    .diseasesarea .diseasebox .table .td span img {
+        max-height: 60px;
+    }
+
+    .diseasesarea .diseasebox .table .td .dis-icon img {
+        max-height: 100px;
+    }
+
+    .diseasesarea p {
+        text-align: center;
+    }
+
+        .diseasesarea p a {
+            color: #ec5124;
+            text-decoration: none;
+        }
+
+    .diseasesarea h2 {
+        font-size: 36px;
+        text-align: center;
+        color: #ec5124;
+    }
+
+    .diseasesarea .contentbox {
+        padding: 1% 30px 30px;
+    }
+
+    .diseasesarea .diseasebox {
+        max-width: 75%;
+        margin: 20px auto;
+    }
+
+        .diseasesarea .diseasebox .table {
+            display: block;
+            -webkit-border-horizontal-spacing: 20px;
+            -webkit-border-vertical-spacing: 10px;
+            border-spacing: 20px 10px;
+            width: 100%;
+            clear: both;
+            position: relative;
+        }
+
+            .diseasesarea .diseasebox .table .td {
+                width: 50%;
+                margin-left: 4%;
+                box-sizing: border-box;
+                border: 3px #707174 solid;
+                margin-bottom: 4%;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                border-radius: 15px;
+                overflow: hidden;
+                z-index: 9;
+                position: relative;
+                background: #fff;
+                padding: 2%;
+                display: table-cell;
+                vertical-align: top;
+            }
+
+                .diseasesarea .diseasebox .table .td:nth-child(1),
+                .diseasesarea .diseasebox .table .td:nth-child(3),
+                .diseasesarea .commonbox .ul .li:nth-child(1),
+                .diseasesarea .commonbox .ul .li:nth-child(4) {
+                    margin-left: 0;
+                }
+
+                .diseasesarea .diseasebox .table .td .dis-icon {
+                    display: block;
+                    clear: both;
+                    margin: 15px auto 0;
+                    max-width: 50%;
+                }
+
+                .diseasesarea .diseasebox .table .td p {
+                    font-weight: bold;
+                    text-align: left;
+                    font-size: 18px;
+                    line-height: normal;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+
+                    .diseasesarea .diseasebox .table .td p span {
+                        display: block;
+                        font-size: 18px;
+                    }
+
+            .diseasesarea .diseasebox .table::after {
+                position: absolute;
+                background: #f25a29;
+                content: "";
+                z-index: 0;
+                display: block;
+                height: 92%;
+                bottom: 4%;
+                top: 4%;
+                left: 4%;
+                right: 4%;
+                width: 92%;
+            }
+
+        .diseasesarea .diseasebox .threebox::after {
+            top: 5%;
+        }
+
+.bdrradis15 {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.diseasesarea .diseasebox .table .single {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+    .diseasesarea .diseasebox .table .single .single-icon {
+        vertical-align: middle;
+        width: 40%;
+        display: table-cell;
+        padding: 0 2% 0 0;
+    }
+
+        .diseasesarea .diseasebox .table .single .single-icon img {
+            max-height: none;
+        }
+
+    .diseasesarea .diseasebox .table .single p {
+        display: table-cell;
+        vertical-align: middle;
+        width: 60%;
+    }
+
+.diseasesarea .japanesbox .diseasebox .ul .li:nth-child(3),
+.diseasesarea .single .diseasebox .ul .li:nth-child(3) {
+    width: 100%;
+}
+
+.diseasesarea .japanesbox .diseasebox .ul .li:nth-child(2) span {
+    font-size: 24px;
+    margin-top: 19px;
+}
+
+.diseasesarea .japanesbox .diseasebox .ul .li:nth-child(3) .dis-icon {
+    float: left;
+    margin-left: 15%;
+    margin-top: 6%;
+}
+
+.diseasesarea .single .diseasebox .ul .li:nth-child(3) .dis-icon {
+    float: left;
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 185px;
+}
+
+.diseasesarea .japanesbox .diseasebox .ul .li:nth-child(3) p {
+    width: 100%;
+    max-width: 330px;
+    float: left;
+    margin-top: 6%;
+}
+
+.diseasesarea .single .diseasebox .ul .li:nth-child(3) p {
+    width: 100%;
+    max-width: 200px;
+    float: left;
+    margin-top: 8%;
+    font-size: 14px;
+}
+
+.diseasesarea .commonbox {
+    max-width: 690px;
+    width: 100%;
+    margin: 0 auto 30px;
+    position: relative;
+    display: block;
+    clear: both;
+}
+
+    .diseasesarea .commonbox h3 {
+        color: #707174;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .diseasesarea .commonbox .ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        height: auto;
+        position: relative;
+    }
+
+        .diseasesarea .commonbox .ul .li {
+            float: left;
+            width: 25%;
+            margin-left: 10%;
+            border: 3px #707174 solid;
+            margin-bottom: 40px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            padding: 7px 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-weight: bold;
+            color: #707174;
+            position: relative;
+            text-align: left;
+        }
+
+            .diseasesarea .commonbox .ul .li span {
+                position: absolute;
+                z-index: 999;
+                bottom: -12px;
+                right: -23px;
+            }
+
+.diseasesarea .hline {
+    display: block;
+    clear: both;
+    width: 100%;
+    margin: 50px 0;
+    height: 4px;
+    background: url(../images/hline.png) left center repeat-x;
+}
+
+.divbox {
+    max-width: 690px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px #707174 solid;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: block;
+    clear: both;
+    margin: 0 auto 40px;
+}
+
+    .divbox img {
+        width: 30px;
+        float: right;
+    }
+
+.org {
+    color: #ec5124 !important;
+}
+
+.mbtm25 {
+    margin-bottom: 25px !important;
+}
+/*#endregion*/
+/*#region Text Box with Corner Image*/
+.textboxwithcornerimagecontainer {
+    margin: 50px auto;
+    display: block;
+}
+
+    .textboxwithcornerimagecontainer .imagecontainer {
+        position: absolute;
+        margin-top: -70px;
+        left: 20px;
+        width: 25%;
+    }
+
+        .textboxwithcornerimagecontainer .imagecontainer img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+    .textboxwithcornerimagecontainer .headingcontainer {
+        float: right;
+        margin-bottom: -10px;
+        margin-right: 1%;
+        text-transform: uppercase;
+    }
+
+        .textboxwithcornerimagecontainer .headingcontainer h2 {
+            letter-spacing: 1px;
+            color: #eb521d;
+            line-height: 100%;
+            font-size: 48px;
+            margin: 0;
+            padding: 0;
+        }
+
+    .textboxwithcornerimagecontainer .content {
+        border: 4px #eb521d solid;
+        border-radius: 15px;
+        padding: 20px 20px 20px 17%;
+        background: #ffffff;
+        width: 90%;
+        float: right;
+    }
+
+        .textboxwithcornerimagecontainer .content p {
+            margin-bottom: 10px;
+        }
+
+        .textboxwithcornerimagecontainer .content ul {
+            margin-top: 10px;
+        }
+
+            .textboxwithcornerimagecontainer .content ul li {
+                padding-left: 5px;
+            }
+/*#endregion*/
+/*#region Orange Box with corner Image*/
+.cornerbox1 {
+    background: #eb4f1d;
+    border: 3px #eb4f1d solid;
+    border-radius: 15px;
+    position: relative;
+    margin: 10% auto;
+    width: 90%;
+    padding: 0 50px 40px 135px;
+    min-height: 400px;
+}
+
+    .cornerbox1 h2 {
+        background: #6d6e71;
+        color: #fff;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: left;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin-left: -135px;
+        padding-left: 140px;
+        padding-top: 13px;
+    }
+
+    .cornerbox1 h3 {
+        color: #fff;
+    }
+
+    .cornerbox1 p, .cornerbox1 ul li {
+        color: #fff;
+    }
+
+        .cornerbox1 ul li:before, .cornerbox2 .textbox ul li:before {
+            background: #ffffff !important;
+        }
+
+.cornersvg1, .cornersvg2, .cornersvg3, .cornersvg4 {
+    position: absolute;
+}
+
+.cornersvg1 {
+    background-size: cover;
+    width: 172px;
+    height: 160px;
+    left: -35px;
+    top: -20px;
+}
+
+.cornersvg2 {
+    background-size: cover;
+    width: 140px;
+    height: 170px;
+    right: -16px;
+    top: -20px;
+}
+
+.cornersvg3 {
+    background-size: cover;
+    width: 165px;
+    height: 206px;
+    left: -25px;
+    bottom: -25px;
+}
+
+.cornersvg4 {
+    background-size: cover;
+    width: 238px;
+    height: 145px;
+    right: 50px;
+    bottom: -62px;
+}
+
+.cornerbox2 {
+    color: #fff;
+    background: #eb4f1d;
+    border-radius: 15px;
+    position: relative;
+    margin: 100px auto 30px;
+    width: 90%;
+    padding: 0 50px 40px 135px;
+    min-height: 400px;
+}
+
+    .cornerbox2 h2 {
+        background: #6d6e71;
+        color: #fff;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: left;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin-left: -135px;
+        padding-left: 140px;
+        border: 3px #fff solid;
+    }
+
+    .cornerbox2 .textbox {
+        padding: 40px 20px;
+    }
+
+    .cornerbox2 .cornersvg2 {
+        background-size: cover;
+        width: 155px;
+        height: 155px;
+        right: -39px;
+        position: absolute;
+        top: -58px;
+    }
+/*#endregion*/
+/*#region Party*/
+.balibelly {
+    border-radius: 20px;
+    position: relative;
+    display: block;
+    clear: both;
+    background: #eb4f1d;
+    width: 100%;
+    margin: 140px auto 0;
+}
+
+    .balibelly h2 {
+        font-size: 46px;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        background: #6d6e71;
+        padding: 12px 0 8px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 45px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom: 3px #fff solid;
+    }
+
+        .balibelly h2 span {
+            width: 50%;
+            display: inline-block;
+        }
+
+            .balibelly h2 span:first-child {
+                padding-right: 75px;
+                text-align: right;
+            }
+
+            .balibelly h2 span:last-child {
+                padding-left: 82px;
+                text-align: left;
+            }
+
+    .balibelly .balibellysvg {
+        width: 150px;
+        height: 195px;
+        background-size: cover;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -127px;
+    }
+
+    .balibelly .bellysvg1 {
+        margin-right: 10%;
+        margin-left: 33%;
+        width: 100px;
+        height: 90px;
+        display: inline-block;
+        background-size: cover;
+    }
+
+    .balibelly .bellysvg2 {
+        margin-right: 30%;
+        width: 70px;
+        height: 100px;
+        display: inline-block;
+        background-size: cover;
+    }
+
+    .balibelly .contentarea {
+        padding: 20px;
+        display: block;
+        color: #fff;
+        max-width: 75%;
+    }
+
+    .balibelly .partycircle {
+        width: 150px;
+        height: 150px;
+        background-size: cover;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -66px;
+    }
+
+    .balibelly .partysvg {
+        width: 125px;
+        height: 125px;
+        background-size: cover;
+        display: inline-block;
+        position: absolute;
+        top: 67px;
+    }
+
+        .balibelly .partysvg.left {
+            left: 0;
+        }
+
+        .balibelly .partysvg.right {
+            right: 5px;
+        }
+
+    .balibelly h3 {
+        color: #fff;
+        text-align: center;
+        font-size: 28px;
+        padding: 45px 0;
+    }
+
+    .balibelly h2 {
+        font-size: 36px;
+    }
+
+    .balibelly ul li, .balibelly p {
+        font-size: 18px;
+    }
+
+.partysec .partycrowd {
+    width: 100%;
+    background-size: cover;
+    display: block;
+    position: relative;
+    margin-top: -20%;
+}
+
+.balibelly .contentarea {
+    padding: 20px 20px 25% 20px;
+}
+
+/*#endregion*/
+/*#region LGBTQI*/
+.lgbtqarea {
+    position: relative;
+    width: 100%;
+    margin: 140px auto 30px;
+}
+
+    .lgbtqarea .lgbtq {
+        border: 3px #eb511d solid;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 8% 60px 50px;
+        background: #fff;
+        color: #6d6e71;
+        font-weight: 700;
+    }
+
+        .lgbtqarea .lgbtq h2 {
+            font-size: 36px;
+            text-align: center;
+            font-weight: 700;
+            color: #eb511d;
+            margin: 0;
+        }
+
+    .lgbtqarea .lgbtqsvgcircle {
+        background-size: cover;
+        width: 15%;
+        margin: auto;
+        position: absolute;
+        top: -12%;
+        left: 0;
+        right: 0;
+    }
+
+        .lgbtqarea .lgbtqsvgcircle img {
+            max-height: 100%;
+        }
+
+    .lgbtqarea .lgbtq p {
+        font-weight: 300;
+    }
+
+    .lgbtqarea .lgbtqlover {
+        background-size: contain;
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+/*#endregion*/
+/*#region Stacked Boxes*/
+.stackedbox, .sti {
+    width: 100%;
+    margin: 30px auto;
+    position: relative;
+    display: block;
+}
+
+    .stackedbox .stackedleft, .stackedbox .stackedright {
+        float: left;
+        min-height: 300px;
+        position: relative;
+    }
+
+    .stackedbox .stackedleft {
+        width: 80%;
+        background: #eb4f1d;
+        border-radius: 15px;
+        border-top-left-radius: 0;
+        padding: 20px;
+        color: #fff;
+    }
+
+        .stackedbox .stackedleft ul {
+            padding-top: 0;
+            padding-left: 20px;
+        }
+
+            .stackedbox .stackedleft ul li:before {
+                width: 5px;
+                height: 5px;
+                background-color: #fff;
+                top: 7px;
+            }
+
+    .stackedbox .stackedright {
+        width: 15%;
+        margin-left: 5%;
+    }
+
+        .stackedbox .stackedright img {
+            max-height: 100%;
+        }
+
+.stackedright .scooter {
+    background-size: cover;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.stacktitle {
+    border: 3px #eb4f1d solid;
+    border-radius: 10px;
+    background: #fff;
+    color: #6d6e71;
+    float: left;
+    max-width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 30px;
+    border-bottom-left-radius: 0;
+    padding: 10px;
+}
+
+.stackedbox1 .stacktitle {
+    width: 320px;
+}
+
+.stackedbox1 .stackedright .scooter {
+    background-size: cover;
+    height: 216px;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: inherit;
+}
+
+.stackedbox.lostpassport .stackedleft {
+    width: 100%;
+}
+
+.passportsvg {
+    background-size: cover;
+    width: 20%;
+    float: left;
+}
+
+.stackedbox.lostpassport .stackedleft ul,
+.stackedbox.lostpassport .stackedleft p {
+    width: 70%;
+    float: left;
+    margin-right: 10%;
+}
+
+    .stackedbox.lostpassport .stackedleft p, .stackedbox.lostpassport .stackedleft ul li {
+        font-size: 20px;
+        letter-spacing: 0;
+    }
+
+.stackedbox.lostpassport .stackedleft ul {
+    margin-top: 40px;
+}
+/*#endregion*/
+/*#region Orange Box with circle borders*/
+.orangeboxwithcircleborderarea {
+    background: #eb4f1d;
+    width: 100%;
+    margin: 150px auto;
+    position: relative;
+    display: block;
+    padding: 100px 0 76px 0;
+}
+
+.circlesvg {
+    margin: 0 auto;
+    padding: 0;
+    width: 106%;
+    display: block;
+    position: relative;
+    left: -3%;
+}
+
+    .circlesvg.topeat {
+        margin-top: -150px;
+    }
+
+    .circlesvg.bottomeat {
+        margin-bottom: -150px;
+    }
+
+
+.orangeboxwithcircleborderarea .circlesvg .eat-svgwidth {
+    width: 145px;
+    height: 145px;
+    margin-left: -1px;
+}
+
+.orangeboxwithcircleborderarea .circlesvg .eat-svg {
+    background-size: cover;
+}
+
+.orangeboxwithcircleborderarea .circlesvg .eat-svgwidth {
+    float: left;
+}
+
+    .orangeboxwithcircleborderarea .circlesvg .eat-svgwidth:first-child {
+        margin-left: 0;
+    }
+
+
+.orangeboxwithcircleborderarea h2 {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    background: #636363;
+    padding: 40px 0;
+    letter-spacing: 4px;
+}
+
+.ectext {
+    padding: 20px;
+    color: #fff;
+}
+
+    .ectext ul {
+        margin-left: 20px;
+    }
+
+        .ectext ul li:before {
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            top: 7px;
+        }
+
+    .ectext a {
+        color: #3C3C3C;
+    }
+
+        .ectext a:hover {
+            color: #f2f2f2;
+        }
+/*#endregion*/
+/*#region Piercings*/
+.dwidth {
+    width: 100%;
+    position: relative;
+    display: block;
+    clear: both;
+    margin: 30px auto;
+}
+
+.piercing {
+    border: 3px #eb5024 solid;
+    background: #fff;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    border-left-width: 0;
+    border-right-width: 0;
+    min-height: 290px;
+}
+
+.piercingtop {
+    background: url("../images/noseimage.svg") no-repeat;
+    background-size: contain;
+    width: 440px;
+    height: 370px;
+    margin: auto;
+    margin-top: -172px;
+    background-position: center;
+}
+
+.piercingsvg1 {
+    width: 70px;
+    height: 47px;
+    position: absolute;
+    background: url("../img/piercing2.png") no-repeat;
+    background-size: cover;
+}
+
+    .piercingsvg1.ltrtp {
+        top: -35px;
+        left: 10px;
+        transform: rotate(-180deg);
+    }
+
+    .piercingsvg1.rltbtm {
+        bottom: -35px;
+        right: 10px;
+    }
+
+.piercing .contentarea {
+    padding: 40px;
+}
+
+    .piercing .contentarea h2 {
+        color: #eb521d;
+    }
+
+    .piercing .contentarea p {
+        color: #868689;
+    }
+
+.piercing .piercinstick {
+    position: absolute;
+    width: 3%;
+    max-width: 51px;
+    height: 110%;
+    z-index: 99;
+}
+
+    .piercing .piercinstick img {
+        height: 100%;
+    }
+
+    .piercing .piercinstick.right {
+        right: -13px;
+        top: -10px;
+    }
+
+    .piercing .piercinstick.left {
+        left: -13px;
+        bottom: -10px;
+    }
+/*#endregion*/
+/*#region max-width:1200px;*/
+@media screen and (max-width: 1200px) {
+    .diseasesarea .diseasebox .table::after {
+        left: 4.5%;
+        width: 90.5%;
+    }
+}
+/*#endregion*/
+/*#region max-width:1100px;*/
+@media screen and (max-width: 1100px) {
+    .diseasesarea .diseasebox .table::after {
+        left: 5%;
+        width: 90%;
+    }
+}
+/*#endregion*/
+/*#region max-width:1030px;*/
+@media screen and (max-width: 1030px) {
+    .orangeboxwithrightimage {
+        min-height: 180px;
+    }
+
+    .piercing .piercinstick.right {
+        right: -13px;
+        top: -4px;
+    }
+
+    .piercing .piercinstick.left {
+        left: -13px;
+        bottom: -4px;
+    }
+
+    /*.threebox .ul .li .circlediv {
+            left: -17.5%;
+        }
+
+        .threebox .ul .li .rightdiv {
+            right: -17.5%;
+        }*/
+
+    .lgbtqarea .lgbtq {
+        padding-top: 12%;
+    }
+
+    /*.threebox .ul .li .circlediv, .threebox .ul .li .rightdiv {
+        width: 20%;
+    }
+
+    .threebox .ul .li .text {
+        width: 60%;
+    }
+
+        .threebox .ul .li .text .contentbox {
+            padding-left: 55px;
+            padding-right: 55px;
+        }
+
+    .threebox .ul .li .circlediv img {
+        right: -45px;
+    }
+
+    .threebox .ul .li .rightdiv img {
+        margin-left: -45px;
+    }*/
+    .diseasesarea .diseasebox .table::after {
+        left: 5.1%;
+        width: 89.7%;
+    }
+}
+/*#endregion*/
+/*#region max-width:1000px;*/
+@media screen and (max-width: 1000px) {
+    /*.threebox .ul .li .circlediv {
+        left: -16.5%;
+    }
+
+    .threebox .ul .li .rightdiv {
+        right: -16.5%;
+    }*/
+
+    .t-box .ul:after {
+        margin-top: 6.5%;
+    }
+
+    .balibelly h2 {
+        font-size: 26px;
+    }
+
+    .balibelly h3 {
+        font-size: 18px;
+    }
+
+    .balibelly ul li, .balibelly p {
+        font-size: 16px;
+    }
+
+    .lgbtqarea .lgbtq {
+        padding: 35px 20px;
+    }
+
+    .threebox .ul .li .circlediv {
+        width: 20%;
+    }
+
+    .threebox .ul .li .text {
+        width: 60%;
+    }
+
+    .threebox .ul .li .rightdiv {
+        width: 20%;
+    }
+}
+/*#endregion*/
+/*#region max-width:990px;*/
+@media screen and (max-width: 990px) {
+    .diseasesarea .diseasebox .table::after {
+        left: 5.8%;
+        width: 88.5%;
+    }
+}
+/*endregion*/
+/*#region max-width:900px;*/
+@media screen and (max-width: 900px) {
+    .diseasesarea .commonbox .ul .li:nth-child(3), .diseasesarea .commonbox .ul .li:nth-child(5) {
+        margin-left: 0;
+    }
+
+    .diseasesarea .commonbox .ul .li, .diseasesarea .commonbox .ul .li:nth-child(4) {
+        width: 45%;
+        margin-left: 10%;
+    }
+
+    .diseasesarea .diseasebox .table::after {
+        left: 6%;
+        width: 88%;
+    }
+
+    .diseasesarea .diseasebox .table .single {
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+        .diseasesarea .diseasebox .table .single .single-icon {
+            display: block;
+            margin: auto;
+            width: auto;
+        }
+
+        .diseasesarea .diseasebox .table .single p {
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
+}
+/*#endregion*/
+/*#region max-width:830px;*/
+@media screen and (max-width: 830px) {
+    .diseasesarea .diseasebox .table::after {
+        left: 6%;
+        width: 87.5%;
+    }
+}
+/*endregion*/
+/*#region max-width:800px;*/
+@media screen and (max-width: 800px) {
+    .t-box .ul:after {
+        margin-top: 4.5%;
+    }
+
+    .servicelistarea .servicelistbox .circleicon {
+        width: 125px;
+        height: 125px;
+        left: -50px;
+        top: -35px;
+    }
+
+    .servicelistarea .servicelistbox .circlecount {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        left: -35px;
+        top: -40px;
+    }
+
+    .servicelistarea .servicelistbox {
+        padding: 20px 20px 20px 80px;
+    }
+
+        .servicelistarea .servicelistbox ul li {
+            line-height: 24px;
+        }
+
+    .textboxwithcornerimagecontainer .imagecontainer {
+        left: 2%;
+        width: 25%;
+        margin-top: -58px;
+    }
+
+    .orangeboxwithrightimage {
+        min-height: 140px;
+    }
+
+    .lgbtqarea .lgbtqsvgcircle {
+        width: 10%;
+    }
+
+    .piercing .piercinstick {
+        width: auto;
+    }
+
+        .piercing .piercinstick.right {
+            right: -13px;
+            top: -9px;
+        }
+
+        .piercing .piercinstick.left {
+            left: -13px;
+            bottom: -9px;
+        }
+
+    .diseasesarea .diseasebox .table::after {
+        left: 6.5%;
+        width: 87%;
+    }
+}
+/*#endregion*/
+/*#region max-width:768px*/
+@media screen and (max-width: 768px) {
+    .widthmorethan768 {
+        display: none;
+    }
+
+    .widthlesstha768 {
+        display: block;
+    }
+
+        .widthlesstha768 .taxiarea {
+            width: 100%;
+            margin: 80px auto 40px;
+            display: block;
+            clear: both;
+            position: relative;
+            padding: 0 15px;
+        }
+
+            .widthlesstha768 .taxiarea .ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: block;
+                z-index: 9;
+            }
+
+                .widthlesstha768 .taxiarea .ul .li {
+                    width: 100%;
+                    float: left;
+                    margin-left: 0;
+                    background: #eb521d;
+                    position: relative;
+                    -webkit-border-radius: 15px;
+                    -moz-border-radius: 15px;
+                    border-radius: 15px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    color: #fff;
+                    z-index: 99;
+                    margin-bottom: 50px;
+                    margin-top: 70px;
+                }
+
+                    .widthlesstha768 .taxiarea .ul .li .taxi-icon {
+                        width: 50%;
+                        border-radius: 10px;
+                        padding: 10px;
+                        position: relative;
+                        z-index: 9;
+                        margin: auto;
+                        padding: 10px 10px 0 10px;
+                    }
+
+            .widthlesstha768 .taxiarea h2:first-child {
+                padding-top: 0;
+            }
+
+            .widthlesstha768 .taxiarea h2 {
+                text-align: center;
+            }
+
+            .widthlesstha768 .taxiarea p {
+                text-align: justify;
+            }
+
+            .widthlesstha768 .taxiarea .ul .li .leftimg {
+                width: 20%;
+                height: auto;
+                margin-bottom: 0;
+                margin-left: 0;
+            }
+
+                .widthlesstha768 .taxiarea .ul .li .leftimg img, .widthlesstha768 .taxiarea .ul .li .rightimg img {
+                    margin: 0 auto;
+                    display: block;
+                    width: auto;
+                    max-width: 100%;
+                }
+
+            .widthlesstha768 .taxiarea .ul .li .rightimg {
+                width: 20%;
+                height: auto;
+                margin-bottom: -14px;
+                margin-right: 0;
+                float: right;
+            }
+
+
+            .widthlesstha768 .taxiarea:after {
+                position: absolute;
+                background: #6d6e71;
+                content: "";
+                z-index: 1;
+                display: block;
+                height: 60%;
+                top: 0;
+                left: 3%;
+                right: 3%;
+                width: 80%;
+            }
+
+            .widthlesstha768 .taxiarea .ul .li .taxi-icon img {
+                margin: -25% auto 10px;
+            }
+
+    .bdrradis15 {
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+    }
+
+    .diseasesarea .diseasebox .table {
+        border-spacing: 10px 5px;
+    }
+
+        .diseasesarea .diseasebox .table .td p {
+            font-size: 14px;
+        }
+
+    .diseasesarea .commonbox .ul .li {
+        font-size: 12px;
+    }
+
+    .servicelistarea .servicelistbox ul {
+        list-style-position: outside;
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .textboxwithcornerimagecontainer .headingcontainer h2 {
+        font-size: 40px;
+        letter-spacing: normal;
+    }
+
+    .orangeboxwithrightimage .textwithoptimalimageimage img {
+        margin-right: -85px;
+        max-width: none;
+        max-height: 150px;
+    }
+
+    .diseasesarea .diseasebox .table::after {
+        left: 4.3%;
+        right: 5%;
+        width: 91.2%;
+    }
+}
+/*#endregion*/
+/*#region max-width:767px;*/
+@media screen and (max-width: 767px) {
+    /*.diseasesarea {
+        margin: 70px auto;
+        padding: 30px 15px;
+    }*/
+
+    .dotted-outer {
+        margin: 40% auto 10%;
+    }
+
+        .dotted-outer .richtextcontent {
+            padding: 10% 20px;
+        }
+
+    .qacontainer h2 {
+        font-size: 25px;
+        line-height: 120%;
+    }
+
+    .t-box .title .mosqicon {
+        height: 45px;
+        margin-top: 10px;
+    }
+
+    .servicelistarea .servicelistbox {
+        width: 90%;
+        padding: 10px 20px 20px 20px;
+    }
+
+        .servicelistarea .servicelistbox h2, .servicelistarea .servicelistbox h3 {
+            text-align: center;
+        }
+
+        .servicelistarea .servicelistbox .circleicon {
+            width: 100px;
+            height: 100px;
+            left: -35px;
+            top: -40px;
+        }
+
+    .cornerbox1 {
+        padding: 0 14px 40px 65px;
+        background-size: contain !important;
+    }
+
+        .cornerbox1 h2 {
+            margin-left: -68px;
+            padding-left: 72px;
+        }
+
+    .cornersvg1 {
+        width: 95px;
+        height: 90px;
+        left: -23px;
+        top: -20px;
+    }
+
+    .cornersvg2 {
+        width: 80px;
+        height: 95px;
+        right: -12px;
+    }
+
+    .cornersvg3 {
+        width: 80px;
+        height: 100px;
+        left: -16px;
+        bottom: -15px;
+    }
+
+    .cornersvg4 {
+        width: 130px;
+        height: 79px;
+        right: 15px;
+        bottom: -38px;
+    }
+
+    .cornerbox2 {
+        padding: 0 14px 40px 65px;
+    }
+
+        .cornerbox2 .textbox {
+            padding: 25px 20px;
+        }
+
+        .cornerbox2 .cornersvg2 {
+            width: 100px;
+            height: 100px;
+            top: -30px;
+            right: -20px;
+        }
+
+        .cornerbox2 h2 {
+            font-size: 24px;
+            margin-left: -65px;
+            padding-left: 80px;
+        }
+
+    .cornerbox1 h3 {
+        font-size: 18px;
+        letter-spacing: 0;
+    }
+
+    .diseasesarea .headingbg {
+        width: 98%;
+        margin: -13% auto 0 1%;
+    }
+
+    .diseasesarea .diseasebox .table .td {
+        width: 100%;
+        display: block;
+        margin-left: 0;
+    }
+
+    .diseasesarea .commonbox {
+        max-width: 85%;
+    }
+
+        .diseasesarea .commonbox .ul .li {
+            width: 45%;
+            margin-left: 10%;
+            margin-bottom: 10%;
+        }
+
+            .diseasesarea .commonbox .ul .li:nth-child(3),
+            .diseasesarea .commonbox .ul .li:nth-child(5) {
+                margin-left: 0;
+            }
+
+            .diseasesarea .commonbox .ul .li:nth-child(4) {
+                margin-left: 10%;
+            }
+
+    .diseasesarea .diseasebox ul li p {
+        font-size: 11px;
+        padding: 10px;
+    }
+
+        .diseasesarea .diseasebox ul li p span {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+
+    .diseasesarea .single .diseasebox ul li:nth-child(3) p,
+    .diseasesarea .japanesbox .diseasebox ul li:nth-child(3) p {
+        float: none;
+        margin-top: initial;
+        margin: auto;
+    }
+
+    .diseasesarea .diseasebox .table::after {
+        left: 3%;
+        right: 3%;
+        width: 93%;
+    }
+
+    .image {
+        width: 50% !important;
+    }
+
+    .t-box .title h2 {
+        max-width: 70%;
+        font-size: 25px;
+        padding: 15px 20px 15px 20px;
+        margin-bottom: -2px;
+    }
+
+    .t-box .ul {
+        display: block !important;
+    }
+
+        .t-box .ul:after {
+            height: 95%;
+            width: 30px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .t-box .ul .li {
+            float: inherit;
+            margin: 0 auto 20px;
+            padding: 1%;
+            text-align: center !important;
+            width: 100% !important;
+        }
+
+            .t-box .ul .li:first-child {
+                margin: 0 auto 20px;
+            }
+
+    .servicelistarea .servicelistbox .circlecount {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .servicelistarea .servicelistbox ul li {
+        line-height: 24px;
+    }
+
+    .servicelistarea .servicelistbox h2, .servicelistarea .servicelistbox h3 {
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 25px;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .servicelistarea .servicelistbox ul {
+        list-style-position: outside;
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .taxiarea .ul .li {
+        min-height: auto;
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        margin-left: 0;
+        padding-bottom: 0;
+    }
+
+        .taxiarea .ul .li .leftimg {
+            width: 20%;
+            position: relative;
+            float: left;
+            left: 0;
+            min-width: 100px;
+        }
+
+        .taxiarea .ul .li .rightimg {
+            right: 3%;
+            width: 20%;
+            position: relative;
+            float: right;
+            min-width: 100px;
+        }
+
+    .taxiarea:after {
+        height: 80%;
+        top: 10%;
+        left: 0;
+        right: 0;
+        width: 50%;
+        margin: auto;
+    }
+
+    .textboxwithcornerimagecontainer .imagecontainer {
+        position: relative;
+        left: 0;
+        max-width: 100%;
+        margin: auto;
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    .textboxwithcornerimagecontainer .content {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .balibelly {
+        margin: 80px auto;
+    }
+
+        .balibelly .balibellysvg {
+            width: 100px;
+            height: 130px;
+            top: -60px;
+        }
+
+        .balibelly .bellysvg2 {
+            margin-right: 20%;
+        }
+
+        .balibelly .bellysvg1 {
+            margin-left: 20%;
+        }
+
+        .balibelly .partycircle {
+            width: 100px;
+            height: 100px;
+            top: -50px;
+        }
+
+        .balibelly h2 {
+            font-size: 16px;
+        }
+
+            .balibelly h2 span:first-child {
+                padding-right: 55px;
+            }
+
+            .balibelly h2 span:last-child {
+                padding-left: 60px;
+            }
+
+        .balibelly .partysvg {
+            width: 60px;
+            height: 60px;
+        }
+
+        .balibelly h3 {
+            font-size: 18px;
+            padding: 5px 50px;
+        }
+
+        .balibelly ul li, .balibelly p {
+            font-size: 16px;
+        }
+
+    .partysec .partycrowd {
+        margin-top: -40%;
+    }
+
+
+    .lgbtqarea .lgbtq {
+        padding: 35px 20px;
+    }
+
+        .lgbtqarea .lgbtq h2 {
+            font-size: 26px;
+        }
+
+    .piercing {
+        margin-top: 100px;
+    }
+
+        .piercing .contentarea {
+            padding: 40px;
+        }
+
+    .piercingtop {
+        width: 215px;
+        height: 180px;
+        margin-top: -85px;
+    }
+
+    .textboxwithcornerimagecontainer .headingcontainer {
+        margin-bottom: -7px;
+        margin-right: 6px;
+    }
+
+        .textboxwithcornerimagecontainer .headingcontainer h2 {
+            font-size: 30px;
+        }
+
+    .threebox .ul .li {
+        margin-bottom: 30px;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+        .threebox .ul .li .circlediv {
+            width: 150px;
+            display: block;
+            margin: 0 auto -78px;
+        }
+
+        .threebox .ul .li .rightdiv {
+            width: 150px;
+            display: block;
+            margin: -78px auto 30px;
+        }
+
+        .threebox .ul .li .text {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .threebox .ul .li .circlediv img, .threebox .ul .li .rightdiv img {
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .threebox .ul .li .text .contentbox {
+            border: 3px #eb521d solid;
+            padding: 90px 10%;
+        }
+}
+/*#endregion*/
+/*#region max-width:600px;*/
+@media screen and (max-width: 600px) {
+    .image {
+        margin-bottom: 20px;
+    }
+
+    .orangeboxwithrightimage {
+        min-height: 110px;
+    }
+
+    .servicelistarea .servicelistbox h2, .servicelistarea .servicelistbox h3 {
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 25px;
+        padding-left: 45px;
+        padding-right: 45px;
+        font-size: 24px;
+        font-weight: bold;
+        word-wrap: break-word;
+    }
+
+    .diseasesarea .diseasebox .table .td {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+/*#endregion*/
+/*#region max-width:500px;*/
+@media screen and (max-width: 500px) {
+    .t-box .title h3 {
+        width: 70%;
+        padding: 15px 20px 15px 20px;
+    }
+
+    .orangeboxwithrightimage {
+        min-height: 110px;
+        padding-right: 20%;
+    }
+
+    .orangeboxwithrightimagetop .textwithoptimalimageimage img {
+        margin-left: -150%;
+        max-width: 300%;
+    }
+
+    .orangeboxwithoutheading {
+        border-top-right-radius: 15px !important;
+    }
+
+    .diseasesarea h2 {
+        font-size: 30px;
+    }
+
+    .diseasesarea .diseasebox .table .td {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .diseasesarea .commonbox .ul .li {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 25px;
+        margin-bottom: 0;
+    }
+
+        .diseasesarea .commonbox .ul .li:nth-child(3),
+        .diseasesarea .commonbox .ul .li:nth-child(5) {
+            margin-left: 0;
+        }
+
+        .diseasesarea .commonbox .ul .li:nth-child(4) {
+            margin-left: 0;
+            width: 100%;
+        }
+
+    .diseasesarea .diseasebox ul li p {
+        font-size: 11px;
+        padding: 10px;
+    }
+
+        .diseasesarea .diseasebox ul li p span {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+    .diseasesarea .single .diseasebox ul li:nth-child(3) .dis-icon,
+    .diseasesarea .japanesbox .diseasebox ul li:nth-child(3) .dis-icon {
+        float: none;
+        margin-left: 0;
+        margin-top: 0;
+        margin: auto;
+    }
+
+    .diseasesarea .single .diseasebox ul li:nth-child(3) p,
+    .diseasesarea .japanesbox .diseasebox ul li:nth-child(3) p {
+        float: none;
+        margin-top: initial;
+        margin: auto;
+    }
+
+    .diseasesarea .commonbox .ul .li span {
+        right: -22px;
+    }
+
+    .diseasesarea .commonbox h3 {
+        font-size: 20px;
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+
+    .diseasesarea .japanesbox .diseasebox ul,
+    .diseasesarea .single .diseasebox ul {
+        min-height: 550px;
+    }
+
+    .diseasesarea .diseasebox .table::after {
+        left: 4%;
+        right: 4%;
+        width: 92%;
+    }
+
+    .cornerbox1 {
+        padding: 0 14px 40px 15px;
+    }
+
+        .cornerbox1 h2 {
+            margin-left: -18px;
+            padding-left: 39px;
+            font-size: 24px;
+            padding-bottom: 5px;
+            margin-right: -17px;
+            padding-top: 5px;
+        }
+
+    .cornersvg1 {
+        width: 50px;
+        height: 45px;
+        left: -12px;
+        top: -8px;
+    }
+
+    .cornersvg2 {
+        width: 40px;
+        height: 50px;
+        right: -8px;
+        top: -8px;
+    }
+
+    .cornersvg3 {
+        width: 40px;
+        height: 51px;
+        left: -8px;
+        bottom: -8px;
+    }
+
+    .cornersvg4 {
+        width: 80px;
+        height: 48px;
+        right: 10px;
+        bottom: -20px;
+    }
+
+    .cornerbox2 {
+        padding: 0 14px 40px 15px;
+    }
+
+        .cornerbox2 .cornersvg2 {
+            width: 70px;
+            height: 70px;
+            top: -10px;
+            right: -20px;
+        }
+
+        .cornerbox2 h2 {
+            font-size: 18px;
+            margin-left: -15px;
+            padding-left: 40px;
+        }
+
+        .cornerbox2 .textbox {
+            padding: 10px 30px;
+        }
+
+    .balibelly {
+        margin: 80px auto;
+    }
+
+        .balibelly .balibellysvg {
+            width: 100px;
+            height: 130px;
+            top: -60px;
+        }
+
+        .balibelly h2 {
+            font-size: 30px;
+        }
+
+            .balibelly h2 span:last-child {
+                padding-left: 50px;
+            }
+
+            .balibelly h2 span:first-child {
+                padding-right: 50px;
+            }
+
+        .balibelly .bellysvg2 {
+            margin-right: 20%;
+        }
+
+        .balibelly .bellysvg1 {
+            margin-left: 3%;
+        }
+
+        .balibelly .partycircle {
+            width: 60px;
+            height: 60px;
+            top: -60px;
+        }
+
+        .balibelly h2 {
+            font-size: 16px;
+        }
+
+            .balibelly h2 span {
+                width: auto;
+            }
+
+                .balibelly h2 span:first-child {
+                    padding-right: 0;
+                }
+
+                .balibelly h2 span:last-child {
+                    padding-left: 10px;
+                }
+
+        .balibelly .partysvg {
+            width: 60px;
+            height: 60px;
+        }
+
+        .balibelly h3 {
+            font-size: 18px;
+            padding: 5px 50px;
+        }
+
+        .balibelly ul li, .balibelly p {
+            font-size: 16px;
+        }
+
+    .lgbtqarea .lgbtq {
+        padding: 35px 20px;
+        font-weight: 300;
+    }
+
+        .lgbtqarea .lgbtq h2 {
+            font-size: 26px;
+        }
+
+    .lgbtqarea .lgbtqsvgcircle {
+        width: 12%;
+    }
+
+    .orangeboxwithrightimage .textwithoptimalimageimage img {
+        margin-right: -50px;
+        max-width: none;
+        max-height: 110px;
+    }
+
+    .widthlesstha768 .taxiarea .ul .li .taxi-icon {
+        width: 70%;
+    }
+}
+
+/*#endregion*/
+/*#region max-width:450px;*/
+@media screen and (max-width: 450px) {
+
+
+    .t-box .title h2 {
+        max-width: 70%;
+        width: 70%;
+        font-size: 25px;
+        padding: 15px 20px 15px 20px;
+        margin-bottom: -2px;
+    }
+
+    .widthlesstha768 .taxiarea .ul .li .taxi-icon {
+        width: 100%;
+    }
+
+    .diseasesarea .headingbg {
+        width: 104%;
+        margin: -13% auto 0 -2%;
+    }
+}
+/*#endregion*/
+/*#region max-width:400px;*/
+@media screen and (max-width: 400px) {
+
+    .image {
+        width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .t-box .title .mosqicon {
+        margin-left: 10px;
+        margin-top: 35px;
+    }
+
+    .dotted-outer {
+        margin-bottom: 40%;
+    }
+
+    .partysec .partycrowd {
+        margin-top: -60%;
+    }
+
+    .cornerbox2 {
+        padding: 0 14px 40px 15px;
+        background-size: contain !important;
+    }
+
+    .lgbtqarea .lgbtqsvgcircle {
+        width: 18%;
+    }
+
+    .servicelistarea .servicelistbox {
+        float: right;
+        width: 95%;
+    }
+
+    .diseasesarea .headingbg {
+        width: 103%;
+        margin: -13% auto 0 -1.5%;
+    }
+
+    .diseasesarea .diseasebox .table::after {
+        left: 6%;
+        right: 3%;
+        width: 88%;
+    }
+}
+/*#endregion*/

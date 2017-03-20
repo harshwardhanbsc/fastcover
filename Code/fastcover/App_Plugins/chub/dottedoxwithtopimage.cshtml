@@ -1,0 +1,44 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    String topimage = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.image : null;
+    String bottomimage = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.image : null;
+    String topimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.altText : null;
+    String bottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.altText : null;
+    String borderstyle = (Model != null) ? Model.dropdownvalue : null;
+}
+<div class="clear"></div>
+@if (borderstyle != "Solid")
+{
+    <div class="dotted-outer">
+        <div class="imagecontent">
+            <img src="@topimage" alt="@topimageAlttext" />
+        </div>
+        <div class="richtextcontent chrichtext">
+            @if (Model != null)
+            {
+                @Html.Raw(@Model.rteValue)
+            }
+        </div>
+        <div class="bottomimagecontent">
+            <img src="@bottomimage" alt="@bottomimageAlttext" />
+        </div>
+    </div>
+}
+@if (borderstyle == "Solid")
+{
+    <div class="dotted-outer">
+        <div class="imagecontent">
+            <img src="@topimage" alt="@topimageAlttext" />
+        </div>
+        <div class="richtextcontent chrichtext" style="border-style:@borderstyle">
+            @if (Model != null)
+            {
+                @Html.Raw(@Model.rteValue)
+            }
+        </div>
+        <div class="bottomimagecontent">
+            <img src="@bottomimage" alt="@bottomimageAlttext" />
+        </div>
+    </div>
+}
+<div class="clear"></div>

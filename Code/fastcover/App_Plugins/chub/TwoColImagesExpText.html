@@ -1,0 +1,141 @@
+<div style="width:30%;float:left;padding-left:10%;padding-right:10%;">
+
+    <div ng-controller="CHControls.MultipleMediaController3" style="width:100%;float:left;">
+        <div class="usky-editor-placeholder imagegrid" ng-click="setImage('image1')" ng-if="control.value == null || control.value.images == null || control.value.images.image1 == null" style="width:100%; ">
+            <i class="icon icon-picture"></i>
+            <div ng-id="!control.$inserted" id="{{control.uniqueId}}" class="help-text">Image 1</div>
+        </div>
+        <div ng-if="control.value.images != null && control.value.images.image1 != null">
+            <div class="imggrid4wide">
+                <span>Image 1</span>
+                <img ng-click="setImage('image1')"
+                     ng-src="{{control.value.images.image1.image}}"
+                     class="fullSizeImage" />
+            </div>
+        </div>
+    </div>
+    <textarea rows="1"
+              umb-auto-resize
+              umb-auto-focus
+              class="textstring input-block-level" id="{{control.uniqueId}}_text1"
+              ng-model="control.value.Heading1"
+              ng-attr-style="{{control.editor.config.style}}" localize="placeholder"
+              style="width:100%;color:#FFF;background:#eb4f1d;line-height:25px;height:35px;font-size:25px;text-align:center;float:left;"
+              placeholder="heading...."></textarea>
+    <div style="clear:both;"></div>
+    <div style="border:1px dotted grey;">
+
+        <div ng-controller="CHControls.RteAllOptions" id="{{control.uniqueId}}">
+            <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                <div grid-rte
+                     configuration="rteconfig"
+                     value="control.value.RteValue1"
+                     unique-id="control.$uniqueId"
+                     on-link-picker-click="vm.openLinkPicker"
+                     on-media-picker-click="vm.openMediaPicker"
+                     on-embed-click="vm.openEmbed"
+                     on-macro-picker-click="vm.openMacroPicker" style="width:100%;" placeholder="Summary (Optional)">
+                </div>
+                <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                             model="vm.linkPickerOverlay"
+                             position="right"
+                             view="vm.linkPickerOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                             model="vm.mediaPickerOverlay"
+                             position="right"
+                             view="vm.mediaPickerOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.embedOverlay.show"
+                             model="vm.embedOverlay"
+                             position="right"
+                             view="vm.embedOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                             model="vm.macroPickerOverlay"
+                             view="vm.macroPickerOverlay.view"
+                             position="right">
+                </umb-overlay>
+            </div>
+            <!--<div
+                    unique-id="control.$uniqueId"
+                    value="control.value.RteValue1"
+                    style="width:100%;"
+                    grid-rte configuration="rteconfig" placeholder="Summary (Optional)"></div>-->
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<div style="width:30%;float:left;padding-left:10%;padding-right:10%;">
+
+    <div ng-controller="CHControls.MultipleMediaController3" style="width:100%;float:left;">
+        <div class="usky-editor-placeholder imagegrid" ng-click="setImage('image2')" ng-if="control.value == null || control.value.images == null || control.value.images.image2 == null" style="width:100%; ">
+            <i class="icon icon-picture"></i>
+            <div ng-id="!control.$inserted" id="Div1" class="help-text">Image 2</div>
+        </div>
+        <div ng-if="control.value.images != null && control.value.images.image2 != null">
+            <div class="imggrid4wide">
+                <span>Image 2</span>
+                <img ng-click="setImage('image2')"
+                     ng-src="{{control.value.images.image2.image}}"
+                     class="fullSizeImage" />
+            </div>
+        </div>
+    </div>
+    <textarea rows="1"
+              umb-auto-resize
+              umb-auto-focus
+              class="textstring input-block-level" id="{{control.uniqueId}}_text2"
+              ng-model="control.value.Heading2"
+              ng-attr-style="{{control.editor.config.style}}" localize="placeholder"
+              style="width:100%;color:#FFF;background:#eb4f1d;line-height:25px;height:35px;font-size:25px;text-align:center;float:left;"
+              placeholder="heading...."></textarea>
+    <div style="clear:both;"></div>
+
+    <div style="border:1px dotted grey;">
+        <div ng-controller="CHControls.RteAllOptions" id="{{control.uniqueId}}">
+            <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                <div grid-rte
+                     configuration="rteconfig"
+                     value="control.value.RteValue2"
+                     unique-id="control.$uniqueId+1"
+                     on-link-picker-click="vm.openLinkPicker"
+                     on-media-picker-click="vm.openMediaPicker"
+                     on-embed-click="vm.openEmbed"
+                     on-macro-picker-click="vm.openMacroPicker" style="width:100%;" placeholder="Summary (Optional)">
+                </div>
+                <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                             model="vm.linkPickerOverlay"
+                             position="right"
+                             view="vm.linkPickerOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                             model="vm.mediaPickerOverlay"
+                             position="right"
+                             view="vm.mediaPickerOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.embedOverlay.show"
+                             model="vm.embedOverlay"
+                             position="right"
+                             view="vm.embedOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                             model="vm.macroPickerOverlay"
+                             view="vm.macroPickerOverlay.view"
+                             position="right">
+                </umb-overlay>
+            </div>
+            <!--<div unique-id="control.$uniqueId+1"
+                     value="control.value.RteValue2"
+                     style="width:100%;"
+                     grid-rte configuration="rteconfig" placeholder="Summary (Optional)"></div>-->
+        </div>
+    </div>
+
+
+</div>
+<div style="clear:both;"></div>

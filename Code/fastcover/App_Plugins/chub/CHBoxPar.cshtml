@@ -1,0 +1,14 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+
+@*<pre>@Model</pre>*@
+@*<span>Brookes testing is working</span>*@
+
+<div class="boxparagph chrichtext">@Html.Raw(Model.rteValue)</div>
+
+
+@if (Model.value != null)
+{
+    <div class="boxparagphimagediv">
+        <img src="@Model.value.image"  alt="@Model.value.altText"/>
+    </div>
+}

@@ -1,0 +1,8 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+<a href="#" class="expander">
+    <div class="outter @Model.editor.config.expanderClass">
+        <div class="heading chrichtext">@Html.Raw(Model.value.Heading) <div class="readmore down">&#9660;</div><div class="readmore up">&#9650;</div></div>
+        <div class="clear"></div>
+        <div class="text expandercontent chrichtext">@Html.Raw(Model.value.RteValue)</div>
+    </div>
+</a>

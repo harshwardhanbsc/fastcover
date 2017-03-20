@@ -1,0 +1,36 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    String img1 = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.image : "";
+    String img2 = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.image : "";
+    String img1AltText = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.altText : "";
+    String img2AltText = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.altText : "";
+}
+
+<div style="width:100%;">
+    <!-- left div -->
+    <div class="imgcols">
+        <div class="img">
+            <img src="@img1" alt="@img1AltText">
+        </div>
+        <div class="heading">
+            @Model.value.Heading1
+        </div>
+        <div class="expander">
+            <div class="readmore"><a href="#">Read More</a></div>
+            <div class="expandercontent chrichtext">@Html.Raw(Model.value.RteValue1)</div>
+        </div>
+    </div>
+    <!-- right div -->
+    <div class="imgcols">
+        <div class="img">
+            <img src="@img2" alt="@img2AltText">
+        </div>
+        <div class="heading">@Model.value.Heading2</div>
+        <div class="expander">
+            <div class="readmore"><a href="#">Read More</a></div>
+            <div class="expandercontent chrichtext">@Html.Raw(Model.value.RteValue2)</div>
+        </div>
+    </div>
+</div>
+<div style="clear:both;">
+</div>

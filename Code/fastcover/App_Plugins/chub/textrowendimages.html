@@ -1,0 +1,101 @@
+﻿<div ng-controller="CHControls.TextRowEndImagesController" class="textrowendimagecontainer">
+    <div class="itemrow">
+        <div class="leftimg">
+            <br />
+            Left Image
+            <br />
+            <br />
+        </div>
+        <div class="middlecontent">
+            <br />
+            Content
+            <br />
+            <br />
+        </div>
+        <div class="rightimg">
+            <br />
+            Right Image
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="deleterow">
+        <br />
+        Delete Row
+        <br />
+        <br />
+    </div>
+    <div ng-repeat="input in control.inputs" class="inputrow">
+        <div class="itemrow">
+            <div class="leftimg">
+                <div class="usky-editor-placeholder" ng-click="setLeftImage(input.id)" ng-if="input.leftimage.image === null || input.leftimage.image == null">
+                    <i class="icon icon-picture" style="line-height: 55px; font-size: 55px;"></i>
+                    <div ng-id="!control.$inserted" class="help-text">Click to insert image</div>
+                </div>
+                <div ng-if="input.leftimage">
+                    <div>
+                        <img ng-if="input.leftimage.image"
+                             ng-click="setLeftImage(input.id)"
+                             ng-src="{{input.leftimage.image}}" />
+                        <a href class="picked-image" ng-click="removeLeftImage(input.id)"><i class="icon icon-delete"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="middlecontent">
+                <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                    <div grid-rte
+                         configuration="control.editor.config.textrowendimagesrtetoolbar"
+                         value="input.content"
+                         unique-id="control.$uniqueId + $index"
+                         on-link-picker-click="vm.openLinkPicker"
+                         on-media-picker-click="vm.openMediaPicker"
+                         on-embed-click="vm.openEmbed"
+                         on-macro-picker-click="vm.openMacroPicker">
+                    </div>
+                    <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                                 model="vm.linkPickerOverlay"
+                                 position="right"
+                                 view="vm.linkPickerOverlay.view">
+                    </umb-overlay>
+                    <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                                 model="vm.mediaPickerOverlay"
+                                 position="right"
+                                 view="vm.mediaPickerOverlay.view">
+                    </umb-overlay>
+                    <umb-overlay ng-if="vm.embedOverlay.show"
+                                 model="vm.embedOverlay"
+                                 position="right"
+                                 view="vm.embedOverlay.view">
+                    </umb-overlay>
+                    <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                                 model="vm.macroPickerOverlay"
+                                 view="vm.macroPickerOverlay.view"
+                                 position="right">
+                    </umb-overlay>
+                </div>
+            </div>
+            <div class="rightimg">
+                <div class="usky-editor-placeholder" ng-click="setRightImage(input.id)" ng-if="input.rightimage.image === null || input.rightimage.image == null">
+                    <i class="icon icon-picture" style="line-height: 55px; font-size: 55px;"></i>
+                    <div ng-id="!control.$inserted" class="help-text">Click to insert image</div>
+                </div>
+                <div ng-if="input.rightimage">
+                    <div>
+                        <img ng-if="input.rightimage.image"
+                             ng-click="setRightImage(input.id)"
+                             ng-src="{{input.rightimage.image}}" />
+                        <a href class="picked-image" ng-click="removeRightImage(input.id)"><i class="icon icon-delete"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="deleterow">
+            <button class="btn btn-default-red" type="button" ng-click="RemoveRow(input.id)">x</button>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div>
+        <button class="btn btn-default pull-right margin10auto" type="button" ng-click="AddRow()">Add New Row</button>
+    </div>
+</div>

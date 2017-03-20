@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+<div class="qacontainer">
+    <h2>@Model.value.qaheading</h2>
+    <dl class="accordion">
+        @foreach (var input in Model.inputs)
+        {
+            <div class="repeatdiv">
+                <dt><span>Q. </span><a href="">@input.question</a></dt>
+                <dd class="chrichtext">@Html.Raw(input.answer)</dd>
+            </div>
+        }
+    </dl>
+</div>

@@ -1,0 +1,45 @@
+<div ng-controller="Umbraco.PropertyEditors.Grid.TextStringController" style="width:{{control.editor.config.editorwidth}};position:relative;margin-left:auto; margin-right:auto;">
+    <textarea rows="1"
+              umb-auto-resize
+              umb-auto-focus
+              class="textstring input-block-level" id="{{control.uniqueId}}_text"
+              ng-model="control.value.Heading"
+              ng-attr-style="{{control.editor.config.style}}" localize="placeholder"
+              style="width:100%;color:#FFF;background:#eb4f1d;line-height:25px;height:35px;font-size:25px;text-align:center;float:left;"
+              placeholder="Panel Heading..."></textarea>
+
+    <div style="border: 2px solid #EB4F1C;" ng-controller="CHControls.RteAllOptions">
+        <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+            <div grid-rte
+                 configuration="rteconfig"
+                 value="control.value.RteValue"
+                 unique-id="control.$uniqueId"
+                 on-link-picker-click="vm.openLinkPicker"
+                 on-media-picker-click="vm.openMediaPicker"
+                 on-embed-click="vm.openEmbed"
+                 on-macro-picker-click="vm.openMacroPicker" class="testclass">
+            </div>
+            <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                         model="vm.linkPickerOverlay"
+                         position="right"
+                         view="vm.linkPickerOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                         model="vm.mediaPickerOverlay"
+                         position="right"
+                         view="vm.mediaPickerOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.embedOverlay.show"
+                         model="vm.embedOverlay"
+                         position="right"
+                         view="vm.embedOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                         model="vm.macroPickerOverlay"
+                         view="vm.macroPickerOverlay.view"
+                         position="right">
+            </umb-overlay>
+        </div>
+    </div>
+
+</div>

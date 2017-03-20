@@ -1,0 +1,51 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+<div class="vaccinations">
+    <div style="" class="chgridrte rte1 chrichtext">@Html.Raw(Model.value.rteValue)</div>
+    @if (Model.value != null)
+    {
+        <div class="rightimage">
+            <img src="@Model.value.image" />
+        </div>
+    }
+    <div class="subheading">
+        <div class="orangebg">
+            <div class="heading">@Model.value.Heading</div>
+        </div>
+    </div>
+
+    <div class="chgridrte subheadingrte chrichtext">
+        @Html.Raw(Model.value.rteValue2)
+    </div>
+
+    <div style="width:100%;height:auto;float:left;z-index:20;">
+        <img src="/media/13959/arch.svg" style="width:100%;z-index:20;margin-top:-3px;" width="100%" />
+    </div>
+    <div style="width:100%;background:url('/media/13961/wiggly-lines.svg') no-repeat;background-size:contain;">
+        <div style="width:100%;margin-top:-6%;float:left;z-index:10;">
+            <div class="onesix"><img src="/media/13941/full-sleeves-normal.png" /></div>
+            <div class="onesix"><img src="/media/13941/full-sleeves-normal.png" /></div>
+            <div class="onesix"><img src="/media/13941/full-sleeves-normal.png" /></div>
+            <div class="onesix"><img src="/media/13941/full-sleeves-normal.png" /></div>
+            <div class="onesix"><img src="/media/13941/full-sleeves-normal.png" /></div>
+            <div class="onesix"><img src="/media/13941/full-sleeves-normal.png" /></div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="warningheading">
+        <div class="textandcircle">
+            <div class="leftext">@Model.value.LeftHeading</div>
+            <div class="circle">
+                <span>@Model.value.CircleText</span>
+            </div>
+            <div class="righttext">@Model.value.RightHeading</div>
+        </div>
+        <img src="/media/13962/warning.svg" class="warning" />
+        <img src="/media/13962/warning.svg" class="warning right" />
+    </div>
+    <div style="clear:both;"></div>
+
+    <div style="clear:both;width:100%;border:4px solid #EB4F1C;border-radius:10px;padding:80px 20px 20px 20px;margin-top:-95px;z-index:15;position:relative;background:"
+         class="disinf chgridrte chrichtext">@Html.Raw(Model.value.rteValue3)</div>
+
+    </div>

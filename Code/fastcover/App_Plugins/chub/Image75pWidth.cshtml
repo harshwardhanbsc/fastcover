@@ -1,0 +1,17 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+
+@if (Model.value != null)
+{
+    var url = Model.value.image;
+    var urlAlttext = Model.value.image;
+    if (Model.editor.config != null && Model.editor.config.size != null){
+        url += "?width=" + Model.editor.config.size.width;
+        url += "&height=" + Model.editor.config.size.height;
+
+        if(Model.value.focalPoint != null){
+            url += "&center=" + Model.value.focalPoint.top +"," + Model.value.focalPoint.left;
+            url += "&mode=crop";
+        }
+    }
+    <img class="wide wideimage75pc" src="@url" alt="@urlAlttext">    
+}

@@ -1,0 +1,44 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    var hv = Model;
+    var tabData = hv["tabData"];
+    bool firstTab = true;
+
+}
+<div class="bs-docs-example">
+
+    @foreach (var row in tabData)
+    {
+        int id = row.id;
+        if (firstTab)
+        {
+            firstTab = false;
+
+        }
+        else
+        {
+            <div style="width:100%;">
+                <div style="width:2%;float:left;">&nbsp;</div>
+                <div style="width:5%;float:left;background:#6D6E71;height:40px;"></div>
+                <div style="clear:both;"></div>
+            </div>
+        }
+        <div style="display:table;width:100%;">
+            <div style="display: table-cell; width: 80%;">
+                <div style="display: inline-block; background: #f1592a; color: White; font-size: 20px; font-weight: 600; line-height: 40px; border-radius: 10px 10px 0px 0px; padding-left: 20px; padding-right: 20px; letter-spacing: 3px;">@row.heading</div>
+                <div style="width: 100%; float: left;">
+                    <div style="width: 100%; border: 3px solid #f1592a; border-radius: 0px 10px 10px 10px; padding: 20px; vertical-align: bottom; position: relative;" class="chrichtext">@Html.Raw(row.content)</div>
+                </div>
+            </div>
+            <div style="width:19%;display:table-cell;position:relative;">
+                <img src="@row.image.image" alt="@row.image.altText" style="padding-left:10%;padding-right:10%;position:absolute;max-width:100%;max-height:100%;bottom:0px; " />
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+    }
+</div>
+
+@*
+    <pre>@Model</pre>
+*@

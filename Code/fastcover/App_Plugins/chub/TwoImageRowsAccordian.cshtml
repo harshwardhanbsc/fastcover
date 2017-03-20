@@ -1,0 +1,84 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    String img1 = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.image : "";
+    String img2 = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.image : "";
+    String img1AltText = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.altText : "";
+    String img2AltText = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.altText : "";
+}
+
+<style>
+    .twoimgrows {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .twoimgrowstopimage {
+        width: 100%;
+        position: relative;
+    }
+
+    .twoimgrowscontent {
+        width: 99%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        padding: 20px 10px 20px 10px;
+        color: #FFF;
+        background: #eb4f1d;
+        line-height: 1.5;
+        /*
+    margin-top:-70px;
+    margin-bottom:-90px;
+    */
+    }
+
+    .twoimgrowsbottomimage {
+        width: 100%;
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .expanded .twoimgrowsbottomimage {
+        /* margin-top:0px; */ padding-top: 20px;
+    }
+
+    .imgbackground {
+        width: 99%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        float: left;
+        height: 50%;
+        top: 50%;
+        position: absolute;
+        background: #eb4f1d;
+        z-index: 5;
+    }
+
+        .imgbackground.bottom {
+            top: 0%;
+        }
+
+    @@media screen and (max-width:767px) {
+        .twoimgrows {
+            width: 95%;
+        }
+    }
+</style>
+
+<a href="#" class="expander">
+    <div class="twoimgrows">
+        <div class="twoimgrowstopimage">
+            <img src="@img1" style="width:100%;z-index:10;position:relative;" alt="@img1AltText" />
+            <div class="imgbackground"></div>
+        </div>
+        <div class="twoimgrowscontent expandercontent chrichtext">
+            @Html.Raw(Model.value.RteValue1)
+        </div>
+        <div class="twoimgrowsbottomimage">
+            <img src="@img2" style="width:100%;;z-index:10;position:relative;" alt="@img2AltText" />
+            <div class="imgbackground bottom"></div>
+        </div>
+    </div>
+</a>
+<div style="clear:both;"></div>

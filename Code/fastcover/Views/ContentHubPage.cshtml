@@ -1,0 +1,637 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "MasterSite2015.cshtml";
+}
+@section HeadAdditionalTags{
+    <title>@Umbraco.Field("title")</title>
+    <meta name="description" content="@Umbraco.Field(" metaDescription")">
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(".expander").click(function () {
+            var theHref;
+            if ($(this).hasClass('expander')) {
+                theHref = $(this);
+            }
+            else {
+                theHref = $(this).parentsUntil('.expander');
+            }
+            if (theHref.hasClass('expanded')) {
+                theHref.find('.expandercontent').slideUp(500);
+                theHref.removeClass('expanded');
+            }
+            else {
+                theHref.find('.expandercontent').slideDown(500);
+                theHref.addClass('expanded');
+            }
+            //$(this).parent().find('.expandercontent').slideDown(500);
+            return false;
+        }); // end of expander click
+
+
+
+        $("div.disinf.chgridrte h3").click(function () {
+            if ($(this).hasClass("expanded")) {
+                $(this).nextUntil("h3").not("hr").slideUp(500);
+                $(this).removeClass("expanded");
+            }
+            else {
+                $(this).nextUntil("h3").slideDown(500);
+                $(this).addClass("expanded");
+            }
+
+
+            /*
+            var theHref;
+            if ($(this).hasClass('expanded')) {
+            theHref = $(this);
+            }
+            else {
+            theHref = $(this).parentsUntil('.expander');
+            }
+            if (theHref.hasClass('expanded')) {
+            theHref.find('.expandercontent').slideUp(500);
+            theHref.removeClass('expanded');
+            }
+            else {
+            theHref.find('.expandercontent').slideDown(500);
+            theHref.addClass('expanded');
+            }
+            */
+            //$(this).parent().find('.expandercontent').slideDown(500);
+            return false;
+        }); // end of expander click
+
+
+
+
+
+    });    // end of document.ready
+</script>
+
+<style>
+    body, .body, .page-head::after {
+        background: #F4F4F4;
+    }
+
+    .grid-section {
+        color: #7F7F7F;
+        font-size: 16px;
+    }
+
+        .grid-section ol, .grid-section ul {
+            list-style-type: none;
+        }
+
+    .col-sm-8.column {
+        width: 75%;
+        float: left;
+    }
+
+    .col-sm-4.column {
+        width: 25%;
+        float: left;
+    }
+
+    .umb-grid .container {
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .wideimage75pc {
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    /*.chsectionHeading {
+        width: 100%;
+        max-height: 200px;
+        min-height: 68px;
+        margin-bottom: 20px;
+    }
+
+    .chheading {
+        color: #FFF;
+        background: #F1592A;
+        width: 100%;
+        min-height: 68px;
+        display: table;
+        position: relative;
+        bottom: 0px;
+        clear: both;
+        border-radius: 20px;
+        display: table;
+    }
+
+        .chheading h2 {
+            color: #FFF;
+            line-height: 1.0;
+            font-size: 30px;
+            letter-spacing: 6px;
+            padding-left: 2%;
+            font-weight: 700;
+            display: table-cell;
+            vertical-align: middle;
+            width: 70%;
+            position: relative;
+            min-height: 68px;
+
+        }
+
+    .chheadingimg1 {
+        float: right;
+        position: absolute;
+        right: 20px;
+        bottom: 0px;
+        display: inline-block;
+        max-width: 10%;
+    }
+
+        .chheadingimg1 img {
+            width: 100%;
+        }
+
+    .chgridrte h3 {
+        color: #eb4f1d;
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .chgridrte hr {
+        border: 1px dashed #eb4f1d;
+    }*/
+
+    .expander div.outter {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .expander div.outter.narrow {
+            width: 70%;
+        }
+
+        .expander div.outter.wide {
+            width: 100%;
+        }
+
+        .expander div.outter div.heading {
+            font-size: 18px;
+            line-height: 20px;
+            border: 4px solid #eb4f1d;
+            background: #eb4f1d;
+            padding-left: 50%;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 2%;
+            padding-right: 2%;
+            color: White;
+            width: 100%;
+            float: left;
+            text-align: center;
+        }
+
+            .expander div.outter div.heading div.readmore {
+                float: right;
+                right: 2%;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                background: #eb4f1d;
+                line-height: 20px;
+                font-size: 15px;
+                border: 4px solid #eb4f1d;
+                color: White;
+                position: absolute;
+                top: 0px;
+            }
+
+    .expander div.readmore.up, .expander.expanded div.readmore.down {
+        display: none;
+    }
+
+    .expander div.readmore.down, .expander.expanded div.readmore.up {
+        display: block;
+    }
+
+    .expander div.outter div.text {
+        margin-top: 0px;
+        font-size: 18px;
+        padding-bottom: 15px;
+        color: #7F7F7F;
+        padding-top: 20px;
+        padding-left: 2%;
+        padding-right: 2%;
+        display: none;
+    }
+
+    .expander div.outter.narrow div.text {
+        border: 4px solid #eb4f1d;
+    }
+
+    .expander div.outter.wide div.heading {
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 5px;
+    }
+
+    .expander div.outter.wide div.expandercontent img {
+        width: 100%;
+    }
+
+    .expander .expandercontent {
+        display: none;
+    }
+
+
+
+    div.heading2outter {
+        width: 90%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        div.heading2outter div.himage {
+            width: 12.5%;
+            float: left;
+            text-align: center;
+        }
+
+            div.heading2outter div.himage img {
+                width: 100%;
+                max-height: 80px;
+            }
+
+        div.heading2outter div.heading2 {
+            width: 75%;
+            float: left;
+        }
+
+    div.heading2 div.heading2table {
+        width: 100%;
+        color: #FFF;
+        text-align: center;
+        background: #eb4f1d;
+        min-height: 80px;
+        display: table;
+    }
+
+    div.heading2 div.heading2cell {
+        display: table-cell;
+        line-height: 40px;
+        font-size: 40px;
+        font-weight: 500;
+        vertical-align: middle;
+    }
+
+    div.heading2 div.summary {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    div.imgcols {
+        width: 50%;
+        padding-left: 5%;
+        padding-right: 5%;
+        float: left;
+    }
+
+        div.imgcols .img {
+            width: 75%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 250px;
+        }
+
+            div.imgcols .img img {
+                width: 100%;
+            }
+
+        div.imgcols .heading {
+            margin-top: 20px;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            color: #eb4f1d;
+            font-size: 30px;
+            line-height: 50px;
+        }
+
+        div.imgcols .expander {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+            div.imgcols .expander .readmore {
+                width: 100%;
+                text-align: center;
+            }
+
+            div.imgcols .expander .expandercontent {
+                width: 100%;
+            }
+
+    div.onesix {
+        width: 16.6%;
+        float: left;
+        z-index: 10;
+    }
+
+        div.onesix:after {
+            content: "";
+            position: relative;
+            z-index: 5;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            border-left: 4px solid #EB4F1C;
+            line-height: 200px;
+            font-size: 160px;
+        }
+
+        div.onesix img {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            position: relative;
+        }
+
+    /* diseases and infctions */
+    div.vaccinations .rte1 {
+        margin-top: 40px;
+        border: 4px solid #EB4F1C;
+        border-radius: 10px;
+        padding-bottom: 5px;
+        color: #7F7F7F;
+        padding-top: 10px;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    div.vaccinations div.rightimage {
+        width: 100%;
+        text-align: right;
+    }
+
+        div.vaccinations div.rightimage img {
+            max-width: 15%;
+            position: relative;
+            margin-left: auto;
+            margin-right: -2%;
+            display: block;
+            margin-top: -3%;
+        }
+
+    div.vaccinations div.subheading {
+        margin-top: -8%;
+    }
+
+        div.vaccinations div.subheading div.orangebg {
+            background: #EB4F1C;
+            PADDING-right: 20%;
+            border-radius: 10px 0px 0px 0px;
+            float: right;
+            color: #FFF;
+            padding-left: 5%;
+            margin-top: 0%;
+            height: 40px;
+            font-weight: bold;
+            padding-top: 4px;
+        }
+
+            div.vaccinations div.subheading div.orangebg div.heading {
+                height: 40px;
+                font-size: 25px;
+                letter-spacing: 6px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+    div.vaccinations div.subheadingrte {
+        clear: both;
+        margin-top: 0px;
+        border: 4px solid #EB4F1C;
+        border-radius: 10px;
+        padding-bottom: 25px;
+        color: #7F7F7F;
+        padding-top: 10px;
+        padding-right: 20%;
+        padding-left: 3%;
+    }
+
+    div.vaccinations div.warningheading {
+        width: 100%;
+        clear: both;
+        padding-left: 0%;
+        padding-right: 0%;
+        height: 100px;
+        position: relative;
+        top: -60px;
+        z-index: 20;
+    }
+
+        div.vaccinations div.warningheading div.textandcircle {
+            position: absolute;
+            top: 15px;
+            height: 70px;
+            background: #EB4F1C;
+            color: #FFF;
+            width: 70%;
+            left: 15%;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 70px;
+            float: right;
+            z-index: 20;
+        }
+
+            div.vaccinations div.warningheading div.textandcircle div.leftext {
+                float: left;
+                width: 40%;
+                text-align: right;
+                padding-right: 5%;
+                letter-spacing: 6px;
+            }
+
+            div.vaccinations div.warningheading div.textandcircle div.circle {
+                float: left;
+                background: url('/media/13967/big-dash-circle.svg') no-repeat;
+                background-size: contain;
+                background-position: 50%;
+                line-height: 16px;
+                font-size: 12px;
+                height: 150px;
+                width: 20%;
+                padding: 0px 15px 0px 15px;
+                margin-top: -40px;
+            }
+
+                div.vaccinations div.warningheading div.textandcircle div.circle span {
+                    display: inline-block;
+                    line-height: normal;
+                    vertical-align: middle;
+                    margin-top: 35px;
+                    font-size: 13px;
+                    line-height: 18px;
+                }
+
+            div.vaccinations div.warningheading div.textandcircle div.righttext {
+                float: left;
+                width: 40%;
+                text-align: left;
+                padding-left: 5%;
+                letter-spacing: 6px;
+            }
+
+        div.vaccinations div.warningheading img.warning {
+            margin-left: 10%;
+            float: left;
+            position: absolute;
+            height: 100%;
+            z-index: 20;
+        }
+
+            div.vaccinations div.warningheading img.warning.right {
+                right: 10%;
+                margin-left: 0%;
+            }
+
+    div.disinf.chgridrte p {
+        display: none;
+    }
+
+    div.disinf.chgridrte hr {
+        width: 50%;
+    }
+
+    div.disinf.chgridrte h3 {
+        margin-bottom: 30px;
+    }
+
+        div.disinf.chgridrte h3.expanded {
+            margin-bottom: 0px;
+        }
+
+        div.disinf.chgridrte h3:hover {
+            cursor: pointer;
+        }
+
+        div.disinf.chgridrte h3:after {
+            content: '\25BC';
+            line-height: 20px;
+            font-size: 20px;
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        div.disinf.chgridrte h3.expanded:after {
+            content: "";
+        }
+
+    /*div.chrichtext h2 {
+        font-size: 25px;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+
+    div.chrichtext p {
+        padding-bottom: 15px;
+    }
+
+    div.chrichtext h4 {
+        font-size: 150%;
+        font-weight: bold;
+    }*/
+
+    div.imgMobAlt {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    @@media screen and (max-width: 767px) {
+        /*.chheading {
+            z-index: 5;
+        }
+
+            .chheading h2 {
+                width: 100%;
+                text-align: center;
+                z-index: 150;
+                position: relative;
+            }*/
+
+        .chheadingimg1 {
+            right: 40%;
+            width: 20%;
+            z-index: 100;
+        }
+
+        .expander div.outter {
+            width: 90%;
+        }
+
+        div.heading2 div.heading2table {
+            min-height: 50px;
+        }
+
+        div.heading2 div.heading2cell {
+            font-size: 25px;
+            line-height: 30px;
+        }
+
+        .expander div.outter.wide div.heading {
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+
+    @@media screen and (max-width: 480px) {
+        div.imgcols {
+            width: 100%;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-bottom: 20px;
+        }
+
+        div.imgMobAlt {
+            width: 75%;
+            margin-left: 12.5%;
+        }
+    }
+</style>
+
+<div class="page-head">
+    <div class="over">
+        <div class="left-man cl"><div class="svg svg-man-q svg-man-q-dims"></div></div>
+    </div>
+    <div class="container">
+        <h1>@Umbraco.Field("heading1")</h1>
+        <p>@Umbraco.Field("headingtext")</p>
+    </div>
+</div>
+<div class="body">
+    <div class="container">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        @CurrentPage.GetGridHtml("gridLayout")
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+    </div>
+
+</div>

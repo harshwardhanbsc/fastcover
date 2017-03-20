@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    var hv = Model;
+    var tabData = hv["tabData"];
+}
+<div class="servicelistarea">
+    @foreach (var row in tabData)
+    {
+        <div class="servicelistbox">
+            <div class="circleicon">
+                @if (row.image != null)
+                {
+                    <img src="@row.image.image" />
+                }
+            </div>
+            <h2>@row.heading</h2>
+            <div class="chrichtext">@Html.Raw(row.rteValue)</div>
+        </div>
+    }
+    <div class="clear"></div>
+</div>

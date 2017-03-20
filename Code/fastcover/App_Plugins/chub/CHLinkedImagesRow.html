@@ -1,0 +1,170 @@
+<style>
+.usky-editor-placeholder.imagegrid
+{
+    padding:0px;
+}
+
+.imggrid4wide
+{   
+    width:75%;display:inline-block;margin-left:12.5%; margin-right:12.5%;
+    text-align:center;
+}
+
+.fourimages
+{
+    width:20%;float:left;
+}
+.fiveImages
+{
+    width:15%;float:left;
+}
+
+
+</style>
+
+<div>
+
+
+<div ng-controller="CHControls.MultipleMediaController3" style="width:100%;float:left;" >
+
+<!-- first row -->
+<div>
+
+<div class="fiveImages">
+	<div class="usky-editor-placeholder imagegrid" ng-click="setImage('image1')" ng-if="control.value == null || control.value.images == null || control.value.images.image1 == null" style="width:100%; ">
+		<i class="icon icon-picture"></i>
+		<div ng-id="!control.$inserted" id="{{control.uniqueId}}" class="help-text">Image 1</div>
+	</div>
+
+	<div ng-if="control.value.images != null && control.value.images.image1 != null">
+		<div class="imggrid4wide">
+            <span>Image 1111</span>
+			<img				
+				ng-click="setImage('image1')"
+				ng-src="{{control.value.images.image1.image}}"
+				class="fullSizeImage" />
+		</div>
+ 	</div>
+    <div>
+        <textarea
+		    rows="2"
+		    umb-auto-resize
+		    umb-auto-focus
+		    class="textstring input-block-level" id="{{control.uniqueId}}_text1"
+		    ng-model="control.value.image1Text"
+		    ng-attr-style="{{control.editor.config.style}}" localize="placeholder" 
+            placeholder="Image Text Here.." style="line-height:20px;height:40px;font-size:18px;width:100%;float:left;border:1px solid grey;"></textarea>
+    
+    </div>
+</div>
+<div class="fiveImages">
+	<div class="usky-editor-placeholder imagegrid" ng-click="setImage('image2')" ng-if="control.value == null || control.value.images == null || control.value.images.image2 == null" style="width:100%; ">
+		<i class="icon icon-picture"></i>
+		<div ng-id="!control.$inserted" id="Div2" class="help-text">Image 2</div>
+	</div>
+
+	<div ng-if="control.value.images != null && control.value.images.image2 != null">
+		<div class="imggrid4wide">
+            <span>Image 2</span>
+			<img				
+				ng-click="setImage('image2')"
+				ng-src="{{control.value.images.image2.image}}"
+				class="fullSizeImage" />
+		</div>
+ 	</div>
+    <div>
+        <textarea
+		    rows="2"
+		    umb-auto-resize
+		    umb-auto-focus
+		    class="textstring input-block-level" id="{{control.uniqueId}}_text2"
+		    ng-model="control.value.image2Text"
+		    ng-attr-style="{{control.editor.config.style}}" localize="placeholder" 
+            placeholder="Image Text Here.." style="line-height:20px;height:40px;font-size:18px;width:100%;float:left;border:1px solid grey;"></textarea>
+    
+    </div>
+</div>
+<div class="fiveImages">
+	<div class="usky-editor-placeholder imagegrid" ng-click="setImage('image3')" ng-if="control.value == null || control.value.images == null || control.value.images.image3 == null" style="width:100%; ">
+		<i class="icon icon-picture"></i>
+		<div ng-id="!control.$inserted" id="Div3" class="help-text">Image 3</div>
+	</div>
+
+	<div ng-if="control.value.images != null && control.value.images.image3 != null">
+		<div class="imggrid4wide">
+			<span>Image 3</span>
+            <img				
+				ng-click="setImage('image3')"
+				ng-src="{{control.value.images.image3.image}}"
+				class="fullSizeImage" />
+		</div>
+ 	</div>
+    <div>
+        <textarea
+		    rows="2"
+		    umb-auto-resize
+		    umb-auto-focus
+		    class="textstring input-block-level" id="{{control.uniqueId}}_text3"
+		    ng-model="control.value.image3Text"
+		    ng-attr-style="{{control.editor.config.style}}" localize="placeholder" 
+            placeholder="Image Text Here.." style="line-height:20px;height:40px;font-size:18px;width:100%;float:left;border:1px solid grey;"></textarea>    
+    </div>
+</div>
+<div class="fiveImages">
+	<div class="usky-editor-placeholder imagegrid" ng-click="setImage('image4')" ng-if="control.value == null || control.value.images == null || control.value.images.image4 == null" style="width:100%; ">
+		<i class="icon icon-picture"></i>
+		<div ng-id="!control.$inserted" id="Div4" class="help-text">Image 4</div>
+	</div>
+	<div ng-if="control.value.images != null && control.value.images.image4 != null">
+		<div class="imggrid4wide">
+			<span>Image 4</span>
+            <img				
+				ng-click="setImage('image4')"
+				ng-src="{{control.value.images.image4.image}}"
+				class="fullSizeImage" />
+		</div>
+ 	</div>
+    <div>
+        <textarea
+		    rows="2"
+		    umb-auto-resize
+		    umb-auto-focus
+		    class="textstring input-block-level" id="{{control.uniqueId}}_text4"
+		    ng-model="control.value.image4Text"
+		    ng-attr-style="{{control.editor.config.style}}" localize="placeholder" 
+            placeholder="Image Text Here.." style="line-height:20px;height:40px;font-size:18px;width:100%;float:left;border:1px solid grey;"></textarea>    
+    </div>
+</div>
+<div class="fiveImages">
+	<div class="usky-editor-placeholder imagegrid" ng-click="setImage('image5')" ng-if="control.value == null || control.value.images == null || control.value.images.image5 == null" style="width:100%; ">
+		<i class="icon icon-picture"></i>
+		<div ng-id="!control.$inserted" id="Div5" class="help-text">Image 5</div>
+	</div>
+
+	<div ng-if="control.value.images != null && control.value.images.image5 != null">
+		<div class="imggrid4wide">
+			<span>Image 5</span>
+            <img				
+				ng-click="setImage('image5')"
+				ng-src="{{control.value.images.image5.image}}"
+				class="fullSizeImage" />
+		</div>
+ 	</div>
+    <div>
+        <textarea
+		    rows="2"
+		    umb-auto-resize
+		    umb-auto-focus
+		    class="textstring input-block-level" id="{{control.uniqueId}}_text5"
+		    ng-model="control.value.image5Text"
+		    ng-attr-style="{{control.editor.config.style}}" localize="placeholder" 
+            placeholder="Image Text Here.." style="line-height:20px;height:40px;font-size:18px;width:100%;float:left;border:1px solid grey;"></textarea>    
+    </div>
+</div>
+</div> <!-- end of first row -->
+
+<div style="clear:both;"></div>
+</div> <!-- end of the controller div-->
+<div style="clear:both;"></div>
+
+</div>
