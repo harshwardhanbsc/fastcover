@@ -1600,20 +1600,14 @@ p, ul, ol, li {
 }
 
     .lgbtqarea .lgbtq {
-        border: 3px #eb511d solid;
+        border: 4px #eb511d solid;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         padding: 120px 60px 50px;
         background: #fff;
-        color: #6d6e71;
-        font-weight: 700;
     }
 
         .lgbtqarea .lgbtq h2 {
-            font-size: 36px;
-            text-align: center;
-            font-weight: 700;
-            color: #eb511d;
             margin: 0;
             padding-top: 45px;
         }
@@ -1627,10 +1621,6 @@ p, ul, ol, li {
         top: -68px;
         left: 0;
         right: 0;
-    }
-
-    .lgbtqarea .lgbtq p {
-        font-weight: 300;
     }
 
     .lgbtqarea .lgbtqlover {
@@ -1928,7 +1918,6 @@ p, ul, ol, li {
         width: 98%;
         font-weight: 800;
         font-size: 40px;
-        letter-spacing: 8px;
         line-height: 120%;
         height: 120%;
     }
@@ -1976,7 +1965,6 @@ p, ul, ol, li {
                     .scamsinbali .scamsbox .lightgrey ul li .nbr {
                         font-size: 155px;
                         font-weight: 700;
-                        font-family: sans-serif;
                         line-height: 175px;
                     }
 
@@ -1985,7 +1973,6 @@ p, ul, ol, li {
                         text-align: right;
                         font-weight: 500;
                         line-height: 30px;
-                        letter-spacing: 4px;
                         margin-top: 55px;
                     }
 
@@ -1994,7 +1981,7 @@ p, ul, ol, li {
                             line-height: 120%;
                             height: 120%;
                             font-weight: 500;
-                            letter-spacing: 4px;
+                            width: 100%;
                         }
 
         .scamsinbali .scamsbox:first-child .lightgrey ul li .svgwidth {
@@ -2005,9 +1992,13 @@ p, ul, ol, li {
 .orangebox-text {
     display: block;
     clear: both;
-    padding: 40px 20px;
+    padding: 20px 150px 20px 20px;
     position: relative;
 }
+
+    .orangebox-text .editorname {
+        width: 100%;
+    }
 
 .bdrbtm {
     border-bottom: 3px #f0f0f0 solid;

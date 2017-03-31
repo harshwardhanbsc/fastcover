@@ -340,6 +340,11 @@ div.chrichtext {
     padding-bottom: 15px;
 }
 
+    .chrichtext ul:only-child {
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
+
     .chrichtext ul li {
         padding-left: 1.2em;
         line-height: 120%;
@@ -434,7 +439,7 @@ div.chrichtext {
 
 .clear {
     clear: both;
-    display: block;
+    display: inline-block;
 }
 
 .margin10 {
@@ -1026,7 +1031,8 @@ div.chrichtext {
         .taxiarea .ul .li .content h4:first-child,
         .taxiarea .ul .li .content h5:first-child,
         .taxiarea .ul .li .content h6:first-child,
-        .taxiarea .ul .li .content ul:first-child {
+        .taxiarea .ul .li .content ul:first-child,
+        .taxiarea .ul .li .content ol:first-child {
             padding-top: 0;
         }
 
@@ -1515,291 +1521,418 @@ div.chrichtext {
             }
 /*#endregion*/
 /*#region Orange Box with corner Image*/
-.cornerbox1 {
+.cornerboxouter {
+    margin: 5% auto 7%;
+}
+
+.cornerbox1, .cornerbox2 {
     background: #eb4f1d;
-    border: 3px #eb4f1d solid;
     border-radius: 15px;
     position: relative;
-    margin: 10% auto;
+    margin: auto;
     width: 90%;
-    padding: 0 50px 40px 135px;
-    min-height: 400px;
 }
 
-    .cornerbox1 h2 {
+    .cornerbox1 .cornerboxheading {
         background: #6d6e71;
-        color: #fff;
-        font-size: 36px;
         font-weight: 700;
-        text-align: left;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        margin-left: -135px;
-        padding-left: 140px;
-        padding-top: 13px;
-    }
-
-    .cornerbox1 h3 {
         color: #fff;
+        padding-left: 20px;
+        display: table;
+        width: 100%;
     }
 
-    .cornerbox1 p, .cornerbox1 ul li {
+    .cornerbox2 .cornerboxheading {
+        background: #6d6e71;
+        font-weight: 700;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
         color: #fff;
+        padding-left: 20px;
+        border: 4px #fff solid;
+        display: table;
+        width: 100%;
     }
 
-        .cornerbox1 ul li:before, .cornerbox2 .textbox ul li:before {
-            background: #ffffff !important;
+
+        .cornerbox1 .cornerboxheading .title, .cornerbox2 .cornerboxheading .title {
+            vertical-align: middle;
+            display: table-cell;
         }
 
-.cornersvg1, .cornersvg2, .cornersvg3, .cornersvg4 {
-    position: absolute;
-}
+        .cornerbox1 .cornerboxheading .noimage.title h2, .cornerbox2 .cornerboxheading .noimage.title h2 {
+            padding: 10px 20px 10px 0;
+        }
+
+    .cornerbox1 .noimage.chrichtext, .cornerbox2 .noimage.chrichtext {
+        padding: 20px;
+    }
+
+    .cornerbox1 .cornerboxheading .lefttopimage.title h2, .cornerbox2 .cornerboxheading .lefttopimage.title h2 {
+        padding: 10px;
+        margin-left: -8%;
+    }
+
+    .cornerbox1 .lefttopimage.chrichtext, .cornerbox2 .lefttopimage.chrichtext {
+        padding: 5% 20px 20px;
+    }
+
+    .cornerbox1 .cornerboxheading .righttopimage.title h2, .cornerbox2 .cornerboxheading .righttopimage.title h2 {
+        padding: 10px;
+        margin-right: -4%;
+    }
+
+    .cornerbox1 .righttopimage.chrichtext, .cornerbox2 .righttopimage.chrichtext {
+        padding: 3% 20px 20px;
+    }
+
+    .cornerbox1 .leftbottomimage.title h2, .cornerbox2 .leftbottomimage.title h2 {
+        padding: 10px 20px 10px 0;
+    }
+
+    .cornerbox1 .leftbottomimage.chrichtext, .cornerbox2 .leftbottomimage.chrichtext {
+        padding: 20px 20px 8% 12%;
+    }
+
+    .cornerbox1 .rightbottomimage.title h2, .cornerbox2 .rightbottomimage.title h2 {
+        padding: 10px 20px 10px 0;
+    }
+
+    .cornerbox1 .rightbottomimage.chrichtext, .cornerbox2 .rightbottomimage.chrichtext {
+        padding: 20px 20px 8% 20px;
+    }
+
+    .cornerbox1 .lefttopbottomimage.title h2, .cornerbox2 .lefttopbottomimage.title h2 {
+        margin-left: -8%;
+    }
+
+    .cornerbox1 .lefttopbottomimage.chrichtext, .cornerbox2 .lefttopbottomimage.chrichtext {
+        padding: 20px 20px 8% 12%;
+    }
+
+    .cornerbox1 .topimages.title h2, .cornerbox2 .topimages.title h2 {
+        margin-left: -8%;
+    }
+
+    .cornerbox1 .topimages.chrichtext, .cornerbox2 .topimages.chrichtext {
+        padding: 5% 20px 20px 20px;
+    }
+
+    .cornerbox1 .bottomimages.title h2, .cornerbox2 .bottomimages.title h2 {
+        margin: 10px 20px 10px 0;
+    }
+
+    .cornerbox1 .bottomimages.chrichtext, .cornerbox2 .bottomimages.chrichtext {
+        padding: 20px 20px 8% 12%;
+    }
+
+    .cornerbox1 .righttopbottomimage.title h2, .cornerbox2 .righttopbottomimage.title h2 {
+        margin: 10px 20px 10px 0;
+    }
+
+    .cornerbox1 .righttopbottomimage.chrichtext, .cornerbox2 .righttopbottomimage.chrichtext {
+        padding: 20px 8% 8% 20px;
+    }
+
+    .cornerbox1 .righttopleftbottomimage.title h2, .cornerbox2 .righttopleftbottomimage.title h2 {
+        margin-right: -4%;
+    }
+
+    .cornerbox1 .righttopleftbottomimage.chrichtext, .cornerbox2 .righttopleftbottomimage.chrichtext {
+        padding: 20px 8% 8% 12%;
+    }
+
+    .cornerbox1 .lefttoprightbottomimage.title h2, .cornerbox2 .lefttoprightbottomimage.title h2 {
+        margin-left: -8%;
+    }
+
+    .cornerbox1 .lefttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprightbottomimage.chrichtext {
+        padding: 20px 20px 8% 12%;
+    }
+
+    .cornerbox1 .lefttoprighttoprightbottomimage.title h2, .cornerbox2 .lefttoprighttoprightbottomimage.title h2 {
+        margin-left: -8%;
+    }
+
+    .cornerbox1 .lefttoprighttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprighttoprightbottomimage.chrichtext {
+        padding: 20px 10% 8% 12%;
+    }
+
+    .cornerbox1 .lefttopleftbottomrightbottomimage.title h2, .cornerbox2 .lefttopleftbottomrightbottomimage.title h2 {
+        margin-left: -8%;
+    }
+
+    .cornerbox1 .lefttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .lefttopleftbottomrightbottomimage.chrichtext {
+        padding: 20px 20px 8% 12%;
+    }
+
+    .cornerbox1 .lefttoprighttopleftbottomimage.title h2, .cornerbox2 .lefttoprighttopleftbottomimage.title h2 {
+        margin-left: -8%;
+        margin-right: -4%;
+    }
+
+    .cornerbox1 .lefttoprighttopleftbottomimage.chrichtext, .cornerbox2 .lefttoprighttopleftbottomimage.chrichtext {
+        padding: 20px 20px 8% 12%;
+    }
+
+    .cornerbox1 .righttopleftbottomrightbottomimage.title h2, .cornerbox2 .righttopleftbottomrightbottomimage.title h2 {
+        margin-right: -4%;
+    }
+
+    .cornerbox1 .righttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .righttopleftbottomrightbottomimage.chrichtext {
+        padding: 20px 10% 8% 12%;
+    }
+
+    .cornerbox1 .allimages.title h2, .cornerbox2 .allimages.title h2 {
+        margin-left: -8%;
+        margin-right: -4%;
+    }
+
+    .cornerbox1 .allimages.chrichtext, .cornerbox2 .allimages.chrichtext {
+        padding: 20px 10% 8% 12%;
+    }
 
 .cornersvg1 {
-    background-size: cover;
-    width: 172px;
-    height: 160px;
-    left: -35px;
-    top: -20px;
+    width: 15%;
+    display: table-cell;
 }
+
+    .cornersvg1 img {
+        margin-left: -50%;
+        margin-top: -20%;
+        margin-bottom: -30%;
+    }
 
 .cornersvg2 {
-    background-size: cover;
-    width: 140px;
-    height: 170px;
-    right: -16px;
-    top: -20px;
+    width: 12%;
+    display: table-cell;
 }
 
+    .cornersvg2 img {
+        margin-bottom: -30%;
+        margin-top: -30%;
+        margin-left: 30%;
+    }
+
 .cornersvg3 {
-    background-size: cover;
-    width: 165px;
-    height: 206px;
-    left: -25px;
-    bottom: -25px;
+    width: 15%;
+    float: left;
+    margin-left: -5%;
+    margin-top: -14%;
 }
 
 .cornersvg4 {
-    background-size: cover;
-    width: 238px;
-    height: 145px;
-    right: 50px;
-    bottom: -62px;
+    width: 25%;
+    float: right;
+    margin-right: 5%;
+    margin-top: -8%;
 }
+/*
+            .cornerbox1 .cornerboxheading .title.withleftimage h2 {
+                margin-left: -8%;
+            }
 
-.cornerbox2 {
-    color: #fff;
-    background: #eb4f1d;
-    border-radius: 15px;
-    position: relative;
-    margin: 100px auto 30px;
-    width: 90%;
-    padding: 0 50px 40px 135px;
-    min-height: 400px;
-}
+            .cornerbox1 .cornerboxheading .title.withrightimage h2 {
+                margin-right: -5%;
+            }
 
-    .cornerbox2 h2 {
-        background: #6d6e71;
-        color: #fff;
-        font-size: 36px;
-        font-weight: 700;
-        text-align: left;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        margin-left: -135px;
-        padding-left: 140px;
-        border: 3px #fff solid;
+            .cornerbox1 .cornerboxheading .title.allimage h2 {
+                margin-left: -8%;
+            }
+
+    .cornerbox1 .textbox.withtopimage {
+        padding: 5% 20px 20px;
     }
 
-    .cornerbox2 .textbox {
-        padding: 40px 20px;
+    .cornerbox1 .textbox.withnnoimage {
+        padding: 20px;
     }
 
-    .cornerbox2 .cornersvg2 {
-        background-size: cover;
-        width: 155px;
-        height: 155px;
-        right: -39px;
-        position: absolute;
-        top: -58px;
+    .cornerbox1 .textbox.withleftbottomimage {
+        padding: 2% 2% 8% 12%;
     }
+
+    .cornerbox1 .textbox.withrightbottomimage {
+        padding: 2% 10% 8% 2%;
+    }
+
+    .cornerbox1 .allimage.chrichtext {
+        padding: 2% 10% 8% 12%;
+    }*/
+/*.cornerbox2 .cornerboxheading .title {
+            vertical-align: middle;
+            display: table-cell;
+        }
+
+            .cornerbox2 .cornerboxheading .title.withleftimage h2 {
+                margin-left: -8%;
+            }
+
+            .cornerbox2 .cornerboxheading .title.withrightimage h2 {
+                margin-right: -5%;
+            }
+
+            .cornerbox2 .cornerboxheading .title.allimage h2 {
+                margin-left: -8%;
+            }
+
+    .cornerbox2 .textbox.withtopimage {
+        padding: 5% 20px 20px;
+    }
+
+    .cornerbox2 .textbox.withnnoimage {
+        padding: 20px;
+    }
+
+    .cornerbox2 .textbox.withleftbottomimage {
+        padding: 2% 2% 8% 12%;
+    }
+
+    .cornerbox2 .textbox.withrightbottomimage {
+        padding: 2% 10% 8% 2%;
+    }
+
+    .cornerbox2 .allimage.chrichtext {
+        padding: 2% 10% 8% 12%;
+    }*/
+
 /*#endregion*/
 /*#region Party*/
-.balibelly {
+.partysec .balibelly {
     border-radius: 20px;
     position: relative;
     display: block;
     clear: both;
     background: #eb4f1d;
     width: 100%;
-    margin: 140px auto 0;
+    margin: 6% auto 0;
 }
 
-    .balibelly h2 {
-        font-size: 46px;
+    .partysec .balibelly .headingwithimage {
+        font-size: 36px;
         font-weight: 700;
         text-align: center;
         color: #fff;
         background: #6d6e71;
         padding: 12px 0 8px;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        line-height: 45px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         border-bottom: 3px #fff solid;
+        width: 100%;
+        display: table;
+        line-height: 120%;
     }
 
-        .balibelly h2 span {
-            width: 50%;
-            display: inline-block;
+        .partysec .balibelly .headingwithimage span {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 1.5%;
+            width: 40%;
         }
 
-            .balibelly h2 span:first-child {
-                padding-right: 75px;
+            .partysec .balibelly .headingwithimage span:first-child {
                 text-align: right;
             }
 
-            .balibelly h2 span:last-child {
-                padding-left: 82px;
+            .partysec .balibelly .headingwithimage span:last-child {
                 text-align: left;
             }
 
-    .balibelly .balibellysvg {
-        width: 150px;
-        height: 195px;
-        background-size: cover;
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: -127px;
-    }
+        .partysec .balibelly .headingwithimage .headingimage {
+            display: table-cell;
+            width: 20%;
+        }
 
-    .balibelly .bellysvg1 {
-        margin-right: 10%;
-        margin-left: 33%;
-        width: 100px;
-        height: 90px;
-        display: inline-block;
-        background-size: cover;
-    }
+            .partysec .balibelly .headingwithimage .headingimage img {
+                margin: -40% auto;
+            }
 
-    .balibelly .bellysvg2 {
-        margin-right: 30%;
-        width: 70px;
-        height: 100px;
-        display: inline-block;
-        background-size: cover;
-    }
-
-    .balibelly .contentarea {
-        padding: 20px;
+    .partysec .balibelly .contentarea {
         display: block;
         color: #fff;
-        max-width: 75%;
     }
 
-    .balibelly .partycircle {
-        width: 150px;
-        height: 150px;
-        background-size: cover;
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: -66px;
-    }
-
-    .balibelly .partysvg {
-        width: 125px;
-        height: 125px;
-        background-size: cover;
-        display: inline-block;
-        position: absolute;
-        top: 67px;
-    }
-
-        .balibelly .partysvg.left {
-            left: 0;
+        .partysec .balibelly .contentarea .partyheadingwithleftrightimage {
+            display: table;
+            width: 100%;
         }
 
-        .balibelly .partysvg.right {
-            right: 5px;
+            .partysec .balibelly .contentarea .partyheadingwithleftrightimage .partysvg {
+                display: table-cell;
+                margin: 0 10px;
+                vertical-align: top;
+            }
+
+            .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
+                display: table-cell;
+                color: #fff;
+                text-align: center;
+                vertical-align: middle;
+                padding: 2% 0 0;
+                width: 75%;
+            }
+
+        .partysec .balibelly .contentarea .text {
+            padding: 20px;
         }
 
-    .balibelly h3 {
-        color: #fff;
-        text-align: center;
-        font-size: 28px;
-        padding: 45px 0;
-    }
-
-    .balibelly h2 {
-        font-size: 36px;
-    }
-
-    .balibelly ul li, .balibelly p {
-        font-size: 18px;
+    .partysec .balibelly .partycircle {
+        max-width: 100%;
+        display: block;
     }
 
 .partysec .partycrowd {
     width: 100%;
-    background-size: cover;
     display: block;
-    position: relative;
-    margin-top: -20%;
 }
 
-.balibelly .contentarea {
-    padding: 20px 20px 25% 20px;
-}
-
+    .partysec .partycrowd img {
+        width: 100%;
+    }
 /*#endregion*/
 /*#region LGBTQI*/
 .lgbtqarea {
     position: relative;
     width: 100%;
-    margin: 140px auto 30px;
+    margin: 10% auto 5%;
+    display: inline-block;
 }
 
     .lgbtqarea .lgbtq {
-        border: 3px #eb511d solid;
+        border: 4px #eb511d solid;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        padding: 8% 60px 50px;
+        padding: 0 5% 5%;
         background: #fff;
-        color: #6d6e71;
-        font-weight: 700;
     }
 
+        .lgbtqarea .lgbtq p:first-child,
+        .lgbtqarea .lgbtq h1:first-child,
+        .lgbtqarea .lgbtq h2:first-child,
+        .lgbtqarea .lgbtq h3:first-child,
+        .lgbtqarea .lgbtq h4:first-child,
+        .lgbtqarea .lgbtq h5:first-child,
+        .lgbtqarea .lgbtq h6:first-child,
+        .lgbtqarea .lgbtq ol:first-child,
+        .lgbtqarea .lgbtq ul:first-child {
+            padding-top: 0;
+        }
+
         .lgbtqarea .lgbtq h2 {
-            font-size: 36px;
-            text-align: center;
-            font-weight: 700;
-            color: #eb511d;
             margin: 0;
         }
 
     .lgbtqarea .lgbtqsvgcircle {
-        background-size: cover;
-        width: 15%;
+        display: table;
         margin: auto;
-        position: absolute;
-        top: -12%;
-        left: 0;
-        right: 0;
+        padding-bottom: 2%;
     }
 
         .lgbtqarea .lgbtqsvgcircle img {
-            max-height: 100%;
+            margin-top: -50%;
         }
-
-    .lgbtqarea .lgbtq p {
-        font-weight: 300;
-    }
 
     .lgbtqarea .lgbtqlover {
         background-size: contain;
@@ -1809,72 +1942,60 @@ div.chrichtext {
     }
 /*#endregion*/
 /*#region Stacked Boxes*/
-.stackedbox, .sti {
+.stackedbox {
     width: 100%;
     margin: 30px auto;
+    display: table;
+}
+
+.stackedheaderrow {
+    display: table-row;
+}
+
+.stackedcontentrow {
+    display: table-row;
+}
+
+.stackedbox .stackedleft, .stackedbox .stackedright {
+    display: table-cell;
     position: relative;
-    display: block;
+    vertical-align: top;
 }
 
-    .stackedbox .stackedleft, .stackedbox .stackedright {
-        float: left;
-        min-height: 300px;
-        position: relative;
-    }
-
-    .stackedbox .stackedleft {
-        width: 80%;
-        background: #eb4f1d;
-        border-radius: 15px;
-        border-top-left-radius: 0;
-        padding: 20px;
-        color: #fff;
-    }
-
-        .stackedbox .stackedleft ul {
-            padding-top: 0;
-            padding-left: 20px;
-        }
-
-            .stackedbox .stackedleft ul li:before {
-                width: 5px;
-                height: 5px;
-                background-color: #fff;
-                top: 7px;
-            }
-
-    .stackedbox .stackedright {
-        width: 15%;
-        margin-left: 5%;
-    }
-
-        .stackedbox .stackedright img {
-            max-height: 100%;
-        }
-
-.stackedright .scooter {
-    background-size: cover;
-    margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
+.stackedbox .stackedleft {
+    width: 80%;
+    background: #eb4f1d;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    padding: 20px;
 }
+
+
+.stackedbox .stackedright {
+    width: 20%;
+    vertical-align: middle;
+}
+
+    .stackedbox .stackedright .scooter {
+        width: 90%;
+        margin-left: auto;
+    }
+
 
 .stacktitle {
-    border: 3px #eb4f1d solid;
+    border: 4px #eb4f1d solid;
     border-radius: 10px;
     background: #fff;
     color: #6d6e71;
+    max-width: 93%;
     float: left;
-    max-width: 100%;
     font-size: 30px;
     font-weight: 700;
-    letter-spacing: 3px;
-    line-height: 30px;
+    line-height: 120%;
     border-bottom-left-radius: 0;
     padding: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
 }
 
 .stackedbox1 .stacktitle {
@@ -1893,30 +2014,24 @@ div.chrichtext {
     top: inherit;
 }
 
+.stackedbox.lostpassport .stackedcontentrow .passport {
+    background: #eb4f1d;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    padding: 20px;
+}
+
 .stackedbox.lostpassport .stackedleft {
-    width: 100%;
+    width: 80%;
+    background: none;
+    border-radius: 0;
+    padding: 0;
 }
 
 .passportsvg {
     background-size: cover;
     width: 20%;
     float: left;
-}
-
-.stackedbox.lostpassport .stackedleft ul,
-.stackedbox.lostpassport .stackedleft p {
-    width: 70%;
-    float: left;
-    margin-right: 10%;
-}
-
-    .stackedbox.lostpassport .stackedleft p, .stackedbox.lostpassport .stackedleft ul li {
-        font-size: 20px;
-        letter-spacing: 0;
-    }
-
-.stackedbox.lostpassport .stackedleft ul {
-    margin-top: 40px;
 }
 /*#endregion*/
 /*#region Orange Box with circle borders*/
@@ -2017,6 +2132,23 @@ div.chrichtext {
     border-left-width: 0;
     border-right-width: 0;
     min-height: 290px;
+    display: table;
+}
+
+.piercingrow {
+    display: table-row;
+}
+
+.piercingleft {
+    display: table-cell;
+}
+
+.piercingmiddle {
+    display: table-cell;
+}
+
+.piercingright {
+    display: table-cell;
 }
 
 .piercingtop {
@@ -2029,27 +2161,29 @@ div.chrichtext {
     background-position: center;
 }
 
-.piercingsvg1 {
+
+.piercingsvg1.ltrtp {
     width: 70px;
-    height: 47px;
+    height: 55px;
     position: absolute;
-    background: url("../img/piercing2.png") no-repeat;
-    background-size: cover;
+    background: url("../images/piercingringtop.svg") no-repeat;
+    background-size: contain;
+    top: -35px;
+    left: 25px;
 }
 
-    .piercingsvg1.ltrtp {
-        top: -35px;
-        left: 10px;
-        transform: rotate(-180deg);
-    }
-
-    .piercingsvg1.rltbtm {
-        bottom: -35px;
-        right: 10px;
-    }
+.piercingsvg1.rltbtm {
+    width: 70px;
+    height: 55px;
+    position: absolute;
+    background: url(../images/piercingringbottom.svg) no-repeat;
+    background-size: contain;
+    bottom: -35px;
+    right: 25px;
+}
 
 .piercing .contentarea {
-    padding: 40px;
+    padding: 4%;
 }
 
     .piercing .contentarea h2 {
@@ -2060,40 +2194,47 @@ div.chrichtext {
         color: #868689;
     }
 
-.piercing .piercinstick {
+.piercing .piercinstick.left {
+    background: url(../images/upwardarrow.svg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
     position: absolute;
-    width: 3%;
-    max-width: 51px;
-    height: 110%;
+    width: 21px;
+    height: 115%;
     z-index: 99;
+    left: -6px;
+    bottom: -3px;
 }
 
-    .piercing .piercinstick img {
-        height: 100%;
-    }
-
-    .piercing .piercinstick.right {
-        right: -13px;
-        top: -10px;
-    }
-
-    .piercing .piercinstick.left {
-        left: -13px;
-        bottom: -10px;
-    }
+.piercing .piercinstick.right {
+    background: url(../images/downwardarrow.svg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    position: absolute;
+    width: 21px;
+    height: 115%;
+    z-index: 99;
+    right: -5px;
+    top: -3px;
+}
 /*#endregion*/
 /*#region Stacked Numbered Info*/
+.scamsinbalicontainer {
+    padding: 0 30px;
+    margin: 50px auto 0;
+}
+
 .scamstitle {
     background: #eb4f1d;
-    border: 2px #a6a6a6 solid;
     color: #fff;
-    padding: 15px;
-    font-weight: 800;
+    padding: 5px 15px;
+    font-weight: 600;
     font-size: 40px;
-    letter-spacing: 8px;
-    max-width: 70%;
-    margin: 50px auto 0;
+    letter-spacing: 2px;
+    max-width: 85%;
     text-align: center;
+    margin: auto;
+    line-height: 120%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -2128,7 +2269,7 @@ div.chrichtext {
                 display: table;
                 position: relative;
                 margin: 0;
-                padding: 0;
+                padding: 0 30px;
                 list-style: none;
                 width: 100%;
             }
@@ -2140,29 +2281,31 @@ div.chrichtext {
                 }
 
                     .scamsinbali .scamsbox .lightgrey ul li .nbr {
-                        font-size: 155px;
+                        font-size: 160px;
                         font-weight: 700;
-                        font-family: sans-serif;
-                        line-height: 175px;
+                        line-height: 120%;
+                        margin-top: -10%;
                     }
 
                     .scamsinbali .scamsbox .lightgrey ul li .txt {
-                        font-size: 26px;
+                        font-size: 32px;
                         text-align: right;
-                        font-weight: 500;
-                        line-height: 30px;
-                        letter-spacing: 4px;
+                        font-weight: 700;
+                        color: #fff;
+                        line-height: 36px;
+                        letter-spacing: 2px;
                     }
 
 .orangebox-text {
     display: block;
     clear: both;
-    padding: 40px 170px 40px 20px !important;
+    padding: 30px 125px 0px 20px !important;
     position: relative;
+    margin: 0 30px;
 }
 
 .bdrbtm {
-    border-bottom: 3px #f0f0f0 solid;
+    border-bottom: 4px #f0f0f0 solid;
 }
 
 .darkgrey {
@@ -2176,17 +2319,16 @@ div.chrichtext {
 
 .excmark-svgwidth {
     width: 130px;
-    height: 130px;
+    height: 113px;
     position: absolute;
-    z-index: 99;
-    right: 10px;
-    bottom: 0px;
+    right: 20px;
+    bottom: 20px;
 }
 
 .scamsinbali .scamsbox .lightgrey ul li .svgwidth {
     width: 200px;
     height: 200px;
-    margin: -9px auto -10px;
+    margin: 0 auto -10px;
 }
 
 
@@ -2220,16 +2362,6 @@ div.chrichtext {
         min-height: 180px;
     }
 
-    .piercing .piercinstick.right {
-        right: -13px;
-        top: -4px;
-    }
-
-    .piercing .piercinstick.left {
-        left: -13px;
-        bottom: -4px;
-    }
-
     /*.threebox .ul .li .circlediv {
             left: -17.5%;
         }
@@ -2238,9 +2370,9 @@ div.chrichtext {
             right: -17.5%;
         }*/
 
-    .lgbtqarea .lgbtq {
+    /*.lgbtqarea .lgbtq {
         padding-top: 12%;
-    }
+    }*/
 
     /*.threebox .ul .li .circlediv, .threebox .ul .li .rightdiv {
         width: 20%;
@@ -2266,6 +2398,10 @@ div.chrichtext {
         left: 5.1%;
         width: 89.7%;
     }
+
+    .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
+        padding: 5% 0 0;
+    }
 }
 /*#endregion*/
 /*#region max-width:1000px;*/
@@ -2282,22 +2418,6 @@ div.chrichtext {
         margin-top: 6.5%;
     }
 
-    .balibelly h2 {
-        font-size: 26px;
-    }
-
-    .balibelly h3 {
-        font-size: 18px;
-    }
-
-    .balibelly ul li, .balibelly p {
-        font-size: 16px;
-    }
-
-    .lgbtqarea .lgbtq {
-        padding: 35px 20px;
-    }
-
     .threebox .ul .li .circlediv {
         width: 20%;
     }
@@ -2308,6 +2428,10 @@ div.chrichtext {
 
     .threebox .ul .li .rightdiv {
         width: 20%;
+    }
+
+    .partysec .balibelly .headingwithimage .headingimage img {
+        margin: -35.1% auto;
     }
 }
 /*#endregion*/
@@ -2335,26 +2459,26 @@ div.chrichtext {
         width: 88%;
     }
 
-    .diseasesarea .diseasebox .table .single {
+    /*.diseasesarea .diseasebox .table .single {
         display: block;
         padding-left: 15px;
         padding-right: 15px;
         width: 96%;
         margin-left: 2%;
         margin-right: 2%;
+    }*/
+
+    .diseasesarea .diseasebox .table .single .single-icon {
+        display: block;
+        margin: auto;
+        width: auto;
     }
 
-        .diseasesarea .diseasebox .table .single .single-icon {
-            display: block;
-            margin: auto;
-            width: auto;
-        }
-
-        .diseasesarea .diseasebox .table .single p {
-            display: block;
-            width: 100%;
-            margin: 0;
-        }
+    .diseasesarea .diseasebox .table .single p {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
 }
 /*#endregion*/
 /*#region max-width:830px;*/
@@ -2403,24 +2527,6 @@ div.chrichtext {
     .orangeboxwithrightimage {
         min-height: 140px;
     }
-
-    .lgbtqarea .lgbtqsvgcircle {
-        width: 10%;
-    }
-
-    .piercing .piercinstick {
-        width: auto;
-    }
-
-        .piercing .piercinstick.right {
-            right: -13px;
-            top: -9px;
-        }
-
-        .piercing .piercinstick.left {
-            left: -13px;
-            bottom: -9px;
-        }
 
     .diseasesarea .diseasebox .table::after {
         left: 6.5%;
@@ -2575,42 +2681,79 @@ div.chrichtext {
         width: 91.2%;
     }
 
+    .scamsinbalicontainer {
+        padding: 0 15px;
+    }
+
     .scamstitle {
         font-size: 30px;
         letter-spacing: 1px;
     }
 
     .excmark-svgwidth {
-        width: 60px;
-        height: 60px;
-    }
-
-    .orangebox-text {
-        padding: 20px 50px 20px 20px !important;
+        position: relative;
+        margin: auto;
+        width: 100px;
+        height: 88px;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 10px;
     }
 
     .scamsinbali .scamsbox .lightgrey {
         height: 90px;
+        padding: 0 10px;
     }
 
-        .scamsinbali .scamsbox .lightgrey ul li .svgwidth {
-            width: 100px;
-            height: 100px;
-            margin: -6px auto -10px;
+        .scamsinbali .scamsbox .lightgrey ul {
+            padding: 0 10px;
         }
 
-        .scamsinbali .scamsbox .lightgrey ul li .nbr {
-            font-size: 90px;
-            line-height: 95px;
-        }
+            .scamsinbali .scamsbox .lightgrey ul li .svgwidth {
+                width: 100px;
+                height: 100px;
+            }
 
-        .scamsinbali .scamsbox .lightgrey ul li .txt {
-            font-size: 18px;
-            text-align: right;
-            line-height: 22px;
-            letter-spacing: 1px;
-            margin-top: 23px;
-        }
+            .scamsinbali .scamsbox .lightgrey ul li .nbr {
+                font-size: 70px;
+                line-height: 100%;
+                margin-top: -5%;
+            }
+
+            .scamsinbali .scamsbox .lightgrey ul li .txt {
+                font-size: 22px;
+                text-align: right;
+                line-height: 120%;
+                letter-spacing: 1px;
+            }
+
+    .partysec .balibelly .headingwithimage .headingimage img {
+        margin: -35.1% auto;
+    }
+
+    .orangebox-text {
+        padding: 20px 20px 10px 20px !important;
+        margin: 0 10px;
+    }
+
+    .cornerbox1 .cornerboxheading .noimage.title h2, .cornerbox2 .cornerboxheading .noimage.title h2,
+    .cornerbox1 .cornerboxheading .lefttopimage.title h2, .cornerbox2 .cornerboxheading .lefttopimage.title h2,
+    .cornerbox1 .cornerboxheading .righttopimage.title h2, .cornerbox2 .cornerboxheading .righttopimage.title h2,
+    .cornerbox1 .leftbottomimage.title h2, .cornerbox2 .leftbottomimage.title h2,
+    .cornerbox1 .rightbottomimage.title h2, .cornerbox2 .rightbottomimage.title h2,
+    .cornerbox1 .lefttopbottomimage.title h2, .cornerbox2 .lefttopbottomimage.title h2,
+    .cornerbox1 .topimages.title h2, .cornerbox2 .topimages.title h2,
+    .cornerbox1 .bottomimages.title h2, .cornerbox2 .bottomimages.title h2,
+    .cornerbox1 .righttopbottomimage.title h2, .cornerbox2 .righttopbottomimage.title h2,
+    .cornerbox1 .righttopleftbottomimage.title h2, .cornerbox2 .righttopleftbottomimage.title h2,
+    .cornerbox1 .lefttoprightbottomimage.title h2, .cornerbox2 .lefttoprightbottomimage.title h2,
+    .cornerbox1 .lefttoprighttoprightbottomimage.title h2, .cornerbox2 .lefttoprighttoprightbottomimage.title h2,
+    .cornerbox1 .lefttopleftbottomrightbottomimage.title h2, .cornerbox2 .lefttopleftbottomrightbottomimage.title h2,
+    .cornerbox1 .lefttoprighttopleftbottomimage.title h2, .cornerbox2 .lefttoprighttopleftbottomimage.title h2,
+    .cornerbox1 .righttopleftbottomrightbottomimage.title h2, .cornerbox2 .righttopleftbottomrightbottomimage.title h2,
+    .cornerbox1 .allimages.title h2, .cornerbox2 .allimages.title h2 {
+        font-size: 24px;
+    }
 }
 /*#endregion*/
 /*#region max-width:767px;*/
@@ -2655,66 +2798,7 @@ div.chrichtext {
         }
 
     .cornerbox1 {
-        padding: 0 14px 40px 65px;
         background-size: contain !important;
-    }
-
-        .cornerbox1 h2 {
-            margin-left: -68px;
-            padding-left: 72px;
-        }
-
-    .cornersvg1 {
-        width: 95px;
-        height: 90px;
-        left: -23px;
-        top: -20px;
-    }
-
-    .cornersvg2 {
-        width: 80px;
-        height: 95px;
-        right: -12px;
-    }
-
-    .cornersvg3 {
-        width: 80px;
-        height: 100px;
-        left: -16px;
-        bottom: -15px;
-    }
-
-    .cornersvg4 {
-        width: 130px;
-        height: 79px;
-        right: 15px;
-        bottom: -38px;
-    }
-
-    .cornerbox2 {
-        padding: 0 14px 40px 65px;
-    }
-
-        .cornerbox2 .textbox {
-            padding: 25px 20px;
-        }
-
-        .cornerbox2 .cornersvg2 {
-            width: 100px;
-            height: 100px;
-            top: -30px;
-            right: -20px;
-        }
-
-        .cornerbox2 h2 {
-            font-size: 24px;
-            margin-left: -65px;
-            padding-left: 80px;
-        }
-
-    .cornerbox1 h3 {
-        font-size: 18px;
-        letter-spacing: 0;
     }
 
     .diseasesarea .headingbg {
@@ -2768,7 +2852,7 @@ div.chrichtext {
     .diseasesarea .diseasebox .table::after {
         left: 3%;
         right: 3%;
-        width: 93%;
+        width: 93.5%;
     }
 
     .image {
@@ -2898,12 +2982,6 @@ div.chrichtext {
             margin-left: 20%;
         }
 
-        .balibelly .partycircle {
-            width: 100px;
-            height: 100px;
-            top: -50px;
-        }
-
         .balibelly h2 {
             font-size: 16px;
         }
@@ -2916,40 +2994,26 @@ div.chrichtext {
                 padding-left: 60px;
             }
 
-        .balibelly .partysvg {
-            width: 60px;
-            height: 60px;
-        }
-
-        .balibelly h3 {
-            font-size: 18px;
-            padding: 5px 50px;
-        }
-
-        .balibelly ul li, .balibelly p {
-            font-size: 16px;
-        }
-
-    .partysec .partycrowd {
-        margin-top: -40%;
+    .partysec .balibelly .headingwithimage {
+        font-size: 26px;
     }
 
-
-    .lgbtqarea .lgbtq {
-        padding: 35px 20px;
+    .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
+        padding: 5% 0 0;
+        font-size: 22px;
     }
 
-        .lgbtqarea .lgbtq h2 {
-            font-size: 26px;
-        }
+    .partysec .balibelly .contentarea .text {
+        padding: 10px;
+    }
+
+    .lgbtqarea .lgbtq h2 {
+        font-size: 26px;
+    }
 
     .piercing {
         margin-top: 100px;
     }
-
-        .piercing .contentarea {
-            padding: 40px;
-        }
 
     .piercingtop {
         width: 215px;
@@ -3000,6 +3064,51 @@ div.chrichtext {
             border: 3px #eb521d solid;
             padding: 90px 10%;
         }
+
+    .lgbtqarea .lgbtqsvgcircle {
+        padding-bottom: 2%;
+        width: 40%;
+    }
+
+        .lgbtqarea .lgbtqsvgcircle img {
+            width: 100%;
+        }
+
+
+    .cornersvg1 img {
+        margin-left: -60%;
+    }
+
+    .piercingsvg1.ltrtp {
+        width: 50px;
+        height: 30px;
+        top: -20px;
+        left: 20px;
+    }
+
+    .piercingsvg1.rltbtm {
+        width: 50px;
+        height: 30px;
+        bottom: -21px;
+        right: 20px;
+    }
+
+    .stackedbox .stackedleft {
+        padding: 20px 10px;
+        width: 70%;
+    }
+
+    .stackedbox.lostpassport .stackedcontentrow .passport {
+        padding: 20px 10px;
+    }
+
+    .stackedbox.lostpassport .stackedleft {
+        width: 70%;
+    }
+
+    .stackedbox .stackedright {
+        width: 30%;
+    }
 }
 /*#endregion*/
 /*#region max-width:600px;*/
@@ -3026,6 +3135,25 @@ div.chrichtext {
     .diseasesarea .diseasebox .table .td {
         width: 100%;
         margin-left: 0;
+    }
+
+    .partysec .balibelly .headingwithimage .headingimage {
+        width: 20%;
+    }
+
+    .partysec .balibelly .headingwithimage span {
+        width: 40%;
+    }
+
+    .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
+        font-size: 20px;
+    }
+}
+/*#endregion*/
+/*#region max-width:550px;*/
+@media screen and (max-width: 550px) {
+    .cornersvg1 img {
+        margin-left: -70%;
     }
 }
 /*#endregion*/
@@ -3122,68 +3250,6 @@ div.chrichtext {
         width: 92%;
     }
 
-    .cornerbox1 {
-        padding: 0 14px 40px 15px;
-    }
-
-        .cornerbox1 h2 {
-            margin-left: -18px;
-            padding-left: 39px;
-            font-size: 24px;
-            padding-bottom: 5px;
-            margin-right: -17px;
-            padding-top: 5px;
-        }
-
-    .cornersvg1 {
-        width: 50px;
-        height: 45px;
-        left: -12px;
-        top: -8px;
-    }
-
-    .cornersvg2 {
-        width: 40px;
-        height: 50px;
-        right: -8px;
-        top: -8px;
-    }
-
-    .cornersvg3 {
-        width: 40px;
-        height: 51px;
-        left: -8px;
-        bottom: -8px;
-    }
-
-    .cornersvg4 {
-        width: 80px;
-        height: 48px;
-        right: 10px;
-        bottom: -20px;
-    }
-
-    .cornerbox2 {
-        padding: 0 14px 40px 15px;
-    }
-
-        .cornerbox2 .cornersvg2 {
-            width: 70px;
-            height: 70px;
-            top: -10px;
-            right: -20px;
-        }
-
-        .cornerbox2 h2 {
-            font-size: 18px;
-            margin-left: -15px;
-            padding-left: 40px;
-        }
-
-        .cornerbox2 .textbox {
-            padding: 10px 30px;
-        }
-
     .balibelly {
         margin: 80px auto;
     }
@@ -3214,11 +3280,6 @@ div.chrichtext {
             margin-left: 3%;
         }
 
-        .balibelly .partycircle {
-            width: 60px;
-            height: 60px;
-            top: -60px;
-        }
 
         .balibelly h2 {
             font-size: 16px;
@@ -3236,32 +3297,9 @@ div.chrichtext {
                     padding-left: 10px;
                 }
 
-        .balibelly .partysvg {
-            width: 60px;
-            height: 60px;
-        }
-
         .balibelly h3 {
-            font-size: 18px;
             padding: 5px 50px;
         }
-
-        .balibelly ul li, .balibelly p {
-            font-size: 16px;
-        }
-
-    .lgbtqarea .lgbtq {
-        padding: 35px 20px;
-        font-weight: 300;
-    }
-
-        .lgbtqarea .lgbtq h2 {
-            font-size: 26px;
-        }
-
-    .lgbtqarea .lgbtqsvgcircle {
-        width: 12%;
-    }
 
     .orangeboxwithrightimage .textwithoptimalimageimage img {
         margin-right: -50px;
@@ -3272,13 +3310,41 @@ div.chrichtext {
     .widthlesstha768 .taxiarea .ul .li .taxi-icon {
         width: 70%;
     }
+
+    .partysec .balibelly .headingwithimage {
+        font-size: 20px;
+    }
+
+    .cornerbox1 .cornerboxheading .noimage.title h2, .cornerbox2 .cornerboxheading .noimage.title h2, .cornerbox1 .cornerboxheading .lefttopimage.title h2, .cornerbox2 .cornerboxheading .lefttopimage.title h2, .cornerbox1 .cornerboxheading .righttopimage.title h2, .cornerbox2 .cornerboxheading .righttopimage.title h2, .cornerbox1 .leftbottomimage.title h2, .cornerbox2 .leftbottomimage.title h2, .cornerbox1 .rightbottomimage.title h2, .cornerbox2 .rightbottomimage.title h2, .cornerbox1 .lefttopbottomimage.title h2, .cornerbox2 .lefttopbottomimage.title h2, .cornerbox1 .topimages.title h2, .cornerbox2 .topimages.title h2, .cornerbox1 .bottomimages.title h2, .cornerbox2 .bottomimages.title h2, .cornerbox1 .righttopbottomimage.title h2, .cornerbox2 .righttopbottomimage.title h2, .cornerbox1 .righttopleftbottomimage.title h2, .cornerbox2 .righttopleftbottomimage.title h2, .cornerbox1 .lefttoprightbottomimage.title h2, .cornerbox2 .lefttoprightbottomimage.title h2, .cornerbox1 .lefttoprighttoprightbottomimage.title h2, .cornerbox2 .lefttoprighttoprightbottomimage.title h2, .cornerbox1 .lefttopleftbottomrightbottomimage.title h2, .cornerbox2 .lefttopleftbottomrightbottomimage.title h2, .cornerbox1 .lefttoprighttopleftbottomimage.title h2, .cornerbox2 .lefttoprighttopleftbottomimage.title h2, .cornerbox1 .righttopleftbottomrightbottomimage.title h2, .cornerbox2 .righttopleftbottomrightbottomimage.title h2, .cornerbox1 .allimages.title h2, .cornerbox2 .allimages.title h2 {
+        font-size: 18px;
+    }
+
+    /*.scamsinbali .scamsbox .lightgrey ul {
+        display: block;
+        position: relative;
+        margin: 0 10px;
+        padding: 0;
+        list-style: none;
+    }
+
+        .scamsinbali .scamsbox .lightgrey ul li {
+            width: 33.3%;
+            float: left;
+            display: block;
+        }
+
+            .scamsinbali .scamsbox .lightgrey ul li .txt {
+                letter-spacing: 0px;
+                font-size: 16px;
+            }*/
+    .scamsinbalicontainer {
+        padding: 0;
+    }
 }
 
 /*#endregion*/
 /*#region max-width:450px;*/
 @media screen and (max-width: 450px) {
-
-
     .t-box .title h2 {
         max-width: 70%;
         width: 70%;
@@ -3315,19 +3381,6 @@ div.chrichtext {
         margin-bottom: 40%;
     }
 
-    .partysec .partycrowd {
-        margin-top: -60%;
-    }
-
-    .cornerbox2 {
-        padding: 0 14px 40px 15px;
-        background-size: contain !important;
-    }
-
-    .lgbtqarea .lgbtqsvgcircle {
-        width: 18%;
-    }
-
     .servicelistarea .servicelistbox {
         float: right;
         width: 95%;
@@ -3343,5 +3396,197 @@ div.chrichtext {
         right: 3%;
         width: 88%;
     }
+
+    .partysec .balibelly .headingwithimage {
+        font-size: 16px;
+    }
+
+    .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
+        font-size: 16px;
+    }
+
+    .cornersvg1 {
+        width: 20%;
+    }
+
+    .cornersvg2 {
+        width: 18%;
+    }
+
+    .cornersvg3 {
+        width: 18%;
+    }
+
+    .cornersvg4 {
+        width: 30%;
+    }
+
+    .cornerbox1 .cornerboxheading .noimage.title h2, .cornerbox2 .cornerboxheading .noimage.title h2 {
+        padding: 10px 20px 10px 0;
+    }
+
+    .cornerbox1 .noimage.chrichtext, .cornerbox2 .noimage.chrichtext {
+        padding: 20px;
+    }
+
+    .cornerbox1 .cornerboxheading .lefttopimage.title h2, .cornerbox2 .cornerboxheading .lefttopimage.title h2 {
+        padding: 10px;
+        margin-left: -18%;
+    }
+
+    .cornerbox1 .lefttopimage.chrichtext, .cornerbox2 .lefttopimage.chrichtext {
+        padding: 5% 20px 20px;
+    }
+
+    .cornerbox1 .cornerboxheading .righttopimage.title h2, .cornerbox2 .cornerboxheading .righttopimage.title h2 {
+        padding: 10px;
+        margin-right: -4%;
+    }
+
+    .cornerbox1 .righttopimage.chrichtext, .cornerbox2 .righttopimage.chrichtext {
+        padding: 5% 20px 20px;
+    }
+
+    .cornerbox1 .leftbottomimage.title h2, .cornerbox2 .leftbottomimage.title h2 {
+        padding: 10px 20px 10px 0;
+    }
+
+    .cornerbox1 .leftbottomimage.chrichtext, .cornerbox2 .leftbottomimage.chrichtext {
+        padding: 20px 20px 8% 18%;
+    }
+
+    .cornerbox1 .rightbottomimage.title h2, .cornerbox2 .rightbottomimage.title h2 {
+        padding: 10px 20px 10px 0;
+    }
+
+    .cornerbox1 .rightbottomimage.chrichtext, .cornerbox2 .rightbottomimage.chrichtext {
+        padding: 20px 20px 8% 20px;
+    }
+
+    .cornerbox1 .lefttopbottomimage.title h2, .cornerbox2 .lefttopbottomimage.title h2 {
+        margin-left: -18%;
+    }
+
+    .cornerbox1 .lefttopbottomimage.chrichtext, .cornerbox2 .lefttopbottomimage.chrichtext {
+        padding: 20px 20px 8% 18%;
+    }
+
+    .cornerbox1 .topimages.title h2, .cornerbox2 .topimages.title h2 {
+        margin-left: -18%;
+    }
+
+    .cornerbox1 .topimages.chrichtext, .cornerbox2 .topimages.chrichtext {
+        padding: 5% 20px 20px 20px;
+    }
+
+    .cornerbox1 .bottomimages.title h2, .cornerbox2 .bottomimages.title h2 {
+        margin: 10px 20px 10px 0;
+    }
+
+    .cornerbox1 .bottomimages.chrichtext, .cornerbox2 .bottomimages.chrichtext {
+        padding: 20px 20px 8% 18%;
+    }
+
+    .cornerbox1 .righttopbottomimage.title h2, .cornerbox2 .righttopbottomimage.title h2 {
+        margin: 10px 20px 10px 0;
+    }
+
+    .cornerbox1 .righttopbottomimage.chrichtext, .cornerbox2 .righttopbottomimage.chrichtext {
+        padding: 20px 8% 8% 20px;
+    }
+
+    .cornerbox1 .righttopleftbottomimage.title h2, .cornerbox2 .righttopleftbottomimage.title h2 {
+        margin-right: -4%;
+    }
+
+    .cornerbox1 .righttopleftbottomimage.chrichtext, .cornerbox2 .righttopleftbottomimage.chrichtext {
+        padding: 20px 8% 8% 18%;
+    }
+
+    .cornerbox1 .lefttoprightbottomimage.title h2, .cornerbox2 .lefttoprightbottomimage.title h2 {
+        margin-left: -18%;
+    }
+
+    .cornerbox1 .lefttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprightbottomimage.chrichtext {
+        padding: 20px 20px 8% 18%;
+    }
+
+    .cornerbox1 .lefttoprighttoprightbottomimage.title h2, .cornerbox2 .lefttoprighttoprightbottomimage.title h2 {
+        margin-left: -18%;
+    }
+
+    .cornerbox1 .lefttoprighttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprighttoprightbottomimage.chrichtext {
+        padding: 20px 10% 8% 18%;
+    }
+
+    .cornerbox1 .lefttopleftbottomrightbottomimage.title h2, .cornerbox2 .lefttopleftbottomrightbottomimage.title h2 {
+        margin-left: -18%;
+    }
+
+    .cornerbox1 .lefttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .lefttopleftbottomrightbottomimage.chrichtext {
+        padding: 20px 20px 8% 18%;
+    }
+
+    .cornerbox1 .lefttoprighttopleftbottomimage.title h2, .cornerbox2 .lefttoprighttopleftbottomimage.title h2 {
+        margin-left: -18%;
+        margin-right: -4%;
+    }
+
+    .cornerbox1 .lefttoprighttopleftbottomimage.chrichtext, .cornerbox2 .lefttoprighttopleftbottomimage.chrichtext {
+        padding: 20px 20px 8% 18%;
+    }
+
+    .cornerbox1 .righttopleftbottomrightbottomimage.title h2, .cornerbox2 .righttopleftbottomrightbottomimage.title h2 {
+        margin-right: -4%;
+    }
+
+    .cornerbox1 .righttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .righttopleftbottomrightbottomimage.chrichtext {
+        padding: 20px 10% 8% 18%;
+    }
+
+    .cornerbox1 .allimages.title h2, .cornerbox2 .allimages.title h2 {
+        margin-left: -18%;
+        margin-right: -4%;
+    }
+
+    .cornerbox1 .allimages.chrichtext, .cornerbox2 .allimages.chrichtext {
+        padding: 20px 10% 8% 18%;
+    }
+
+    .scamsinbali .scamsbox .lightgrey {
+        padding: 0 10px;
+        height: 70px;
+    }
+
+        .scamsinbali .scamsbox .lightgrey ul {
+            padding: 0;
+        }
+
+    .orangebox-text {
+        padding: 20px 10px 10px 10px !important;
+        margin: 0;
+    }
+
+    .scamstitle {
+        font-size: 30px;
+        letter-spacing: normal;
+    }
+
+    .scamsinbali .scamsbox .lightgrey ul li {
+        display: block;
+        float: left;
+    }
+
+        .scamsinbali .scamsbox .lightgrey ul li .txt {
+            font-size: 16px;
+            padding: 10px 0 0;
+            letter-spacing: normal;
+            font-weight: 500;
+        }
+
+        .scamsinbali .scamsbox .lightgrey ul li .svgwidth {
+            width: 80px;
+            height: 80px;
+        }
 }
 /*#endregion*/

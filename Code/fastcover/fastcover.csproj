@@ -411,6 +411,8 @@
     <Content Include="images\exclaimationmark.svg" />
     <Content Include="images\hline.png" />
     <Content Include="images\noseimage.svg" />
+    <Content Include="images\piercingringbottom.svg" />
+    <Content Include="images\piercingringtop.svg" />
     <Content Include="images\plane.svg" />
     <Content Include="images\upwardarrow.svg" />
     <Content Include="js\bootstrap.min.js" />

@@ -4,50 +4,148 @@
     string righttopimage = (Model.value != null && Model.value.images != null && Model.value.images.righttopimage != null) ? Model.value.images.righttopimage.image : null;
     string leftbottomimage = (Model.value != null && Model.value.images != null && Model.value.images.leftbottomimage != null) ? Model.value.images.leftbottomimage.image : null;
     string rightbottomimage = (Model.value != null && Model.value.images != null && Model.value.images.rightbottomimage != null) ? Model.value.images.rightbottomimage.image : null;
-    string backgroundimage = (Model.value != null && Model.value.images != null && Model.value.images.backgroundimage != null) ? Model.value.images.backgroundimage.image : null;
+    string backgroundimage = (Model.value != null && Model.value.images != null && Model.value.images.backgroundimage != null) ? Model.value.images.backgroundimage.image : "";
     string lefttopimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.lefttopimage != null) ? Model.value.images.lefttopimage.altText : null;
     string righttopimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.righttopimage != null) ? Model.value.images.righttopimage.altText : null;
     string leftbottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.leftbottomimage != null) ? Model.value.images.leftbottomimage.altText : null;
     string rightbottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.rightbottomimage != null) ? Model.value.images.rightbottomimage.altText : null;
-
     string headingposition = (Model != null) ? Model.position : "inside";
+    string headingandcontentclass = string.Empty;
+    if (string.IsNullOrEmpty(lefttopimage) && string.IsNullOrEmpty(righttopimage) && string.IsNullOrEmpty(leftbottomimage) && string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "noimage";
+    }
+    else if (!string.IsNullOrEmpty(lefttopimage) && string.IsNullOrEmpty(righttopimage) && string.IsNullOrEmpty(leftbottomimage) && string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "lefttopimage";
+    }
+    else if (string.IsNullOrEmpty(lefttopimage) && !string.IsNullOrEmpty(righttopimage) && string.IsNullOrEmpty(leftbottomimage) && string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "righttopimage";
+    }
+    else if (string.IsNullOrEmpty(lefttopimage) && string.IsNullOrEmpty(righttopimage) && !string.IsNullOrEmpty(leftbottomimage) && string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "leftbottomimage";
+    }
+    else if (string.IsNullOrEmpty(lefttopimage) && string.IsNullOrEmpty(righttopimage) && string.IsNullOrEmpty(leftbottomimage) && !string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "rightbottomimage";
+    }
+    else if (!string.IsNullOrEmpty(lefttopimage) && !string.IsNullOrEmpty(righttopimage) && string.IsNullOrEmpty(leftbottomimage) && string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "topimages";
+    }
+    else if (string.IsNullOrEmpty(lefttopimage) && string.IsNullOrEmpty(righttopimage) && !string.IsNullOrEmpty(leftbottomimage) && !string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "bottomimages";
+    }
+    else if (!string.IsNullOrEmpty(lefttopimage) && string.IsNullOrEmpty(righttopimage) && !string.IsNullOrEmpty(leftbottomimage) && string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "lefttopbottomimage";
+    }
+    else if (!string.IsNullOrEmpty(lefttopimage) && string.IsNullOrEmpty(righttopimage) && string.IsNullOrEmpty(leftbottomimage) && !string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "lefttoprightbottomimage";
+    }
+    else if (string.IsNullOrEmpty(lefttopimage) && !string.IsNullOrEmpty(righttopimage) && !string.IsNullOrEmpty(leftbottomimage) && string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "righttopleftbottomimage";
+    }
+    else if (string.IsNullOrEmpty(lefttopimage) && !string.IsNullOrEmpty(righttopimage) && string.IsNullOrEmpty(leftbottomimage) && !string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "righttopbottomimage";
+    }
+    else if (!string.IsNullOrEmpty(lefttopimage) && !string.IsNullOrEmpty(righttopimage) && !string.IsNullOrEmpty(leftbottomimage) && string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "lefttoprighttopleftbottomimage";
+    }
+    else if (!string.IsNullOrEmpty(lefttopimage) && !string.IsNullOrEmpty(righttopimage) && string.IsNullOrEmpty(leftbottomimage) && !string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "lefttoprighttoprightbottomimage";
+    }
+    else if (!string.IsNullOrEmpty(lefttopimage) && string.IsNullOrEmpty(righttopimage) && !string.IsNullOrEmpty(leftbottomimage) && !string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "lefttopleftbottomrightbottomimage";
+    }
+    else if (string.IsNullOrEmpty(lefttopimage) && !string.IsNullOrEmpty(righttopimage) && !string.IsNullOrEmpty(leftbottomimage) && !string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "righttopleftbottomrightbottomimage";
+    }
+    else if (!string.IsNullOrEmpty(lefttopimage) && !string.IsNullOrEmpty(righttopimage) && !string.IsNullOrEmpty(leftbottomimage) && !string.IsNullOrEmpty(rightbottomimage))
+    {
+        headingandcontentclass = "allimages";
+    }
 }
+
 @if (headingposition == "inside")
 {
-    <div class="cornerbox1 ulbullet" style="background: url('@backgroundimage') no-repeat #F1592A; background-size: auto; background-position: center center;">
-        <div class="cornersvg1">
-            <img src="@lefttopimage" alt="@lefttopimageAlttext" />
+    <div class="cornerboxouter">
+        <div class="cornerbox1 ulbullet" style="background: url('@backgroundimage') no-repeat #F1592A; background-size: auto; background-position: center center;">
+            <div class="cornerboxheading">
+                @if (!string.IsNullOrEmpty(lefttopimage))
+                {
+                <div class="cornersvg1">
+                    <img src="@lefttopimage" alt="@lefttopimageAlttext" />
+                </div>
+                }
+                <div class="title  @headingandcontentclass"><h2>@Model.value.heading</h2></div>
+                @if (!string.IsNullOrEmpty(righttopimage))
+                {
+                <div class="cornersvg2">
+                    <img src="@righttopimage" alt="@righttopimageAlttext" />
+                </div>
+                }
+            </div>
+            <div class="chrichtext orangebg @headingandcontentclass">@Html.Raw(Model.rteValue)</div>
+            @if (!string.IsNullOrEmpty(leftbottomimage))
+                {
+                <div class="cornersvg3">
+                    <img src="@leftbottomimage" alt="@leftbottomimageAlttext" />
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(rightbottomimage))
+                {
+                <div class="cornersvg4">
+                    <img src="@rightbottomimage" alt="@rightbottomimageAlttext" />
+                </div>
+            }
         </div>
-        <div class="cornersvg2">
-            <img src="@righttopimage" alt="@righttopimageAlttext" />
-        </div>
-        <h2>@Model.value.heading</h2>
-        <div class="chrichtext">@Html.Raw(Model.rteValue)</div>
-        <div class="cornersvg3">
-            <img src="@leftbottomimage" alt="@leftbottomimageAlttext" />
-        </div>
-        <div class="cornersvg4">
-            <img src="@rightbottomimage" alt="@rightbottomimageAlttext" />
-        </div>
-    </div>
+    </div>    <div class="clear"></div>
 }
 @if (headingposition == "outside")
 {
-    <div class="cornerbox2 ulbullet" style="background: url('@backgroundimage') no-repeat #F1592A; background-size: auto; background-position: center center;">
-        <div class="cornersvg1">
-            <img src="@lefttopimage" alt="@lefttopimageAlttext" />
+    <div class="cornerboxouter">
+        <div class="cornerbox2 ulbullet" style="background: url('@backgroundimage') no-repeat #F1592A; background-size: auto; background-position: center center;">
+
+            <div class="cornerboxheading">
+                @if (!string.IsNullOrEmpty(lefttopimage))
+                {
+                    <div class="cornersvg1">
+                        <img src="@lefttopimage" alt="@lefttopimageAlttext" />
+                    </div>
+                }
+                <div class="title  @headingandcontentclass"><h2>@Model.value.heading</h2></div>
+                @if (!string.IsNullOrEmpty(righttopimage))
+                {
+                    <div class="cornersvg2">
+                        <img src="@righttopimage" alt="@righttopimageAlttext" />
+                    </div>
+                }
+            </div>
+            <div class="chrichtext orangebg @headingandcontentclass">@Html.Raw(Model.rteValue)</div>
+            @if (!string.IsNullOrEmpty(leftbottomimage))
+                {
+                <div class="cornersvg3">
+                    <img src="@leftbottomimage" alt="@leftbottomimageAlttext" />
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(rightbottomimage))
+                {
+                <div class="cornersvg4">
+                    <img src="@rightbottomimage" alt="@rightbottomimageAlttext" />
+                </div>
+            }
         </div>
-        <div class="cornersvg2">
-            <img src="@righttopimage" alt="@righttopimageAlttext" />
-        </div><h2>@Model.value.heading</h2>
-        <div class="textbox chrichtext">
-            @Html.Raw(Model.rteValue)
-        </div>
-        <div class="cornersvg3">
-            <img src="@leftbottomimage" alt="@leftbottomimageAlttext" />
-        </div>
-        <div class="cornersvg4">
-            <img src="@rightbottomimage" alt="@rightbottomimageAlttext" />
-        </div>
-    </div>
+
+    </div>    <div class="clear"></div>
 }

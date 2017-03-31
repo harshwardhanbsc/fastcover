@@ -5,46 +5,69 @@
 
 @foreach (var item in items)
 {
-    if (item.position == "inside")
-    {
-        <div class="stackedbox">
-            <div class="stacktitle">@item.heading</div>
-            <div class="clear"></div>
-            <div class="stackedleft chrichtext">
-                @Html.Raw(item.rteValue)
-            </div>
-            <div class="stackedright">
-                <div class="scooter">
-                    @if (item.image != null)
-                    {
-                        if (item.image.image != null)
-                        {
-                            <img src="@item.image.image" alt="@item.image.altText" />
-                        }
-                    }
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-    }
     if (item.position == "outside")
     {
-        <div class="stackedbox lostpassport">
-            <div class="stacktitle">@item.heading</div>
-            <div class="clear"></div>
-            <div class="stackedleft chrichtext">
-                @Html.Raw(item.rteValue)
-                <div class="passportsvg">
-                    @if (item.image != null)
+        <div class="stackedbox">
+            <div class="stackedheaderrow">
+                <div class="stacktitle">@item.heading</div>
+            </div>
+            <div class="stackedcontentrow">
+                <div class="stackedleft chrichtext orangebg">
+                    @Html.Raw(item.rteValue)
+                </div>
+                <div class="stackedright">
+                    <div class="scooter">
+                        @if (item.image != null)
                     {
                         if (item.image.image != null)
                         {
-                            <img src="@item.image.image" alt="@item.image.altText" />
+                                <img src="@item.image.image" alt="@item.image.altText" />
+                            }
                         }
-                    }
+                    </div>
                 </div>
             </div>
-            <div class="clear"></div>
+        </div>
+    }
+    if (item.position == "inside")
+    {
+        <div class="stackedbox lostpassport">
+            @*<div class="stacktitle">@item.heading</div>
+                <div class="clear"></div>
+                <div class="stackedleft chrichtext">
+                    @Html.Raw(item.rteValue)
+                    <div class="passportsvg">
+                        @if (item.image != null)
+                        {
+                            if (item.image.image != null)
+                            {
+                                <img src="@item.image.image" alt="@item.image.altText" />
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="clear"></div>*@
+            <div class="stackedheaderrow">
+                <div class="stacktitle">@item.heading</div>
+            </div>
+            <div class="stackedcontentrow">
+                <div class="passport">
+                    <div class="stackedleft chrichtext orangebg">
+                        @Html.Raw(item.rteValue)
+                    </div>
+                    <div class="stackedright">
+                        <div class="scooter">
+                            @if (item.image != null)
+                            {
+                                if (item.image.image != null)
+                                {
+                                    <img src="@item.image.image" alt="@item.image.altText" />
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     }
 }

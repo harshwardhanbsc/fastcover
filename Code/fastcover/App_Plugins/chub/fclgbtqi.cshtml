@@ -6,10 +6,11 @@
     string bottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.altText : null;
 }
 <div class="lgbtqarea">
-    <div class="lgbtqsvgcircle">
-        <img src="@topimage" alt="@topimageAlttext" />
-    </div>
+
     <div class="lgbtq chrichtext">
+        <div class="lgbtqsvgcircle">
+            <img src="@topimage" alt="@topimageAlttext" />
+        </div>
         @Html.Raw(Model.rteValue)
     </div>
     <div class="lgbtqlover">

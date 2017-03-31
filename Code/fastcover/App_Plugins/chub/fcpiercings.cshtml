@@ -1,15 +1,21 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
 <div class="piercing dwidth width768">
-    <div class="piercingtop"></div>
-    <div class="piercingsvg1 ltrtp"></div>
-    <div class="piercinstick left">
-        <img src="~/images/upwardarrow.svg" />
-    </div>
-    <div class="contentarea chrichtext">
-        @Html.Raw(Model.rteValue)
-    </div>
-    <div class="piercingsvg1 rltbtm"></div>
-    <div class="piercinstick right">
-        <img src="~/images/downwardarrow.svg" />
+    <div class="piercingrow">
+        <div class="piercingleft">
+            <div class="piercinstick left">
+            </div>
+        </div>
+        <div class="piercingmiddle">
+            <div class="piercingtop"></div>
+            <div class="piercingsvg1 ltrtp"></div>
+            <div class="contentarea chrichtext">
+                @Html.Raw(Model.rteValue)
+            </div>
+            <div class="piercingsvg1 rltbtm"></div>
+        </div>
+        <div class="piercingright">
+            <div class="piercinstick right">
+            </div>
+        </div>
     </div>
 </div>

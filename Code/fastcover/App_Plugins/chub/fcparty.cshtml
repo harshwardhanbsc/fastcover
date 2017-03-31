@@ -12,22 +12,31 @@
 <div class="partysec">
     <div class="balibelly">
         <div class="partycircle">
-            <img src="@partycircle" alt="@partycircleAlttext" />
-        </div>
-        <h2><span>@Model.headingleft </span><span>@Model.headingright</span></h2>
-        <div class="contentarea entry">
-            <div class="partysvg left">
-                <img src="@partysvgleft" alt="@partysvgleftAlttext" />
+            <div class="headingwithimage">
+                <span>@Model.headingleft </span>
+                <div class="headingimage">   <img src="@partycircle" alt="@partycircleAlttext" /></div>
+                <span>@Model.headingright</span>
             </div>
-            <div class="partysvg right">
-                <img src="@partysvgright" alt="@partysvgrightAlttext" />
-            </div>
-            <h3>@Model.subheading</h3>
-            <div class="chrichtext">@Html.Raw(Model.rteValue)</div>
         </div>
-    </div>
-    <div class="partycrowd">
-        <img src="@partycrowd" alt="@partycrowdAlttext" />
+
+        <div class="contentarea">
+            <div class="partyheadingwithleftrightimage">
+                <div class="partysvg left">
+                    <img src="@partysvgleft" alt="@partysvgleftAlttext" />
+                </div>
+                <h3>@Model.subheading</h3>
+                <div class="partysvg right">
+                    <img src="@partysvgright" alt="@partysvgrightAlttext" />
+                </div>
+            </div>
+            <div class="chrichtext text orangebg">
+                @Html.Raw(Model.rteValue)
+            </div>
+
+            <div class="partycrowd">
+                <img src="@partycrowd" alt="@partycrowdAlttext" />
+            </div>
+        </div>
     </div>
 
 </div>
