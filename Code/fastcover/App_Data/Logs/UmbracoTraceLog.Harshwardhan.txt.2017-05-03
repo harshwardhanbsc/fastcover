@@ -1,0 +1,49 @@
+﻿ 2017-05-03 00:57:25,522 [P4036/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.11 application starting on HARSHWARDHAN
+ 2017-05-03 00:57:25,631 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-05-03 00:57:25,686 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 55ms)
+ 2017-05-03 00:57:25,817 [P4036/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-05-03 00:57:25,818 [P4036/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-05-03 00:57:25,825 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-05-03 00:57:26,574 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 749ms)
+ 2017-05-03 00:57:27,221 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-05-03 00:57:27,222 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2017-05-03 00:57:27,223 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-05-03 00:57:27,224 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2017-05-03 00:57:27,268 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-05-03 00:57:27,269 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 0ms)
+ 2017-05-03 00:57:27,269 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-05-03 00:57:27,300 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 30ms)
+ 2017-05-03 00:57:27,813 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-05-03 00:57:27,814 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-05-03 00:57:27,814 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-05-03 00:57:27,815 [P4036/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-05-03 00:57:33,528 [P4036/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-05-03 00:57:34,972 [P4036/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-05-03 00:57:35,459 [P4036/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-05-03 00:57:35,878 [P4036/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-05-03 00:57:36,043 [P4036/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 10724ms)
+ 2017-05-03 00:57:45,891 [P4036/D2/T9] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:49523/umbraco (UmbracoModule request)
+ 2017-05-03 00:57:45,982 [P4036/D2/T7] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:49523/umbraco (UmbracoModule request)
+ 2017-05-03 00:57:47,717 [P4036/D2/T9] INFO  umbraco.content - Load Xml from file...
+ 2017-05-03 00:57:47,790 [P4036/D2/T9] INFO  umbraco.content - Loaded Xml from file.
+ 2017-05-03 00:57:51,000 [P4036/D2/T9] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-05-03 00:57:51,001 [P4036/D2/T9] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2017-05-03 00:58:03,328 [P4036/D2/T9] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-05-03 00:58:03,328 [P4036/D2/T9] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 1ms)
+ 2017-05-03 00:58:04,049 [P4036/D2/T9] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username harshwardhan.in@gmail.com from IP address ::1
+ 2017-05-03 00:58:04,049 [P4036/D2/T9] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: harshwardhan.in@gmail.com logged in from IP address ::1
+ 2017-05-03 00:58:04,453 [P4036/D2/T16] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-03 00:58:04,453 [P4036/D2/T16] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 1ms)
+ 2017-05-03 00:58:05,359 [P4036/D2/T16] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2017-05-03 00:58:05,360 [P4036/D2/T16] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 1ms)
+ 2017-05-03 00:58:05,690 [P4036/D2/T16] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-03 00:58:05,690 [P4036/D2/T16] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-05-03 00:58:05,711 [P4036/D2/T16] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-05-03 00:58:05,712 [P4036/D2/T16] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 1ms)
+ 2017-05-03 00:58:06,083 [P4036/D2/T18] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-05-03 00:58:06,084 [P4036/D2/T18] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 1ms)
+ 2017-05-03 00:58:48,075 [P4036/D2/T15] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-05-02 00:58:47
+ 2017-05-03 01:17:34,048 [P4036/D2/T79] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: harshwardhan.in@gmail.com, IP Address: ::1
+ 2017-05-03 01:17:40,056 [P4036/D2/T79] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: harshwardhan.in@gmail.com, IP Address: ::1
+ 2017-05-03 11:18:25,521 [P4036/D2/T15] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-05-02 11:18:25
+ 2017-05-03 16:49:03,202 [P4036/D2/T36] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-05-02 16:49:03

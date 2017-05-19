@@ -75,28 +75,35 @@
     {
         headingandcontentclass = "allimages";
     }
+    string heading = (Model.value != null && Model.value.heading != null) ? Model.value.heading : null;
 }
 
 @if (headingposition == "inside")
 {
     <div class="cornerboxouter">
-        <div class="cornerbox1 ulbullet" style="background: url('@backgroundimage') no-repeat #F1592A; background-size: auto; background-position: center center;">
-            <div class="cornerboxheading">
-                @if (!string.IsNullOrEmpty(lefttopimage))
+        <div class="cornerbox1 ulbullet">
+            @if (!string.IsNullOrEmpty(lefttopimage))
                 {
                 <div class="cornersvg1">
                     <img src="@lefttopimage" alt="@lefttopimageAlttext" />
                 </div>
-                }
-                <div class="title  @headingandcontentclass"><h2>@Model.value.heading</h2></div>
-                @if (!string.IsNullOrEmpty(righttopimage))
+            }
+            @if (!string.IsNullOrEmpty(righttopimage))
                 {
                 <div class="cornersvg2">
                     <img src="@righttopimage" alt="@righttopimageAlttext" />
                 </div>
-                }
+            }
+            <div class="cornerboxheading @headingandcontentclass">
+                <h2>
+                    @heading
+                </h2>
             </div>
-            <div class="chrichtext orangebg @headingandcontentclass">@Html.Raw(Model.rteValue)</div>
+            <div class="contentareacover">
+                <div class="chrichtext orangebg @headingandcontentclass" style="background: url('@backgroundimage') no-repeat; background-size: contain; background-position: center center;">
+                    @Html.Raw(Model.rteValue)
+                </div>
+            </div>
             @if (!string.IsNullOrEmpty(leftbottomimage))
                 {
                 <div class="cornersvg3">
@@ -108,31 +115,38 @@
                 <div class="cornersvg4">
                     <img src="@rightbottomimage" alt="@rightbottomimageAlttext" />
                 </div>
-            }
+            }        <div class="clear"></div>
+
         </div>
-    </div>    <div class="clear"></div>
+    </div>
 }
-@if (headingposition == "outside")
+@if (headingposition == "ontop")
 {
     <div class="cornerboxouter">
-        <div class="cornerbox2 ulbullet" style="background: url('@backgroundimage') no-repeat #F1592A; background-size: auto; background-position: center center;">
+        <div class="cornerbox2 ulbullet">
 
-            <div class="cornerboxheading">
-                @if (!string.IsNullOrEmpty(lefttopimage))
+            @if (!string.IsNullOrEmpty(lefttopimage))
                 {
-                    <div class="cornersvg1">
-                        <img src="@lefttopimage" alt="@lefttopimageAlttext" />
-                    </div>
-                }
-                <div class="title  @headingandcontentclass"><h2>@Model.value.heading</h2></div>
-                @if (!string.IsNullOrEmpty(righttopimage))
+                <div class="cornersvg1">
+                    <img src="@lefttopimage" alt="@lefttopimageAlttext" />
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(righttopimage))
                 {
-                    <div class="cornersvg2">
-                        <img src="@righttopimage" alt="@righttopimageAlttext" />
-                    </div>
-                }
+                <div class="cornersvg2">
+                    <img src="@righttopimage" alt="@righttopimageAlttext" />
+                </div>
+            }
+            <div class="cornerboxheading @headingandcontentclass">
+                <h2>
+                    @heading
+                </h2>
             </div>
-            <div class="chrichtext orangebg @headingandcontentclass">@Html.Raw(Model.rteValue)</div>
+            <div class="contentareacover">
+                <div class="chrichtext orangebg @headingandcontentclass" style="background: url('@backgroundimage') no-repeat; background-size: contain; background-position: center center;">
+                    @Html.Raw(Model.rteValue)
+                </div>
+            </div>
             @if (!string.IsNullOrEmpty(leftbottomimage))
                 {
                 <div class="cornersvg3">
@@ -147,5 +161,6 @@
             }
         </div>
 
-    </div>    <div class="clear"></div>
+        <div class="clear"></div>
+    </div>
 }

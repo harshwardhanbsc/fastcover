@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string leftcolimage = (Model.value != null && Model.value.images != null && Model.value.images.leftcolimage != null) ? Model.value.images.leftcolimage.image : null;
+    string leftcolimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.leftcolimage != null) ? Model.value.images.leftcolimage.altText : null;
+}
+<div class="sidebysideboxcontainer">
+    <div class="table">
+        @if (Model.position == "left")
+        {<div class="leftcol">
+            <img src="@leftcolimage" alt="@leftcolimageAlttext" />
+        </div>
+        }<div class="rightcol chrichtext orangebg">
+            @Html.Raw(Model.rightcolrteValue)
+        </div>
+        @if (Model.position == "right")
+        {<div class="leftcol">
+            <img src="@leftcolimage" alt="@leftcolimageAlttext" />
+        </div>
+        }
+    </div>
+</div>

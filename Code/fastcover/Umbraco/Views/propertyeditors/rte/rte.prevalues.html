@@ -2,16 +2,17 @@
 
 	<umb-control-group label="Toolbar" hide-label="false">
 		<div ng-repeat="cmd in tinyMceConfig.commands">
-		    <label>
-		        <input type="checkbox"
-		               ng-checked="selected(cmd, cmd.frontEndCommand, model.value.toolbar)"
-		               ng-model="cmd.selected"
-		               ng-change="selectCommand(cmd)"/>                
-		        <!--<img ng-src="{{cmd.icon}}"/>-->
-		        <i class="mce-ico" ng-class="(cmd.isCustom ? ' mce-i-custom ' : ' mce-i-') + cmd.fontIcon"></i>
+            <label>
+			    <input type="checkbox" 
+				       ng-checked="selected(cmd, cmd.frontEndCommand, model.value.toolbar)" 
+				       ng-model="cmd.selected" 
+				       ng-change="selectCommand(cmd)" /> 
 
-		        {{cmd.name}}
-		    </label>
+				<!--<img ng-src="{{cmd.icon}}" />-->
+                <i class="mce-ico" ng-class="(cmd.isCustom ? ' mce-i-custom ' : ' mce-i-') + cmd.fontIcon"></i>
+
+                {{cmd.name}}
+            </label>
 		</div>
 	</umb-control-group>
 

@@ -1,0 +1,47 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    var items = Model.inputs;
+    var width = 75;
+    var liwidth = 30;
+    if (items.Count == 3)
+    {
+        width = 75;
+        liwidth = 30;
+    }
+    else if (items.Count == 2)
+    {
+        width = 50;
+        liwidth = 47;
+    }
+    else if (items.Count == 1)
+    {
+        width = 25;
+        liwidth = 100;
+    }
+}
+<div class="smallinfoboxcontainer" style="width:@width%">
+    <ul>
+        @foreach (var item in items)
+        {
+            <li style="width:@liwidth%">
+                <div class="smallinfoboxheading">
+                    <h3>@item.heading</h3>
+                    <div class="img">
+                        @if (item.image != null)
+                        {
+                            if (item.image.image != null)
+                            {
+                                <img src="@item.image.image" alt="@item.image.altText" />
+                            }
+                        }
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="smallinfoboxcontent">
+                    @Html.Raw(item.rteValue)
+                </div>
+            </li>
+        }
+    </ul>
+    <div class="clear"></div>
+</div>

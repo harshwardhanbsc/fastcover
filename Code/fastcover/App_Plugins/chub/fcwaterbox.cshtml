@@ -1,0 +1,43 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string leftimage = (Model.value != null && Model.value.images != null && Model.value.images.leftimage != null) ? Model.value.images.leftimage.image : null;
+    string rightimage = (Model.value != null && Model.value.images != null && Model.value.images.rightimage != null) ? Model.value.images.rightimage.image : null;
+    string topimage = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.image : null;
+    string bottomimage = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.image : null;
+    string leftimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.leftimage != null) ? Model.value.images.leftimage.altText : null;
+    string rightimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.rightimage != null) ? Model.value.images.rightimage.altText : null;
+    string topimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.altText : null;
+    string bottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.altText : null;
+}
+<div class="waterboxarea">
+    <div class="waterbox">
+        <div class="leftcol">
+            <img src="@leftimage" alt="@leftimageAlttext" />
+        </div>
+        <div class="middlecol">
+            <div class="drinksvg">
+                <img src="@topimage" alt="@topimageAlttext" />
+            </div>
+            <div class="waterboxcontentarea">
+                <h2>@Model.heading</h2>
+                <div class="contentarea chrichtext">
+                    @Html.Raw(Model.rteValue)
+                </div>
+            </div>
+        </div>
+        <div class="rightcol">
+            <img src="@rightimage" alt="@rightimageAlttext" />
+        </div>
+    </div>
+    <div class="waterbox">
+        <div class="leftcol">
+        </div>
+        <div class="middlecol">
+            <div class="bottomimage">
+                <img src="@bottomimage" alt="@bottomimageAlttext" />
+            </div>
+        </div>
+        <div class="rightcol">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,339 @@
+﻿ 2017-05-14 12:08:32,389 [P8312/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.11 application starting on DESKTOP-3LGJ1R9
+ 2017-05-14 12:08:32,430 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-05-14 12:08:32,472 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 41ms)
+ 2017-05-14 12:08:32,560 [P8312/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-05-14 12:08:32,562 [P8312/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-05-14 12:08:32,571 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-05-14 12:08:33,371 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 801ms)
+ 2017-05-14 12:08:34,131 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-05-14 12:08:34,132 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2017-05-14 12:08:34,132 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-05-14 12:08:34,133 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2017-05-14 12:08:34,150 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-05-14 12:08:34,152 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2017-05-14 12:08:34,153 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-05-14 12:08:34,164 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 11ms)
+ 2017-05-14 12:08:34,882 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-05-14 12:08:34,883 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-05-14 12:08:34,884 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-05-14 12:08:34,885 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-05-14 12:08:36,825 [P8312/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-05-14 12:08:37,677 [P8312/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-05-14 12:08:37,783 [P8312/D2/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will build its caches and indexes, and then adjust its last synced Id to the latest found in the database and maintain cache updates based on that Id.
+ 2017-05-14 12:08:37,838 [P8312/D2/T1] INFO  umbraco.content - Load Xml from file...
+ 2017-05-14 12:08:37,845 [P8312/D2/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2017-05-14 12:08:37,848 [P8312/D2/T1] INFO  umbraco.content - Loading content from database...
+ 2017-05-14 12:08:39,594 [P8312/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-05-14 12:08:39,595 [P8312/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-05-14 12:08:39,630 [P8312/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 7468ms)
+ 2017-05-14 12:08:39,632 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - Rebuilding index, Provider=InternalMemberIndexer, NodeId=-1
+ 2017-05-14 12:08:39,791 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - member, Provider=InternalMemberIndexer, NodeId=-1
+ 2017-05-14 12:08:39,978 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - member, took 186ms, Provider=InternalMemberIndexer, NodeId=-1
+ 2017-05-14 12:08:39,978 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - Rebuilding index, Provider=InternalIndexer, NodeId=-1
+ 2017-05-14 12:08:39,992 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - content, Provider=InternalIndexer, NodeId=-1
+ 2017-05-14 12:08:40,427 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-05-14 12:08:42,872 [P8312/D2/T12] INFO  umbraco.content - Save Xml to file...
+ 2017-05-14 12:08:42,931 [P8312/D2/T12] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-14 12:08:48,732 [P8312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 8305ms)
+ 2017-05-14 12:08:48,934 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - content, took 8941ms, Provider=InternalIndexer, NodeId=-1
+ 2017-05-14 12:08:48,935 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - media, Provider=InternalIndexer, NodeId=-1
+ 2017-05-14 12:08:49,114 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - media, took 178ms, Provider=InternalIndexer, NodeId=-1
+ 2017-05-14 12:08:49,114 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - Rebuilding index, Provider=ExternalIndexer, NodeId=-1
+ 2017-05-14 12:08:49,149 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - content, Provider=ExternalIndexer, NodeId=-1
+ 2017-05-14 12:08:49,191 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - content, took 41ms, Provider=ExternalIndexer, NodeId=-1
+ 2017-05-14 12:08:49,191 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - media, Provider=ExternalIndexer, NodeId=-1
+ 2017-05-14 12:08:49,199 [P8312/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - media, took 8ms, Provider=ExternalIndexer, NodeId=-1
+ 2017-05-14 12:08:49,827 [P8312/D2/T15] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:49523/umbraco (UmbracoModule request)
+ 2017-05-14 12:09:39,489 [P8312/D2/T15] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-05-14 12:09:44,772 [P8312/D2/T15] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-05-14 12:09:48,219 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-05-14 12:09:48,287 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 68ms)
+ 2017-05-14 12:09:48,743 [P8312/D2/T15] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username harshwardhan.in@gmail.com from IP address ::1
+ 2017-05-14 12:09:48,746 [P8312/D2/T15] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: harshwardhan.in@gmail.com logged in from IP address ::1
+ 2017-05-14 12:09:49,004 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-14 12:09:49,021 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 16ms)
+ 2017-05-14 12:09:49,190 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2017-05-14 12:09:49,222 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 31ms)
+ 2017-05-14 12:09:49,963 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-14 12:09:49,963 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-05-14 12:09:49,966 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-05-14 12:09:49,994 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 28ms)
+ 2017-05-14 12:09:50,627 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-05-14 12:09:50,672 [P8312/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 45ms)
+ 2017-05-14 12:09:50,716 [P8312/D2/T19] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-05-13 12:09:50
+ 2017-05-14 12:10:00,214 [P8312/D2/T5] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Stacked Numbered Info' with Id '1050' has been unpublished.
+ 2017-05-14 12:10:00,354 [P8312/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ICacheRefresher
+ 2017-05-14 12:10:00,388 [P8312/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 0 (took 33ms)
+ 2017-05-14 12:10:04,432 [P8312/D2/T13] INFO  umbraco.content - Save Xml to file...
+ 2017-05-14 12:10:04,450 [P8312/D2/T13] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-14 12:29:19,952 [P8312/D2/T32] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: harshwardhan.in@gmail.com, IP Address: ::1
+ 2017-05-14 13:48:50,984 [P8312/D2/T194] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 13:51:30,999 [P8312/D2/T206] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 13:51:50,313 [P8312/D2/T209] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2017-05-14 13:54:11,001 [P8312/D2/T215] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 13:56:51,016 [P8312/D2/T194] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 13:58:30,327 [P8312/D2/T228] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2017-05-14 13:59:31,043 [P8312/D2/T217] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:02:11,046 [P8312/D2/T235] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:04:51,063 [P8312/D2/T228] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:05:10,358 [P8312/D2/T241] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2017-05-14 14:07:31,083 [P8312/D2/T225] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:10:11,094 [P8312/D2/T249] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:11:50,377 [P8312/D2/T251] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2017-05-14 14:12:51,124 [P8312/D2/T268] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:15:31,132 [P8312/D2/T281] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:18:11,156 [P8312/D2/T277] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:18:30,631 [P8312/D2/T255] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2017-05-14 14:20:51,172 [P8312/D2/T297] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:23:31,187 [P8312/D2/T311] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:25:10,656 [P8312/D2/T315] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2017-05-14 14:26:11,204 [P8312/D2/T328] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:28:51,218 [P8312/D2/T289] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:31:31,235 [P8312/D2/T345] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:31:51,310 [P8312/D2/T345] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2017-05-14 14:34:11,264 [P8312/D2/T353] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:36:51,547 [P8312/D2/T351] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:38:31,560 [P8312/D2/T363] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2017-05-14 14:39:31,568 [P8312/D2/T372] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:42:11,584 [P8312/D2/T382] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:44:51,595 [P8312/D2/T369] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2017-05-14 14:45:11,581 [P8312/D2/T389] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:49523/umbraco").
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2017-05-14 18:31:14,118 [P7312/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.11 application starting on DESKTOP-3LGJ1R9
+ 2017-05-14 18:31:14,447 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-05-14 18:31:14,467 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 21ms)
+ 2017-05-14 18:31:15,149 [P7312/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-05-14 18:31:15,150 [P7312/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-05-14 18:31:15,158 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-05-14 18:31:17,078 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 1919ms)
+ 2017-05-14 18:31:18,701 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-05-14 18:31:18,703 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+ 2017-05-14 18:31:18,703 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-05-14 18:31:18,706 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 2ms)
+ 2017-05-14 18:31:18,763 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-05-14 18:31:18,765 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2017-05-14 18:31:18,765 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-05-14 18:31:18,926 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 161ms)
+ 2017-05-14 18:31:21,136 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-05-14 18:31:21,137 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-05-14 18:31:21,138 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-05-14 18:31:21,138 [P7312/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-05-14 18:31:29,005 [P7312/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-05-14 18:31:35,657 [P7312/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-05-14 18:31:37,248 [P7312/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-05-14 18:31:39,019 [P7312/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-05-14 18:31:39,650 [P7312/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 26503ms)
+ 2017-05-14 18:31:59,015 [P7312/D2/T8] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:49523/umbraco (UmbracoModule request)
+ 2017-05-14 18:32:01,340 [P7312/D2/T8] INFO  umbraco.content - Load Xml from file...
+ 2017-05-14 18:32:01,343 [P7312/D2/T8] INFO  umbraco.content - Loaded Xml from file.
+ 2017-05-14 18:32:01,347 [P7312/D2/T8] WARN  Umbraco.Web.UmbracoModule - Umbraco has no content
+ 2017-05-14 18:32:12,615 [P7312/D2/T14] WARN  Umbraco.Web.UmbracoModule - Umbraco has no content
+ 2017-05-14 18:32:17,470 [P7312/D2/T8] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-05-14 18:32:17,472 [P7312/D2/T8] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2017-05-14 18:32:25,380 [P7312/D2/T16] WARN  Umbraco.Web.UmbracoModule - Umbraco has no content
+ 2017-05-14 18:32:28,366 [P7312/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-05-14 18:32:28,367 [P7312/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 1ms)
+ 2017-05-14 18:32:31,395 [P7312/D2/T15] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username harshwardhan.in@gmail.com from IP address ::1
+ 2017-05-14 18:32:31,399 [P7312/D2/T15] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: harshwardhan.in@gmail.com logged in from IP address ::1
+ 2017-05-14 18:32:32,546 [P7312/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-14 18:32:32,548 [P7312/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 1ms)
+ 2017-05-14 18:32:32,885 [P7312/D2/T16] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2017-05-14 18:32:32,886 [P7312/D2/T16] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 1ms)
+ 2017-05-14 18:32:33,549 [P7312/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-14 18:32:33,549 [P7312/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-05-14 18:32:33,570 [P7312/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-05-14 18:32:33,572 [P7312/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 1ms)
+ 2017-05-14 18:32:33,826 [P7312/D2/T18] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-05-14 18:32:33,826 [P7312/D2/T18] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 0ms)
+ 2017-05-14 18:33:01,422 [P7312/D2/T16] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-14 18:33:01,422 [P7312/D2/T16] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-05-14 18:33:17,314 [P7312/D2/T6] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-05-13 18:33:17
+ 2017-05-14 18:33:39,383 [P7312/D2/T29] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-14 18:33:39,383 [P7312/D2/T29] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-05-14 18:33:41,750 [P7312/D2/T16] WARN  Umbraco.Web.UmbracoModule - Umbraco has no content
+ 2017-05-14 18:34:23,610 [P7312/D2/T30] WARN  Umbraco.Web.UmbracoModule - Umbraco has no content
+ 2017-05-14 18:34:44,295 [P7312/D2/T25] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username harshwardhan.in@gmail.com from IP address ::1
+ 2017-05-14 18:34:44,295 [P7312/D2/T25] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: harshwardhan.in@gmail.com logged in from IP address ::1
+ 2017-05-14 18:34:44,369 [P7312/D2/T34] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-14 18:34:44,369 [P7312/D2/T34] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-05-14 18:34:50,453 [P7312/D2/T34] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-14 18:34:50,453 [P7312/D2/T34] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-05-14 18:36:21,226 [P7312/D2/T25] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Swimming Warning' with Id '0' has been published.
+ 2017-05-14 18:36:21,819 [P7312/D2/T25] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ICacheRefresher
+ 2017-05-14 18:36:21,822 [P7312/D2/T25] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 0 (took 3ms)
+ 2017-05-14 18:36:25,969 [P7312/D2/T12] INFO  umbraco.content - Save Xml to file...
+ 2017-05-14 18:36:25,987 [P7312/D2/T12] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-14 18:46:50,848 [P7312/D2/T19] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Swimming Warning' with Id '1051' has been published.
+ 2017-05-14 18:46:56,486 [P7312/D2/T28] INFO  umbraco.content - Save Xml to file...
+ 2017-05-14 18:46:56,520 [P7312/D2/T28] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-14 18:48:04,091 [P7312/D2/T9] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Swimming Warning' with Id '1051' has been published.
+ 2017-05-14 18:48:08,569 [P7312/D2/T19] INFO  umbraco.content - Save Xml to file...
+ 2017-05-14 18:48:08,584 [P7312/D2/T19] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-14 18:50:27,396 [P7312/D2/T26] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Swimming Warning' with Id '1051' has been published.
+ 2017-05-14 18:50:31,576 [P7312/D2/T19] INFO  umbraco.content - Save Xml to file...
+ 2017-05-14 18:50:31,590 [P7312/D2/T19] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-14 19:06:29,199 [P7312/D2/T61] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: harshwardhan.in@gmail.com, IP Address: ::1
+ 2017-05-14 21:55:35,561 [P7312/D2/T214] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-05-14 22:58:25,294 [P7312/D2/T200] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-05-13 22:58:25
+ 2017-05-14 23:05:29,696 [P7312/D2/T185] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2017-05-14 23:05:29,696 [P7312/D2/T185] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2017-05-14 23:05:29,697 [P7312/D2/T185] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2017-05-14 23:05:29,697 [P7312/D2/T185] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2017-05-14 23:05:29,698 [P7312/D2/T185] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2017-05-14 23:05:29,698 [P7312/D2/T185] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2017-05-14 23:05:29,698 [P7312/D2/T186] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2017-05-14 23:05:29,699 [P7312/D2/T176] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2017-05-14 23:05:29,699 [P7312/D2/T174] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2017-05-14 23:05:29,701 [P7312/D2/T185] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-05-14 23:05:29,702 [P7312/D2/T185] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2017-05-14 23:05:29,720 [P7312/D2/T185] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2017-05-14 23:05:29,720 [P7312/D2/T185] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2017-05-14 23:05:29,720 [P7312/D2/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2017-05-14 23:05:29,720 [P7312/D2/T185] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2017-05-14 23:05:29,720 [P7312/D2/T185] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2017-05-14 23:05:29,720 [P7312/D2/T200] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2017-05-14 23:05:59,750 [P7312/D2/T200] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: BuildManagerChange
+
+_shutDownMessage=Change in C:\Users\Harshwardhan\AppData\Local\Temp\Temporary ASP.NET Files\vs\cb96081d\f9afb844\hash\hash.web
+HostingEnvironment initiated shutdown
+File Change Notification Error in C:\Users\Harshwardhan\AppData\Local\Temp\Temporary ASP.NET Files\vs\cb96081d\f9afb844\hash
+HostingEnvironment caused shutdown
+
+_shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   at System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   at System.Web.Compilation.BuildManager.OnWebHashFileChange(Object sender, FileChangeEvent e)
+   at System.Web.DirectoryMonitor.FireNotifications()
+   at System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   at System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()

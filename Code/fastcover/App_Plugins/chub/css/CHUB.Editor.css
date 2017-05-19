@@ -134,9 +134,25 @@ p, ul, ol, li {
     right: -12px;
 }
 
+.add-link {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    color: #d8d7d9;
+    text-align: center;
+    text-decoration: none;
+    border: 2px #d8d7d9 dashed;
+    transition: all 150ms ease-in-out;
+}
+
+    .add-link:hover {
+        color: #00aea2;
+        border-color: #03bfb3;
+    }
+
 .clear {
     clear: both;
-    display: block;
 }
 
 .editorname {
@@ -179,7 +195,7 @@ p, ul, ol, li {
     }
 
         .textboxwithoptimalimage .chub-theading .theading {
-            background: #eb521d;
+            background: #EB551D;
             padding: 15px 80px 15px 20px;
             border-radius: 15px;
             border-bottom-left-radius: 0;
@@ -191,7 +207,7 @@ p, ul, ol, li {
             }
 
     .textboxwithoptimalimage .chub-content {
-        border: 4px #eb521d solid;
+        border: 4px #EB551D solid;
         padding: 20px;
         border-radius: 15px;
         border-top-left-radius: 0;
@@ -442,7 +458,7 @@ p, ul, ol, li {
 }
 
 .textboxwithheadingoptionalhorizontalimageheading {
-    background: #eb521d;
+    background: #EB551D;
     color: #fff;
     padding: 15px 80px 15px 20px;
     margin: 0;
@@ -459,7 +475,7 @@ p, ul, ol, li {
     }
 
 .textboxwithheadingoptionalhorizontalimageheadingbottomcontainer {
-    border: 4px #eb521d solid;
+    border: 4px #EB551D solid;
     -ms-border-radius: 15px;
     border-radius: 15px;
     padding: 20px;
@@ -604,7 +620,7 @@ p, ul, ol, li {
 
     .servicelistarea .servicelistbox {
         width: 80%;
-        background: #EB4F1D;
+        background: #EB551D;
         -ms-border-radius: 15px;
         border-radius: 15px;
         margin-bottom: 150px;
@@ -615,7 +631,7 @@ p, ul, ol, li {
     }
 
         .servicelistarea .servicelistbox .textcontainer input {
-            background: #EB4F1D;
+            background: #EB551D;
             color: #ffffff;
         }
 
@@ -672,7 +688,7 @@ p, ul, ol, li {
             font-weight: bold;
             left: -65px;
             top: -70px;
-            background: #EB4F1D;
+            background: #EB551D;
         }
 
             .servicelistarea .servicelistbox .circlecount:before {
@@ -732,7 +748,7 @@ p, ul, ol, li {
             width: 27%;
             float: left;
             margin-left: 2%;
-            background: #eb521d;
+            background: #EB551D;
             position: relative;
             -webkit-border-radius: 15px;
             -moz-border-radius: 15px;
@@ -1185,7 +1201,7 @@ p, ul, ol, li {
     width: 100%;
     margin: 50px 0px;
     height: 4px;
-    background: url(../../../images/hline.png) left center repeat-x;
+    background: url(../../../images/chub/disease-and-infection-editor/hline.png) left center repeat-x;
 }
 
 .divbox {
@@ -1242,7 +1258,7 @@ p, ul, ol, li {
 
         .textboxwithcornerimagecontainer .headingcontainer input {
             letter-spacing: 5px;
-            color: #eb521d;
+            color: #EB551D;
             font-size: 48px;
             padding: 10px;
             text-transform: uppercase;
@@ -1250,7 +1266,7 @@ p, ul, ol, li {
         }
 
     .textboxwithcornerimagecontainer .content {
-        border: 4px #eb521d solid;
+        border: 4px #EB551D solid;
         border-radius: 15px;
         padding: 20px;
         background: #ffffff;
@@ -1266,7 +1282,7 @@ p, ul, ol, li {
 }
 
     .dottedboxwithoptimalimage h1, .dottedboxwithoptimalimage h2, .dottedboxwithoptimalimage h3, .dottedboxwithoptimalimage h4, .dottedboxwithoptimalimage h5, .dottedboxwithoptimalimage h6 {
-        color: #eb521d;
+        color: #EB551D;
         text-align: center;
     }
 
@@ -1283,7 +1299,7 @@ p, ul, ol, li {
         }
 
     .dottedboxwithoptimalimage .richtextcontent {
-        border: 2px dashed #eb521d;
+        border: 2px dashed #EB551D;
         padding: 10% 20px 15%;
         -ms-border-radius: 15px;
         border-radius: 15px;
@@ -1315,7 +1331,7 @@ p, ul, ol, li {
 
 .orangeboxwithrightimage {
     font-size: 15px;
-    border: 4px solid #eb521d;
+    border: 4px solid #EB551D;
     color: #7F7F7F;
     padding: 2% 0;
     -ms-border-radius: 15px;
@@ -1327,7 +1343,7 @@ p, ul, ol, li {
 }
 
     .orangeboxwithrightimage h2 {
-        color: #eb521d;
+        color: #EB551D;
     }
 
     .orangeboxwithrightimage .textwithoptimalimageimage {
@@ -1359,8 +1375,8 @@ p, ul, ol, li {
 }
 
 .cornerbox1 {
-    background: #eb4f1d;
-    border: 3px #eb4f1d solid;
+    background: #EB551D;
+    border: 3px #EB551D solid;
     border-radius: 15px;
     position: relative;
     margin: 30px auto 100px;
@@ -1465,7 +1481,7 @@ p, ul, ol, li {
     position: relative;
     display: block;
     clear: both;
-    background: #eb4f1d;
+    background: #EB551D;
     width: 100%;
     margin: 80px auto 100px;
 }
@@ -1600,7 +1616,7 @@ p, ul, ol, li {
 }
 
     .lgbtqarea .lgbtq {
-        border: 4px #eb511d solid;
+        border: 4px #EB551D solid;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         padding: 120px 60px 50px;
@@ -1647,7 +1663,7 @@ p, ul, ol, li {
 
     .stackedbox .stackedleft {
         width: 75%;
-        background: #eb4f1d;
+        background: #EB551D;
         border-radius: 15px;
         border-top-left-radius: 0;
         padding: 20px;
@@ -1687,7 +1703,7 @@ p, ul, ol, li {
 }
 
 .stacktitle {
-    border: 3px #eb4f1d solid;
+    border: 3px #EB551D solid;
     border-radius: 10px;
     background: #fff;
     color: #6d6e71;
@@ -1749,7 +1765,7 @@ p, ul, ol, li {
 }
 
 .orangeboxwithcircleborderarea {
-    background: #eb4f1d;
+    background: #EB551D;
     width: 100%;
     margin: 150px auto;
     position: relative;
@@ -1825,40 +1841,46 @@ p, ul, ol, li {
 }
 
 .piercing {
-    border: 3px #eb5024 solid;
+    border: 4px #EB551D solid;
     background: #fff;
     margin-top: 250px;
     margin-bottom: 60px;
 }
 
 .piercingtop {
-    background: url("../../../images/noseimage.svg") no-repeat;
-    background-size: contain;
-    width: 440px;
-    height: 370px;
+    background: url("../../../images/chub/piercings/noseimage.svg") no-repeat;
+    background-size: 100%;
+    width: 330px;
+    height: 300px;
     margin: auto;
-    margin-top: -227px;
-    background-position: center;
+    margin-top: -160px;
+    background-position: bottom;
 }
 
-.piercingsvg1 {
+/*.piercingsvg1 {
     width: 70px;
     height: 47px;
     position: absolute;
-    background: url("../img/piercing2.png") no-repeat;
-    background-size: cover;
+}*/
+
+.piercingsvg1.ltrtp {
+    width: 50px;
+    height: 30px;
+    margin-top: -20px;
+    margin-left: 15px;
+    background: url("../../../images/chub/piercings/piercingringtop.svg") no-repeat;
+    background-size: contain;
 }
 
-    .piercingsvg1.ltrtp {
-        top: -35px;
-        left: 10px;
-        transform: rotate(-180deg);
-    }
-
-    .piercingsvg1.rltbtm {
-        bottom: -35px;
-        right: 10px;
-    }
+.piercingsvg1.rltbtm {
+    width: 50px;
+    height: 30px;
+    margin-bottom: -21px;
+    margin-right: 15px;
+    background: url("../../../images/chub/piercings/piercingringbottom.svg") no-repeat;
+    background-size: contain;
+    margin-left: auto;
+}
 
 .piercing .contentarea {
     text-align: center;
@@ -1882,24 +1904,74 @@ p, ul, ol, li {
     z-index: 99;
 }
 
-    .piercing .piercinstick.right {
-        background: url("../../../images/downwardarrow.svg") no-repeat;
-        background-size: contain;
-        background-position-y: top;
-        right: -13px;
-        top: -10px;
+    .piercing .piercinstick.left {
+        width: 10px;
+        height: 101%;
+        left: -4px;
+        top: -4px;
+        background: #EB551D;
+        position: absolute;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
-    .piercing .piercinstick.left {
-        background: url("../../../images/upwardarrow.svg") no-repeat;
-        background-size: contain;
-        background-position-y: bottom;
-        left: -10px;
-        bottom: -10px;
+        .piercing .piercinstick.left:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-bottom: 50px solid #EB551D;
+            position: absolute;
+            bottom: 55px;
+            left: 0px;
+        }
+
+        .piercing .piercinstick.left:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            bottom: -55px;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-top: 50px solid #EB551D;
+        }
+
+    .piercing .piercinstick.right {
+        height: 101%;
+        width: 10px;
+        right: -4px;
+        bottom: -4px;
+        background: #EB551D;
+        position: absolute;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
+
+        .piercing .piercinstick.right:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-bottom: 50px solid #EB551D;
+            position: absolute;
+            top: -55px;
+            left: 0px;
+        }
+
+        .piercing .piercinstick.right:after {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 55px;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-top: 50px solid #EB551D;
+        }
 
 .scamstitle {
-    background: #eb4f1d;
+    background: #EB551D;
     border: 2px #a6a6a6 solid;
     color: #fff;
     padding: 15px;
@@ -1923,7 +1995,7 @@ p, ul, ol, li {
     }
 
 .scamsinbali {
-    background: #eb4f1d;
+    background: #EB551D;
     max-width: 890px;
     width: 100%;
     margin: 0px auto 50px;
@@ -2028,7 +2100,7 @@ p, ul, ol, li {
 
 
 .exclaimation-mark {
-    background: url('../../../images/exclaimationmark.svg') 26.9% 12% no-repeat;
+    background: url('../../../images/chub/stacked-numbered-info/exclaimationmark.svg') 26.9% 12% no-repeat;
     background-size: 100%;
 }
 
@@ -2059,3 +2131,773 @@ p, ul, ol, li {
 .scamsinbali .scamsbox:nth-child(2n) .lightgrey {
     background: #464646;
 }
+
+
+.staysafe {
+    background: #EB551D;
+    color: #fff;
+    display: table;
+    width: 80%;
+    margin: 10% auto;
+}
+
+    .staysafe .leftcol {
+        display: table-cell;
+        width: 20%;
+        vertical-align: middle;
+    }
+
+        .staysafe .leftcol img, .staysafe .leftcol .imagegrid {
+            margin-left: -90%;
+            height: 110%;
+            margin-top: -15%;
+            margin-bottom: -15%;
+        }
+
+        .staysafe .leftcol .picked-image {
+            margin-left: -8%;
+            margin-top: 15%;
+        }
+
+        .staysafe .leftcol img {
+            max-width: none !important;
+        }
+
+    .staysafe .rightcol {
+        display: table-cell;
+        width: 80%;
+        vertical-align: top;
+    }
+
+        .staysafe .rightcol .contentimage {
+            margin-left: -130px;
+        }
+
+    .staysafe .contentarea {
+        padding: 40px;
+    }
+
+    .staysafe .stayheading {
+        background: #6d6e71;
+        margin: 15px -40px 15px -120px;
+        padding: 10px 0px 10px 130px;
+    }
+
+        .staysafe .stayheading input {
+            font-size: 34px;
+            line-height: 120%;
+            height: 120%;
+            width: 90%;
+        }
+
+        .staysafe .stayheading .usky-editor-placeholder.imagegrid {
+            margin: 0;
+            padding: 10px 0;
+        }
+
+    .staysafe .staydrinksvg {
+        position: absolute;
+        width: 138px;
+        height: 316px;
+        right: 4%;
+        z-index: 99;
+        top: 8%;
+    }
+
+    .staysafe .staydeathsvg {
+        width: 200px;
+        height: 78px;
+        z-index: 99;
+        position: absolute;
+        bottom: -4%;
+        right: 4%;
+    }
+
+.waterboxarea {
+    display: table;
+    width: 100%;
+}
+
+.waterbox {
+    display: table-row;
+}
+
+    .waterbox .leftcol {
+        width: 20%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .waterbox .middlecol {
+        width: 60%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .waterbox .rightcol {
+        width: 20%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+.waterboxarea .waterboxcontentarea {
+    background: #fff;
+    text-align: justify;
+    width: 100%;
+    position: relative;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+}
+
+    .waterboxarea .waterboxcontentarea h2 {
+        background: #EB551D;
+        line-height: 120%;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+        .waterboxarea .waterboxcontentarea h2 input {
+            line-height: 120%;
+            height: 120%;
+            font-size: 36px;
+            font-weight: 700;
+            width: 95%;
+            margin: 10px auto;
+        }
+
+    .waterboxarea .waterboxcontentarea .contentarea {
+        padding: 30px;
+        border-top: 0px #EB551D solid;
+        border-left: 4px #EB551D solid;
+        border-bottom: 4px #EB551D solid;
+        border-right: 4px #EB551D solid;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+.gastrobox .balibelly.partysec .contentarea {
+    background: url('../../../images/chub/gastro-box/stomachinside.svg') no-repeat;
+    background-size: 80% 100%;
+    background-position-x: center;
+    padding: 20px 20px 200px 20px;
+}
+
+.gastrobox .balibelly.partysec .partycrowd {
+    height: auto;
+    bottom: 0;
+}
+
+.bgimage {
+    background: #EB551D;
+    width: 250px;
+    display: block;
+}
+
+    .bgimage img {
+        max-width: 100% !important;
+    }
+
+.stiarea {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    width: 95%;
+}
+
+.sti {
+    background: #eb4f1d;
+    color: #fff;
+    min-height: 718px;
+    margin-top: 10%;
+}
+
+    .sti:before {
+        content: "";
+        background: url("../../../images/chub/stis/curveimg.svg") bottom no-repeat;
+        background-size: cover;
+        height: 70px;
+        width: 102%;
+        z-index: 99;
+        display: block;
+        margin: 0px -10px;
+    }
+
+    .sti:after {
+        content: "";
+        position: absolute;
+        bottom: -120px;
+        width: 117%;
+        height: 203px;
+        border-radius: 47%;
+        background: #f0f0f0;
+        margin: 0 0 0 -112px;
+    }
+
+    .sti .rightbdr {
+        content: "";
+        position: absolute;
+        right: -24px;
+        bottom: 0px;
+        top: 0;
+        width: 40px;
+        height: 100%;
+        border-radius: 100%;
+        background: #f0f0f0;
+    }
+
+.womenbottom {
+    background: url('../../../images/chub/stis/womeninminiskirt.svg') no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 225px;
+    margin-top: -72px;
+    margin-left: -46px;
+    position: absolute;
+    z-index: 9;
+}
+
+.sti .contentarea {
+    padding: 0px 30px 25% 220px;
+}
+
+    .sti .contentarea p, .sti .contentarea ul li {
+        font-size: 18px;
+        line-height: 1.5em;
+        letter-spacing: 0;
+    }
+
+    .sti .contentarea ul {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+        .sti .contentarea ul li {
+            font-weight: 500;
+        }
+
+.sti .stiheading {
+    background: #636363;
+    color: #fff;
+    position: relative;
+    display: block;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 50px 0px 30px 0px;
+    padding: 10px 10px 10px 220px;
+}
+
+    .sti .stiheading input {
+        width: 95%;
+        margin: auto;
+        height: 120%;
+        line-height: 120%;
+        font-size: 34px;
+    }
+
+.sti .sticonsvg {
+    height: 170px;
+    width: 170px;
+    right: 12px;
+    position: absolute;
+    z-index: 9;
+    bottom: 24px;
+}
+
+.sti .sticurrency {
+    height: 145px;
+    width: 180px;
+    position: absolute;
+    z-index: 9;
+    top: -10%;
+    left: 216px;
+}
+
+.infocirclecontainer {
+    width: 100%;
+    overflow: hidden;
+    background: url('../../../images/chub/info-circle/skeletonwithdottedborder.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 180s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+    .infocirclecontainer .infocircle {
+        width: 58%;
+        margin: auto;
+        -webkit-animation-name: antirotate;
+        -webkit-animation-duration: 180s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+    }
+
+        .infocirclecontainer .infocircle .inforcircletopimage {
+            width: 50%;
+            margin: 5% auto 0;
+        }
+
+        .infocirclecontainer .infocircle .inforcirclebottomimage {
+            width: 50%;
+            margin: 0 auto 5%;
+        }
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes antirotate {
+    from {
+        -webkit-transform: rotate(360deg);
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+.smalldottedorangebox {
+    width: 100%;
+}
+
+    .smalldottedorangebox h1, .smalldottedorangebox h2, .smalldottedorangebox h3, .smalldottedorangebox h4, .smalldottedorangebox h5, .smalldottedorangebox h6 {
+        color: #EB551D;
+        text-align: center;
+    }
+
+    .smalldottedorangebox .heading {
+        text-align: center;
+        padding: 12px 20px 10px 20px;
+        border: 4px solid #eb551d;
+        width: 30%;
+        margin: auto;
+        border-bottom: 0;
+        border-radius: 20px 20px 0 0;
+        background: #ffffff;
+    }
+
+        .smalldottedorangebox .heading input {
+            font-size: 34px;
+            line-height: 120%;
+            height: 120%;
+            text-align: center;
+        }
+
+    .smalldottedorangebox .richtextcontent {
+        border: 4px dashed #ffffff;
+        padding: 20px 20px 20%;
+        -ms-border-radius: 15px;
+        border-radius: 15px;
+        background: #EB551D;
+        font-size: 15px;
+        margin-bottom: 20%;
+        color: #fff;
+        text-align: center;
+    }
+
+    .smalldottedorangebox .bottomimagecontent {
+        text-align: center;
+        color: #fff;
+        margin: -40% auto 0;
+    }
+
+        .smalldottedorangebox .bottomimagecontent .imagegrid {
+            width: 30% !important;
+        }
+
+        .smalldottedorangebox .bottomimagecontent .smallimage {
+            width: 20%;
+            border-radius: 100%;
+            border: 4px dashed #EB551D;
+            padding: 20px;
+            background: #fff;
+        }
+
+.sidebysideboxcontainer {
+    width: 100%;
+    border-spacing: 10px;
+    margin: auto;
+}
+
+    .sidebysideboxcontainer .table {
+        display: table;
+    }
+
+    .sidebysideboxcontainer .radiogroup {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .sidebysideboxcontainer .leftcol {
+        width: 40%;
+        display: table-cell;
+        border: 4px solid #eb551d;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 20px;
+        vertical-align: middle;
+    }
+
+    .sidebysideboxcontainer .rightcol {
+        width: 60%;
+        display: table-cell;
+        border: 4px solid #eb551d;
+        background: #eb551d;
+        padding: 20px;
+        border-radius: 20px;
+        vertical-align: middle;
+    }
+
+.whiteboxwithorangetoprowcontainer {
+    border: 4px solid #eb551d;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+    .whiteboxwithorangetoprowcontainer .toprow {
+        background: #eb551d;
+        border-radius: 15px 15px 0 0;
+        padding: 10px 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .whiteboxwithorangetoprowcontainer .middlerow {
+        padding: 10px 20px;
+    }
+
+    .whiteboxwithorangetoprowcontainer .bottomrow {
+        background: #6D6E71;
+        border-radius: 0 0 15px 15px;
+        padding: 10px 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+.swimmingtopcontainer {
+    width: 90%;
+    margin: 50px auto;
+    background: #eb551d;
+    border-radius: 20px;
+}
+
+    .swimmingtopcontainer .swimmingcornerimage {
+        width: 15%;
+        float: left;
+        margin-top: -50px;
+        margin-left: -30px;
+    }
+
+    .swimmingtopcontainer .swimmingheading {
+        background: #6D6E71;
+        padding: 6px 20px 7px 20px;
+        text-align: center;
+        border-radius: 20px 20px 0 0;
+    }
+
+
+        .swimmingtopcontainer .swimmingheading input {
+            font-size: 32px;
+            line-height: 120%;
+            height: 120%;
+        }
+
+    .swimmingtopcontainer .swimmingcontent {
+        padding: 20px;
+    }
+
+.flagboxcontainer {
+    width: 100%;
+    display: block;
+    clear: both;
+    position: relative;
+}
+
+    .flagboxcontainer li {
+        width: 30%;
+        float: left;
+        margin-right: 3%;
+        text-align: center;
+        border-radius: 20px;
+        z-index: 999999999;
+        background: #ffffff;
+        margin-top: -25%;
+    }
+
+        .flagboxcontainer li:first-child {
+            border: 4px solid #ff0000;
+        }
+
+            .flagboxcontainer li:first-child .flagboxheading {
+                background: #ff0000;
+            }
+
+
+        .flagboxcontainer li:nth-child(2) {
+            border: 4px solid #ffc600;
+        }
+
+            .flagboxcontainer li:nth-child(2) .flagboxheading {
+                background: #ffc600;
+            }
+
+        .flagboxcontainer li:last-child {
+            margin-right: 0;
+            border: 4px solid #cccccc;
+        }
+
+            .flagboxcontainer li:last-child .flagboxheading {
+                background: #cccccc;
+            }
+
+        .flagboxcontainer li .flagboxheading {
+            padding: 15px 7px;
+            border-radius: 15px 15px 0 0;
+        }
+
+            .flagboxcontainer li .flagboxheading h2 {
+                float: left;
+                width: 45%;
+            }
+
+                .flagboxcontainer li .flagboxheading h2 input {
+                    width: 100%;
+                    font-size: 32px;
+                    line-height: 120%;
+                    height: 120%;
+                }
+
+            .flagboxcontainer li .flagboxheading .imagegrid, .flagboxcontainer li .flagboxheading .imggrid4wide {
+                width: 45% !important;
+                float: right;
+            }
+
+        .flagboxcontainer li .flagboxcontent {
+            padding: 10px;
+            z-index: 99;
+        }
+
+
+
+    .flagboxcontainer ul {
+        margin: 0 !important;
+        padding: 0;
+        display: block;
+        z-index: 9;
+        width: 100%;
+        list-style: none;
+    }
+
+        .flagboxcontainer ul:after {
+            background: #6d6e71;
+            content: '';
+            z-index: 1;
+            display: block;
+            height: 40px;
+            left: 0;
+            right: 0;
+            width: 90%;
+            margin-left: auto;
+            margin-top: 30%;
+            margin-right: auto;
+        }
+
+.colorpickercontainer {
+    width: 100%;
+    display: block;
+}
+
+    .colorpickercontainer .colorpickerinput {
+        width: 30%;
+        float: left;
+        margin-right: 3%;
+        text-align: center;
+    }
+
+        .colorpickercontainer .colorpickerinput:last-child {
+            margin-right: 0;
+        }
+
+.smallinfoboxcontainer {
+    width: 100%;
+    display: block;
+    clear: both;
+    position: relative;
+}
+
+    .smallinfoboxcontainer li {
+        width: 30%;
+        float: left;
+        margin-right: 3%;
+        text-align: center;
+        border-radius: 20px;
+        z-index: 999999999;
+        background: #ffffff;
+        margin-top: 3%;
+    }
+
+    .smallinfoboxcontainer li {
+        border: 4px solid #eb551d;
+    }
+
+        .smallinfoboxcontainer li .smallinfoboxheading {
+            background: #eb551d;
+        }
+
+
+        .smallinfoboxcontainer li:last-child {
+            margin-right: 0;
+        }
+
+
+        .smallinfoboxcontainer li .smallinfoboxheading {
+            padding: 15px 7px;
+            border-radius: 15px 15px 0 0;
+        }
+
+            .smallinfoboxcontainer li .smallinfoboxheading h3 {
+                float: left;
+                width: 45%;
+            }
+
+                .smallinfoboxcontainer li .smallinfoboxheading h3 input {
+                    width: 100%;
+                    font-size: 24px;
+                    line-height: 120%;
+                    height: 120%;
+                }
+
+            .smallinfoboxcontainer li .smallinfoboxheading .imagegrid, .smallinfoboxcontainer li .smallinfoboxheading .imggrid4wide {
+                width: 45% !important;
+                float: right;
+            }
+
+        .smallinfoboxcontainer li .smallinfoboxcontent {
+            padding: 10px;
+            z-index: 99;
+        }
+
+
+
+    .smallinfoboxcontainer ul {
+        margin: 0 !important;
+        padding: 0;
+        display: block;
+        z-index: 9;
+        width: 100%;
+        list-style: none;
+    }
+
+.add-linkcontainer {
+    float: left;
+    margin-left: 3%;
+    margin-top: 4%;
+}
+
+.connectedboxescontainer {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+    .connectedboxescontainer .radiogroup {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .connectedboxescontainer .addbtn {
+        float: right;
+        margin: 10px;
+    }
+
+    .connectedboxescontainer .connectedbox {
+        margin: 20px 20px 100px;
+        position: relative;
+        z-index: 99;
+    }
+
+        .connectedboxescontainer .connectedbox:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+
+        .connectedboxescontainer .connectedbox h2 {
+            max-width: 40%;
+            padding: 10px 20px 8px 20px;
+            background: #eb551d;
+            border-radius: 20px 20px 0 0;
+            margin-bottom: 0;
+        }
+
+            .connectedboxescontainer .connectedbox h2 input {
+                font-size: 30px;
+                line-height: 120%;
+                height: 100%;
+            }
+
+    .connectedboxescontainer .connectedboxcontentarea {
+        border: 4px solid #eb551d;
+        background: #ffffff;
+        border-radius: 0 20px 20px;
+        padding: 20px;
+        float: left;
+        width: 79%;
+        margin-right: 10px;
+    }
+
+        .connectedboxescontainer .connectedboxcontentarea .connectedboxcontent {
+            float: left;
+            width: 80%;
+        }
+
+        .connectedboxescontainer .connectedboxcontentarea .connectedboxcontentimage {
+            width: 20%;
+            float: left;
+        }
+
+    .connectedboxescontainer .connectedboxcontentareaoutside {
+        margin: 0 10px 0 0;
+        width: 85%;
+        float: left;
+    }
+
+        .connectedboxescontainer .connectedboxcontentareaoutside .connectedboxcontent {
+            float: left;
+            width: 70%;
+            border: 4px solid #eb551d;
+            background: #ffffff;
+            border-radius: 0 20px 20px;
+            padding: 20px;
+            margin: 0 20px 0 0%;
+        }
+
+        .connectedboxescontainer .connectedboxcontentareaoutside .connectedboxcontentimage {
+            width: 20%;
+            float: left;
+        }
+
+    .connectedboxescontainer:after {
+        background: #6d6e71;
+        content: '';
+        z-index: 1;
+        display: block;
+        height: 80%;
+        left: 7%;
+        right: 0;
+        width: 10%;
+        position: absolute;
+        top: 15%;
+        bottom: 0;
+    }

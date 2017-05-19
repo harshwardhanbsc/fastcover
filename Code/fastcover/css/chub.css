@@ -44,12 +44,12 @@
 /*#region Common Components*/
 h1,
 .h1 {
-    font-size: 36px;
+    font-size: 40px;
 }
 
 h2,
 .h2 {
-    font-size: 30px;
+    font-size: 34px;
 }
 
 h3,
@@ -79,7 +79,7 @@ h2,
 h3,
 .h3 {
     font-weight: bold;
-    line-height: 150%;
+    line-height: 135%;
 }
 
 p, ul, ol, li {
@@ -91,8 +91,12 @@ a.morelink {
     outline: none;
 }
 
-.morecontent span {
+.morecontent div {
     display: none;
+}
+
+.morecontent ul:only-child {
+    padding-left: 20px;
 }
 
 img {
@@ -131,7 +135,7 @@ img {
 
 .chheading {
     color: #FFF;
-    background: #eb521d;
+    background: #EB551D;
     width: 100%;
     min-height: 68px;
     display: table;
@@ -269,8 +273,21 @@ div.chrichtext {
         line-height: 120%;
     }
 
+        div.chrichtext p:last-child {
+            margin-bottom: 0px;
+        }
+
+    div.chrichtext ol:last-child {
+        margin-bottom: 0px;
+    }
+
+    div.chrichtext ul:last-child {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
 .chrichtext h1 {
-    color: #eb541d;
+    color: #EB551D;
     font-weight: bold;
     font-size: 36px;
     padding: 10px 0 10px 0;
@@ -278,7 +295,7 @@ div.chrichtext {
 }
 
 .chrichtext h2 {
-    color: #eb541d;
+    color: #EB551D;
     font-weight: bold;
     font-size: 32px;
     padding-bottom: 10px;
@@ -287,7 +304,7 @@ div.chrichtext {
 }
 
 .chrichtext h3 {
-    color: #eb541d;
+    color: #EB551D;
     font-weight: bold;
     font-size: 28px;
     padding-top: 7px;
@@ -296,7 +313,7 @@ div.chrichtext {
 }
 
 .chrichtext h4 {
-    color: #eb541d;
+    color: #EB551D;
     font-weight: bold;
     font-size: 24px;
     padding-top: 5px;
@@ -305,7 +322,7 @@ div.chrichtext {
 }
 
 .chrichtext h5 {
-    color: #eb541d;
+    color: #EB551D;
     font-weight: bold;
     font-size: 20px;
     padding-top: 5px;
@@ -314,7 +331,7 @@ div.chrichtext {
 }
 
 .chrichtext h6 {
-    color: #eb541d;
+    color: #EB551D;
     font-weight: bold;
     font-size: 16px;
     padding-top: 5px;
@@ -354,7 +371,7 @@ div.chrichtext {
         .chrichtext ul li:before {
             position: absolute;
             content: "•";
-            color: #eb541d;
+            color: #EB551D;
             margin-left: -20px;
         }
 
@@ -379,7 +396,7 @@ div.chrichtext {
         .chrichtext ol li:before {
             content: counter(my-counter) ".";
             counter-increment: my-counter;
-            color: #eb541d;
+            color: #EB551D;
             padding-right: 10px;
             margin-left: -23px;
             font-weight: bold;
@@ -439,7 +456,6 @@ div.chrichtext {
 
 .clear {
     clear: both;
-    display: inline-block;
 }
 
 .margin10 {
@@ -451,7 +467,6 @@ div.chrichtext {
 }
 
 .img-row .image p {
-    color: #6D6E71;
     margin: 10px 20px;
     padding: 0 10px;
 }
@@ -463,8 +478,12 @@ div.chrichtext {
 }
 
     .chub-textwithoptimalimagecontainer h2 {
-        color: #eb521d;
+        color: #EB551D;
     }
+
+.t-box .mosqbdr div.chrichtext {
+    padding: 0;
+}
 
 .t-box .mosqbdr .textwithoptimalimageimage {
     width: 10%;
@@ -608,15 +627,33 @@ div.chrichtext {
         position: relative;
     }
 
-        .t-box .title h2 {
-            background: #eb521d;
+        .t-box .title h1, .t-box .title h2, .t-box .title h3, .t-box .title h4 {
+            background: #EB551D;
             color: #fff;
-            padding: 9px 80px 7px 20px;
-            margin: 0;
+            padding: 12px 80px 10px 20px;
             text-align: left;
+            margin: 0;
             float: left;
-            -ms-border-radius: 15px 15px 0 0;
-            border-radius: 15px 15px 0 0;
+            -ms-border-radius: 20px 20px 0 0;
+            border-radius: 20px 20px 0 0;
+            line-height: 120%;
+            font-weight: 500;
+        }
+
+        .t-box .title h1 {
+            font-size: 36px;
+        }
+
+        .t-box .title h2 {
+            font-size: 34px;
+        }
+
+        .t-box .title h3 {
+            font-size: 28px;
+        }
+
+        .t-box .title h4 {
+            font-size: 22px;
         }
 
         .t-box .title .mosqicon {
@@ -641,7 +678,7 @@ div.chrichtext {
     }
 
     .t-box .mosqbdr {
-        border: 4px #eb521d solid;
+        border: 4px #EB551D solid;
         -ms-border-radius: 15px;
         border-radius: 15px;
         padding: 20px;
@@ -649,12 +686,6 @@ div.chrichtext {
         border-top-left-radius: 0;
         background: #fff;
     }
-
-        .t-box .mosqbdr p {
-            text-align: left;
-            line-height: 25px;
-            margin: 0;
-        }
 
     .t-box .ul {
         margin: 0 auto !important;
@@ -704,7 +735,7 @@ div.chrichtext {
 }
 
     .dotted-outer h2 {
-        color: #eb521d;
+        color: #EB551D;
         text-align: center;
     }
 
@@ -721,7 +752,7 @@ div.chrichtext {
         }
 
     .dotted-outer .richtextcontent {
-        border: 4px dashed #EB541D;
+        border: 4px dashed #EB551D;
         padding: 10% 20px 50px;
         -ms-border-radius: 15px;
         border-radius: 15px;
@@ -746,7 +777,7 @@ div.chrichtext {
 }
 
 .orangeboxwithrightimage {
-    border: 4px solid #eb521d;
+    border: 4px solid #EB551D;
     padding: 2% 10% 2% 2%;
     -ms-border-radius: 15px;
     border-radius: 15px;
@@ -758,7 +789,7 @@ div.chrichtext {
 }
 
     .orangeboxwithrightimage h2 {
-        color: #eb521d;
+        color: #EB551D;
     }
 
 .orangeboxwithheading {
@@ -801,10 +832,6 @@ div.chrichtext {
 .orangeboxwithrightimage .width100 {
     width: 100%;
 }
-
-.textwithoptimalimagecontent p {
-    text-align: justify;
-}
 /*#endregion*/
 /*#region Orange Connected Boxes*/
 .servicelistarea {
@@ -831,7 +858,7 @@ div.chrichtext {
 
     .servicelistarea .servicelistbox {
         width: 80%;
-        background: #EB4F1D;
+        background: #eb551d;
         -ms-border-radius: 15px;
         border-radius: 15px;
         margin-bottom: 100px;
@@ -890,7 +917,7 @@ div.chrichtext {
             font-weight: bold;
             left: -65px;
             top: -70px;
-            background: #EB4F1D;
+            background: #eb551d;
         }
 
             .servicelistarea .servicelistbox .circlecount:before {
@@ -957,7 +984,7 @@ div.chrichtext {
         .taxiarea .ul .li {
             width: 33.33%;
             margin-left: 2%;
-            background: #eb521d;
+            background: #EB551D;
             position: relative;
             padding-left: 20px;
             padding-right: 20px;
@@ -1095,8 +1122,8 @@ div.chrichtext {
             /*display: block;
             clear: both;
             margin-bottom: 100px;
-            border-top: 3px #eb521d solid;
-            border-bottom: 3px #eb521d solid;
+            border-top: 3px #EB551D solid;
+            border-bottom: 3px #EB551D solid;
             background: #fff;
             position: relative;
             padding: 20px 25px;*/
@@ -1153,8 +1180,8 @@ div.chrichtext {
 
                 .threebox .ul .li .text .contentbox {
                     height: auto;
-                    border-top: 3px #eb521d solid;
-                    border-bottom: 3px #eb521d solid;
+                    border-top: 3px #EB551D solid;
+                    border-bottom: 3px #EB551D solid;
                     padding-left: 10%;
                     padding-right: 10%;
                     padding-top: 15px;
@@ -1168,7 +1195,7 @@ div.chrichtext {
 /*#endregion*/
 /*#region Disease and Infection*/
 .diseasesarea {
-    border: 4px #eb521d solid;
+    border: 4px #EB551D solid;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
@@ -1433,7 +1460,7 @@ div.chrichtext {
     width: 100%;
     margin: 50px 0;
     height: 4px;
-    background: url(../images/hline.png) left center repeat-x;
+    background: url(../images/chub/disease-and-infection-editor/hline.png) left center repeat-x;
 }
 
 .divbox {
@@ -1492,7 +1519,7 @@ div.chrichtext {
 
         .textboxwithcornerimagecontainer .headingcontainer h2 {
             letter-spacing: 1px;
-            color: #eb521d;
+            color: #EB551D;
             line-height: 100%;
             font-size: 48px;
             margin: 0;
@@ -1500,7 +1527,7 @@ div.chrichtext {
         }
 
     .textboxwithcornerimagecontainer .content {
-        border: 4px #eb521d solid;
+        border: 4px #EB551D solid;
         border-radius: 15px;
         padding: 20px 20px 20px 17%;
         background: #ffffff;
@@ -1522,12 +1549,16 @@ div.chrichtext {
 /*#endregion*/
 /*#region Orange Box with corner Image*/
 .cornerboxouter {
-    margin: 5% auto 7%;
+    margin: 150px auto;
+}
+
+.cornerbox1 {
+    border: 4px solid #eb551d;
 }
 
 .cornerbox1, .cornerbox2 {
-    background: #eb4f1d;
-    border-radius: 15px;
+    background: #eb551d;
+    border-radius: 20px;
     position: relative;
     margin: auto;
     width: 90%;
@@ -1536,199 +1567,206 @@ div.chrichtext {
     .cornerbox1 .cornerboxheading {
         background: #6d6e71;
         font-weight: 700;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         color: #fff;
-        padding-left: 20px;
-        display: table;
         width: 100%;
     }
 
     .cornerbox2 .cornerboxheading {
         background: #6d6e71;
         font-weight: 700;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         color: #fff;
-        padding-left: 20px;
-        border: 4px #fff solid;
-        display: table;
+        padding: 6px 10% 7px 12%;
+        border-bottom: 4px #fff solid;
         width: 100%;
     }
 
-
-        .cornerbox1 .cornerboxheading .title, .cornerbox2 .cornerboxheading .title {
-            vertical-align: middle;
-            display: table-cell;
-        }
-
-        .cornerbox1 .cornerboxheading .noimage.title h2, .cornerbox2 .cornerboxheading .noimage.title h2 {
-            padding: 10px 20px 10px 0;
-        }
-
-    .cornerbox1 .noimage.chrichtext, .cornerbox2 .noimage.chrichtext {
+    .cornerbox1 .contentareacover, .cornerbox2 .contentareacover {
         padding: 20px;
     }
 
-    .cornerbox1 .cornerboxheading .lefttopimage.title h2, .cornerbox2 .cornerboxheading .lefttopimage.title h2 {
-        padding: 10px;
-        margin-left: -8%;
+    .cornerbox1 .cornerboxheading, .cornerbox2 .cornerboxheading {
+        vertical-align: middle;
+    }
+
+        .cornerbox1 .cornerboxheading.noimage, .cornerbox2 .cornerboxheading.noimage {
+            padding: 10px 20px 7px;
+        }
+
+    .cornerbox1 .noimage.chrichtext, .cornerbox2 .noimage.chrichtext {
+        padding: 0;
+    }
+
+    .cornerbox1 .cornerboxheading.lefttopimage, .cornerbox2 .cornerboxheading.lefttopimage {
+        padding: 10px 20px 7px 100px;
     }
 
     .cornerbox1 .lefttopimage.chrichtext, .cornerbox2 .lefttopimage.chrichtext {
-        padding: 5% 20px 20px;
+        padding: 0;
     }
 
-    .cornerbox1 .cornerboxheading .righttopimage.title h2, .cornerbox2 .cornerboxheading .righttopimage.title h2 {
-        padding: 10px;
-        margin-right: -4%;
+    .cornerbox1 .cornerboxheading.righttopimage, .cornerbox2 .cornerboxheading .righttopimage {
+        padding: 10px 20px 7px;
     }
 
     .cornerbox1 .righttopimage.chrichtext, .cornerbox2 .righttopimage.chrichtext {
-        padding: 3% 20px 20px;
+        padding: 0;
     }
 
-    .cornerbox1 .leftbottomimage.title h2, .cornerbox2 .leftbottomimage.title h2 {
-        padding: 10px 20px 10px 0;
+    .cornerbox1 .cornerboxheading.leftbottomimage, .cornerbox2 .cornerboxheading.leftbottomimage {
+        padding: 10px 20px 7px 20px;
     }
 
     .cornerbox1 .leftbottomimage.chrichtext, .cornerbox2 .leftbottomimage.chrichtext {
-        padding: 20px 20px 8% 12%;
+        padding: 0 0 40px 100px;
     }
 
-    .cornerbox1 .rightbottomimage.title h2, .cornerbox2 .rightbottomimage.title h2 {
-        padding: 10px 20px 10px 0;
+    .cornerbox1 .cornerboxheading.rightbottomimage, .cornerbox2 .cornerboxheading.rightbottomimage {
+        padding: 10px 20px 7px;
     }
 
     .cornerbox1 .rightbottomimage.chrichtext, .cornerbox2 .rightbottomimage.chrichtext {
-        padding: 20px 20px 8% 20px;
+        padding: 0 0 40px 0;
     }
 
-    .cornerbox1 .lefttopbottomimage.title h2, .cornerbox2 .lefttopbottomimage.title h2 {
-        margin-left: -8%;
+    .cornerbox1 .cornerboxheading.lefttopbottomimage, .cornerbox2 .cornerboxheading.lefttopbottomimage {
+        padding: 10px 20px 7px 100px;
     }
 
     .cornerbox1 .lefttopbottomimage.chrichtext, .cornerbox2 .lefttopbottomimage.chrichtext {
-        padding: 20px 20px 8% 12%;
+        padding: 0 0 40px 100px;
     }
 
-    .cornerbox1 .topimages.title h2, .cornerbox2 .topimages.title h2 {
-        margin-left: -8%;
+    .cornerbox1 .cornerboxheading.topimages, .cornerbox2 .cornerboxheading.topimages {
+        padding: 10px 100px 7px;
     }
 
     .cornerbox1 .topimages.chrichtext, .cornerbox2 .topimages.chrichtext {
-        padding: 5% 20px 20px 20px;
+        padding: 0;
     }
 
     .cornerbox1 .bottomimages.title h2, .cornerbox2 .bottomimages.title h2 {
-        margin: 10px 20px 10px 0;
+        margin: 9px 20px 7px 0;
     }
 
     .cornerbox1 .bottomimages.chrichtext, .cornerbox2 .bottomimages.chrichtext {
-        padding: 20px 20px 8% 12%;
+        padding: 0 0 40px 100px;
     }
 
-    .cornerbox1 .righttopbottomimage.title h2, .cornerbox2 .righttopbottomimage.title h2 {
-        margin: 10px 20px 10px 0;
+    .cornerbox1 .cornerboxheading.righttopbottomimage, .cornerbox2 .cornerboxheading.righttopbottomimage {
+        padding: 10px 100px 7px 20px;
     }
 
     .cornerbox1 .righttopbottomimage.chrichtext, .cornerbox2 .righttopbottomimage.chrichtext {
-        padding: 20px 8% 8% 20px;
+        padding: 0 0 40px;
     }
 
-    .cornerbox1 .righttopleftbottomimage.title h2, .cornerbox2 .righttopleftbottomimage.title h2 {
-        margin-right: -4%;
+    .cornerbox1 .cornerboxheading.righttopleftbottomimage, .cornerbox2 .cornerboxheading.righttopleftbottomimage {
+        padding: 10px 100px 7px 20px;
     }
 
     .cornerbox1 .righttopleftbottomimage.chrichtext, .cornerbox2 .righttopleftbottomimage.chrichtext {
-        padding: 20px 8% 8% 12%;
+        padding: 0 0 40px 100px;
     }
 
-    .cornerbox1 .lefttoprightbottomimage.title h2, .cornerbox2 .lefttoprightbottomimage.title h2 {
-        margin-left: -8%;
+    .cornerbox1 .cornerboxheading.lefttoprightbottomimage, .cornerbox2 .cornerboxheading.lefttoprightbottomimage {
+        padding: 10px 20px 7px 100px;
     }
 
     .cornerbox1 .lefttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprightbottomimage.chrichtext {
-        padding: 20px 20px 8% 12%;
+        padding: 0 0 40px;
     }
 
-    .cornerbox1 .lefttoprighttoprightbottomimage.title h2, .cornerbox2 .lefttoprighttoprightbottomimage.title h2 {
-        margin-left: -8%;
+    .cornerbox1 .cornerboxheading.lefttoprighttoprightbottomimage, .cornerbox2 .cornerboxheading.lefttoprighttoprightbottomimage {
+        padding: 10px 100px 7px 100px;
     }
 
     .cornerbox1 .lefttoprighttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprighttoprightbottomimage.chrichtext {
-        padding: 20px 10% 8% 12%;
+        padding: 0 20px 40px;
     }
 
-    .cornerbox1 .lefttopleftbottomrightbottomimage.title h2, .cornerbox2 .lefttopleftbottomrightbottomimage.title h2 {
-        margin-left: -8%;
+    .cornerbox1 .cornerboxheading.lefttopleftbottomrightbottomimage, .cornerbox2 .cornerboxheading.lefttopleftbottomrightbottomimage {
+        padding: 10px 20px 7px 100px;
     }
 
     .cornerbox1 .lefttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .lefttopleftbottomrightbottomimage.chrichtext {
-        padding: 20px 20px 8% 12%;
+        padding: 0 0 40px 100px;
     }
 
-    .cornerbox1 .lefttoprighttopleftbottomimage.title h2, .cornerbox2 .lefttoprighttopleftbottomimage.title h2 {
-        margin-left: -8%;
-        margin-right: -4%;
+    .cornerbox1 .cornerboxheading.lefttoprighttopleftbottomimage, .cornerbox2 .cornerboxheading.lefttoprighttopleftbottomimage {
+        padding: 10px 100px 7px;
     }
 
     .cornerbox1 .lefttoprighttopleftbottomimage.chrichtext, .cornerbox2 .lefttoprighttopleftbottomimage.chrichtext {
-        padding: 20px 20px 8% 12%;
+        padding: 0 0 40px 100px;
     }
 
-    .cornerbox1 .righttopleftbottomrightbottomimage.title h2, .cornerbox2 .righttopleftbottomrightbottomimage.title h2 {
-        margin-right: -4%;
+    .cornerbox1 .cornerboxheading.righttopleftbottomrightbottomimage, .cornerbox2 .cornerboxheading.righttopleftbottomrightbottomimage {
+        padding: 10px 100px 7px 20px;
     }
 
     .cornerbox1 .righttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .righttopleftbottomrightbottomimage.chrichtext {
-        padding: 20px 10% 8% 12%;
+        padding: 0 20px 40px 100px;
     }
 
-    .cornerbox1 .allimages.title h2, .cornerbox2 .allimages.title h2 {
-        margin-left: -8%;
-        margin-right: -4%;
+    .cornerbox1 .cornerboxheading.allimages, .cornerbox2 .cornerboxheading.allimages {
+        padding: 10px 100px 7px;
     }
 
     .cornerbox1 .allimages.chrichtext, .cornerbox2 .allimages.chrichtext {
-        padding: 20px 10% 8% 12%;
+        padding: 0 0 40px 100px;
     }
 
 .cornersvg1 {
-    width: 15%;
-    display: table-cell;
+    margin-left: -30px;
+    margin-top: -60px;
+    float: left;
+    height: 135px;
 }
 
     .cornersvg1 img {
-        margin-left: -50%;
-        margin-top: -20%;
-        margin-bottom: -30%;
+        height: 100%;
+        width: auto;
     }
 
 .cornersvg2 {
-    width: 12%;
-    display: table-cell;
+    margin-right: -50px;
+    margin-top: -60px;
+    float: right;
+    height: 145px;
 }
 
     .cornersvg2 img {
-        margin-bottom: -30%;
-        margin-top: -30%;
-        margin-left: 30%;
+        height: 100%;
+        width: auto;
     }
 
 .cornersvg3 {
-    width: 15%;
-    float: left;
-    margin-left: -5%;
-    margin-top: -14%;
+    width: 135px;
+    left: -30px;
+    bottom: -20px;
+    height: 165px;
+    position: absolute;
 }
 
+    .cornersvg3 img {
+        bottom: 0;
+        position: absolute;
+    }
+
 .cornersvg4 {
-    width: 25%;
-    float: right;
-    margin-right: 5%;
-    margin-top: -8%;
+    right: 50px;
+    bottom: -50px;
+    position: absolute;
+    height: 100px;
 }
+
+    .cornersvg4 img {
+        height: 100%;
+    }
 /*
             .cornerbox1 .cornerboxheading .title.withleftimage h2 {
                 margin-left: -8%;
@@ -1800,97 +1838,100 @@ div.chrichtext {
 
 /*#endregion*/
 /*#region Party*/
-.partysec .balibelly {
-    border-radius: 20px;
-    position: relative;
-    display: block;
-    clear: both;
-    background: #eb4f1d;
+.partysec {
     width: 100%;
-    margin: 6% auto 0;
+    max-width: 90%;
+    padding: 0 20px;
+    margin: auto;
 }
 
-    .partysec .balibelly .headingwithimage {
-        font-size: 36px;
-        font-weight: 700;
-        text-align: center;
-        color: #fff;
-        background: #6d6e71;
-        padding: 12px 0 8px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom: 3px #fff solid;
-        width: 100%;
-        display: table;
-        line-height: 120%;
-    }
-
-        .partysec .balibelly .headingwithimage span {
-            display: table-cell;
-            vertical-align: middle;
-            padding: 0 1.5%;
-            width: 40%;
-        }
-
-            .partysec .balibelly .headingwithimage span:first-child {
-                text-align: right;
-            }
-
-            .partysec .balibelly .headingwithimage span:last-child {
-                text-align: left;
-            }
-
-        .partysec .balibelly .headingwithimage .headingimage {
-            display: table-cell;
-            width: 20%;
-        }
-
-            .partysec .balibelly .headingwithimage .headingimage img {
-                margin: -40% auto;
-            }
-
-    .partysec .balibelly .contentarea {
+    .partysec .balibelly {
+        border-radius: 20px;
+        position: relative;
         display: block;
-        color: #fff;
+        clear: both;
+        background: #eb551d;
+        margin: 8% auto 0;
     }
 
-        .partysec .balibelly .contentarea .partyheadingwithleftrightimage {
-            display: table;
+        .partysec .balibelly .headingwithimage {
+            text-align: center;
+            color: #fff;
+            background: #6d6e71;
+            padding: 8px 0 6px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom: 3px #fff solid;
+            width: 100%;
+            line-height: 120%;
+        }
+
+            .partysec .balibelly .headingwithimage h2 {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 0 1.5%;
+                width: 40%;
+            }
+
+                .partysec .balibelly .headingwithimage h2:first-child {
+                    text-align: right;
+                }
+
+                .partysec .balibelly .headingwithimage h2:last-child {
+                    text-align: left;
+                }
+
+            .partysec .balibelly .headingwithimage .headingimage {
+                display: table-cell;
+                width: 20%;
+            }
+
+                .partysec .balibelly .headingwithimage .headingimage img {
+                    margin: -40% auto;
+                }
+
+        .partysec .balibelly .contentarea {
+            display: block;
+            color: #fff;
+        }
+
+            .partysec .balibelly .contentarea .partyheadingwithleftrightimage {
+                display: table;
+                width: 100%;
+            }
+
+                .partysec .balibelly .contentarea .partyheadingwithleftrightimage .partysvg {
+                    display: table-cell;
+                    margin: 0 10px;
+                    vertical-align: top;
+                }
+
+                .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
+                    display: table-cell;
+                    color: #fff;
+                    text-align: center;
+                    vertical-align: middle;
+                    padding: 2% 0 0;
+                    width: 75%;
+                }
+
+            .partysec .balibelly .contentarea .text {
+                padding: 20px;
+            }
+
+        .partysec .balibelly .partycircle {
+            max-width: 100%;
+            display: block;
+        }
+
+    .partysec .partycrowd {
+        width: 100%;
+        display: block;
+    }
+
+        .partysec .partycrowd img {
             width: 100%;
         }
-
-            .partysec .balibelly .contentarea .partyheadingwithleftrightimage .partysvg {
-                display: table-cell;
-                margin: 0 10px;
-                vertical-align: top;
-            }
-
-            .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
-                display: table-cell;
-                color: #fff;
-                text-align: center;
-                vertical-align: middle;
-                padding: 2% 0 0;
-                width: 75%;
-            }
-
-        .partysec .balibelly .contentarea .text {
-            padding: 20px;
-        }
-
-    .partysec .balibelly .partycircle {
-        max-width: 100%;
-        display: block;
-    }
-
-.partysec .partycrowd {
-    width: 100%;
-    display: block;
-}
-
-    .partysec .partycrowd img {
-        width: 100%;
-    }
 /*#endregion*/
 /*#region LGBTQI*/
 .lgbtqarea {
@@ -1964,7 +2005,7 @@ div.chrichtext {
 
 .stackedbox .stackedleft {
     width: 80%;
-    background: #eb4f1d;
+    background: #eb551d;
     border-radius: 15px;
     border-top-left-radius: 0;
     padding: 20px;
@@ -1972,30 +2013,46 @@ div.chrichtext {
 
 
 .stackedbox .stackedright {
-    width: 20%;
+    width: 19%;
     vertical-align: middle;
 }
 
     .stackedbox .stackedright .scooter {
-        width: 90%;
+        width: 100%;
         margin-left: auto;
     }
 
 
-.stacktitle {
-    border: 4px #eb4f1d solid;
-    border-radius: 10px;
+h1.stacktitle, h2.stacktitle, h3.stacktitle, h4.stacktitle {
+    border: 4px #eb551d solid;
+    border-radius: 20px;
     background: #fff;
-    color: #6d6e71;
-    max-width: 93%;
-    float: left;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 120%;
-    border-bottom-left-radius: 0;
-    padding: 10px;
-    border-bottom-right-radius: 0;
+    color: #eb551d;
     border-bottom: 0;
+    padding: 10px 80px 8px 20px;
+    text-align: left;
+    margin: 0;
+    float: left;
+    -ms-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+    line-height: 120%;
+    font-weight: 500;
+}
+
+h1.stacktitle {
+    font-size: 36px;
+}
+
+h2.stacktitle {
+    font-size: 34px;
+}
+
+h3.stacktitle {
+    font-size: 28px;
+}
+
+h4.stacktitle {
+    font-size: 22px;
 }
 
 .stackedbox1 .stacktitle {
@@ -2015,7 +2072,7 @@ div.chrichtext {
 }
 
 .stackedbox.lostpassport .stackedcontentrow .passport {
-    background: #eb4f1d;
+    background: #eb551d;
     border-radius: 15px;
     border-top-left-radius: 0;
     padding: 20px;
@@ -2025,7 +2082,7 @@ div.chrichtext {
     width: 80%;
     background: none;
     border-radius: 0;
-    padding: 0;
+    padding: 0 20px 0 0;
 }
 
 .passportsvg {
@@ -2036,31 +2093,44 @@ div.chrichtext {
 /*#endregion*/
 /*#region Orange Box with circle borders*/
 .orangeboxwithcircleborderarea {
-    background: #eb4f1d;
-    width: 100%;
-    margin: 150px auto;
+    background: #eb551d;
+    width: 97%;
+    margin: 10% auto;
     position: relative;
-    display: block;
-    padding: 100px 0 76px 0;
+    display: table;
+}
+
+.orangeboxwithcirclebordertoprow,
+.orangeboxwithcirclebordercontentrow,
+.orangeboxwithcircleborderbottomrow {
+    display: table-row;
 }
 
 .circlesvg {
     margin: 0 auto;
     padding: 0;
-    width: 106%;
-    display: block;
+    width: 100%;
+    display: table-cell;
     position: relative;
-    left: -3%;
 }
 
     .circlesvg.topeat {
-        margin-top: -150px;
+        padding: 0px 0 20px;
     }
 
-    .circlesvg.bottomeat {
-        margin-bottom: -150px;
-    }
+        .circlesvg.topeat img {
+            margin-left: -1.7%;
+            width: 103.3%;
+            max-width: 103.3%;
+            margin-top: -8%;
+        }
 
+    .circlesvg.bottomeat img {
+        margin-left: -1.7%;
+        width: 103.3%;
+        max-width: 103.3%;
+        margin-bottom: -8%;
+    }
 
 .orangeboxwithcircleborderarea .circlesvg .eat-svgwidth {
     width: 145px;
@@ -2087,33 +2157,14 @@ div.chrichtext {
     text-align: center;
     color: #fff;
     background: #636363;
-    padding: 40px 0;
-    letter-spacing: 4px;
+    padding: 4% 20px;
+    line-height: 100%;
 }
 
 .ectext {
-    padding: 20px;
-    color: #fff;
+    padding: 20px !important;
 }
 
-    .ectext ul {
-        margin-left: 20px;
-    }
-
-        .ectext ul li:before {
-            width: 5px;
-            height: 5px;
-            background-color: #fff;
-            top: 7px;
-        }
-
-    .ectext a {
-        color: #3C3C3C;
-    }
-
-        .ectext a:hover {
-            color: #f2f2f2;
-        }
 /*#endregion*/
 /*#region Piercings*/
 .dwidth {
@@ -2125,7 +2176,7 @@ div.chrichtext {
 }
 
 .piercing {
-    border: 3px #eb5024 solid;
+    border: 4px #EB551D solid;
     background: #fff;
     margin-top: 200px;
     margin-bottom: 200px;
@@ -2152,95 +2203,126 @@ div.chrichtext {
 }
 
 .piercingtop {
-    background: url("../images/noseimage.svg") no-repeat;
-    background-size: contain;
-    width: 440px;
-    height: 370px;
+    background: url("../images/chub/piercings/noseimage.svg") no-repeat;
+    background-size: 100%;
+    width: 330px;
+    height: 300px;
     margin: auto;
-    margin-top: -172px;
-    background-position: center;
+    margin-top: -170px;
+    background-position: bottom;
 }
 
 
 .piercingsvg1.ltrtp {
     width: 70px;
     height: 55px;
-    position: absolute;
-    background: url("../images/piercingringtop.svg") no-repeat;
+    background: url("../images/chub/piercings/piercingringtop.svg") no-repeat;
     background-size: contain;
-    top: -35px;
-    left: 25px;
+    margin-top: -35px;
+    margin-left: 35px;
 }
 
 .piercingsvg1.rltbtm {
     width: 70px;
     height: 55px;
-    position: absolute;
-    background: url(../images/piercingringbottom.svg) no-repeat;
+    background: url(../images/chub/piercings/piercingringbottom.svg) no-repeat;
     background-size: contain;
-    bottom: -35px;
-    right: 25px;
+    margin-bottom: -35px;
+    margin-right: 35px;
+    margin-left: auto;
 }
 
 .piercing .contentarea {
-    padding: 4%;
+    padding: 20px 26px;
 }
-
-    .piercing .contentarea h2 {
-        color: #eb521d;
-    }
-
-    .piercing .contentarea p {
-        color: #868689;
-    }
 
 .piercing .piercinstick.left {
-    background: url(../images/upwardarrow.svg) no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
+    width: 10px;
+    height: 101%;
+    left: -4px;
+    top: -4px;
+    background: #EB551D;
     position: absolute;
-    width: 21px;
-    height: 115%;
-    z-index: 99;
-    left: -6px;
-    bottom: -3px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
+    .piercing .piercinstick.left:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-bottom: 50px solid #EB551D;
+        position: absolute;
+        bottom: 55px;
+        left: 0px;
+    }
+
+    .piercing .piercinstick.left:before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        bottom: -55px;
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-top: 50px solid #EB551D;
+    }
+
 .piercing .piercinstick.right {
-    background: url(../images/downwardarrow.svg) no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
+    height: 101%;
+    width: 10px;
+    right: -4px;
+    bottom: -4px;
+    background: #EB551D;
     position: absolute;
-    width: 21px;
-    height: 115%;
-    z-index: 99;
-    right: -5px;
-    top: -3px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
+
+    .piercing .piercinstick.right:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-bottom: 50px solid #EB551D;
+        position: absolute;
+        top: -55px;
+        left: 0px;
+    }
+
+    .piercing .piercinstick.right:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 55px;
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-top: 50px solid #EB551D;
+    }
 /*#endregion*/
 /*#region Stacked Numbered Info*/
 .scamsinbalicontainer {
     padding: 0 30px;
     margin: 50px auto 0;
+    max-width: 790px;
 }
 
 .scamstitle {
-    background: #eb4f1d;
+    background: #EB551D;
     color: #fff;
-    padding: 5px 15px;
-    font-weight: 600;
-    font-size: 40px;
-    letter-spacing: 2px;
-    max-width: 85%;
-    text-align: center;
+    padding: 9px 20px 7px 20px;
     margin: auto;
-    line-height: 120%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    text-align: center;
+    -ms-border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 0 0;
+    max-width: 85%;
 }
 
+
 .scamsinbali {
-    background: #eb4f1d;
+    background: #eb551d;
     width: 100%;
     margin: 0px auto 50px;
     position: relative;
@@ -2299,10 +2381,15 @@ div.chrichtext {
 .orangebox-text {
     display: block;
     clear: both;
-    padding: 30px 125px 0px 20px !important;
+    padding: 30px 125px 15px 20px !important;
     position: relative;
     margin: 0 30px;
 }
+
+    .orangebox-text *:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 
 .bdrbtm {
     border-bottom: 4px #f0f0f0 solid;
@@ -2313,7 +2400,7 @@ div.chrichtext {
 }
 
 .exclaimation-mark {
-    background: url(../images/exclaimationmark.svg) 26.9% 12% no-repeat;
+    background: url(../images/chub/stacked-numbered-info/exclaimationmark.svg) 26.9% 12% no-repeat;
     background-size: 100%;
 }
 
@@ -2321,14 +2408,14 @@ div.chrichtext {
     width: 130px;
     height: 113px;
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: 15px;
+    bottom: 15px;
 }
 
 .scamsinbali .scamsbox .lightgrey ul li .svgwidth {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto -10px;
+    width: 180px;
+    height: 180px;
+    margin: 10px auto -10px;
 }
 
 
@@ -2340,11 +2427,937 @@ div.chrichtext {
     background: #464646;
 }
 /*#endregion*/
+/*#region Stay Safe*/
+.staysafe {
+    background: #eb551d;
+    color: #fff;
+    display: table;
+    width: 80%;
+    margin: 10% auto;
+    border-radius: 20px;
+}
+
+    .staysafe .leftcol {
+        display: table-cell;
+        width: 20%;
+        vertical-align: middle;
+        height: 100%;
+    }
+
+        .staysafe .leftcol img, .staysafe .leftcol .imagegrid {
+            margin-left: -50%;
+            margin-top: -15%;
+            margin-bottom: -15%;
+        }
+
+        /*.staysafe .leftcol .bottleimage {
+            bottom: 0;
+            position: absolute;
+        }*/
+
+        .staysafe .leftcol img {
+            width: auto;
+        }
+
+    .staysafe .rightcol {
+        display: table-cell;
+        width: 80%;
+        vertical-align: top;
+    }
+
+        .staysafe .rightcol .contentimage {
+            margin-left: -13%;
+        }
+
+    .staysafe .contentarea {
+        padding: 20px 20px 0;
+        min-height: 165px;
+    }
+
+    .staysafe .stayheading {
+        background: #6d6e71;
+        margin-left: -10.65%;
+        padding: 10px 20px 10px 15%;
+        margin-top: 20px;
+    }
+
+        .staysafe .stayheading h2 {
+            font-size: 6em;
+            text-align: center;
+            line-height: 120%;
+            letter-spacing: normal;
+        }
+
+    .staysafe .staydrinksvg {
+        float: right;
+        width: 15%;
+        margin-right: -4%;
+        z-index: 99;
+        margin-top: -5%;
+    }
+
+    .staysafe .staydeathsvg {
+        width: 20%;
+        z-index: 99;
+        margin-bottom: -3%;
+        margin-right: -2%;
+        float: right;
+    }
+
+/*#endregion*/
+/*#region Water Box*/
+.waterboxarea {
+    display: table;
+    width: 100%;
+}
+
+.waterbox {
+    display: table-row;
+}
+
+    .waterbox .leftcol {
+        width: 20%;
+        display: table-cell;
+        vertical-align: bottom;
+    }
+
+    .waterbox .middlecol {
+        width: 60%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+        .waterbox .middlecol .bottomimage {
+            padding: 40px 0 0;
+        }
+
+            .waterbox .middlecol .bottomimage img {
+                max-width: 30%;
+            }
+
+    .waterbox .rightcol {
+        width: 20%;
+        display: table-cell;
+        vertical-align: bottom;
+    }
+
+.waterboxarea .waterboxcontentarea {
+    text-align: justify;
+    width: 100%;
+    position: relative;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+}
+
+    .waterboxarea .waterboxcontentarea h1,
+    .waterboxarea .waterboxcontentarea h2,
+    .waterboxarea .waterboxcontentarea h3,
+    .waterboxarea .waterboxcontentarea h4 {
+        background: #EB551D;
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        -ms-border-radius: 20px 20px 0 0;
+        border-radius: 20px 20px 0 0;
+        line-height: 120%;
+        font-weight: 500;
+        padding: 12px 20px 10px 20px;
+    }
+
+    .waterboxarea .waterboxcontentarea h1 {
+        font-size: 36px;
+    }
+
+    .waterboxarea .waterboxcontentarea h2 {
+        font-size: 34px;
+    }
+
+    .waterboxarea .waterboxcontentarea h3 {
+        font-size: 28px;
+    }
+
+    .waterboxarea .waterboxcontentarea h4 {
+        font-size: 22px;
+    }
+
+    .waterboxarea .waterboxcontentarea .contentarea {
+        padding: 20px;
+        background: #fff;
+        border-top: 0px #EB551D solid;
+        border-left: 4px #EB551D solid;
+        border-bottom: 4px #EB551D solid;
+        border-right: 4px #EB551D solid;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+/*#endregion*/
+/*#region Gastro Box*/
+.gastrobox .balibelly {
+    border-radius: 20px;
+    position: relative;
+    display: block;
+    /*clear: both;
+    background: ;*/
+    width: 100%;
+    margin: 20% auto 0;
+    background: #eb551d;
+    background: url('../images/chub/gastro-box/stomachinside.svg') no-repeat #eb551d;
+    background-size: auto 100%;
+    background-position: center top;
+}
+
+    .gastrobox .balibelly .bgimage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 100%;
+    }
+
+        .gastrobox .balibelly .bgimage img {
+            height: 100%;
+        }
+
+    .gastrobox .balibelly .headingwithimage {
+        color: #fff;
+        background: #6d6e71;
+        padding: 8px 0 6px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom: 3px #fff solid;
+        width: 100%;
+        display: table;
+    }
+
+        .gastrobox .balibelly .headingwithimage span {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 1.5%;
+            width: 42.5%;
+        }
+
+            .gastrobox .balibelly .headingwithimage span:first-child {
+                text-align: right;
+            }
+
+            .gastrobox .balibelly .headingwithimage span:last-child {
+                text-align: left;
+            }
+
+        .gastrobox .balibelly .headingwithimage .headingimage {
+            display: table-cell;
+            width: 15%;
+        }
+
+            .gastrobox .balibelly .headingwithimage .headingimage img {
+                margin-top: -95%;
+                margin-bottom: -10%;
+            }
+
+    .gastrobox .balibelly .gastroboxbgimage {
+        position: absolute;
+        height: 91.5%;
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+
+        .gastrobox .balibelly .gastroboxbgimage img {
+            height: 100%;
+        }
+
+    .gastrobox .balibelly .contentarea {
+        display: block;
+        /*background: url('../../../images/stomach inside.svg') no-repeat;
+        background-size: contain;
+        background-position-x: 46%;
+        background-position-y: top;*/
+        color: #fff;
+        padding: 50px 20px 20px;
+        margin-top: -30px;
+    }
+
+        .gastrobox .balibelly .contentarea .partyheadingwithleftrightimage {
+            display: table;
+            width: 100%;
+        }
+
+            .gastrobox .balibelly .contentarea .partyheadingwithleftrightimage .partysvg {
+                display: table-cell;
+                margin: 0 10px;
+                vertical-align: top;
+            }
+
+            .gastrobox .balibelly .contentarea .partyheadingwithleftrightimage h3 {
+                display: table-cell;
+                color: #fff;
+                text-align: center;
+                vertical-align: middle;
+                padding: 2% 0 0;
+                width: 75%;
+            }
+
+    .gastrobox .balibelly .partycircle {
+        max-width: 100%;
+        display: block;
+    }
+
+.gastrobox .partycrowd {
+    width: 100%;
+    display: block;
+}
+/*#endregion*/
+/*#region STIS*/
+.stiarea {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
+    .stiarea .leftcol {
+        display: table-cell;
+        width: 20%;
+        vertical-align: bottom;
+        height: 100%;
+    }
+
+        .stiarea .leftcol img {
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+    .stiarea .rightcol {
+        display: table-cell;
+        width: 80%;
+        vertical-align: top;
+    }
+
+        .stiarea .rightcol .contentimage {
+            margin-left: -13%;
+            margin-bottom: 10%;
+        }
+
+    .stiarea .stayheading {
+        background: #6d6e71;
+        padding: 10px 20px 10px 25%;
+        margin-left: -10.65%;
+    }
+
+    .stiarea .staydrinksvg {
+        width: 20%;
+        margin-left: 15%;
+        z-index: 99;
+        margin-top: -10%;
+        margin-bottom: 20px;
+    }
+
+    .stiarea .staydeathsvg {
+        width: 20%;
+        z-index: 99;
+        margin-top: -8%;
+        margin-right: -3%;
+        margin-left: auto;
+        position: absolute;
+        right: 0;
+    }
+
+.sti {
+    background: #eb551d;
+    color: #fff;
+    min-height: 718px;
+    margin-top: 10%;
+}
+
+    .sti:before {
+        content: "";
+        background: url("../images/chub/stis/curveimg.svg") bottom no-repeat;
+        background-size: cover;
+        height: 70px;
+        width: 104%;
+        z-index: 99;
+        display: block;
+        margin: 0 -2%;
+    }
+
+    .sti:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 110%;
+        height: 50px;
+        border-radius: 50% 50% 0 0;
+        background: #f4f4f4;
+        margin: 0 0 0 -5%;
+    }
+
+    .sti .rightbdr {
+        content: "";
+        position: absolute;
+        right: -24px;
+        bottom: 0px;
+        top: 0;
+        width: 40px;
+        height: 100%;
+        border-radius: 100%;
+        background: #f4f4f4;
+    }
+
+.womenbottom {
+    left: -5%;
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    width: 25%;
+}
+
+.sti .contentarea {
+    padding: 20px 35px 10% 15%;
+}
+
+.sti .stiheading {
+    background: #636363;
+    color: #fff;
+    position: relative;
+    display: block;
+    padding: 10px 35px 10px 25%;
+}
+
+.sti .sticonsvg {
+    width: 15%;
+    margin-right: 12px;
+    z-index: 9;
+    margin-top: -8%;
+    margin-left: auto;
+}
+
+    .sti .sticonsvg img {
+        position: absolute;
+        width: 15%;
+        z-index: 99;
+    }
+
+.sti .sticurrency {
+    width: 20%;
+    z-index: 9;
+    margin-top: -10%;
+    margin-left: 20%;
+}
+
+/*#endregion*/
+/*#region Info Box*/
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes antirotate {
+    from {
+        -webkit-transform: rotate(360deg);
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+.infocontainer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.infocirclecontainer {
+    width: 100%;
+    background: url('../images/chub/info-circle/skeletonwithdottedborder.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 180s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+    .infocirclecontainer .infocircle {
+        margin: auto;
+        -webkit-animation-name: antirotate;
+        -webkit-animation-duration: 180s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        padding: 15% 20%;
+        overflow-y: auto;
+    }
+
+        .infocirclecontainer .infocircle .inforcirclecontent {
+            padding: 0;
+        }
+
+            .infocirclecontainer .infocircle .inforcirclecontent h1,
+            .infocirclecontainer .infocircle .inforcirclecontent h2,
+            .infocirclecontainer .infocircle .inforcirclecontent h3,
+            .infocirclecontainer .infocircle .inforcirclecontent h4,
+            .infocirclecontainer .infocircle .inforcirclecontent h5,
+            .infocirclecontainer .infocircle .inforcirclecontent h6 {
+                text-align: center;
+            }
+
+        .infocirclecontainer .infocircle .inforcircletopimage {
+            width: 25%;
+            margin: auto;
+        }
+
+        .infocirclecontainer .infocircle .inforcirclebottomimage {
+            width: 25%;
+            margin: auto;
+        }
+/*#endregion*/
+/*#region Small-Dotted-Orange-Box*/
+.small-dotted-outer {
+    margin: 20px auto 10%;
+    width: 70%;
+    padding: 0;
+}
+
+    .small-dotted-outer h2 {
+        color: #EB551D;
+        text-align: center;
+        background: #ffffff;
+        border: 4px solid #eb551d;
+        border-radius: 20px 20px 0 0;
+        margin-bottom: -4px;
+        padding: 10px 20px 8px 20px;
+        line-height: 120%;
+        border-bottom: 0;
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .small-dotted-outer .richtextcontent {
+        border: 4px dashed #FFFFFF;
+        padding: 20px 20px 11%;
+        -ms-border-radius: 20px;
+        border-radius: 20px;
+        background: #EB551D;
+    }
+
+    .small-dotted-outer .bottomimagecontent {
+        text-align: center;
+        width: 20%;
+        margin: -10% auto;
+        padding: 20px;
+        border-radius: 100%;
+        background: #fff;
+        border: 4px dashed #eb551d;
+    }
+
+        .small-dotted-outer .bottomimagecontent img {
+            width: auto;
+            max-width: 100%;
+        }
+
+/*#endregion*/
+/*#region Side By Side Boxes*/
+.sidebysideboxcontainer {
+    width: 70%;
+    border-spacing: 10px;
+    margin: auto;
+}
+
+    .sidebysideboxcontainer .table {
+        display: table;
+    }
+
+    .sidebysideboxcontainer .leftcol {
+        width: 30%;
+        display: table-cell;
+        border: 4px solid #eb551d;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 20px;
+        vertical-align: middle;
+    }
+
+    .sidebysideboxcontainer .rightcol {
+        width: 70%;
+        display: table-cell;
+        border: 4px solid #eb551d;
+        background: #eb551d;
+        padding: 20px;
+        border-radius: 20px;
+        vertical-align: middle;
+    }
+
+/*#endregion*/
+/*#region White box with Orange Top Row*/
+.whiteboxwithorangetoprowcontainer {
+    border: 4px solid #eb551d;
+    margin: 20px auto;
+    border-radius: 20px;
+    width: 80%;
+}
+
+    .whiteboxwithorangetoprowcontainer .toprow {
+        background: #eb551d;
+        border-radius: 15px 15px 0 0;
+        padding: 10px 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+        .whiteboxwithorangetoprowcontainer .toprow h2 {
+            color: #fff;
+        }
+
+    .whiteboxwithorangetoprowcontainer .middlerow {
+        padding: 20px;
+        background: #fff;
+    }
+
+    .whiteboxwithorangetoprowcontainer .bottomrow {
+        background: #6D6E71;
+        border-radius: 0 0 15px 15px;
+        padding: 10px 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+        .whiteboxwithorangetoprowcontainer .bottomrow h2 {
+            color: #fff;
+        }
+/*#endregion*/
+/*#region Swimming Warning*/
+.swimmingtopcontainer {
+    width: 75%;
+    margin: 50px auto;
+    background: #eb551d;
+    border-radius: 20px;
+}
+
+    .swimmingtopcontainer .swimmingcornerimage {
+        width: 20%;
+        float: left;
+        margin-top: -7%;
+        margin-left: -5%;
+    }
+
+    .swimmingtopcontainer .swimmingheading {
+        background: #6D6E71;
+        padding: 12px 20px 10px 20px;
+        text-align: center;
+        border-radius: 20px 20px 0 0;
+    }
+
+
+        .swimmingtopcontainer .swimmingheading h2 {
+            line-height: 120%;
+            color: #fff;
+        }
+
+    .swimmingtopcontainer .swimmingcontent {
+        padding: 8% 12% 0;
+    }
+
+    .swimmingtopcontainer .swimmingbottomimage {
+        width: 130%;
+        margin-left: -15%;
+        margin-bottom: -2.5%;
+        margin-top: -10%;
+    }
+
+.flagboxcontainer {
+    width: 75%;
+    display: block;
+    margin: auto;
+    position: relative;
+}
+
+    .flagboxcontainer li {
+        width: 30%;
+        float: left;
+        margin-right: 3%;
+        border-radius: 20px;
+        z-index: 999999999;
+        background: #ffffff;
+        position: relative;
+    }
+
+        .flagboxcontainer li:first-child {
+            border: 4px solid #ff0000;
+        }
+
+            .flagboxcontainer li:first-child .flagboxheading {
+                background: #ff0000;
+            }
+
+
+        .flagboxcontainer li:nth-child(2) {
+            border: 4px solid #ffc600;
+        }
+
+            .flagboxcontainer li:nth-child(2) .flagboxheading {
+                background: #ffc600;
+            }
+
+        .flagboxcontainer li:last-child {
+            margin-right: 0;
+            border: 4px solid #cccccc;
+        }
+
+            .flagboxcontainer li:last-child .flagboxheading {
+                background: #cccccc;
+            }
+
+        .flagboxcontainer li .flagboxheading {
+            padding: 15px 7px;
+            border-radius: 15px 15px 0 0;
+            color: #fff;
+        }
+
+            .flagboxcontainer li .flagboxheading h2 {
+                float: left;
+                width: 45%;
+            }
+
+            .flagboxcontainer li .flagboxheading .img {
+                width: 45%;
+                float: right;
+            }
+
+        .flagboxcontainer li .flagboxcontent {
+            padding: 10px;
+            z-index: 99;
+        }
+
+
+
+    .flagboxcontainer ul {
+        margin: 0 !important;
+        padding: 0;
+        display: block;
+        z-index: 9;
+        width: 100%;
+        list-style: none;
+        position: relative;
+    }
+
+        .flagboxcontainer ul:after {
+            background: #6d6e71;
+            content: '';
+            z-index: 1;
+            display: block;
+            height: 80px;
+            left: 0;
+            right: 0;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+            margin-top: 10%;
+        }
+/*#endregion*/
+/*#region*/
+.smallinfoboxcontainer {
+    width: 75%;
+    display: block;
+    margin: 20px auto;
+    position: relative;
+}
+
+    .smallinfoboxcontainer li {
+        width: 30%;
+        float: left;
+        margin-right: 3%;
+        border-radius: 20px;
+        z-index: 999999999;
+        background: #ffffff;
+        position: relative;
+    }
+
+    .smallinfoboxcontainer li {
+        border: 4px solid #eb551d;
+    }
+
+        .smallinfoboxcontainer li .smallinfoboxheading {
+            background: #eb551d;
+        }
+
+
+
+        .smallinfoboxcontainer li .smallinfoboxheading {
+            padding: 15px 7px;
+            border-radius: 15px 15px 0 0;
+            color: #fff;
+        }
+
+            .smallinfoboxcontainer li .smallinfoboxheading h3 {
+                float: left;
+                width: 45%;
+                color: #fff;
+            }
+
+            .smallinfoboxcontainer li .smallinfoboxheading .img {
+                width: 45%;
+                float: right;
+            }
+
+        .smallinfoboxcontainer li .smallinfoboxcontent {
+            padding: 10px;
+            z-index: 99;
+        }
+
+
+
+    .smallinfoboxcontainer ul {
+        margin: 0 !important;
+        padding: 0;
+        display: block;
+        z-index: 9;
+        width: 100%;
+        list-style: none;
+        position: relative;
+    }
+
+/*#endregion*/
+/*#region Connected Text Boxes*/
+.connectedboxescontainer {
+    width: 100%;
+    margin: 20px auto;
+    position: relative;
+}
+
+    .connectedboxescontainer .radiogroup {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .connectedboxescontainer .addbtn {
+        float: right;
+        margin: 10px;
+    }
+
+    .connectedboxescontainer .connectedbox {
+        margin: 0px 0px 100px;
+        position: relative;
+        z-index: 99;
+    }
+
+        .connectedboxescontainer .connectedbox:nth-last-child(1) {
+            margin-bottom: 0;
+        }
+
+        .connectedboxescontainer .connectedbox h2 {
+            max-width: 40%;
+            padding: 10px 20px 8px 20px;
+            background: #eb551d;
+            border-radius: 20px 20px 0 0;
+            margin-bottom: 0;
+            color: #ffffff;
+        }
+
+            .connectedboxescontainer .connectedbox h2 input {
+                font-size: 30px;
+                line-height: 120%;
+                height: 100%;
+            }
+
+    .connectedboxescontainer .connectedboxcontentarea {
+        border: 4px solid #eb551d;
+        background: #ffffff;
+        border-radius: 0 20px 20px;
+        padding: 20px;
+        float: left;
+        width: 100%;
+    }
+
+        .connectedboxescontainer .connectedboxcontentarea .connectedboxcontent {
+            float: left;
+            width: 85%;
+        }
+
+        .connectedboxescontainer .connectedboxcontentarea .connectedboxcontentimage {
+            width: 15%;
+            float: left;
+        }
+
+    .connectedboxescontainer .connectedboxcontentareaoutside {
+        margin: 0;
+        width: 100%;
+        float: left;
+    }
+
+        .connectedboxescontainer .connectedboxcontentareaoutside .connectedboxcontent {
+            float: left;
+            width: 83%;
+            border: 4px solid #eb551d;
+            background: #ffffff;
+            border-radius: 0 20px 20px;
+            padding: 20px;
+            margin: 0 20px 0 0%;
+            min-height: 200px;
+        }
+
+        .connectedboxescontainer .connectedboxcontentareaoutside .connectedboxcontentimage {
+            width: 15%;
+            float: left;
+        }
+
+    .connectedboxescontainer:after {
+        background: #6d6e71;
+        content: '';
+        z-index: 1;
+        display: block;
+        height: 80%;
+        left: 7%;
+        right: 0;
+        width: 10%;
+        position: absolute;
+        top: 15%;
+        bottom: 0;
+    }
+
+/*#endregion*/
+/*#region max-width:1250px;*/
+@media screen and (max-width: 1250px) {
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -97%;
+        margin-bottom: -7%;
+    }
+}
+/*#endregion*/
 /*#region max-width:1200px;*/
 @media screen and (max-width: 1200px) {
     .diseasesarea .diseasebox .table::after {
         left: 4.5%;
         width: 90.5%;
+    }
+
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -93%;
+        margin-bottom: -10%;
+    }
+}
+/*#endregion*/
+/*#region max-width:1130px*/
+@media screen and (max-width:1130px) {
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -90%;
+        margin-bottom: -11%;
+    }
+
+    .connectedboxescontainer .connectedboxcontentareaoutside .connectedboxcontent {
+        width: 80%;
     }
 }
 /*#endregion*/
@@ -2353,6 +3366,24 @@ div.chrichtext {
     .diseasesarea .diseasebox .table::after {
         left: 5%;
         width: 90%;
+    }
+
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -90%;
+        margin-bottom: -10%;
+    }
+}
+/*#endregion*/
+/*#region max-width:1070px;*/
+@media screen and (max-width: 1070px) {
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -88%;
+        margin-bottom: -11%;
+    }
+
+    .staysafe .stayheading h2 {
+        font-size: 4em;
+        line-height: 100%;
     }
 }
 /*#endregion*/
@@ -2404,6 +3435,22 @@ div.chrichtext {
     }
 }
 /*#endregion*/
+/*#region max-width:1020px;*/
+@media screen and (max-width: 1020px) {
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -86%;
+        margin-bottom: -12%;
+    }
+}
+/*#endregion*/
+/*#region max-width:1005px;*/
+@media screen and (max-width: 1005px) {
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -85%;
+        margin-bottom: -12%;
+    }
+}
+/*#endregion*/
 /*#region max-width:1000px;*/
 @media screen and (max-width: 1000px) {
     /*.threebox .ul .li .circlediv {
@@ -2440,6 +3487,34 @@ div.chrichtext {
     .diseasesarea .diseasebox .table::after {
         left: 5.8%;
         width: 88.5%;
+    }
+
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -84%;
+        margin-bottom: -12%;
+    }
+}
+/*#endregion*/
+/*#region max-width:930px;*/
+@media screen and (max-width: 930px) {
+    .infocirclecontainer .infocircle {
+        padding: 15%;
+    }
+
+        .infocirclecontainer .infocircle .inforcircletopimage {
+            width: 15%;
+        }
+
+        .infocirclecontainer .infocircle .inforcirclebottomimage {
+            width: 15%;
+        }
+}
+/*#endregion*/
+/*#region max-width:905px;*/
+@media screen and (max-width: 905px) {
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -78%;
+        margin-bottom: -14%;
     }
 }
 /*#endregion*/
@@ -2479,6 +3554,22 @@ div.chrichtext {
         width: 100%;
         margin: 0;
     }
+
+    /*.piercing .piercinstick.left {
+        top: -2%;
+    }
+
+        .piercing .piercinstick.left::before {
+            bottom: 0.11%;
+        }
+
+    .piercing .piercinstick.right {
+        bottom: -2%;
+    }
+
+        .piercing .piercinstick.right::before {
+            top: 0.11%;
+        }*/
 }
 /*#endregion*/
 /*#region max-width:830px;*/
@@ -2532,10 +3623,56 @@ div.chrichtext {
         left: 6.5%;
         width: 87%;
     }
+
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -76%;
+        margin-bottom: -14%;
+    }
 }
 /*#endregion*/
 /*#region max-width:768px*/
 @media screen and (max-width: 768px) {
+    /*#region Common Components*/
+    h1,
+    .h1 {
+        font-size: 28px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 25px;
+    }
+
+    h3,
+    .h3 {
+        font-size: 20px;
+    }
+
+    h4,
+    .h4 {
+        font-size: 16px;
+    }
+
+    h5,
+    .h5 {
+        font-size: 14px;
+    }
+
+    h6,
+    .h6 {
+        font-size: 12px;
+    }
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3 {
+        font-weight: bold;
+        line-height: 150%;
+    }
+    /*#endregion*/
     .widthmorethan768 {
         display: none;
     }
@@ -2565,7 +3702,7 @@ div.chrichtext {
                     width: 100%;
                     float: left;
                     margin-left: 0;
-                    background: #eb521d;
+                    background: #EB551D;
                     position: relative;
                     -webkit-border-radius: 15px;
                     -moz-border-radius: 15px;
@@ -2754,6 +3891,240 @@ div.chrichtext {
     .cornerbox1 .allimages.title h2, .cornerbox2 .allimages.title h2 {
         font-size: 24px;
     }
+
+    /*.gastrobox .balibelly {
+        background-image: url(../images/chub/gastro-box/stomachinsidemobile.svg);
+    }*/
+
+    .gastrobox .balibelly .contentarea {
+        background-position-x: 32%;
+    }
+
+    .staysafe .stayheading h2 {
+        font-size: 2em;
+        letter-spacing: 0.1em;
+    }
+
+    /*.waterbox .leftcol {
+        width: 15%;
+    }
+
+    .waterbox .rightcol {
+        width: 15%;
+    }
+
+    .waterbox .middlecol .bottomimage img {
+        max-width: 25%;
+    }*/
+
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -86%;
+        margin-bottom: -20%;
+    }
+
+    .cornersvg1 {
+        margin-left: -40px;
+        margin-top: -40px;
+        float: left;
+        height: 110px;
+    }
+
+    .cornersvg2 {
+        margin-right: -40px;
+        margin-top: -40px;
+        float: right;
+        height: 110px;
+    }
+
+    .cornersvg3 {
+        width: 110px;
+        left: -30px;
+        bottom: -20px;
+        height: 110px;
+        position: absolute;
+    }
+
+    .cornersvg4 {
+        right: 50px;
+        bottom: -40px;
+        position: absolute;
+        height: 80px;
+    }
+
+    .cornerbox1 .cornerboxheading.noimage, .cornerbox2 .cornerboxheading.noimage {
+        padding: 10px 20px 7px;
+    }
+
+    .cornerbox1 .noimage.chrichtext, .cornerbox2 .noimage.chrichtext {
+        padding: 0;
+    }
+
+    .cornerbox1 .cornerboxheading.lefttopimage, .cornerbox2 .cornerboxheading.lefttopimage {
+        padding: 10px 20px 7px 70px;
+    }
+
+    .cornerbox1 .lefttopimage.chrichtext, .cornerbox2 .lefttopimage.chrichtext {
+        padding: 0;
+    }
+
+    .cornerbox1 .cornerboxheading.righttopimage, .cornerbox2 .cornerboxheading .righttopimage {
+        padding: 10px 20px 7px;
+    }
+
+    .cornerbox1 .righttopimage.chrichtext, .cornerbox2 .righttopimage.chrichtext {
+        padding: 0;
+    }
+
+    .cornerbox1 .cornerboxheading.leftbottomimage, .cornerbox2 .cornerboxheading.leftbottomimage {
+        padding: 10px 20px 7px 20px;
+    }
+
+    .cornerbox1 .leftbottomimage.chrichtext, .cornerbox2 .leftbottomimage.chrichtext {
+        padding: 0 0 20px 70px;
+    }
+
+    .cornerbox1 .cornerboxheading.rightbottomimage, .cornerbox2 .cornerboxheading.rightbottomimage {
+        padding: 10px 20px 7px;
+    }
+
+    .cornerbox1 .rightbottomimage.chrichtext, .cornerbox2 .rightbottomimage.chrichtext {
+        padding: 0 0 20px 0;
+    }
+
+    .cornerbox1 .cornerboxheading.lefttopbottomimage, .cornerbox2 .cornerboxheading.lefttopbottomimage {
+        padding: 10px 20px 7px 70px;
+    }
+
+    .cornerbox1 .lefttopbottomimage.chrichtext, .cornerbox2 .lefttopbottomimage.chrichtext {
+        padding: 0 0 20px 70px;
+    }
+
+    .cornerbox1 .cornerboxheading.topimages, .cornerbox2 .cornerboxheading.topimages {
+        padding: 10px 70px 7px;
+    }
+
+    .cornerbox1 .topimages.chrichtext, .cornerbox2 .topimages.chrichtext {
+        padding: 0;
+    }
+
+    .cornerbox1 .bottomimages.title h2, .cornerbox2 .bottomimages.title h2 {
+        margin: 9px 20px 7px 0;
+    }
+
+    .cornerbox1 .bottomimages.chrichtext, .cornerbox2 .bottomimages.chrichtext {
+        padding: 0 0 20px 70px;
+    }
+
+    .cornerbox1 .cornerboxheading.righttopbottomimage, .cornerbox2 .cornerboxheading.righttopbottomimage {
+        padding: 10px 70px 7px 20px;
+    }
+
+    .cornerbox1 .righttopbottomimage.chrichtext, .cornerbox2 .righttopbottomimage.chrichtext {
+        padding: 0 0 20px;
+    }
+
+    .cornerbox1 .cornerboxheading.righttopleftbottomimage, .cornerbox2 .cornerboxheading.righttopleftbottomimage {
+        padding: 10px 70px 7px 20px;
+    }
+
+    .cornerbox1 .righttopleftbottomimage.chrichtext, .cornerbox2 .righttopleftbottomimage.chrichtext {
+        padding: 0 0 20px 70px;
+    }
+
+    .cornerbox1 .cornerboxheading.lefttoprightbottomimage, .cornerbox2 .cornerboxheading.lefttoprightbottomimage {
+        padding: 10px 20px 7px 70px;
+    }
+
+    .cornerbox1 .lefttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprightbottomimage.chrichtext {
+        padding: 0 0 20px;
+    }
+
+    .cornerbox1 .cornerboxheading.lefttoprighttoprightbottomimage, .cornerbox2 .cornerboxheading.lefttoprighttoprightbottomimage {
+        padding: 10px 70px 7px 70px;
+    }
+
+    .cornerbox1 .lefttoprighttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprighttoprightbottomimage.chrichtext {
+        padding: 0 20px 20px;
+    }
+
+    .cornerbox1 .cornerboxheading.lefttopleftbottomrightbottomimage, .cornerbox2 .cornerboxheading.lefttopleftbottomrightbottomimage {
+        padding: 10px 20px 7px 70px;
+    }
+
+    .cornerbox1 .lefttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .lefttopleftbottomrightbottomimage.chrichtext {
+        padding: 0 0 20px 70px;
+    }
+
+    .cornerbox1 .cornerboxheading.lefttoprighttopleftbottomimage, .cornerbox2 .cornerboxheading.lefttoprighttopleftbottomimage {
+        padding: 10px 70px 7px;
+    }
+
+    .cornerbox1 .lefttoprighttopleftbottomimage.chrichtext, .cornerbox2 .lefttoprighttopleftbottomimage.chrichtext {
+        padding: 0 0 20px 70px;
+    }
+
+    .cornerbox1 .cornerboxheading.righttopleftbottomrightbottomimage, .cornerbox2 .cornerboxheading.righttopleftbottomrightbottomimage {
+        padding: 10px 70px 7px 20px;
+    }
+
+    .cornerbox1 .righttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .righttopleftbottomrightbottomimage.chrichtext {
+        padding: 0 20px 20px 70px;
+    }
+
+    .cornerbox1 .cornerboxheading.allimages, .cornerbox2 .cornerboxheading.allimages {
+        padding: 10px 70px 7px;
+    }
+
+    .cornerbox1 .allimages.chrichtext, .cornerbox2 .allimages.chrichtext {
+        padding: 0 0 20px 70px;
+    }
+
+    .swimmingtopcontainer .swimmingcornerimage {
+        width: 25%;
+    }
+
+    .flagboxcontainer li {
+        width: 100%;
+        margin-bottom: 10%;
+        margin-right: 0;
+        float: none;
+    }
+
+        .flagboxcontainer li .flagboxheading h2 {
+            width: 80%;
+        }
+
+        .flagboxcontainer li .flagboxheading .img {
+            width: 15%;
+        }
+
+    .flagboxcontainer ul:after {
+        height: 80%;
+        width: 40%;
+        position: absolute;
+        top: 0;
+        margin-top: 0;
+    }
+
+    .smallinfoboxcontainer {
+        width: 100% !important;
+        padding: 0 20px;
+    }
+
+        .smallinfoboxcontainer li {
+            width: 100% !important;
+            margin-bottom: 10%;
+            margin-right: 0;
+            float: none;
+        }
+
+            .smallinfoboxcontainer li .smallinfoboxheading h2 {
+                width: 80%;
+            }
+
+            .smallinfoboxcontainer li .smallinfoboxheading .img {
+                width: 15%;
+            }
 }
 /*#endregion*/
 /*#region max-width:767px;*/
@@ -2859,11 +4230,25 @@ div.chrichtext {
         width: 50% !important;
     }
 
+    .t-box .title h1, .t-box .title h2, .t-box .title h3, .t-box .title h4 {
+        max-width: 80%;
+        padding: 12px 50px 10px 20px;
+    }
+
+    .t-box .title h1 {
+        font-size: 30px;
+    }
+
     .t-box .title h2 {
-        max-width: 70%;
         font-size: 25px;
-        padding: 15px 20px 15px 20px;
-        margin-bottom: -2px;
+    }
+
+    .t-box .title h3 {
+        font-size: 22px;
+    }
+
+    .t-box .title h4 {
+        font-size: 18px;
     }
 
     .t-box .ul {
@@ -2986,6 +4371,8 @@ div.chrichtext {
             font-size: 16px;
         }
 
+
+
             .balibelly h2 span:first-child {
                 padding-right: 55px;
             }
@@ -2994,18 +4381,25 @@ div.chrichtext {
                 padding-left: 60px;
             }
 
-    .partysec .balibelly .headingwithimage {
+    /*.partysec .balibelly .headingwithimage {
         font-size: 26px;
+    }*/
+    .partysec {
+        padding: 0;
     }
 
-    .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
-        padding: 5% 0 0;
-        font-size: 22px;
-    }
+        .partysec .balibelly .headingwithimage h2 {
+            font-size: 25px;
+        }
 
-    .partysec .balibelly .contentarea .text {
-        padding: 10px;
-    }
+        .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
+            padding: 5% 0 0;
+            font-size: 22px;
+        }
+
+        .partysec .balibelly .contentarea .text {
+            padding: 10px;
+        }
 
     .lgbtqarea .lgbtq h2 {
         font-size: 26px;
@@ -3015,11 +4409,21 @@ div.chrichtext {
         margin-top: 100px;
     }
 
+        .piercing .piercinstick.left {
+            height: 102%;
+        }
+
+        .piercing .piercinstick.right {
+            height: 102%;
+        }
+
+
     .piercingtop {
-        width: 215px;
-        height: 180px;
+        width: 145px;
+        height: 140px;
         margin-top: -85px;
     }
+
 
     .textboxwithcornerimagecontainer .headingcontainer {
         margin-bottom: -7px;
@@ -3061,7 +4465,7 @@ div.chrichtext {
         }
 
         .threebox .ul .li .text .contentbox {
-            border: 3px #eb521d solid;
+            border: 3px #EB551D solid;
             padding: 90px 10%;
         }
 
@@ -3075,22 +4479,18 @@ div.chrichtext {
         }
 
 
-    .cornersvg1 img {
-        margin-left: -60%;
-    }
-
     .piercingsvg1.ltrtp {
         width: 50px;
         height: 30px;
-        top: -20px;
-        left: 20px;
+        margin-top: -20px;
+        margin-left: 15px;
     }
 
     .piercingsvg1.rltbtm {
         width: 50px;
         height: 30px;
-        bottom: -21px;
-        right: 20px;
+        margin-bottom: -21px;
+        margin-right: 15px;
     }
 
     .stackedbox .stackedleft {
@@ -3108,6 +4508,148 @@ div.chrichtext {
 
     .stackedbox .stackedright {
         width: 30%;
+    }
+
+    .orangeboxwithcircleborderarea h2 {
+        font-size: 30px;
+    }
+
+    h1.stacktitle, h2.stacktitle, h3.stacktitle, h4.stacktitle {
+        max-width: 80%;
+        padding: 10px 50px 8px 20px;
+    }
+
+    h1.stacktitle {
+        font-size: 30px;
+    }
+
+    h2.stacktitle {
+        font-size: 25px;
+    }
+
+    h3.stacktitle {
+        font-size: 22px;
+    }
+
+    h4.stacktitle {
+        font-size: 18px;
+    }
+
+    .gastrobox .balibelly .headingwithimage {
+        font-size: 24px;
+    }
+
+        .gastrobox .balibelly .headingwithimage h2 {
+            font-size: 25px;
+        }
+
+        .gastrobox .balibelly .headingwithimage .headingimage img {
+            margin-top: -82%;
+            margin-bottom: -14%;
+        }
+
+    .waterboxarea .waterboxcontentarea h1,
+    .waterboxarea .waterboxcontentarea h2,
+    .waterboxarea .waterboxcontentarea h3,
+    .waterboxarea .waterboxcontentarea h4 {
+        padding: 12px 20px 10px 20px;
+    }
+
+    .waterboxarea .waterboxcontentarea h1 {
+        font-size: 30px;
+    }
+
+    .waterboxarea .waterboxcontentarea h2 {
+        font-size: 25px;
+    }
+
+    .waterboxarea .waterboxcontentarea h3 {
+        font-size: 22px;
+    }
+
+    .waterboxarea .waterboxcontentarea h4 {
+        font-size: 18px;
+    }
+
+    .infocirclecontainer .infocircle {
+        padding: 15% 20%;
+    }
+
+        .infocirclecontainer .infocircle .inforcirclecontent h1 {
+            font-size: 30px;
+            padding: 5px 0;
+        }
+
+        .infocirclecontainer .infocircle .inforcirclecontent h2 {
+            font-size: 25px;
+            padding: 5px 0;
+        }
+
+        .infocirclecontainer .infocircle .inforcirclecontent h3 {
+            font-size: 22px;
+            padding: 5px 0;
+        }
+
+        .infocirclecontainer .infocircle .inforcirclecontent h4 {
+            font-size: 18px;
+            padding: 5px 0;
+        }
+
+        .infocirclecontainer .infocircle .inforcirclecontent {
+            font-size: 12px;
+        }
+
+            .infocirclecontainer .infocircle .inforcirclecontent p, .infocirclecontainer .infocircle .inforcirclecontent ul li, .infocirclecontainer .infocircle .inforcirclecontent ol li, .infocirclecontainer .infocircle .inforcirclecontent ul, .infocirclecontainer .infocircle .inforcirclecontent ol {
+                margin-bottom: 5px;
+                padding-bottom: 0;
+            }
+
+    .small-dotted-outer {
+        width: 80%;
+    }
+
+        .small-dotted-outer .richtextcontent {
+            padding: 20px 20px 17%;
+        }
+
+        .small-dotted-outer .bottomimagecontent {
+            width: 30%;
+            margin: -15% auto;
+        }
+
+    .sidebysideboxcontainer {
+        width: 70%;
+        margin: auto;
+    }
+
+        .sidebysideboxcontainer .table {
+            display: block;
+        }
+
+        .sidebysideboxcontainer .leftcol, .sidebysideboxcontainer .rightcol {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+    .whiteboxwithorangetoprowcontainer {
+        width: 90%;
+    }
+}
+/*#endregion*/
+/*#region max-width:730px;*/
+@media screen and (max-width: 730px) {
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -76%;
+        margin-bottom: -17%;
+    }
+}
+/*#endregion*/
+/*#region max-width:650px;*/
+@media screen and (max-width: 650px) {
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -70%;
+        margin-bottom: -18%;
     }
 }
 /*#endregion*/
@@ -3148,22 +4690,266 @@ div.chrichtext {
     .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
         font-size: 20px;
     }
+
+    .gastrobox .balibelly .headingwithimage span {
+        width: 37.5%;
+    }
+
+    .gastrobox .balibelly .headingwithimage .headingimage {
+        width: 25%;
+    }
+
+        .gastrobox .balibelly .headingwithimage .headingimage img {
+            margin-top: -90%;
+            margin-bottom: -14%;
+        }
+
+    .t-box .title h1, .t-box .title h2, .t-box .title h3, .t-box .title h4 {
+        min-width: 50%;
+        padding: 12px 40px 10px 20px;
+    }
+
+    .t-box .title h1 {
+        font-size: 30px;
+    }
+
+    .t-box .title h2 {
+        font-size: 25px;
+    }
+
+    .t-box .title h3 {
+        font-size: 22px;
+    }
+
+    .t-box .title h4 {
+        font-size: 18px;
+    }
+
+    h1.stacktitle, h2.stacktitle, h3.stacktitle, h4.stacktitle {
+        min-width: 50%;
+        padding: 10px 50px 8px 20px;
+    }
+
+    h1.stacktitle {
+        font-size: 30px;
+    }
+
+    h2.stacktitle {
+        font-size: 25px;
+    }
+
+    h3.stacktitle {
+        font-size: 22px;
+    }
+
+    h4.stacktitle {
+        font-size: 18px;
+    }
+
+    .waterboxarea .waterboxcontentarea h1,
+    .waterboxarea .waterboxcontentarea h2,
+    .waterboxarea .waterboxcontentarea h3,
+    .waterboxarea .waterboxcontentarea h4 {
+        padding: 12px 20px 10px 20px;
+    }
+
+    .waterboxarea .waterboxcontentarea h1 {
+        font-size: 30px;
+    }
+
+    .waterboxarea .waterboxcontentarea h2 {
+        font-size: 25px;
+    }
+
+    .waterboxarea .waterboxcontentarea h3 {
+        font-size: 22px;
+    }
+
+    .waterboxarea .waterboxcontentarea h4 {
+        font-size: 18px;
+    }
+
+    .infocontainer {
+        width: 100%;
+        overflow: hidden;
+        padding: 0 20px;
+        position: relative;
+    }
+
+    .infocirclecontainer {
+        background: #fff;
+        -webkit-animation-name: none;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+        /*.infoborderoverflowhidden:nth-of-type(1) {
+        position: absolute;
+        overflow: hidden;
+        width: 80%;
+    }
+
+    .infocirclecontainer:nth-of-type(1) {
+        position: absolute;
+        width: 200%;
+        border-bottom: 4px dotted #eb551d;
+        animation: inversemovex 180s infinite linear;
+        background: transparent;
+        border-radius: 0;
+    }
+
+    .infocirclecontainer:nth-of-type(2) {
+        position: absolute;
+        width: auto;
+        height: 200%;
+        border-right: 4px dotted #eb551d;
+        margin-right: 20px;
+        right: 0;
+        border-radius: 0;
+        background: transparent;
+        animation: inversemovey 180s infinite linear;
+    }
+
+    .infocirclecontainer:nth-of-type(3) {
+        position: absolute;
+        width: 200%;
+        bottom: 0;
+        border-bottom: 4px dotted #eb551d;
+        animation: movex 180s infinite linear;
+        background: transparent;
+        border-radius: 0;
+    }
+
+    .infocirclecontainer:nth-of-type(4) {
+        position: absolute;
+        width: auto;
+        height: 200%;
+        background: transparent;
+        border-left: 4px dotted #eb551d;
+        animation: movey 180s infinite linear;
+        border-radius: 0;
+    }*/
+
+        .infocirclecontainer .infocircle {
+            border: 4px dotted #eb551d;
+            border-radius: 20px;
+            -webkit-animation-name: none;
+            padding: 20px;
+        }
+
+
+
+            .infocirclecontainer .infocircle .inforcircletopimage {
+                width: 50%;
+            }
+
+            .infocirclecontainer .infocircle .inforcirclebottomimage {
+                width: 30%;
+                1;
+            }
+
+            .infocirclecontainer .infocircle .inforcirclecontent {
+                font-size: 16px;
+                margin: 20px 0;
+            }
+
+                .infocirclecontainer .infocircle .inforcirclecontent p, .infocirclecontainer .infocircle .inforcirclecontent ul li, .infocirclecontainer .infocircle .inforcirclecontent ol li, .infocirclecontainer .infocircle .inforcirclecontent ul, .infocirclecontainer .infocircle .inforcirclecontent ol {
+                    margin-bottom: 15px;
+                }
+
+
+
+    @keyframes movex {
+        from {
+            transform: translateX(0%);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes movey {
+        from {
+            transform: translateY(0%);
+        }
+
+        to {
+            transform: translateY(-50%);
+        }
+    }
+
+    @keyframes inversemovex {
+        from {
+            transform: translateX(-50%);
+        }
+
+        to {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes inversemovey {
+        from {
+            transform: translateY(-50%);
+        }
+
+        to {
+            transform: translateY(0%);
+        }
+    }
+
+    .connectedboxescontainer .connectedboxcontentareaoutside .connectedboxcontent {
+        width: 75%;
+    }
+
+    .connectedboxescontainer .connectedboxcontentareaoutside .connectedboxcontentimage {
+        width: 20%;
+        float: left;
+    }
 }
 /*#endregion*/
 /*#region max-width:550px;*/
 @media screen and (max-width: 550px) {
-    .cornersvg1 img {
-        margin-left: -70%;
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -86%;
+        margin-bottom: -14%;
     }
+
+    .partysec .balibelly .headingwithimage .headingimage img {
+        margin: -25.1% auto;
+    }
+
+    .partysec .balibelly .headingwithimage h2 {
+        font-size: 18px;
+    }
+
+    .waterbox .leftcol {
+        display: none;
+    }
+
+    .waterbox .middlecol {
+        width: 100%;
+    }
+
+    .waterbox .rightcol {
+        display: none;
+    }
+    /*.waterbox .leftcol {
+        width: 10%;
+    }
+
+    .waterbox .rightcol {
+        width: 10%;
+    }
+
+    .waterbox .middlecol .bottomimage img {
+        max-width: 15%;
+    }*/
 }
 /*#endregion*/
 /*#region max-width:500px;*/
 @media screen and (max-width: 500px) {
-    .t-box .title h3 {
-        width: 70%;
-        padding: 15px 20px 15px 20px;
-    }
-
     .orangeboxwithrightimage {
         min-height: 110px;
         padding-right: 20%;
@@ -3340,19 +5126,96 @@ div.chrichtext {
     .scamsinbalicontainer {
         padding: 0;
     }
+
+    /*.piercing .piercinstick.left {
+        top: -1%;
+    }
+
+        .piercing .piercinstick.left::before {
+            bottom: 1%;
+        }
+
+    .piercing .piercinstick.right {
+        bottom: -1%;
+    }
+
+        .piercing .piercinstick.right::before {
+            top: 1%;
+        }*/
+    .staysafe .stayheading h2 {
+        font-size: 22px;
+        letter-spacing: normal;
+    }
+
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -82%;
+        margin-bottom: -14%;
+    }
+}
+
+/*#endregion*/
+/*#region max-width:479px;*/
+@media screen and (max-width: 479px) {
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -78%;
+        margin-bottom: -20%;
+    }
+
+    .stiarea .leftcol {
+        vertical-align: top;
+    }
+
+    /*.stiarea .leftcol img {
+            margin-bottom: 0;
+            margin-top: -100%;
+            margin-left: -20%;
+        }*/
+
+    .stiarea .rightcol .contentimage {
+        margin-left: -13%;
+        margin-bottom: 25%;
+    }
+
+    .stiarea .staydeathsvg {
+        width: 30%;
+    }
+
+    .stiarea .stayheading {
+        padding-left: 30%;
+    }
+
+    .sti .contentarea {
+        padding-left: 20px;
+        margin-left: -11%;
+    }
+
+    .stiarea .staydrinksvg {
+        width: 30%;
+        margin-left: 25%;
+        margin-top: -20%;
+    }
+
+    .womenbottom {
+        position: relative;
+        width: 100%;
+        margin-left: -20%;
+        margin-top: -100%;
+    }
+
+    .sidebysideboxcontainer {
+        width: 100%;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .connectedboxescontainer .connectedboxcontentareaoutside .connectedboxcontent {
+        width: 73%;
+    }
 }
 
 /*#endregion*/
 /*#region max-width:450px;*/
 @media screen and (max-width: 450px) {
-    .t-box .title h2 {
-        max-width: 70%;
-        width: 70%;
-        font-size: 25px;
-        padding: 15px 20px 15px 20px;
-        margin-bottom: -2px;
-    }
-
     .widthlesstha768 .taxiarea .ul .li .taxi-icon {
         width: 100%;
     }
@@ -3360,6 +5223,11 @@ div.chrichtext {
     .diseasesarea .headingbg {
         width: 104%;
         margin: -13% auto 0 -2%;
+    }
+
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -73%;
+        margin-bottom: -18%;
     }
 }
 /*#endregion*/
@@ -3401,41 +5269,129 @@ div.chrichtext {
         font-size: 16px;
     }
 
+        .partysec .balibelly .headingwithimage h2 {
+            font-size: 12px;
+        }
+
     .partysec .balibelly .contentarea .partyheadingwithleftrightimage h3 {
         font-size: 16px;
     }
 
     .cornersvg1 {
-        width: 20%;
+        margin-left: -40px;
+        margin-top: -15px;
+        float: left;
+        height: 80px;
     }
 
     .cornersvg2 {
-        width: 18%;
+        margin-right: -30px;
+        margin-top: -15px;
+        float: right;
+        height: 80px;
     }
 
     .cornersvg3 {
-        width: 18%;
+        width: 70px;
+        left: -20px;
+        bottom: -15px;
+        height: 80px;
+        position: absolute;
     }
 
     .cornersvg4 {
-        width: 30%;
+        right: 30px;
+        bottom: -30px;
+        position: absolute;
+        height: 60px;
     }
 
-    .cornerbox1 .cornerboxheading .noimage.title h2, .cornerbox2 .cornerboxheading .noimage.title h2 {
+    .cornerbox1 .noimage.chrichtext, .cornerbox2 .noimage.chrichtext {
+        padding: 0;
+    }
+
+    .cornerbox1 .lefttopimage.chrichtext, .cornerbox2 .lefttopimage.chrichtext {
+        padding: 0;
+    }
+
+    .cornerbox1 .righttopimage.chrichtext, .cornerbox2 .righttopimage.chrichtext {
+        padding: 3% 0px 0;
+    }
+
+    .cornerbox1 .leftbottomimage.chrichtext, .cornerbox2 .leftbottomimage.chrichtext {
+        padding: 0 0 50px;
+    }
+
+    .cornerbox1 .rightbottomimage.chrichtext, .cornerbox2 .rightbottomimage.chrichtext {
+        padding: 0px 0px 20px 0px;
+    }
+
+    .cornerbox1 .lefttopbottomimage.chrichtext, .cornerbox2 .lefttopbottomimage.chrichtext {
+        padding: 0px 0 40px;
+    }
+
+    .cornerbox1 .topimages.chrichtext, .cornerbox2 .topimages.chrichtext {
+        padding: 0;
+    }
+
+
+    .cornerbox1 .bottomimages.chrichtext, .cornerbox2 .bottomimages.chrichtext {
+        padding: 0px 0 50px;
+    }
+
+
+    .cornerbox1 .righttopbottomimage.chrichtext, .cornerbox2 .righttopbottomimage.chrichtext {
+        padding: 0 0 10px;
+    }
+
+
+    .cornerbox1 .righttopleftbottomimage.chrichtext, .cornerbox2 .righttopleftbottomimage.chrichtext {
+        padding: 0 0 50px;
+    }
+
+    .cornerbox1 .lefttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprightbottomimage.chrichtext {
+        padding: 0px 0 10px;
+    }
+
+
+    .cornerbox1 .lefttoprighttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprighttoprightbottomimage.chrichtext {
+        padding: 0 0 10px;
+    }
+
+
+    .cornerbox1 .lefttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .lefttopleftbottomrightbottomimage.chrichtext {
+        padding: 0px 0 50px;
+    }
+
+
+    .cornerbox1 .lefttoprighttopleftbottomimage.chrichtext, .cornerbox2 .lefttoprighttopleftbottomimage.chrichtext {
+        padding: 0px 0 50px;
+    }
+
+
+    .cornerbox1 .righttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .righttopleftbottomrightbottomimage.chrichtext {
+        padding: 0px 0 50px;
+    }
+
+
+    .cornerbox1 .allimages.chrichtext, .cornerbox2 .allimages.chrichtext {
+        padding: 0px 0 50px;
+    }
+    /*.cornerbox1 .cornerboxheading .noimage.title h2, .cornerbox2 .cornerboxheading .noimage.title h2 {
         padding: 10px 20px 10px 0;
     }
 
     .cornerbox1 .noimage.chrichtext, .cornerbox2 .noimage.chrichtext {
-        padding: 20px;
+        padding: 0 20px;
     }
 
     .cornerbox1 .cornerboxheading .lefttopimage.title h2, .cornerbox2 .cornerboxheading .lefttopimage.title h2 {
         padding: 10px;
-        margin-left: -18%;
+        margin-left: -20%;
     }
 
     .cornerbox1 .lefttopimage.chrichtext, .cornerbox2 .lefttopimage.chrichtext {
-        padding: 5% 20px 20px;
+        padding: 3% 20px 20px;
     }
 
     .cornerbox1 .cornerboxheading .righttopimage.title h2, .cornerbox2 .cornerboxheading .righttopimage.title h2 {
@@ -3444,7 +5400,7 @@ div.chrichtext {
     }
 
     .cornerbox1 .righttopimage.chrichtext, .cornerbox2 .righttopimage.chrichtext {
-        padding: 5% 20px 20px;
+        padding: 3% 0px 0;
     }
 
     .cornerbox1 .leftbottomimage.title h2, .cornerbox2 .leftbottomimage.title h2 {
@@ -3452,7 +5408,7 @@ div.chrichtext {
     }
 
     .cornerbox1 .leftbottomimage.chrichtext, .cornerbox2 .leftbottomimage.chrichtext {
-        padding: 20px 20px 8% 18%;
+        padding: 0px 20px 4% 11%;
     }
 
     .cornerbox1 .rightbottomimage.title h2, .cornerbox2 .rightbottomimage.title h2 {
@@ -3460,23 +5416,23 @@ div.chrichtext {
     }
 
     .cornerbox1 .rightbottomimage.chrichtext, .cornerbox2 .rightbottomimage.chrichtext {
-        padding: 20px 20px 8% 20px;
+        padding: 0px 0px 8% 0px;
     }
 
     .cornerbox1 .lefttopbottomimage.title h2, .cornerbox2 .lefttopbottomimage.title h2 {
-        margin-left: -18%;
+        margin-left: -20%;
     }
 
     .cornerbox1 .lefttopbottomimage.chrichtext, .cornerbox2 .lefttopbottomimage.chrichtext {
-        padding: 20px 20px 8% 18%;
+        padding: 0px 20px 8% 18%;
     }
 
     .cornerbox1 .topimages.title h2, .cornerbox2 .topimages.title h2 {
-        margin-left: -18%;
+        margin-left: -11%;
     }
 
     .cornerbox1 .topimages.chrichtext, .cornerbox2 .topimages.chrichtext {
-        padding: 5% 20px 20px 20px;
+        padding: 3% 20px 0 20px;
     }
 
     .cornerbox1 .bottomimages.title h2, .cornerbox2 .bottomimages.title h2 {
@@ -3484,7 +5440,7 @@ div.chrichtext {
     }
 
     .cornerbox1 .bottomimages.chrichtext, .cornerbox2 .bottomimages.chrichtext {
-        padding: 20px 20px 8% 18%;
+        padding: 0px 20px 8% 11%;
     }
 
     .cornerbox1 .righttopbottomimage.title h2, .cornerbox2 .righttopbottomimage.title h2 {
@@ -3492,7 +5448,7 @@ div.chrichtext {
     }
 
     .cornerbox1 .righttopbottomimage.chrichtext, .cornerbox2 .righttopbottomimage.chrichtext {
-        padding: 20px 8% 8% 20px;
+        padding: 0px 8% 8% 20px;
     }
 
     .cornerbox1 .righttopleftbottomimage.title h2, .cornerbox2 .righttopleftbottomimage.title h2 {
@@ -3500,40 +5456,40 @@ div.chrichtext {
     }
 
     .cornerbox1 .righttopleftbottomimage.chrichtext, .cornerbox2 .righttopleftbottomimage.chrichtext {
-        padding: 20px 8% 8% 18%;
+        padding: 0px 8% 8% 18%;
     }
 
     .cornerbox1 .lefttoprightbottomimage.title h2, .cornerbox2 .lefttoprightbottomimage.title h2 {
-        margin-left: -18%;
+        margin-left: -20%;
     }
 
     .cornerbox1 .lefttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprightbottomimage.chrichtext {
-        padding: 20px 20px 8% 18%;
+        padding: 0px 20px 8% 18%;
     }
 
     .cornerbox1 .lefttoprighttoprightbottomimage.title h2, .cornerbox2 .lefttoprighttoprightbottomimage.title h2 {
-        margin-left: -18%;
+        margin-left: -20%;
     }
 
     .cornerbox1 .lefttoprighttoprightbottomimage.chrichtext, .cornerbox2 .lefttoprighttoprightbottomimage.chrichtext {
-        padding: 20px 10% 8% 18%;
+        padding: 0px 10% 8% 18%;
     }
 
     .cornerbox1 .lefttopleftbottomrightbottomimage.title h2, .cornerbox2 .lefttopleftbottomrightbottomimage.title h2 {
-        margin-left: -18%;
+        margin-left: -20%;
     }
 
     .cornerbox1 .lefttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .lefttopleftbottomrightbottomimage.chrichtext {
-        padding: 20px 20px 8% 18%;
+        padding: 0px 20px 8% 11%;
     }
 
     .cornerbox1 .lefttoprighttopleftbottomimage.title h2, .cornerbox2 .lefttoprighttopleftbottomimage.title h2 {
-        margin-left: -18%;
+        margin-left: -20%;
         margin-right: -4%;
     }
 
     .cornerbox1 .lefttoprighttopleftbottomimage.chrichtext, .cornerbox2 .lefttoprighttopleftbottomimage.chrichtext {
-        padding: 20px 20px 8% 18%;
+        padding: 0px 20px 8% 11%;
     }
 
     .cornerbox1 .righttopleftbottomrightbottomimage.title h2, .cornerbox2 .righttopleftbottomrightbottomimage.title h2 {
@@ -3541,17 +5497,17 @@ div.chrichtext {
     }
 
     .cornerbox1 .righttopleftbottomrightbottomimage.chrichtext, .cornerbox2 .righttopleftbottomrightbottomimage.chrichtext {
-        padding: 20px 10% 8% 18%;
+        padding: 0px 10% 8% 11%;
     }
 
     .cornerbox1 .allimages.title h2, .cornerbox2 .allimages.title h2 {
-        margin-left: -18%;
+        margin-left: -20%;
         margin-right: -4%;
     }
 
     .cornerbox1 .allimages.chrichtext, .cornerbox2 .allimages.chrichtext {
-        padding: 20px 10% 8% 18%;
-    }
+        padding: 0px 10% 8% 11%;
+    }*/
 
     .scamsinbali .scamsbox .lightgrey {
         padding: 0 10px;
@@ -3588,5 +5544,57 @@ div.chrichtext {
             width: 80px;
             height: 80px;
         }
+
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -59%;
+        margin-bottom: -20%;
+    }
+
+    .infocirclecontainer .infocircle {
+        -webkit-animation-name: none;
+        padding: 20px;
+    }
+
+    /*.small-dotted-outer {
+        width: 100%;
+        padding: 0 20px;
+    }*/
+
+    /*.small-dotted-outer .richtextcontent {
+            padding-bottom: 17%;
+        }
+
+        .small-dotted-outer .bottomimagecontent {
+            width: 30%;
+            margin: -15% auto;
+        }*/
 }
+/*#endregion*/
+/*#region max-width:350px;*/
+@media screen and (max-width: 350px) {
+    /*.piercing .piercinstick.left {
+        top: -0.5%;
+    }
+
+        .piercing .piercinstick.left::before {
+            bottom: 1.51%;2639
+        }
+
+    .piercing .piercinstick.right {
+        bottom: -0.5%;
+    }
+
+        .piercing .piercinstick.right::before {
+            top: 1.51%;
+        }*/
+    .gastrobox .balibelly .headingwithimage .headingimage img {
+        margin-top: -60%;
+        margin-bottom: -20%;
+    }
+
+    .connectedboxescontainer .connectedboxcontentareaoutside .connectedboxcontent {
+        width: 70%;
+    }
+}
+
 /*#endregion*/

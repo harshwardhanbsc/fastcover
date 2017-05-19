@@ -1,0 +1,22 @@
+﻿ 2017-04-03 12:14:39,032 [P9932/D2/T186] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username harshwardhan.in@gmail.com from IP address ::1
+ 2017-04-03 12:14:39,032 [P9932/D2/T186] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: harshwardhan.in@gmail.com logged in from IP address ::1
+ 2017-04-03 12:14:39,102 [P9932/D2/T186] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-04-03 12:14:39,104 [P9932/D2/T186] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 1ms)
+ 2017-04-03 12:14:55,171 [P9932/D2/T182] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Piercings' with Id '1068' has been published.
+ 2017-04-03 12:14:59,349 [P9932/D2/T182] INFO  umbraco.content - Save Xml to file...
+ 2017-04-03 12:14:59,359 [P9932/D2/T182] INFO  umbraco.content - Saved Xml to file.
+ 2017-04-03 12:34:10,776 [P9932/D2/T180] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: harshwardhan.in@gmail.com, IP Address: ::1
+ 2017-04-03 12:35:28,412 [P9932/D2/T16] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-02 12:35:28
+ 2017-04-03 16:35:28,429 [P9932/D2/T16] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-02 16:35:28
+ 2017-04-03 17:47:02,964 [P9932/D2/T110] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username harshwardhan.in@gmail.com from IP address ::1
+ 2017-04-03 17:47:02,965 [P9932/D2/T110] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: harshwardhan.in@gmail.com logged in from IP address ::1
+ 2017-04-03 17:47:03,559 [P9932/D2/T40] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-04-03 17:47:03,648 [P9932/D2/T40] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 89ms)
+ 2017-04-03 17:48:32,603 [P9932/D2/T171] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Piercings' with Id '1068' has been published.
+ 2017-04-03 17:48:37,034 [P9932/D2/T182] INFO  umbraco.content - Save Xml to file...
+ 2017-04-03 17:48:37,061 [P9932/D2/T182] INFO  umbraco.content - Saved Xml to file.
+ 2017-04-03 17:55:26,158 [P9932/D2/T100] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Piercings' with Id '1068' has been published.
+ 2017-04-03 17:55:30,359 [P9932/D2/T182] INFO  umbraco.content - Save Xml to file...
+ 2017-04-03 17:55:30,373 [P9932/D2/T182] INFO  umbraco.content - Saved Xml to file.
+ 2017-04-03 19:34:40,383 [P9932/D2/T16] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-02 19:34:40
+ 2017-04-03 23:34:40,501 [P9932/D2/T16] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-02 23:34:40

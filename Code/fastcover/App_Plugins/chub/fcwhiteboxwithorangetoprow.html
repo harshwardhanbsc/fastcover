@@ -1,0 +1,82 @@
+﻿<div class="whiteboxwithorangetoprowcontainer" ng-controller="CHControls.WhiteboxwithorangetoprowController">
+    <div class="toprow">
+        <span data-ng-repeat="items in control.radiocollection">
+            <input type="radio" name="toprowcontenttype_{{control.$uniqueId}}" unique-id="control.$uniqueId" value="{{items.value}}" ng-model="control.toprowcontenttype" />
+            {{items.text}}
+        </span>
+        <div ng-show="control.toprowcontenttype=='image'">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('topimage')" ng-if="control.value == null || control.value.images == null || control.value.images.topimage == null" style="width: 100%;">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                    Image<br /> (Optional)
+                </div>
+            </div>
+            <div ng-if="control.value.images != null && control.value.images.topimage != null">
+                <div class="imggrid4wide smallimage">
+                    <img ng-click="setImage('topimage')" ng-src="{{control.value.images.topimage.image}}" cl class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('topimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+        <div ng-show="control.toprowcontenttype=='text'">
+            <input type="text" ng-model="control.topheading" />
+        </div>
+    </div>
+    <div class="middlerow">
+        <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+            <div grid-rte
+                 configuration="control.editor.config.fcwhiteboxwithorangetoprowrtetoolbar"
+                 value="control.rteValue"
+                 unique-id="control.$uniqueId"
+                 on-link-picker-click="vm.openLinkPicker"
+                 on-media-picker-click="vm.openMediaPicker"
+                 on-embed-click="vm.openEmbed"
+                 on-macro-picker-click="vm.openMacroPicker">
+            </div>
+            <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                         model="vm.linkPickerOverlay"
+                         position="right"
+                         view="vm.linkPickerOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                         model="vm.mediaPickerOverlay"
+                         position="right"
+                         view="vm.mediaPickerOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.embedOverlay.show"
+                         model="vm.embedOverlay"
+                         position="right"
+                         view="vm.embedOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                         model="vm.macroPickerOverlay"
+                         view="vm.macroPickerOverlay.view"
+                         position="right">
+            </umb-overlay>
+        </div>
+    </div>
+    <div class="bottomrow">
+        <span data-ng-repeat="items in control.radiocollection">
+            <input type="radio" name="bottomrowcontenttype_{{control.$uniqueId}}" unique-id="control.$uniqueId" value="{{items.value}}" ng-model="control.bottomrowcontenttype" />
+            {{items.text}}
+        </span>
+        <div ng-show="control.bottomrowcontenttype=='image'">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('bottomimage')" ng-if="control.value == null || control.value.images == null || control.value.images.bottomimage == null" style="width: 100%;">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                    Image<br /> (Optional)
+                </div>
+            </div>
+
+            <div ng-if="control.value.images != null && control.value.images.bottomimage != null">
+                <div class="imggrid4wide smallimage">
+                    <img ng-click="setImage('bottomimage')" ng-src="{{control.value.images.bottomimage.image}}" class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('bottomimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+        <div ng-show="control.bottomrowcontenttype=='text'">
+            <input type="text" ng-model="control.bottomheading" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    var items = Model["tabData"];
+
+}
+<div class="connectedboxescontainer">
+    @foreach (var item in items)
+    {
+        <div class="connectedbox">
+            <h2>
+                @item.heading
+            </h2>
+            @if (Model.position == "inside")
+            {
+                <div class="connectedboxcontentarea">
+                    <div class="connectedboxcontent">
+                        @Html.Raw(item.content)
+                    </div>
+                    <div class="connectedboxcontentimage">
+                        @if (item.image != null)
+                        {
+                            if (item.image.image != null)
+                            {
+                                <img src="@item.image.image" alt="@item.image.alt" />
+                            }
+                        }
+                    </div>
+                </div>
+            }
+            else if (Model.position == "outside")
+            {
+                <div class="connectedboxcontentareaoutside">
+                    <div class="connectedboxcontent">
+                        @Html.Raw(item.content)
+                    </div>
+                    <div class="connectedboxcontentimage">
+                        @if (item.image != null)
+                        {
+                            if (item.image.image != null)
+                            {
+                                <img src="@item.image.image" alt="@item.image.alt" />
+                            }
+                        }
+                    </div>
+                </div>
+            }
+            <div class="clear"></div>
+        </div>
+    }
+</div>

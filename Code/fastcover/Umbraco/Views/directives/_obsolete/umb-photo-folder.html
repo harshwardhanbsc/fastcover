@@ -8,6 +8,7 @@
             <a href="#media/media/edit/{{img.id}}"
                 ng-click="clickHandler(img, $event, false)"
                 title="{{img.name}}">
+
                 <div ng-style="img.style" class="umb-non-thumbnail" ng-if="!img.thumbnail">
                     <i class="icon large {{img.icon}}"></i>
                     <span>{{img.name}}</span>

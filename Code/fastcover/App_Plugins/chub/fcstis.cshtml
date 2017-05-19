@@ -1,0 +1,49 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string topimage = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.image : null;
+    string bottomimage = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.image : null;
+    string topimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.altText : null;
+    string bottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.altText : null;
+}
+@*<div class="stiarea">
+        <div class="sti">
+            <div class="womenbottom">
+
+            </div>
+            <div class="sticurrency"><img src="@topimage" alt="@topimageAlttext" /></div>
+            <div class="stiheading">
+                <h2>
+                    @Model.heading
+                </h2>
+            </div>
+            <div class="rightbdr"></div>
+            <div class="contentarea chrichtext orangebg">
+                @Html.Raw(Model.rteValue)
+            </div>
+            <div class="sticonsvg"><img src="@bottomimage" alt="@bottomimageAlttext" /></div>
+        </div>
+    </div>*@
+<div class="stiarea sti">
+    <div class="leftcol">
+        <div class="womenbottom">
+            <img src="~/images/chub/stis/womeninminiskirt.svg" />
+        </div>
+    </div>
+    <div class="rightcol">
+        <div class="rightbdr"></div>
+        <div class="contentimage">
+            <div class="staydrinksvg">
+                <img src="@topimage" alt="@topimageAlttext" />
+            </div>
+            <div class="stayheading">
+                <h2>@Model.heading</h2>
+            </div>
+            <div class="contentarea chrichtext orangebg">
+                @Html.Raw(Model.rteValue)
+            </div>
+            <div class="staydeathsvg">
+                <img src="@bottomimage" alt="@bottomimageAlttext" />
+            </div>
+        </div>
+    </div>
+</div>

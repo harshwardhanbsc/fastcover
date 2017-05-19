@@ -5,15 +5,21 @@
     string topimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.altText : null;
     string bottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.altText : null;
 }
-<div class="orangeboxwithcircleborderarea ">
-    <div class="circlesvg topeat">
-        <img src="@topimage" alt="@topimageAlttext" />
+<div class="orangeboxwithcircleborderarea">
+    <div class="orangeboxwithcirclebordertoprow">
+        <div class="circlesvg topeat">
+            <img src="@topimage" alt="@topimageAlttext" />
+        </div>
     </div>
-    <h2>@Model.heading</h2>
-    <div class="ectext chrichtext">
-        @Html.Raw(Model.rteValue)
+    <div class="orangeboxwithcirclebordercontentrow">
+        <h2>@Model.heading</h2>
+        <div class="orangebg ectext chrichtext">
+            @Html.Raw(Model.rteValue)
+        </div>
     </div>
-    <div class="circlesvg bottomeat">
-        <img src="@bottomimage" alt="@bottomimageAlttext" />
+    <div class="orangeboxwithcircleborderbottomrow">
+        <div class="circlesvg bottomeat">
+            <img src="@bottomimage" alt="@bottomimageAlttext" />
+        </div>
     </div>
 </div>

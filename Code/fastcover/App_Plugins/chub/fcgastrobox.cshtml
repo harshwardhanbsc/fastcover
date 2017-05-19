@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string partycircle = (Model.value != null && Model.value.images != null && Model.value.images.partycircle != null) ? Model.value.images.partycircle.image : null;
+    string partysvgleft = (Model.value != null && Model.value.images != null && Model.value.images.partysvgleft != null) ? Model.value.images.partysvgleft.image : null;
+    string partysvgright = (Model.value != null && Model.value.images != null && Model.value.images.partysvgright != null) ? Model.value.images.partysvgright.image : null;
+    string partycrowd = (Model.value != null && Model.value.images != null && Model.value.images.partycrowd != null) ? Model.value.images.partycrowd.image : null;
+    string partycircleAlttext = (Model.value != null && Model.value.images != null && Model.value.images.partycircle != null) ? Model.value.images.partycircle.altText : null;
+    string partysvgleftAlttext = (Model.value != null && Model.value.images != null && Model.value.images.partysvgleft != null) ? Model.value.images.partysvgleft.altText : null;
+    string partysvgrightAlttext = (Model.value != null && Model.value.images != null && Model.value.images.partysvgright != null) ? Model.value.images.partysvgright.altText : null;
+    string partycrowdAlttext = (Model.value != null && Model.value.images != null && Model.value.images.partycrowd != null) ? Model.value.images.partycrowd.altText : null;
+}
+<div class="gastrobox">
+    <div class="balibelly">
+        @*<div class="bgimage">
+                <img src="~/images/stomachinside.svg" />
+            </div>*@
+        <div class="partycircle">
+            <div class="headingwithimage">
+                <h2>
+                    <span>@Model.headingleft </span>
+                    <div class="headingimage">   <img src="@partycircle" alt="@partycircleAlttext" /></div>
+                    <span>@Model.headingright</span>
+                </h2>
+            </div>
+        </div>
+        @*<div class="gastroboxbgimage">
+                <img src="~/images/stomach inside.svg" />
+            </div>*@
+        <div class="contentarea chrichtext text orangebg">
+            @Html.Raw(Model.rteValue)
+
+            <div class="partycrowd">
+                <img src="@partycrowd" alt="@partycrowdAlttext" />
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,68 @@
+﻿<div ng-controller="CHControls.MultipleMediaController3" class="gastrobox">
+    <div class="balibelly partysec">
+        <div class="partycircle">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('partycircle')" ng-if="control.value == null || control.value.images == null || control.value.images.partycircle == null" style="width: 100%;">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                    Image<br /> (Optional)
+                </div>
+            </div>
+
+            <div ng-if="control.value.images != null && control.value.images.partycircle != null">
+                <div class="imggrid4wide smallimage">
+                    <img ng-click="setImage('partycircle')" ng-src="{{control.value.images.partycircle.image}}" class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('partycircle')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+        <h2><span><input type="text" ng-model="control.headingleft" /></span><span><input type="text" ng-model="control.headingright" /></span></h2>
+        <div class="contentarea entry">
+            <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                <div grid-rte
+                     configuration="control.editor.config.fcgastroboxrtetoolbar"
+                     value="control.rteValue"
+                     unique-id="control.$uniqueId"
+                     on-link-picker-click="vm.openLinkPicker"
+                     on-media-picker-click="vm.openMediaPicker"
+                     on-embed-click="vm.openEmbed"
+                     on-macro-picker-click="vm.openMacroPicker">
+                </div>
+                <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                             model="vm.linkPickerOverlay"
+                             position="right"
+                             view="vm.linkPickerOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                             model="vm.mediaPickerOverlay"
+                             position="right"
+                             view="vm.mediaPickerOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.embedOverlay.show"
+                             model="vm.embedOverlay"
+                             position="right"
+                             view="vm.embedOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                             model="vm.macroPickerOverlay"
+                             view="vm.macroPickerOverlay.view"
+                             position="right">
+                </umb-overlay>
+            </div>
+        </div>
+        <div class="partycrowd">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('partycrowd')" ng-if="control.value == null || control.value.images == null || control.value.images.partycrowd == null" style="width: 100%;">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                    Image<br /> (Optional)
+                </div>
+            </div>
+
+            <div ng-if="control.value.images != null && control.value.images.partycrowd != null">
+                <div class="imggrid4wide smallimage">
+                    <img ng-click="setImage('partycrowd')" ng-src="{{control.value.images.partycrowd.image}}" class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('partycrowd')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

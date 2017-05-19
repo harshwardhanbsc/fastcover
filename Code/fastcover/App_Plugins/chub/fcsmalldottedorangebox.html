@@ -1,0 +1,58 @@
+﻿<div class="smalldottedorangebox" ng-controller="CHControls.MultipleMediaController3">
+    <div class="heading">
+        <input type="text" ng-model="control.heading" />
+    </div>
+    <div class="richtextcontent">
+        <br />
+        <span>Content</span>
+        <br /><br />
+        <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+            <div grid-rte
+                 configuration="control.editor.config.fcsmalldottedorangeboxrtetoolbar"
+                 value="control.rteValue"
+                 unique-id="control.$uniqueId"
+                 on-link-picker-click="vm.openLinkPicker"
+                 on-media-picker-click="vm.openMediaPicker"
+                 on-embed-click="vm.openEmbed"
+                 on-macro-picker-click="vm.openMacroPicker">
+            </div>
+            <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                         model="vm.linkPickerOverlay"
+                         position="right"
+                         view="vm.linkPickerOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                         model="vm.mediaPickerOverlay"
+                         position="right"
+                         view="vm.mediaPickerOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.embedOverlay.show"
+                         model="vm.embedOverlay"
+                         position="right"
+                         view="vm.embedOverlay.view">
+            </umb-overlay>
+            <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                         model="vm.macroPickerOverlay"
+                         view="vm.macroPickerOverlay.view"
+                         position="right">
+            </umb-overlay>
+        </div>
+    </div>
+    <div class="chub-image bottomimagecontent">
+        <br />
+        <span>Bottom Image</span>
+        <br /><br />
+        <div class="usky-editor-placeholder imagegrid" ng-click="setImage('bottomimage')" ng-if="control.value == null || control.value.images == null || control.value.images.bottomimage == null">
+            <i class="icon icon-picture"></i>
+            <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                Bottom Image<br /> (Optional)
+            </div>
+        </div>
+        <div ng-if="control.value.images != null && control.value.images.bottomimage != null">
+            <div class="imggrid4wide smallimage">
+                <img ng-click="setImage('bottomimage')" ng-src="{{control.value.images.bottomimage.image}}" class="fullSizeImage" />
+                <a href class="picked-image" ng-click="removeImage('bottomimage')"><i class="icon icon-delete"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

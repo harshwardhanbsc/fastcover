@@ -1,0 +1,245 @@
+﻿<div ng-controller="CHControls.MultipleMediaController3">
+    <div class="swimmingtopcontainer">
+        <div class="swimmingcornerimage">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('leftcornerimage')" ng-if="control.value == null || control.value.images == null || control.value.images.leftcornerimage == null" style="width: 100%;">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                    Image<br /> (Optional)
+                </div>
+            </div>
+
+            <div ng-if="control.value.images != null && control.value.images.leftcornerimage != null">
+                <div class="imggrid4wide smallimage">
+                    <img ng-click="setImage('leftcornerimage')" ng-src="{{control.value.images.leftcornerimage.image}}" class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('leftcornerimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="swimmingheading">
+            <input type="text" ng-model="control.heading" />
+        </div>
+        <div class="swimmingcontent">
+            <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                <div grid-rte
+                     configuration="control.editor.config.fcswimmingwarningrtetoolbar"
+                     value="control.rteValue"
+                     unique-id="control.$uniqueId"
+                     on-link-picker-click="vm.openLinkPicker"
+                     on-media-picker-click="vm.openMediaPicker"
+                     on-embed-click="vm.openEmbed"
+                     on-macro-picker-click="vm.openMacroPicker">
+                </div>
+                <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                             model="vm.linkPickerOverlay"
+                             position="right"
+                             view="vm.linkPickerOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                             model="vm.mediaPickerOverlay"
+                             position="right"
+                             view="vm.mediaPickerOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.embedOverlay.show"
+                             model="vm.embedOverlay"
+                             position="right"
+                             view="vm.embedOverlay.view">
+                </umb-overlay>
+                <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                             model="vm.macroPickerOverlay"
+                             view="vm.macroPickerOverlay.view"
+                             position="right">
+                </umb-overlay>
+            </div>
+            <div class="swimmingbottomimage">
+                <div class="usky-editor-placeholder imagegrid" ng-click="setImage('bottomimage')" ng-if="control.value == null || control.value.images == null || control.value.images.bottomimage == null" style="width: 100%;">
+                    <i class="icon icon-picture"></i>
+                    <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                        Image<br /> (Optional)
+                    </div>
+                </div>
+
+                <div ng-if="control.value.images != null && control.value.images.bottomimage != null">
+                    <div class="imggrid4wide smallimage">
+                        <img ng-click="setImage('bottomimage')" ng-src="{{control.value.images.bottomimage.image}}" class="fullSizeImage" />
+                        <a href class="picked-image" ng-click="removeImage('bottomimage')"><i class="icon icon-delete"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="colorpickercontainer" ng-controller="CHControls.FlagColorPicker">
+        <div class="colorpickerinput">
+            <input type="color" ng-model="control.flagbox1color">
+        </div><div class="colorpickerinput">
+            <input type="color" ng-model="control.flagbox2color">
+        </div><div class="colorpickerinput">
+            <input type="color" ng-model="control.flagbox3color">
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="flagboxcontainer">
+        <ul>
+            <li style="border-color:{{control.flagbox1color}}">
+
+                <div class="flagboxheading" style="background:{{control.flagbox1color}}">
+                    <h2><input type="text" ng-model="control.flagbox1heading" /></h2>
+                    <div class="usky-editor-placeholder imagegrid" ng-click="setImage('flagbox1image')" ng-if="control.value == null || control.value.images == null || control.value.images.flagbox1image == null" style="width: 100%;">
+                        <i class="icon icon-picture"></i>
+                        <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                            Image<br /> (Optional)
+                        </div>
+                    </div>
+
+                    <div ng-if="control.value.images != null && control.value.images.flagbox1image != null">
+                        <div class="imggrid4wide smallimage">
+                            <img ng-click="setImage('flagbox1image')" ng-src="{{control.value.images.flagbox1image.image}}" c class="fullSizeImage" />
+                            <a href class="picked-image" ng-click="removeImage('flagbox1image')"><i class="icon icon-delete"></i></a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="flagboxcontent">
+                    <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                        <div grid-rte
+                             configuration="control.editor.config.fcswimmingwarningrtetoolbar"
+                             value="control.flagbox1rteValue"
+                             unique-id="control.$uniqueId + 1"
+                             on-link-picker-click="vm.openLinkPicker"
+                             on-media-picker-click="vm.openMediaPicker"
+                             on-embed-click="vm.openEmbed"
+                             on-macro-picker-click="vm.openMacroPicker">
+                        </div>
+                        <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                                     model="vm.linkPickerOverlay"
+                                     position="right"
+                                     view="vm.linkPickerOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                                     model="vm.mediaPickerOverlay"
+                                     position="right"
+                                     view="vm.mediaPickerOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.embedOverlay.show"
+                                     model="vm.embedOverlay"
+                                     position="right"
+                                     view="vm.embedOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                                     model="vm.macroPickerOverlay"
+                                     view="vm.macroPickerOverlay.view"
+                                     position="right">
+                        </umb-overlay>
+                    </div>
+                </div>
+            </li>
+            <li style="border-color:{{control.flagbox2color}}">
+
+                <div class="flagboxheading" style="background:{{control.flagbox2color}}">
+
+                    <h2><input type="text" ng-model="control.flagbox2heading" /></h2>
+                    <div class="usky-editor-placeholder imagegrid" ng-click="setImage('flagbox2image')" ng-if="control.value == null || control.value.images == null || control.value.images.flagbox2image == null" style="width: 100%;">
+                        <i class="icon icon-picture"></i>
+                        <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                            Image<br /> (Optional)
+                        </div>
+                    </div>
+
+                    <div ng-if="control.value.images != null && control.value.images.flagbox2image != null">
+                        <div class="imggrid4wide smallimage">
+                            <img ng-click="setImage('flagbox2image')" ng-src="{{control.value.images.flagbox2image.image}}" c class="fullSizeImage" />
+                            <a href class="picked-image" ng-click="removeImage('flagbox2image')"><i class="icon icon-delete"></i></a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="flagboxcontent">
+                    <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                        <div grid-rte
+                             configuration="control.editor.config.fcswimmingwarningrtetoolbar"
+                             value="control.flagbox2rteValue"
+                             unique-id="control.$uniqueId + 2"
+                             on-link-picker-click="vm.openLinkPicker"
+                             on-media-picker-click="vm.openMediaPicker"
+                             on-embed-click="vm.openEmbed"
+                             on-macro-picker-click="vm.openMacroPicker">
+                        </div>
+                        <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                                     model="vm.linkPickerOverlay"
+                                     position="right"
+                                     view="vm.linkPickerOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                                     model="vm.mediaPickerOverlay"
+                                     position="right"
+                                     view="vm.mediaPickerOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.embedOverlay.show"
+                                     model="vm.embedOverlay"
+                                     position="right"
+                                     view="vm.embedOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                                     model="vm.macroPickerOverlay"
+                                     view="vm.macroPickerOverlay.view"
+                                     position="right">
+                        </umb-overlay>
+                    </div>
+                </div>
+            </li>
+            <li style="border-color:{{control.flagbox3color}}">
+
+                <div class="flagboxheading" style="background:{{control.flagbox3color}}">
+                    <h2><input type="text" ng-model="control.flagbox3heading" /></h2>
+                    <div class="usky-editor-placeholder imagegrid" ng-click="setImage('flagbox3image')" ng-if="control.value == null || control.value.images == null || control.value.images.flagbox3image == null" style="width: 100%;">
+                        <i class="icon icon-picture"></i>
+                        <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                            Image<br /> (Optional)
+                        </div>
+                    </div>
+
+                    <div ng-if="control.value.images != null && control.value.images.flagbox3image != null">
+                        <div class="imggrid4wide smallimage">
+                            <img ng-click="setImage('flagbox3image')" ng-src="{{control.value.images.flagbox3image.image}}" c class="fullSizeImage" />
+                            <a href class="picked-image" ng-click="removeImage('flagbox3image')"><i class="icon icon-delete"></i></a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="flagboxcontent">
+                    <div ng-controller="Umbraco.PropertyEditors.Grid.RichTextEditorController as vm" class="editorname">
+                        <div grid-rte
+                             configuration="control.editor.config.fcswimmingwarningrtetoolbar"
+                             value="control.flagbox3rteValue"
+                             unique-id="control.$uniqueId + 3"
+                             on-link-picker-click="vm.openLinkPicker"
+                             on-media-picker-click="vm.openMediaPicker"
+                             on-embed-click="vm.openEmbed"
+                             on-macro-picker-click="vm.openMacroPicker">
+                        </div>
+                        <umb-overlay ng-if="vm.linkPickerOverlay.show"
+                                     model="vm.linkPickerOverlay"
+                                     position="right"
+                                     view="vm.linkPickerOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.mediaPickerOverlay.show"
+                                     model="vm.mediaPickerOverlay"
+                                     position="right"
+                                     view="vm.mediaPickerOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.embedOverlay.show"
+                                     model="vm.embedOverlay"
+                                     position="right"
+                                     view="vm.embedOverlay.view">
+                        </umb-overlay>
+                        <umb-overlay ng-if="vm.macroPickerOverlay.show"
+                                     model="vm.macroPickerOverlay"
+                                     view="vm.macroPickerOverlay.view"
+                                     position="right">
+                        </umb-overlay>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

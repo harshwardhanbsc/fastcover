@@ -1,0 +1,37 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string leftimage = (Model.value != null && Model.value.images != null && Model.value.images.leftimage != null) ? Model.value.images.leftimage.image : null;
+    string topimage = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.image : null;
+    string bottomimage = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.image : null;
+    //string headingimage = (Model.value != null && Model.value.images != null && Model.value.images.headingimage != null) ? Model.value.images.headingimage.image : null;
+    string leftimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.leftimage != null) ? Model.value.images.leftimage.altText : null;
+    string topimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.topimage != null) ? Model.value.images.topimage.altText : null;
+    string bottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.altText : null;
+    //string headingimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.headingimage != null) ? Model.value.images.headingimage.altText : null;
+}
+<div class="staysafe">
+    <div class="leftcol">
+        <div class="bottleimage">
+            <img src="@leftimage" alt="@leftimageAlttext" />
+        </div>
+    </div>
+    <div class="rightcol">
+        <div class="contentimage">
+            <div class="staydrinksvg">
+                <img src="@topimage" alt="@topimageAlttext" />
+            </div>
+            <div class="contentarea chrichtext orangebg">
+                @Html.Raw(Model.toprteValue)
+            </div>
+            <div class="stayheading">
+                <h2>@Model.heading</h2>
+            </div>
+            <div class="contentarea chrichtext orangebg">
+                @Html.Raw(Model.bottomrteValue)
+            </div>
+            <div class="staydeathsvg">
+                <img src="@bottomimage" alt="@bottomimageAlttext" />
+            </div>
+        </div>
+    </div>
+</div>

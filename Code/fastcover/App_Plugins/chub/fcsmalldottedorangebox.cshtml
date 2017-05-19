@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    String bottomimage = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.image : null;
+    String bottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.altText : null;
+}
+<div class="small-dotted-outer">
+    <h2>@Model.heading</h2>
+    <div class="richtextcontent chrichtext orangebg">
+        @if (Model != null)
+            {
+            @Html.Raw(@Model.rteValue)
+        }
+    </div>
+    <div class="bottomimagecontent">
+        <img src="@bottomimage" alt="@bottomimageAlttext" />
+    </div>
+</div>

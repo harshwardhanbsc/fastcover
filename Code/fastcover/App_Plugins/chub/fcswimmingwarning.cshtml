@@ -1,0 +1,69 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string leftcornerimage = (Model.value != null && Model.value.images != null && Model.value.images.leftcornerimage != null) ? Model.value.images.leftcornerimage.image : null;
+    string leftcornerimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.leftcornerimage != null) ? Model.value.images.leftcornerimage.altText : null;
+    string bottomimage = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.image : null;
+    string bottomimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.bottomimage != null) ? Model.value.images.bottomimage.altText : null;
+    string flagbox1image = (Model.value != null && Model.value.images != null && Model.value.images.flagbox1image != null) ? Model.value.images.flagbox1image.image : null;
+    string flagbox1imageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.flagbox1image != null) ? Model.value.images.flagbox1image.altText : null;
+    string flagbox2image = (Model.value != null && Model.value.images != null && Model.value.images.flagbox2image != null) ? Model.value.images.flagbox2image.image : null;
+    string flagbox2imageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.flagbox2image != null) ? Model.value.images.flagbox2image.altText : null;
+    string flagbox3image = (Model.value != null && Model.value.images != null && Model.value.images.flagbox3image != null) ? Model.value.images.flagbox3image.image : null;
+    string flagbox3imageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.flagbox3image != null) ? Model.value.images.flagbox3image.altText : null;
+}
+<div class="swimmingtopcontainer">
+    <div class="swimmingcornerimage">
+        <img src="@leftcornerimage" alt="@leftcornerimageAlttext" />
+    </div>
+    <div class="swimmingheading">
+        <h2>@Model.heading</h2>
+    </div>
+    <div class="swimmingcontent orangebg chrichtext">
+        @Html.Raw(Model.rteValue)
+
+    </div>
+    <div class="swimmingbottomimage">
+        <img src="@bottomimage" alt="@bottomimageAlttext" />
+    </div>
+</div>
+<div class="clear"></div>
+<div class="flagboxcontainer">
+    <ul>
+        <li style="border-color:@Model.flagbox1color">
+            <div class="flagboxheading" style="background:@Model.flagbox1color">
+                <h2>@Model.flagbox1heading</h2>
+                <div class="img">
+                    <img src="@flagbox1image" alt="@flagbox1imageAlttext" />
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="flagboxcontent">
+                @Html.Raw(Model.flagbox1rteValue)
+            </div>
+        </li>
+        <li style="border-color:@Model.flagbox2color">
+            <div class="flagboxheading" style="background:@Model.flagbox2color">
+                <h2>@Model.flagbox2heading</h2>
+                <div class="img">
+                    <img src="@flagbox2image" alt="@flagbox2imageAlttext" />
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="flagboxcontent">
+                @Html.Raw(Model.flagbox2rteValue)
+            </div>
+        </li>
+        <li style="border-color:@Model.flagbox3color">
+            <div class="flagboxheading" style="background:@Model.flagbox3color">
+                <h2>@Model.flagbox3heading</h2>
+                <div class="img">
+                    <img src="@flagbox3image" alt="@flagbox3imageAlttext" />
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="flagboxcontent">
+                @Html.Raw(Model.flagbox3rteValue)
+            </div>
+        </li>
+    </ul>
+</div>

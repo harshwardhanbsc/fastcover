@@ -1,0 +1,87 @@
+﻿ 2017-05-01 00:33:35,914 [P8756/D5/T177] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-30 00:33:35
+ 2017-05-01 04:33:36,023 [P8756/D5/T221] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-30 04:33:35
+ 2017-05-01 13:01:31,863 [P8756/D5/T200] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-30 13:01:31
+ 2017-05-01 17:01:30,065 [P8756/D5/T175] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-30 17:01:29
+ 2017-05-01 18:34:34,261 [P10220/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.11 application starting on HARSHWARDHAN
+ 2017-05-01 18:34:34,424 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-05-01 18:34:34,496 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 72ms)
+ 2017-05-01 18:34:34,690 [P10220/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-05-01 18:34:34,691 [P10220/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-05-01 18:34:34,701 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-05-01 18:34:35,596 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 894ms)
+ 2017-05-01 18:34:36,269 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-05-01 18:34:36,271 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+ 2017-05-01 18:34:36,271 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-05-01 18:34:36,273 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2017-05-01 18:34:36,358 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-05-01 18:34:36,360 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 2ms)
+ 2017-05-01 18:34:36,361 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-05-01 18:34:36,436 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 75ms)
+ 2017-05-01 18:34:37,027 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-05-01 18:34:37,028 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2017-05-01 18:34:37,028 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-05-01 18:34:37,029 [P10220/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2017-05-01 18:34:44,511 [P10220/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-05-01 18:34:47,010 [P10220/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-05-01 18:34:47,633 [P10220/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-05-01 18:34:48,125 [P10220/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-05-01 18:34:48,325 [P10220/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 14235ms)
+ 2017-05-01 18:34:59,692 [P10220/D2/T11] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:49523/umbraco (UmbracoModule request)
+ 2017-05-01 18:35:01,847 [P10220/D2/T11] INFO  umbraco.content - Load Xml from file...
+ 2017-05-01 18:35:01,913 [P10220/D2/T11] INFO  umbraco.content - Loaded Xml from file.
+ 2017-05-01 18:35:04,752 [P10220/D2/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-05-01 18:35:04,753 [P10220/D2/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2017-05-01 18:36:02,348 [P10220/D2/T14] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-30 18:36:02
+ 2017-05-01 18:36:02,807 [P10220/D2/T12] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-05-01 18:36:02,815 [P10220/D2/T12] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 7ms)
+ 2017-05-01 18:38:20,052 [P10220/D2/T23] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-05-01 18:38:28,976 [P10220/D2/T23] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-05-01 18:38:46,215 [P10220/D2/T25] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username harshwardhan.in@gmail.com from IP address ::1
+ 2017-05-01 18:38:46,217 [P10220/D2/T25] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: harshwardhan.in@gmail.com logged in from IP address ::1
+ 2017-05-01 18:38:46,918 [P10220/D2/T16] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-01 18:38:46,920 [P10220/D2/T16] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 1ms)
+ 2017-05-01 18:38:47,277 [P10220/D2/T16] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2017-05-01 18:38:47,279 [P10220/D2/T16] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 2ms)
+ 2017-05-01 18:38:47,432 [P10220/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-05-01 18:38:47,434 [P10220/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 2ms)
+ 2017-05-01 18:38:47,499 [P10220/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-01 18:38:47,500 [P10220/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-05-01 18:38:47,504 [P10220/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-05-01 18:38:47,505 [P10220/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 0ms)
+ 2017-05-01 18:47:06,527 [P10220/D2/T52] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-05-01 18:58:21,425 [P10220/D2/T73] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: harshwardhan.in@gmail.com, IP Address: ::1
+ 2017-05-01 19:02:17,376 [P10220/D2/T92] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username harshwardhan.in@gmail.com from IP address ::1
+ 2017-05-01 19:02:17,376 [P10220/D2/T92] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: harshwardhan.in@gmail.com logged in from IP address ::1
+ 2017-05-01 19:03:19,941 [P10220/D2/T42] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Orange Box Corner Images' with Id '1066' has been published.
+ 2017-05-01 19:03:21,714 [P10220/D2/T42] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ICacheRefresher
+ 2017-05-01 19:03:21,716 [P10220/D2/T42] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 0 (took 2ms)
+ 2017-05-01 19:03:26,268 [P10220/D2/T13] INFO  umbraco.content - Save Xml to file...
+ 2017-05-01 19:03:26,331 [P10220/D2/T13] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-01 19:06:31,489 [P10220/D2/T66] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Orange Box Corner Images' with Id '1066' has been published.
+ 2017-05-01 19:06:35,722 [P10220/D2/T52] INFO  umbraco.content - Save Xml to file...
+ 2017-05-01 19:06:35,805 [P10220/D2/T52] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-01 19:07:46,264 [P10220/D2/T53] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Orange Box Corner Images' with Id '1066' has been published.
+ 2017-05-01 19:07:50,349 [P10220/D2/T8] INFO  umbraco.content - Save Xml to file...
+ 2017-05-01 19:07:50,366 [P10220/D2/T8] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-01 19:12:16,740 [P10220/D2/T28] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Orange Box Corner Images' with Id '1066' has been published.
+ 2017-05-01 19:12:20,864 [P10220/D2/T8] INFO  umbraco.content - Save Xml to file...
+ 2017-05-01 19:12:20,881 [P10220/D2/T8] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-01 19:15:13,855 [P10220/D2/T59] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Orange Box Corner Images' with Id '1066' has been published.
+ 2017-05-01 19:15:17,926 [P10220/D2/T8] INFO  umbraco.content - Save Xml to file...
+ 2017-05-01 19:15:17,960 [P10220/D2/T8] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-01 19:30:33,683 [P10220/D2/T15] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Orange Box Corner Images' with Id '1066' has been published.
+ 2017-05-01 19:30:37,889 [P10220/D2/T8] INFO  umbraco.content - Save Xml to file...
+ 2017-05-01 19:30:37,910 [P10220/D2/T8] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-01 19:32:04,136 [P10220/D2/T9] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-05-01 19:32:04,136 [P10220/D2/T9] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-05-01 19:32:29,250 [P10220/D2/T22] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Orange Box Corner Images' with Id '1066' has been published.
+ 2017-05-01 19:32:33,400 [P10220/D2/T8] INFO  umbraco.content - Save Xml to file...
+ 2017-05-01 19:32:33,426 [P10220/D2/T8] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-01 19:39:31,544 [P10220/D2/T94] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Orange Box Corner Images' with Id '1066' has been published.
+ 2017-05-01 19:39:35,686 [P10220/D2/T8] INFO  umbraco.content - Save Xml to file...
+ 2017-05-01 19:39:35,706 [P10220/D2/T8] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-01 19:41:16,057 [P10220/D2/T94] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Orange Box Corner Images' with Id '1066' has been published.
+ 2017-05-01 19:41:20,235 [P10220/D2/T8] INFO  umbraco.content - Save Xml to file...
+ 2017-05-01 19:41:20,269 [P10220/D2/T8] INFO  umbraco.content - Saved Xml to file.
+ 2017-05-01 19:59:53,164 [P10220/D2/T47] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: harshwardhan.in@gmail.com, IP Address: ::1
+ 2017-05-01 22:36:02,797 [P10220/D2/T50] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-04-30 22:36:02

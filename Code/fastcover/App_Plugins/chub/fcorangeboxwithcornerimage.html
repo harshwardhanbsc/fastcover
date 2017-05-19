@@ -2,12 +2,12 @@
     <div class="usky-editor-placeholder imagegrid" ng-click="setImage('backgroundimage')" ng-if="control.value == null || control.value.images == null || control.value.images.backgroundimage == null" style="width: 100%;">
         <i class="icon icon-picture"></i>
         <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
-            Image<br /> (Optional)
+            Background Image<br /> (Optional)
         </div>
     </div>
 
     <div ng-if="control.value.images != null && control.value.images.backgroundimage != null">
-        <div class="imggrid4wide smallimage">
+        <div class="imggrid4wide smallimage bgimage">
             <img ng-click="setImage('backgroundimage')" ng-src="{{control.value.images.backgroundimage.image}}" class="fullSizeImage" />
             <a href class="picked-image" ng-click="removeImage('backgroundimage')"><i class="icon icon-delete"></i></a>
         </div>
