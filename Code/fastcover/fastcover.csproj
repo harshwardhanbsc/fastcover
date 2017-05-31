@@ -227,6 +227,18 @@
       <HintPath>..\packages\semver.1.1.2\lib\net451\Semver.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Skybrud.Essentials, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Skybrud.Essentials.1.0.7\lib\net45\Skybrud.Essentials.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Skybrud.LinkPicker, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Skybrud.LinkPicker.1.1.2\lib\net45\Skybrud.LinkPicker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Skybrud.Umbraco.GridData, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Skybrud.Umbraco.GridData.2.0.0\lib\net45\Skybrud.Umbraco.GridData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SQLCE4Umbraco, Version=1.0.6337.40637, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.6.1\lib\net45\SQLCE4Umbraco.dll</HintPath>
       <Private>True</Private>
@@ -362,11 +374,15 @@
     <Content Include="App_Plugins\chub\css\CHUB.Editor.css" />
     <Content Include="App_Plugins\chub\dieditor.html" />
     <Content Include="App_Plugins\chub\dottedoxwithtopimage.html" />
+    <Content Include="App_Plugins\chub\fcboxwithorangegreyrows.html" />
     <Content Include="App_Plugins\chub\fcconnectedtextboxes.html" />
     <Content Include="App_Plugins\chub\fcgastrobox.html" />
+    <Content Include="App_Plugins\chub\fcgreycappedbox.html" />
     <Content Include="App_Plugins\chub\fcheading1orangebarplaceholder.html" />
     <Content Include="App_Plugins\chub\fcinfocircle.html" />
     <Content Include="App_Plugins\chub\fclgbtqi.html" />
+    <Content Include="App_Plugins\chub\fclinkedhorizontalimages.html" />
+    <Content Include="App_Plugins\chub\fcorangeboxtext.html" />
     <Content Include="App_Plugins\chub\fcorangeboxwithcircleborders.html" />
     <Content Include="App_Plugins\chub\fcorangeboxwithcornerimage.html" />
     <Content Include="App_Plugins\chub\fcparty.html" />
@@ -395,12 +411,32 @@
     <Content Include="App_Plugins\chub\textrowendimages.html" />
     <Content Include="App_Plugins\chub\TwoColImagesExpText.html" />
     <Content Include="App_Plugins\chub\TwoImageRowsAccordian.html" />
+    <Content Include="App_Plugins\GibeLinkPicker\Dialogs\linkpicker.controller.js" />
+    <Content Include="App_Plugins\GibeLinkPicker\Dialogs\linkpicker.html" />
+    <Content Include="App_Plugins\GibeLinkPicker\picker.controller.js" />
+    <Content Include="App_Plugins\GibeLinkPicker\picker.css" />
+    <Content Include="App_Plugins\GibeLinkPicker\picker.html" />
     <Content Include="App_Plugins\Grid\Config\FanoeConfig.txt" />
     <Content Include="App_Plugins\Grid\Editors\Views\media_with_description.html" />
     <Content Include="App_Plugins\Grid\Editors\Views\quote_with_description.html" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.htm" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Controllers\LinkPickerGridEditor.js" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Controllers\LinkPickerPreValues.js" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Directives\LinkPicker.js" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Lang\da-DK.xml" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Lang\en-GB.xml" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Lang\en-US.xml" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Services\LinkPickerService.js" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Styles\LinkPicker.css" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Styles\LinkPicker.min.css" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Styles\_table.css" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Styles\_table.min.css" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Views\LinkPicker.html" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Views\LinkPickerDirective.html" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Views\LinkPickerGridEditor.html" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Views\LinkPickerPreValues.html" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -420,6 +456,8 @@
     <Content Include="config\Lang\ru-RU.user.xml" />
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
+    <Content Include="config\splashes\booting.aspx" />
+    <Content Include="config\splashes\noNodes.aspx" />
     <Content Include="css\chub.css" />
     <Content Include="css\chubrtestyles.css" />
     <Content Include="css\orangelinkedboxesv2rtestyles.css" />
@@ -437,13 +475,19 @@
     <Content Include="fonts\MetaPro\MetaProNormal.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\chub\gastro-box\stomachinsidemobile.svg" />
+    <Content Include="images\chub\piercings\piercingringbottom.svg" />
     <Content Include="images\chub\stis\curveimg.svg" />
     <Content Include="images\downwardarrow.svg" />
     <Content Include="images\chub\stacked-numbered-info\exclaimationmark.svg" />
     <Content Include="images\chub\disease-and-infection-editor\hline.png" />
     <Content Include="images\chub\piercings\noseimage.svg" />
-    <Content Include="images\chub\piercings\piercingringbottom.svg" />
+    <Content Include="images\chub\piercings\piercingringbottom1.svg" />
     <Content Include="images\chub\piercings\piercingringtop.svg" />
+    <Content Include="images\exclaimationmark.svg" />
+    <Content Include="images\hline.png" />
+    <Content Include="images\noseimage.svg" />
+    <Content Include="images\piercingringbottom.svg" />
+    <Content Include="images\piercingringtop.svg" />
     <Content Include="images\plane.svg" />
     <Content Include="images\chub\info-circle\skeletonwithdottedborder.svg" />
     <Content Include="images\chub\gastro-box\stomachinside.svg" />
@@ -3153,10 +3197,22 @@
     <Content Include="config\404handlers.config" />
     <Content Include="App_Plugins\chub\fcsmallinfoboxes.cshtml" />
     <Content Include="App_Plugins\chub\fcconnectedtextboxes.cshtml" />
+    <Content Include="App_Plugins\chub\fclinkedhorizontalimages.cshtml" />
+    <Content Include="App_Plugins\GibeLinkPicker\package.manifest" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Styles\_table.less" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Styles\_preview.less" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\Styles\LinkPicker.less" />
+    <Content Include="App_Plugins\Skybrud.LinkPicker\package.manifest" />
+    <Content Include="App_Plugins\chub\fcgreycappedbox.cshtml" />
+    <Content Include="App_Plugins\chub\fcorangeboxtext.cshtml" />
+    <Content Include="App_Plugins\chub\fcboxwithorangegreyrows.cshtml" />
+    <Content Include="config\UrlRewriting.config" />
     <None Include="Properties\PublishProfiles\File System.pubxml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
+    <Content Include="Views\ContentHubPage.cshtml" />
+    <Content Include="Views\MasterSite2015.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3182,6 +3238,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="scripts\Site2015JS\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

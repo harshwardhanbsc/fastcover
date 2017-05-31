@@ -138,7 +138,7 @@ angular.module("umbraco").controller("CHControls.MultipleMediaController3", func
 
 angular.module("umbraco").controller("CHControls.LinkedParagraphGroupController", function ($scope, $rootScope, $location, $routeParams, $timeout, $http, $log, dialogService) {
     if (("tabData" in $scope.control)) {
-        var tableOldData = $scope.control.tabData;
+        var tableOldData = $scope.control.tabelsData;
         $scope.control.tabelsData = tableOldData;
     }
     else {
@@ -1173,8 +1173,8 @@ angular.module("umbraco").controller("CHControls.ConnectedTextBoxesController", 
     if ($scope.control.position == null) {
         $scope.control.position = $scope.control.editor.config.radiodefaultvalue;
     }
-    if (("tabData" in $scope.control)) {
-        var tableOldData = $scope.control.tabData;
+    if (("tabelsData" in $scope.control)) {
+        var tableOldData = $scope.control.tabelsData;
         $scope.control.tabelsData = tableOldData;
     }
     else {
@@ -1261,4 +1261,94 @@ angular.module("umbraco").controller("CHControls.ConnectedTextBoxesController", 
         $scope.control.tabelsData.splice(index, 1);
         $scope.ChangeContent();
     };
+});
+
+angular.module("umbraco").controller("CHControls.LinkPickerController", function ($scope, assetsService) {
+
+    var ngi = angular.element('body').injector();
+    var uDialogService = ngi.get('dialogService');
+
+    if ($scope.control.links == null) {
+        $scope.control.links = {};
+    }
+    // choose internal link
+    $scope.chooseLink = function (linkname) {
+        uDialogService.open({
+            template: '../App_Plugins/GibeLinkPicker/Dialogs/linkpicker.html',
+            show: true,
+            dialogData: $scope.model.config,
+            callback: function (e) {
+                // set model
+                $scope.control.links[linkname] = {
+                    id: e.id || 0,
+                    name: e.name || '',
+                    url: e.url,
+                    target: e.target || '_self',
+                    hashtarget: e.hashtarget || ''
+                };
+                // close dialog
+                uDialogService.close();
+            }
+        });
+    };
+
+    $scope.editLink = function (linkname) {
+        var linkPickerModel = angular.copy($scope.control);
+        uDialogService.open({
+            template: '../App_Plugins/GibeLinkPicker/Dialogs/linkpicker.html',
+            show: true,
+            dialogData: linkPickerModel.config,
+            target: linkPickerModel.value,
+            callback: function (e) {
+                // set model
+                $scope.control.links[linkname] = {
+                    id: e.id || 0,
+                    name: e.name || '',
+                    url: e.url,
+                    target: e.target || '_self',
+                    hashtarget: e.hashtarget || ''
+                };
+                // close dialog
+                uDialogService.close();
+            }
+        });
+    };
+
+    // remove link
+    $scope.removeLink = function (linkname) {
+        //$scope.control.link[linkname]= null;
+        delete $scope.control.links[linkname];
+    };
+
+    assetsService.loadCss("../App_Plugins/GibeLinkPicker/picker.css");
+});
+
+angular.module("umbraco").controller("CHControls.BoxwithOrangeGreyRowsController", function ($scope) {
+    if (("tabelsData" in $scope.control)) {
+        var tableOldData = $scope.control.tabelsData;
+        $scope.control.tabelsData = tableOldData;
+    }
+    else {
+        $scope.control.id = 1;
+        $scope.control.tabelsData = [{ 'orangeboxcontent': '', 'greyboxcontent': '', 'id': $scope.control.id }];
+    }
+
+    $scope.AddRow = function () {
+        $scope.control.id++;
+        $scope.control.tabelsData.push({ 'orangeboxcontent': '', 'greyboxcontent': '', id: $scope.control.id });
+    };
+
+});
+
+angular.module("umbraco").controller("CHControls.RangeSlider", function ($scope) {
+    if ($scope.control.imagewidth1 == null) {
+        $scope.control.imagewidth1 = $scope.control.editor.config.imagedefaultwidth;
+    } else {
+        $scope.control.imagewidth1 = $scope.control.imagewidth1;
+    }
+    if ($scope.control.imagewidth2 == null) {
+        $scope.control.imagewidth2 = $scope.control.editor.config.imagedefaultwidth;
+    } else {
+        $scope.control.imagewidth2 = $scope.control.imagewidth2;
+    }
 });

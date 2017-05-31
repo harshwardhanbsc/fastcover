@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string greyboximage = (Model.value != null && Model.value.images != null && Model.value.images.greyboximage != null) ? Model.value.images.greyboximage.image : null;
+    string greyboximageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.greyboximage != null) ? Model.value.images.greyboximage.altText : null;
+    string orangeboximage = (Model.value != null && Model.value.images != null && Model.value.images.orangeboximage != null) ? Model.value.images.orangeboximage.image : null;
+    string orangeboximageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.orangeboximage != null) ? Model.value.images.orangeboximage.altText : null;
+}
+<div class="graycappedboxcontainer">
+    <div class="grayboxcontainer">
+        <div class="grayboxcontent chrichtext orangebg">
+            @Html.Raw(Model.greyrteValue)
+        </div>
+        <div class="grayboximage">
+            <img src="@greyboximage" alt="@greyboximageAlttext" />
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="orangeboxcontainer">
+        <div class="orangeboxcontent chrichtext orangebg">
+            @Html.Raw(Model.orangerteValue)
+        </div>
+        <div class="orangeboximage">
+            <img src="@orangeboximage" alt="@orangeboximageAlttext" />
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

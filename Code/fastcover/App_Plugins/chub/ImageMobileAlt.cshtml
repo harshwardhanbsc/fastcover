@@ -5,18 +5,42 @@
     String img1AltText = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.altText : "";
     String img2AltText = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.altText : "";
 }
-
-
 @if (Model.value != null && img1 != null && img2 != null)
 {
-    <div class="imgMobAlt">
-        <picture>
-            <source media="(min-width: 480px)" srcset="@img1">
-            <source media="(min-width: 250px)" srcset="@img2">
-            <!-- img tag for browsers that do not support picture element -->
-            <img src="@img1" alt="@img1AltText" style="width:100%;">
-        </picture>
-    </div>
-
-
+    if (Model.imagealign1 == "left")
+    {
+        <div class="imgMobAlt widthmorethan768" style="margin-left:0;">
+            <img src="@img1" alt="@img1AltText" style="margin-left:0; width:@Model.imagewidth1%;">
+        </div>
+    }
+    else if (Model.imagealign1 == "right")
+    {
+        <div class="imgMobAlt widthmorethan768" style="margin-right:0;">
+            <img src="@img1" alt="@img1AltText" style="margin-right:0; width:@Model.imagewidth1%;">
+        </div>
+    }
+    else
+    {
+        <div class="imgMobAlt widthmorethan768">
+            <img src="@img1" alt="@img1AltText" style="width:@Model.imagewidth1%;">
+        </div>
+    }
+    if (Model.imagealign2 == "left")
+    {
+        <div class="imgMobAlt widthlesstha768" style="margin-left:0;">
+            <img src="@img2" alt="@img2AltText" style="margin-left:0; width:@Model.imagewidth2%;">
+        </div>
+    }
+    else if (Model.imagealign2 == "right")
+    {
+        <div class="imgMobAlt widthlesstha768" style="margin-right:0;">
+            <img src="@img2" alt="@img2AltText" style="margin-right:0; width:@Model.imagewidth2%;">
+        </div>
+    }
+    else
+    {
+        <div class="imgMobAlt widthlesstha768">
+            <img src="@img2" alt="@img2AltText" style="width:@Model.imagewidth2%;">
+        </div>
+    }
 }

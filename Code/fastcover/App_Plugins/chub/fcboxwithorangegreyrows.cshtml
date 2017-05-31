@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    var hv = Model;
+    var tabData = hv["tabelsData"];
+}
+<div class="orangegreyboxcovercontainer">
+    @foreach (var row in tabData)
+    {
+        <div class="orangegreyboxcontainer">
+            <div class="orangebox chrichtext orangebg">
+                @Html.Raw(row.orangeboxcontent)
+            </div>
+            <div class="greybox chrichtext orangebg">
+                @Html.Raw(row.greyboxcontent)
+            </div>
+            <div class="clear"></div>
+        </div>
+    }
+</div>

@@ -1,0 +1,113 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    String img1 = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.image : null;
+    String img2 = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.image : null;
+    String img3 = (Model.value != null && Model.value.images != null && Model.value.images.image3 != null) ? Model.value.images.image3.image : null;
+    String img4 = (Model.value != null && Model.value.images != null && Model.value.images.image4 != null) ? Model.value.images.image4.image : null;
+    String img5 = (Model.value != null && Model.value.images != null && Model.value.images.image5 != null) ? Model.value.images.image5.image : null;
+    String img6 = (Model.value != null && Model.value.images != null && Model.value.images.image6 != null) ? Model.value.images.image6.image : null;
+    String img1AltText = (Model.value != null && Model.value.images != null && Model.value.images.image1 != null) ? Model.value.images.image1.altText : null;
+    String img2AltText = (Model.value != null && Model.value.images != null && Model.value.images.image2 != null) ? Model.value.images.image2.altText : null;
+    String img3AltText = (Model.value != null && Model.value.images != null && Model.value.images.image3 != null) ? Model.value.images.image3.altText : null;
+    String img4AltText = (Model.value != null && Model.value.images != null && Model.value.images.image4 != null) ? Model.value.images.image4.altText : null;
+    String img5AltText = (Model.value != null && Model.value.images != null && Model.value.images.image5 != null) ? Model.value.images.image5.altText : null;
+    String img6AltText = (Model.value != null && Model.value.images != null && Model.value.images.image6 != null) ? Model.value.images.image6.altText : null;
+    String description1 = (Model.value != null) ? Model.value.image1description : null;
+    String description2 = (Model.value != null) ? Model.value.image2description : null;
+    String description3 = (Model.value != null) ? Model.value.image3description : null;
+    String description4 = (Model.value != null) ? Model.value.image4description : null;
+    String description5 = (Model.value != null) ? Model.value.image5description : null;
+    String description6 = (Model.value != null) ? Model.value.image6description : null;
+    String link1 = (Model != null && Model.links != null && Model.links.link1 != null) ? Model.links.link1.url : null;
+    String link2 = (Model != null && Model.links != null && Model.links.link2 != null) ? Model.links.link2.url : null;
+    String link3 = (Model != null && Model.links != null && Model.links.link3 != null) ? Model.links.link3.url : null;
+    String link4 = (Model != null && Model.links != null && Model.links.link4 != null) ? Model.links.link4.url : null;
+    String link5 = (Model != null && Model.links != null && Model.links.link5 != null) ? Model.links.link5.url : null;
+    String link6 = (Model != null && Model.links != null && Model.links.link6 != null) ? Model.links.link6.url : null;
+
+    var i = 0;
+    foreach (var item in Model.value.images)
+    {
+        i++;
+    }
+    string width = Convert.ToString((100 / i) - 1.66) + "%";
+    if (i >= 6)
+    {
+        width = "15%";
+    }
+}
+<div class="siximagescontainer">
+    @if (!string.IsNullOrEmpty(img1))
+    {
+        <div class="siximages" style="width: @width;">
+            <a href="@link1">
+                <img src="@img1" alt="@img1AltText"
+                     class="fullSizeImage" />
+                <div class="img-desc textcenter">
+                    @Html.Raw(description1)
+                </div>
+            </a>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(img2))
+    {
+        <div class="siximages" style="width: @width;">
+            <a href="@link2">
+                <img src="@img2" alt="@img2AltText"
+                     class="fullSizeImage" />
+                <div class="img-desc textcenter">
+                    @Html.Raw(description2)
+                </div>
+            </a>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(img3))
+    {
+
+        <div class="siximages" style="width: @width;">
+            <a href="@link3">
+                <img src="@img3" alt="@img3AltText"
+                     class="fullSizeImage" />
+                <div class="img-desc textcenter">
+                    @Html.Raw(description3)
+                </div>
+            </a>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(img4))
+    {
+        <div class="siximages" style="width: @width;">
+            <a href="@link4">
+                <img src="@img4" alt="@img4AltText"
+                     class="fullSizeImage" />
+                <div class="img-desc textcenter">
+                    @Html.Raw(Model.value.image4description)
+                </div>
+            </a>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(img5))
+    {
+        <div class="siximages" style="width: @width;">
+            <a href="@link5">
+                <img src="@img5" alt="@img5AltText"
+                     class="fullSizeImage" />
+                <div class="img-desc textcenter">
+                    @Html.Raw(Model.value.image5description)
+                </div>
+            </a>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(img6))
+    {
+        <div class="siximages" style="width: @width;">
+            <a href="@link6">
+                <img src="@img6" alt="@img6AltText"
+                     class="fullSizeImage" />
+                <div class="img-desc textcenter">
+                    @Html.Raw(Model.value.image6description)
+                </div>
+            </a>
+        </div>
+    }
+</div>

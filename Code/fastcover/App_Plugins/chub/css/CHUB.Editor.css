@@ -2901,3 +2901,168 @@ p, ul, ol, li {
         top: 15%;
         bottom: 0;
     }
+
+.siximagescontainer {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+    .siximagescontainer .siximages {
+        float: left;
+        width: 15%;
+        margin-right: 1.66%;
+        position: relative;
+        z-index: 99;
+    }
+
+        .siximagescontainer .siximages:last-child {
+            margin-right: 0;
+        }
+
+        .siximagescontainer .siximages .imggrid4wide img {
+            height: 100px;
+        }
+
+    .siximagescontainer:after {
+        background: #6d6e71;
+        content: '';
+        z-index: 1;
+        display: block;
+        height: 40px;
+        left: 10%;
+        right: 10%;
+        width: 80%;
+        position: absolute;
+        margin-top: 8%;
+    }
+
+.graycappedboxcontainer {
+    width: 100%;
+    margin: 20px auto;
+}
+
+    .graycappedboxcontainer .grayboxcontainer {
+        background: #6d6e71;
+        border-radius: 20px 20px 0 0;
+        padding: 20px;
+    }
+
+        .graycappedboxcontainer .grayboxcontainer .grayboxcontent {
+            width: 80%;
+            float: left;
+        }
+
+        .graycappedboxcontainer .grayboxcontainer .grayboximage {
+            width: 20%;
+            float: left;
+        }
+
+    .graycappedboxcontainer .orangeboxcontainer {
+        background: #eb551d;
+        border-radius: 0 0 20px 20px;
+        padding: 20px;
+    }
+
+        .graycappedboxcontainer .orangeboxcontainer .orangeboxcontent {
+            width: 80%;
+            float: left;
+        }
+
+        .graycappedboxcontainer .orangeboxcontainer .orangeboximage {
+            width: 20%;
+            float: left;
+        }
+
+.orangeboxtextcontainer {
+    width: 90%;
+    margin: 20px auto;
+    background: #eb551d;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+    .orangeboxtextcontainer .orangeboxtextleftimage {
+        width: 25%;
+        float: left;
+        margin-right: 20px;
+    }
+
+    .orangeboxtextcontainer .orangeboxtextcontent {
+        width: 70%;
+        float: left;
+    }
+
+    .orangeboxtextcontainer .orangeboxtextrightimage {
+        width: 25%;
+        float: right;
+        margin-left: 20px;
+    }
+
+.orangegreyboxcovercontainer {
+    width: 100%;
+    margin: 20px auto;
+}
+
+    .orangegreyboxcovercontainer .orangegreyboxcontainer {
+        width: 100%;
+        display: table;
+        border-spacing: 20px 10px;
+        -ms-border-spacing: 20px 10px;
+    }
+
+        .orangegreyboxcovercontainer .orangegreyboxcontainer .orangebox {
+            width: 70%;
+            padding: 20px;
+            background: #eb551d;
+            border-radius: 20px;
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .orangegreyboxcovercontainer .orangegreyboxcontainer .greybox {
+            width: 30%;
+            padding: 20px;
+            background: #6d6e71;
+            border-radius: 20px;
+            display: table-cell;
+            vertical-align: top;
+        }
+
+    .orangegreyboxcovercontainer .addbtn {
+        float: right;
+        margin: 20px;
+    }
+
+.imagemobilealtcontainer {
+    width: 100%;
+}
+
+    .imagemobilealtcontainer .desktopimage {
+        width: 40%;
+        float: left;
+    }
+
+    .imagemobilealtcontainer .mobileimage {
+        width: 40%;
+        float: left;
+        margin-left: 10%;
+    }
+
+    .imagemobilealtcontainer .radiocontrol {
+        text-align: center;
+    }
+
+    .imagemobilealtcontainer .imggrid4wide {
+        border: 1px solid blue;
+        border-radius: 20px;
+    }
+
+.rangeslider {
+    text-align: center;
+    margin: 20px auto;
+}
+
+    .rangeslider input {
+        margin: 0 20px 20px;
+    }

@@ -1,40 +1,63 @@
-<div ng-controller="CHControls.MultipleMediaController3" style="width:100%;">
-
-
-<div class="" style="width:40%;float:left;">
-	<div class="usky-editor-placeholder imagegrid" ng-click="setImage('image1')" ng-if="control.value == null || control.value.images == null || control.value.images.image1 == null" style="width:100%; ">
-		<i class="icon icon-picture"></i>
-		<div ng-id="!control.$inserted" id="{{control.uniqueId}}" class="help-text">Regular Image</div>
-	</div>
-
-	<div ng-if="control.value.images != null && control.value.images.image1 != null">
-		<div class="imggrid4wide">
-            <span>Regular Image</span><br />
-			<img				
-				ng-click="setImage('image1')"
-				ng-src="{{control.value.images.image1.image}}"
-				class="" style="max-height:300px;"/>
-		</div>
-		</div>
- 	</div>
+<div ng-controller="CHControls.MultipleMediaController3" class="imagemobilealtcontainer">
+    <div class="desktopimage">
+        <div ng-controller="CHControls.RadioOptionselect" class="radiocontrol">
+            <fieldset class="radiogroup">
+                <span data-ng-repeat="items in control.radiocollection">
+                    <input type="radio" name="Imagemobilealtregular_{{control.$uniqueId}}" unique-id="control.$uniqueId" value="{{items.value}}" ng-model="control.imagealign1" />
+                    {{items.text}}
+                </span>
+            </fieldset>
+        </div>
+        <div ng-controller="CHControls.RangeSlider" class="rangeslider">
+            {{control.editor.config.imagedefaultwidthmin}}<input type="range" ng-model="control.imagewidth1" min="{{control.editor.config.imagedefaultwidthmin}}" max="{{control.editor.config.imagedefaultwidthmax}}" step="1">{{control.editor.config.imagedefaultwidthmax}}
+            <br />
+            {{control.imagewidth1}}%
+        </div>
+        <div class="usky-editor-placeholder imagegrid" ng-click="setImage('image1')" ng-if="control.value == null || control.value.images == null || control.value.images.image1 == null" style="width: 100%;">
+            <i class="icon icon-picture"></i>
+            <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                Regular Image
+            </div>
+        </div>
+        <div ng-if="control.value.images != null && control.value.images.image1 != null">
+            <div class="imggrid4wide smallimage">
+                Regular Image
+                <br />
+                <br />
+                <img ng-click="setImage('image1')" ng-src="{{control.value.images.image1.image}}" class="fullSizeImage" style="max-width:{{control.imagewidth1}}% !important" />
+                <a href class="picked-image" ng-click="removeImage('image1')"><i class="icon icon-delete"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="mobileimage">
+        <div ng-controller="CHControls.RadioOptionselect" class="radiocontrol">
+            <fieldset class="radiogroup">
+                <span data-ng-repeat="items in control.radiocollection">
+                    <input type="radio" name="Imagemobilealtmobile_{{control.$uniqueId}}" unique-id="control.$uniqueId" value="{{items.value}}" ng-model="control.imagealign2" />
+                    {{items.text}}
+                </span>
+            </fieldset>
+        </div>
+        <div ng-controller="CHControls.RangeSlider" class="rangeslider">
+            {{control.editor.config.imagedefaultwidthmin}}<input type="range" ng-model="control.imagewidth2" min="{{control.editor.config.imagedefaultwidthmin}}" max="{{control.editor.config.imagedefaultwidthmax}}" step="1">{{control.editor.config.imagedefaultwidthmax}}
+            <br />
+            {{control.imagewidth2}}%
+        </div>
+        <div class="usky-editor-placeholder imagegrid" ng-click="setImage('image2')" ng-if="control.value == null || control.value.images == null || control.value.images.image2 == null" style="width: 100%;">
+            <i class="icon icon-picture"></i>
+            <div ng-id="!control.$inserted" id="divsmallimage" class="help-text">
+                Mobile Image
+            </div>
+        </div>
+        <div ng-if="control.value.images != null && control.value.images.image2 != null">
+            <div class="imggrid4wide smallimage">
+                Mobile Image
+                <br />
+                <br />
+                <img ng-click="setImage('image2')" ng-src="{{control.value.images.image2.image}}" class="fullSizeImage" style="max-width:{{control.imagewidth2}}% !important" />
+                <a href class="picked-image" ng-click="removeImage('image2')"><i class="icon icon-delete"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
 </div>
-<div class="" style="width:40%;padding-left:10%;float:left;">
-	<div class="usky-editor-placeholder imagegrid" ng-click="setImage('image2')" ng-if="control.value == null || control.value.images == null || control.value.images.image2 == null" style="width:100%; ">
-		<i class="icon icon-picture"></i>
-		<div ng-id="!control.$inserted" id="Div1" class="help-text">Mobile Image</div>
-	</div>
-
-	<div ng-if="control.value.images != null && control.value.images.image2 != null">
-		<div class="imggrid4wide">
-            <span>Mobile Image</span><br />
-			<img				
-				ng-click="setImage('image2')"
-				ng-src="{{control.value.images.image2.image}}"
-				class="" style="max-height:300px;"/>
-		</div>
- 	</div>
-</div>
-<div style="clear:both;"></div>
-
-
-

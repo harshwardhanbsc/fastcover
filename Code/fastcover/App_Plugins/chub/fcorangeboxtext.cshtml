@@ -1,0 +1,25 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+@{
+    string orangeboxtextimage = (Model.value != null && Model.value.images != null && Model.value.images.orangeboxtextimage != null) ? Model.value.images.orangeboxtextimage.image : null;
+    string orangeboxtextimageAlttext = (Model.value != null && Model.value.images != null && Model.value.images.orangeboxtextimage != null) ? Model.value.images.orangeboxtextimage.altText : null;
+    string imageposition = (Model != null) ? Model.position : "left";
+}
+<div class="orangeboxtextcontainer">
+    @if (imageposition == "left")
+    {
+        <div class="orangeboxtextleftimage">
+            <img src="@orangeboxtextimage" alt="@orangeboxtextimageAlttext" />
+        </div>
+    }
+    <div class="orangeboxtextcontent chrichtext orangebg">
+
+        @Html.Raw(Model.rteValue)
+    </div>
+    @if (imageposition == "right")
+    {
+        <div class="orangeboxtextrightimage">
+            <img src="@orangeboxtextimage" alt="@orangeboxtextimageAlttext" />
+        </div>
+    }
+    <div class="clear"></div>
+</div>
