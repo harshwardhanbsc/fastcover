@@ -365,7 +365,7 @@
     <Content Include="App_Plugins\chub\CH-RichText.html" />
     <Content Include="App_Plugins\chub\CHBoxPar.html" />
     <Content Include="App_Plugins\chub\CHHeading.html" />
-    <Content Include="App_Plugins\chub\CHHeadingEndImages.html" />
+    <Content Include="App_Plugins\chub\fcheading1orangebar.html" />
     <Content Include="App_Plugins\chub\CHLinkedImagesRow.html" />
     <Content Include="App_Plugins\chub\ChLinkRedOutlineParagraphs.html" />
     <Content Include="App_Plugins\chub\CHTextAniSideImages.html" />
@@ -3134,7 +3134,7 @@
     <Content Include="App_Plugins\chub\CH-RichText.cshtml" />
     <Content Include="App_Plugins\chub\CHBoxPar.cshtml" />
     <Content Include="App_Plugins\chub\CHHeading.cshtml" />
-    <Content Include="App_Plugins\chub\CHHeadingEndImages.cshtml" />
+    <Content Include="App_Plugins\chub\fcheading1orangebar.cshtml" />
     <Content Include="App_Plugins\chub\CHLinkedImagesRow.cshtml" />
     <Content Include="App_Plugins\chub\ChLinkRedOutlineParagraphs.cshtml" />
     <Content Include="App_Plugins\chub\CHTextAniSideImages.cshtml" />

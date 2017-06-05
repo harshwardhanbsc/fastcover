@@ -1,0 +1,56 @@
+<div ng-controller="CHControls.MultipleMediaController3" class="headingorangebarcontainer">
+    <div class="lefttopimage">
+        <div class="fourimages" style="width:100%;">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('lefttopimage')" ng-if="control.value == null || control.value.images == null || control.value.images.lefttopimage == null" style="width:100%; ">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="{{control.uniqueId}}" class="help-text">Left Top Image</div>
+            </div>
+            <div ng-if="control.value.images != null && control.value.images.lefttopimage != null">
+                <div class="imggrid4wide">
+                    <span>Left Top Image</span>
+                    <img ng-click="setImage('lefttopimage')"
+                         ng-src="{{control.value.images.lefttopimage.image}}"
+                         class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('lefttopimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="righttopimage">
+        <div class="fourimages" style="width:100%;">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('righttopimage')" ng-if="control.value == null || control.value.images == null || control.value.images.righttopimage == null" style="width:100%; ">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="Div1" class="help-text">Right Top Image</div>
+            </div>
+            <div ng-if="control.value.images != null && control.value.images.righttopimage != null">
+                <div class="imggrid4wide">
+                    <span>Right Top Image</span>
+                    <img ng-click="setImage('righttopimage')"
+                         ng-src="{{control.value.images.righttopimage.image}}"
+                         class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('righttopimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chheading">
+        <input type="text" ng-model="control.value.Heading" placeholder="Heading...." />
+    </div>
+    <div class="leftbottomimage">
+        <div class="fourimages" style="width:100%;">
+            <div class="usky-editor-placeholder imagegrid" ng-click="setImage('leftbottomimage')" ng-if="control.value == null || control.value.images == null || control.value.images.leftbottomimage == null" style="width:100%; ">
+                <i class="icon icon-picture"></i>
+                <div ng-id="!control.$inserted" id="Div1" class="help-text">Left Bottom Image</div>
+            </div>
+            <div ng-if="control.value.images != null && control.value.images.leftbottomimage != null">
+                <div class="imggrid4wide">
+                    <span>Left Bottom Image</span>
+                    <img ng-click="setImage('leftbottomimage')"
+                         ng-src="{{control.value.images.leftbottomimage.image}}"
+                         class="fullSizeImage" />
+                    <a href class="picked-image" ng-click="removeImage('leftbottomimage')"><i class="icon icon-delete"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

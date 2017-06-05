@@ -25,15 +25,17 @@
         {
             <li style="width:@liwidth%">
                 <div class="smallinfoboxheading">
-                    <h3>@item.heading</h3>
-                    <div class="img">
-                        @if (item.image != null)
-                        {
-                            if (item.image.image != null)
+                    <div class="smallinfoboxheadingcell"><h3>@item.heading</h3></div>
+                    <div class="smallinfoboxheadingimagecell">
+                        <div class="img">
+                            @if (item.image != null)
                             {
-                                <img src="@item.image.image" alt="@item.image.altText" />
+                                if (item.image.image != null)
+                                {
+                                    <img src="@item.image.image" alt="@item.image.altText" />
+                                }
                             }
-                        }
+                        </div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -45,3 +47,4 @@
     </ul>
     <div class="clear"></div>
 </div>
+<div class="clear"></div>

@@ -149,7 +149,6 @@ img {
     .chheading h2 {
         color: #FFF;
         letter-spacing: 2px;
-        font-size: 34px;
         padding-left: 2%;
         line-height: 100%;
         font-weight: 500;
@@ -158,6 +157,81 @@ img {
         width: 70%;
         position: relative;
         min-height: 68px;
+    }
+/*#endregion*/
+/*#region Heading 1 - Orange Bar*/
+.headingorangebarcontainer {
+    display: table;
+    width: 100%;
+}
+
+    .headingorangebarcontainer .rowgroup {
+        display: table-row;
+    }
+
+    .headingorangebarcontainer .leftcol {
+        width: 20%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .headingorangebarcontainer .middlecol {
+        width: 60%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .headingorangebarcontainer .rightcol {
+        width: 20%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .headingorangebarcontainer .toprow {
+        display: table-row;
+    }
+
+    .headingorangebarcontainer .middlerow {
+        display: table-row;
+    }
+
+        .headingorangebarcontainer .middlerow .middlecol,
+        .headingorangebarcontainer .middlerow .leftcol,
+        .headingorangebarcontainer .middlerow .rightcol {
+            background: #eb551d;
+        }
+
+        .headingorangebarcontainer .middlerow .rightcol {
+            vertical-align: bottom;
+        }
+
+    .headingorangebarcontainer .bottomrow {
+        display: table-row;
+    }
+
+    .headingorangebarcontainer .chheading {
+        border-radius: 0;
+        text-align: center;
+        padding: 2%;
+    }
+
+        .headingorangebarcontainer .chheading h2 {
+            z-index: 9999;
+            padding-left: 0;
+        }
+
+    .headingorangebarcontainer .lefttopimage,
+    .headingorangebarcontainer .leftbottomimage {
+        width: 80%;
+        margin-left: auto;
+    }
+
+    .headingorangebarcontainer .righttopimage {
+        z-index: 9;
+        position: absolute;
+        bottom: 0;
+        width: 80%;
+        left: 0;
     }
 /*#endregion*/
 /*#region Image Mobile Alternate*/
@@ -1098,7 +1172,7 @@ div.chrichtext {
 }
 
 .widthlesstha768 {
-    display: none;
+    display: none !important;
 }
 
 .widthmorethan768 {
@@ -3016,13 +3090,14 @@ h4.stacktitle {
     .whiteboxwithorangetoprowcontainer .toprow {
         background: #eb551d;
         border-radius: 15px 15px 0 0;
-        padding: 10px 20px;
+        padding: 20px;
         margin: auto;
         text-align: center;
     }
 
         .whiteboxwithorangetoprowcontainer .toprow h2 {
             color: #fff;
+            line-height: 110%;
         }
 
     .whiteboxwithorangetoprowcontainer .middlerow {
@@ -3033,13 +3108,14 @@ h4.stacktitle {
     .whiteboxwithorangetoprowcontainer .bottomrow {
         background: #6D6E71;
         border-radius: 0 0 15px 15px;
-        padding: 10px 20px;
+        padding: 20px;
         margin: auto;
         text-align: center;
     }
 
         .whiteboxwithorangetoprowcontainer .bottomrow h2 {
             color: #fff;
+            line-height: 110%;
         }
 /*#endregion*/
 /*#region Swimming Warning*/
@@ -3051,10 +3127,10 @@ h4.stacktitle {
 }
 
     .swimmingtopcontainer .swimmingcornerimage {
-        width: 20%;
-        float: left;
-        margin-top: -7%;
-        margin-left: -5%;
+        width: 15%;
+        position: absolute;
+        top: -7%;
+        left: 10%;
     }
 
     .swimmingtopcontainer .swimmingheading {
@@ -3071,7 +3147,7 @@ h4.stacktitle {
         }
 
     .swimmingtopcontainer .swimmingcontent {
-        padding: 8% 12% 0;
+        padding: 8% 7% 0;
     }
 
     .swimmingtopcontainer .swimmingbottomimage {
@@ -3128,24 +3204,41 @@ h4.stacktitle {
             padding: 15px 7px;
             border-radius: 15px 15px 0 0;
             color: #fff;
+            display: table;
+            width: 101%;
+            border-spacing: 10px 5px;
         }
 
-            .flagboxcontainer li .flagboxheading h2 {
+            /*.flagboxcontainer li .flagboxheading h2 {
                 float: left;
                 width: 45%;
-            }
+            }*/
 
-            .flagboxcontainer li .flagboxheading .img {
+            /*.flagboxcontainer li .flagboxheading .img {
                 width: 45%;
                 float: right;
+            }*/
+
+            .flagboxcontainer li .flagboxheading .flagboxheadingcell,
+            .flagboxcontainer li .flagboxheading .flagboxheadingimagecell {
+                width: 50%;
+                display: table-cell;
+                vertical-align: middle;
             }
 
         .flagboxcontainer li .flagboxcontent {
             padding: 10px;
             z-index: 99;
+            display: table;
+            width: 101%;
         }
 
-
+            .flagboxcontainer li .flagboxcontent p,
+            .flagboxcontainer li .flagboxcontent ul,
+            .flagboxcontainer li .flagboxcontent ol,
+            .flagboxcontainer li .flagboxcontent li {
+                line-height: 120%;
+            }
 
     .flagboxcontainer ul {
         margin: 0 !important;
@@ -3204,25 +3297,40 @@ h4.stacktitle {
             padding: 15px 7px;
             border-radius: 15px 15px 0 0;
             color: #fff;
+            display: table;
+            width: 101%;
+            border-spacing: 10px 5px;
         }
 
-            .smallinfoboxcontainer li .smallinfoboxheading h3 {
-                float: left;
-                width: 45%;
-                color: #fff;
+            .smallinfoboxcontainer li .smallinfoboxheading .smallinfoboxheadingcell,
+            .smallinfoboxcontainer li .smallinfoboxheading .smallinfoboxheadingimagecell {
+                display: table-cell;
+                width: 50%;
+                vertical-align: middle;
             }
 
+                .smallinfoboxcontainer li .smallinfoboxheading .smallinfoboxheadingcell h3 {
+                    color: #fff;
+                    line-height: 120%;
+                }
+
             .smallinfoboxcontainer li .smallinfoboxheading .img {
-                width: 45%;
-                float: right;
+                width: 100%;
             }
 
         .smallinfoboxcontainer li .smallinfoboxcontent {
             padding: 10px;
             z-index: 99;
+            display: table;
+            width: 101%;
         }
 
-
+            .smallinfoboxcontainer li .smallinfoboxcontent p,
+            .smallinfoboxcontainer li .smallinfoboxcontent ul,
+            .smallinfoboxcontainer li .smallinfoboxcontent ol,
+            .smallinfoboxcontainer li .smallinfoboxcontent li {
+                line-height: 120%;
+            }
 
     .smallinfoboxcontainer ul {
         margin: 0 !important;
@@ -3396,16 +3504,19 @@ h4.stacktitle {
     }
 
         .graycappedboxcontainer .grayboxcontainer .grayboxcontent {
-            width: 73%;
+            width: 78%;
             float: left;
             margin-right: 2%;
         }
 
         .graycappedboxcontainer .grayboxcontainer .grayboximage {
-            width: 25%;
+            width: 20%;
             float: left;
         }
 
+            .graycappedboxcontainer .grayboxcontainer .grayboximage img {
+                width: 80%;
+            }
 
     .graycappedboxcontainer .orangeboxcontainer {
         background: #eb551d;
@@ -3414,15 +3525,19 @@ h4.stacktitle {
     }
 
         .graycappedboxcontainer .orangeboxcontainer .orangeboxcontent {
-            width: 73%;
+            width: 78%;
             float: left;
             margin-right: 2%;
         }
 
         .graycappedboxcontainer .orangeboxcontainer .orangeboximage {
-            width: 25%;
+            width: 20%;
             float: left;
         }
+
+            .graycappedboxcontainer .orangeboxcontainer .orangeboximage img {
+                width: 80%;
+            }
 
         .graycappedboxcontainer .grayboxcontainer .grayboxcontent.chrichtext,
         .graycappedboxcontainer .orangeboxcontainer .orangeboxcontent.chrichtext {
@@ -3440,13 +3555,13 @@ h4.stacktitle {
 }
 
     .orangeboxtextcontainer .orangeboxtextleftimage {
-        width: 15%;
+        width: 25%;
         float: left;
         margin-right: 2%;
     }
 
     .orangeboxtextcontainer .orangeboxtextcontent {
-        width: 83%;
+        width: 73%;
         float: left;
         padding: 0;
     }
@@ -3841,11 +3956,11 @@ h4.stacktitle {
     }
     /*#endregion*/
     .widthmorethan768 {
-        display: none;
+        display: none !important;
     }
 
     .widthlesstha768 {
-        display: block;
+        display: block !important;
     }
 
         .widthlesstha768 .taxiarea {
@@ -4257,13 +4372,21 @@ h4.stacktitle {
         float: none;
     }
 
-        .flagboxcontainer li .flagboxheading h2 {
+        .flagboxcontainer li .flagboxheading .flagboxheadingcell {
+            width: 80%;
+        }
+
+        .flagboxcontainer li .flagboxheading .flagboxheadingimagecell {
+            width: 20%;
+        }
+
+    /*.flagboxcontainer li .flagboxheading h2 {
             width: 80%;
         }
 
         .flagboxcontainer li .flagboxheading .img {
             width: 15%;
-        }
+        }*/
 
     .flagboxcontainer ul:after {
         height: 80%;
@@ -4352,6 +4475,24 @@ h4.stacktitle {
     .orangegreyboxcovercontainer {
         width: 100%;
         margin: 20px auto;
+    }
+
+    .headingorangebarcontainer .middlerow .middlecol, .headingorangebarcontainer .middlerow .leftcol, .headingorangebarcontainer .middlerow .rightcol {
+        background: transparent;
+    }
+
+    .headingorangebarcontainer .lefttopimage, .headingorangebarcontainer .leftbottomimage {
+        width: 25%;
+        margin-left: 10%;
+    }
+
+    .headingorangebarcontainer .righttopimage {
+        right: 0;
+        width: 25%;
+        position: relative;
+        margin-top: -27.4%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 /*#endregion*/

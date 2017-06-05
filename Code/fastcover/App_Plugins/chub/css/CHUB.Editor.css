@@ -3066,3 +3066,61 @@ p, ul, ol, li {
     .rangeslider input {
         margin: 0 20px 20px;
     }
+
+.chheading {
+    color: #FFF;
+    background: #EB551D;
+    width: 100%;
+    min-height: 68px;
+    display: table;
+    position: relative;
+    bottom: 0;
+    clear: both;
+    display: table;
+    text-align: center;
+}
+
+    .chheading input {
+        margin: auto;
+        color: #FFF;
+        background: #EB551D;
+        letter-spacing: 2px;
+        font-size: 34px;
+        padding-left: 2%;
+        line-height: 100%;
+        font-weight: 500;
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+        position: relative;
+        min-height: 68px;
+    }
+
+        .chheading input::-moz-placeholder {
+            color: #fff;
+        }
+
+        .chheading input::-webkit-input-placeholder {
+            color: #fff;
+        }
+
+.headingorangebarcontainer .lefttopimage,
+.headingorangebarcontainer .leftbottomimage {
+    width: 15%;
+    float: left;
+    margin-left: 5%;
+}
+
+.headingorangebarcontainer .righttopimage {
+    width: 15%;
+    float: right;
+    margin-right: 5%;
+    margin-bottom: -68px;
+    margin-top: 68px;
+    z-index: 9;
+    position: relative;
+}
+
+.headingorangebarcontainer .usky-editor-placeholder.imagegrid {
+    margin: 0 auto;
+}
